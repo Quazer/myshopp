@@ -5,35 +5,36 @@ class Product {
 	/**
 	 * Product will be sold by the supplier
 	 */
-	//static belongsTo = [supplier : User, category : Category]
-	def SKU
+	static belongsTo = [supplier : Member, category : Category]
+	String SKU
 	
-	def name
-	def overview
-	def specification
+	String name
+	String overview
+	String specification
 	
 	//User supplier
 	//Category category
 	/**
 	 * Price
 	 */
-	def purchargePrice
-	def importPrice // root price
-	def discount
-	def discount3Item
-	def discount5Item
-	def discount10Item
+	float purchargePrice
+	float importPrice // root price
+	int discount
+	int discount3Item
+	int discount5Item
+	int discount10Item
+	
+	ImageStore productImage
 	
 	/**
 	 * 1: Thumbnails of product
 	 * 2: Other products related to this product
 	 */
-	ImageStore mainImage
 	static hasMany = [images: ImageStore, productRelated: Product]
 	
 	Date dateAdded = new Date()
 	
     static constraints = {
-		mainImage nullable:true
+		productImage nullable : true
     }
 }
