@@ -63,11 +63,13 @@
 			<div class="subpage_wrap clearfix">
 				<!--left side:begin-->
 				<div class="cate_sidebar">
-				
+				    <%--
 					<!-- Left menu: begin -->
 					<g:render template="/layouts/main_left_menu"/>
 					<!-- Left menu: end -->
 					
+					 --%>
+					 
 					<script type="text/javascript">
             			Pattaya.Mall.Search.init({ radix: '.' });
         			</script>
@@ -86,9 +88,11 @@
 				
 				<div class="clear"></div>
 				<!--mainbox:end-->
+				<%--
 				<g:render template="/layouts/main_last_viewed"/>
-				<g:render template="/layouts/main_recommend"/>
 				
+				<g:render template="/layouts/main_recommend"/>
+				 --%>
 
 				<script type="text/javascript">
 				    var vp = { url: '/CommonContent/ViewHistory', limit: 6, titleSize: 0, chvUrl: '/CommonContent/ClearViewHistory', cname: 'ProductViewHistory' },
