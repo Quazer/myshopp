@@ -2,9 +2,10 @@ package com.nghia.shop
 
 class ImageStore {
 
-	def fileName
-	def filePath
-	def thumbnailPath
+	String fileName
+	String filePath
+	String thumbnailPath
+	boolean isExternal = false
 	
     static constraints = {
     }
