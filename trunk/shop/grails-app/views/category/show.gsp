@@ -10,12 +10,12 @@
     </head>
     <body>
                     <h1>
-                        ${categoryInstance?.name }
+                        ${categoryName}
                     </h1>
                     <!-- recommended products -->
                     <div class="filter_result">
                         <div class="whole_result">
-                            <strong>${productTotalCount }</strong> Results for <strong>${categoryInstance?.name }</strong>
+                            <strong>${productTotalCount }</strong> Results for <strong>${categoryName}</strong>
                             <g:paginate total="${productTotalCount}" />
                             
                             <div class="pagenumber">
@@ -81,7 +81,7 @@
                         </div>
                         <div id="proList" class="pro_nor">
                             <ul class="productList subList">
-                                <g:each in="${categoryInstance?.products }" var="product">
+                                <g:each in="${productList}" var="product">
                                     <li>
                                         <div class="photo">
                                             <a
@@ -156,7 +156,7 @@
                                     class="next">Next</a></li>
                             </ul>
                             <script type="text/javascript">
-    //Pattaya.Mall.Pagination.init();
+    Pattaya.Mall.Pagination.init();
     </script>
                         </div>
 
