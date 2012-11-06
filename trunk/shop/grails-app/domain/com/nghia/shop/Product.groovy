@@ -19,10 +19,10 @@ class Product {
 	 */
 	float purchargePrice
 	float importPrice // root price
-	int discount
-	int discount3Item
-	int discount5Item
-	int discount10Item
+	int discount = 0
+	int discount3Item = 0
+	int discount5Item = 0
+	int discount10Item = 0
 	
 	ImageStore productImage
 	
@@ -34,7 +34,10 @@ class Product {
 	
 	Date dateAdded = new Date()
 	
+	//TODO: need to edit
     static constraints = {
 		productImage nullable : true
+		supplier nullable : true
+		category nullable : true
     }
 }
