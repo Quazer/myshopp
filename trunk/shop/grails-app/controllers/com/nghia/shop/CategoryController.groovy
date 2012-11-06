@@ -68,8 +68,30 @@ class CategoryController {
 		
 		def productList
 		
-		totalRecCount = categoryInstance?.products?.size()
-		productList = categoryInstance?.products?.list(params)
+		if (params.pattern && !''.equals(params.pattern.toString())) {
+			paramsForPaging['pattern'] = params.pattern.toString()
+			def pattern = '%'+ CommonUtils.convertSpecialCharactersForSearch(params.pattern) + '%'
+			
+			totalRecCount = Product.createCriteria().count {
+				ilike("name", pattern)
+				eq("category.id", categoryInstance.id)
+			}
+			
+			params.properties = CommonUtils.validateParamsForPaging(params, params.gotoPage, totalRecCount, 10, 100, listSortBy)
+			
+			productList = Product.createCriteria().list(params) {
+				ilike("name", pattern)
+				eq("category.id", categoryInstance.id)
+			}
+		} else {
+
+			totalRecCount = Product.createCriteria().count{params}
+
+			params.properties = CommonUtils.validateParamsForPaging(params, params.gotoPage, totalRecCount, 10, 100, listSortBy)
+
+			productList = Product.createCriteria().list(params){}
+		}
+		
 		
 		//return [userProfileInstanceList: userProfileList, userProfileInstanceTotal: totalRecCount, paramsForPagingList: paramsForPaging, currentuserIdLogin: currentuserIdLogin, actived_menu:actived_menu]
 		
@@ -79,8 +101,8 @@ class CategoryController {
 
 			
 		
-		def productTotalCount = categoryInstance?.products?.size()
-		[categoryInstance: categoryInstance, productTotalCount : productTotalCount]
+		//def productTotalCount = categoryInstance?.products?.size()
+		[categoryName: categoryInstance?.name, productTotalCount : totalRecCount, productList : productList]
         
     }
 
