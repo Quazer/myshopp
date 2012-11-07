@@ -256,4 +256,9 @@ class CommonUtils {
 				 params = rs
 				 return params
 			 }
+	 
+	 static otherProducts(productId) {
+		 // TODO: need to verify productInstance!=null before using
+		 Product.list()
+	 }
 }
