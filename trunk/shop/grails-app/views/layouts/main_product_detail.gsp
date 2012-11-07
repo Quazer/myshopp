@@ -29,6 +29,26 @@
         <script chartset="utf-8" type="text/javascript"
             src="${resource(dir: 'js', file: 'content2.axd')}"></script>
             
+        
+         <link charset="utf-8" rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'dialog.en.min.css')}">
+         <script chartset="utf-8" type="text/javascript" src="${resource(dir: 'js', file: 'content.axd')}?js=pattaya/mall/mall.min.js,pattaya/mall/affiliate.min.js&amp;v=2.10.0&amp;l=en"></script>
+        <script chartset="utf-8" type="text/javascript" src="${resource(dir: 'js', file: 'jquery_v2.10.0.js')}"></script>
+        
+    <style type="text/css">
+        .tab_content > .tab_panel, .tab_content > div
+        {
+            display: none;
+        }
+        .tab_content > div.active
+        {
+            display: block;
+        }
+        .pinfobox
+        {
+            margin-top: 0px;
+        }
+    </style>
+    
         <g:layoutHead/>
         <r:layoutResources />
     </head>
