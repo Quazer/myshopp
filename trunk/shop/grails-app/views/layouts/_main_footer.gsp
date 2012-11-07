@@ -1,5 +1,7 @@
 	<!--services:beging-->
 	<div class="container">
+	
+	<!-- 
 		<div class="help_wrapper clearfix">
 			<div class="helpbox">
 				<h3>Customer Service Express</h3>
@@ -83,13 +85,14 @@
 			</div>
 		</div>
 	</div>
+	 -->
 	<!--services:end-->
 	<!--footer:begin-->
 	<div class="container">
 		<div class="footer">
 			<div class="copyright">
 				<p>
-					<strong>© 2006~2012 <a href="http://dx.com/">DX.com</a>.
+					<strong>© 2012 <a href="http://dx.com/">NghiaShop</a>.
 						All rights reserved.
 					</strong>
 				</p>
@@ -100,68 +103,14 @@
 					may become out of date and may change between the time you added an
 					item to cart and the time your order is received.<br>
 					Quantities on clearance items are limited. Prices are current at
-					time of posting. DX Reserves the right to change prices at any time
+					time of posting. NghiaShop Reserves the right to change prices at any time
 					without notice.
 				</p>
-				<p>
-					Partners: <a
-						href="http://www.allbuy.com/?utm_source=dx&utm_medium=link&utm_content=allbuy&utm_campaign=dxlink"
-						target="_blank">Allbuy</a> l <a
-						href="http://www.volumerate.com/?utm_source=dx&utm_medium=link&utm_content=vr&utm_campaign=dxlink"
-						target="_blank">Volumerate</a> l <a
-						href="http://www.intimategadgets.com/?utm_source=dx&utm_medium=link&utm_content=ig&utm_campaign=dxlink"
-						target="_blank">IntimateGadgets</a> l <a
-						href="http://www.madeinchina.com/?utm_source=dx&utm_medium=link&utm_content=mic&utm_campaign=dxlink"
-						target="_blank">MadeinChina</a> l <a rel="nofollow"
-						href="http://seller.tradeglobals.com:8089/" target="_blank">寻求供应商</a>
-				</p>
+
 			</div>
-			<div class="authentication">
-				<ul>
-					<li><a
-						href="https://sealserver.trustwave.com/cert.php?customerId=x4ix8fufDZxlQRKB1cFEuNc3X2I9qj"
-						target="_blank"> <img width="105" height="54"
-							title="This site protected by Trustwave&#39;s Trusted Commerce program"
-							alt="This site protected by Trustwave&#39;s Trusted Commerce program"
-							oncontextmenu="javascript:alert(&#39;Copying Prohibited by Law - Trusted Commerce is a Service Mark of TrustWave Holdings, Inc.&#39;); return false;"
-							onclick="javascript:window.open(&#39;https://sealserver.trustwave.com/cert.php?customerId=x4ix8fufDZxlQRKB1cFEuNc3X2I9qj&amp;size=105x54&amp;style=normal&#39;, &#39;c_TW&#39;, &#39;location=no, toolbar=no, resizable=yes, scrollbars=yes, directories=no, status=no, width=615, height=720&#39;); return false;"
-							src="./Apple Iphone Ipad Ipod Stickers - Free Shipping - DX_files/seal_image.php">
-					</a></li>
-					<li><a href="http://dx.com/Page-Conditions#return_policy"
-						rel="nofollow" target="_blank"> <img width="49" height="49"
-							alt="Satisfaction Guaranteed - or your money back"
-							src="./Apple Iphone Ipad Ipod Stickers - Free Shipping - DX_files/PolicyLogo.png">
-					</a></li>
-					<li><a
-						href="https://www.paypal.com/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside"
-						rel="nofollow"> <img width="230" height="68"
-							alt="We accept MasterCard, Visa, American Express, Discover, Giropay and all major cards via PayPal"
-							onclick="javascript:window.open(&#39;https://www.paypal.com/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside&#39;,&#39;olcwhatispaypal&#39;,&#39;toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=400&#39;); return false;"
-							src="./Apple Iphone Ipad Ipod Stickers - Free Shipping - DX_files/paypal.jpg">
-					</a></li>
-					<li><a href="http://www.opuspayments.com/" rel="nofollow"
-						target="_blank"> <img width="144" height="58"
-							alt="opus payment"
-							src="./Apple Iphone Ipad Ipod Stickers - Free Shipping - DX_files/opus.jpg">
-					</a></li>
-					<li><a
-						href="https://www.mcafeesecure.com/RatingVerify?ref=dx.com"
-						target="_blank"> <img width="115" height="32"
-							oncontextmenu="alert(&#39;Copying Prohibited by Law - McAfee Secure is a Trademark of McAfee, Inc.&#39;); return false;"
-							alt="McAfee SECURE"
-							src="./Apple Iphone Ipad Ipod Stickers - Free Shipping - DX_files/12.gif">
-					</a></li>
-					<li class="norton"><a
-						href="https://trustsealinfo.verisign.com/splash?form_file=fdf/splash.fdf&dn=dx.com&lang=en"
-						target="_blank"> <img width="100" height="58"
-							alt="Click to Verify - This site has chosen an SSL Certificate to improve Web site security"
-							src="./Apple Iphone Ipad Ipod Stickers - Free Shipping - DX_files/norton.png"
-							onclick="javascript:window.open(&quot;https://trustsealinfo.verisign.com/splash?form_file=fdf/splash.fdf&amp;dn=dx.com&amp;lang=en&quot;,&quot;VRSN_Splash&quot;,&quot;location=yes,status=yes,resizable=yes,scrollbars=yes,width=560,height=500&quot;); return false;">
-					</a></li>
-				</ul>
-			</div>
+			
 			<div class="bg_footer">
-				<span class="version">Pattaya Beta v1.1.0907</span>
+				<span class="version">NghiaShop v1.0</span>
 			</div>
 		</div>
 	</div>
