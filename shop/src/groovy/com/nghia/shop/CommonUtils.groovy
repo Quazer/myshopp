@@ -20,9 +20,40 @@ class CommonUtils {
 		//params
 	}
 	
-	def static productPrice(productInstance) {
-		// check productInstance != null ?
-		return "US" + 0
+	def static productPrice(productInstance, quantity = null) {
+		// TODO: check productInstance != null ?
+		def productPrice = this.priceOfProduct(productInstance)
+		
+		
+		// TODO:check quantity la integer or not
+		return "US" + productPrice
+	}
+	
+	def static priceOfProduct(Object productInstance) {
+		//TODO get product price
+		return 0
+	}
+	
+	
+	def static totalPriceOfShopCart(cartList, coupon, shipMethod = null) {
+		// TODO: check Coupon is existing in DB or not
+		def couponPrice = 0
+		
+		def total = 0
+		for (ShoppingCart item : cartList) {
+			// Total = total + (so luong * product price) - coupon
+			total = total + (item.quantity * priceOfProduct(item.product))
+		}	
+		
+		if (total > 0) {
+			if (shipMethod) {
+				//TODO: get price of Shipping Method before minus the total price
+			}
+			
+			total = total - couponPrice
+		}
+		
+		total
 	}
 	
 	def static isFreeShipping(productInstance) {
