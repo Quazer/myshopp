@@ -103,7 +103,7 @@
 
                                         </div>
                                         <div class="po">
-                                            <p class="sku">SKU : ${product.SKU }</p>
+                                            <p class="sku">SKU : ${product.sku }</p>
                                             <p class="np">
                                                 Price :<span>${CommonUtils.productPrice(product) }</span>
                                             </p>
