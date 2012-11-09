@@ -1,6 +1,5 @@
-<%@ page import="com.nghia.shop.CommonUtils" %>
+
 <%@ page import="com.nghia.shop.ShoppingCart" %>
-<%@ page import="com.nghia.shop.ShippingMethod" %>
 <!doctype html>
 <html>
     <head>
@@ -50,56 +49,65 @@
             
             <div id="ctl00_content_cartPanel">
                 <div id="shoppingcart">
-                            <g:each in="${cartList }" var="shoppingCartInstance">
-                                <g:if test="${shoppingCartInstance?.product }">
                             <table id="table2" cellpadding="5" cellspacing="1" class="cart clear_sc" style="line-height: 15px;
                                 font-size: 12px;">
                                 <tbody>
                                 <tr>
-                                    <th class="name" style="text-align:left" >
-                                        SKU: ${shoppingCartInstance.product.sku }
+                                    <th class="sku">
+                                        SKU
                                     </th>
-                                    <th class="qty" style="width:200px">
+                                    <th class="name">
+                                        Product Name
+                                    </th>
+                                    <th class="qty">
+                                        Quantity
+                                    </th>
+                                    <th class="price">
+                                        Price
                                     </th>
                                     <th class="total">
+                                        Line Total
                                     </th>
-                                    <th class="remove" >
+                                    <th class="remove">
+                                        Options
                                     </th>
                                 </tr>
-		                            <tr class="item">
-		                                <td class="name">
-		                                    
-		                                    <a class="producttitlelink" href="${createLink(controller : 'product',action: 'show', id: shoppingCartInstance?.product.id)}">
-		                                       ${shoppingCartInstance.product.name } 
-		                                    </a>
-		                                    
-		                                    <br>
-		                                    
-		                                </td>
-		                                <td class="quantity" align="center" id="" style="text-align:left">
-		                                    <g:textField name="quantity"  maxlength="5" class="qty" value="${shoppingCartInstance.quantity } "/>
-		                                    &nbsp;<g:message code="${shoppingCartInstance.product.prodcutKind }"/>
-		                                    &nbsp;&nbsp;&nbsp;&nbsp;
-		                                    x
-		                                    &nbsp;&nbsp;&nbsp;&nbsp;
-		                                    ${CommonUtils.productPrice(shoppingCartInstance.product) }
-		                                </td>
-
-                                        <td class="remove">
-                                            <g:select name="shipMethod" from="${ShippingMethod.list() }" value="${shoppingCartInstance.shippingMethod} "/>
-                                            
-                                        </td>
-		                                <td class="remove">
-		                                    <a title="remove" class="saved_c_remove" href="https://cart.dx.com/shoppingcart.dx/remove.164561">&nbsp;</a><a rel="164561" href="javascript:void(0)" title="add to wish list" class="saved_c_wishlist">&nbsp;</a>
-		                                </td>
-		                            </tr>
+                            <g:each>
+                            </g:each>
+                            <tr class="item">
+                                <td class="sku">
+                                    164561
+                                </td>
+                                <td class="name">
+                                    
+                                    <a class="producttitlelink" href="http://dx.com//p/164561">
+                                    MG705 7" Capacitive Screen Android 4.0 Tablet PC w/ Dual SIM / TF / Wi-Fi / HDMI / Camera - White 
+                                    </a>
+                                    
+                                    <br>
+                                    
+                                </td>
+                                <td class="quantity" align="center" id="">
+                                    <a class="adjust" href="https://cart.dx.com/shoppingcart.dx/add.164561~quantity.1">-</a>
+                                    <input type="hidden" value="164561">
+                                    <input name="ctl00$content$listCart$ctl01$qty" type="text" id="ctl00_content_listCart_ctl01_qty" maxlength="5" class="qty" value="1">
+                                    <a class="adjust" href="https://cart.dx.com/shoppingcart.dx/add.164561~quantity.2">+</a>
+                                </td>
+                                <td class="price">
+                                    $163.90
+                                </td>
+                                <td class="total">
+                                    $163.90
+                                </td>
+                                <td class="remove">
+                                    <a title="remove" class="saved_c_remove" href="https://cart.dx.com/shoppingcart.dx/remove.164561">&nbsp;</a><a rel="164561" href="javascript:void(0)" title="add to wish list" class="saved_c_wishlist">&nbsp;</a>
+                                </td>
+                            </tr>
+                        
+                            
                         
                             </tbody>
                       </table>
-                      <br>
-	                            </g:if>
-                            </g:each>
-
                         
                 </div>
 
@@ -108,7 +116,7 @@
                     <table width="100%" border="0" cellspacing="0" cellpadding="0" class="priceBox">
                       <tbody><tr>
                         <th>Order Subtotal:</th>
-                        <td><span id="ctl00_content_lblProducts" class="subtotal">${CommonUtils.totalPriceOfShopCart(cartList, session.coupon) }</span></td>
+                        <td><span id="ctl00_content_lblProducts" class="subtotal">$163.91</span></td>
                       </tr>
                       <tr class="lastTr">
                         <th><b>Shipping Method</b>:</th>
@@ -130,7 +138,7 @@
                       </tr>
                       <tr class="GrandTotal">
                         <th>Grand Total:</th>
-                        <td><span id="ctl00_content_lblGrandTotal" class="grand_total">${CommonUtils.totalPriceOfShopCart(cartList, session.coupon) }</span></td>
+                        <td><span id="ctl00_content_lblGrandTotal" class="grand_total">$163.91</span></td>
                       </tr>
                     </tbody></table>
                     <div id="ctl00_content_dxPoints" class="dx_points">
