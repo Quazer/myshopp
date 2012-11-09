@@ -1,5 +1,6 @@
 <%@ page import="com.nghia.shop.CommonUtils" %>
 <%@ page import="com.nghia.shop.Product" %>
+<%@ page import="com.nghia.shop.ShippingMethod" %>
 <!doctype html>
 <html>
     <head>
@@ -66,7 +67,7 @@
 	            <div class="fr">
 	                <span class="product_sku">
 	                    SKU: 
-	                    <span id="sku">${productInstance?.SKU }</span>
+	                    <span id="sku">${productInstance?.sku }</span>
 	                    
 	                    <input id="productStatus" type="hidden" value="Normal">
 	                </span><span class="product_date_added">(Added on <g:formatDate date="${productInstance?.dateAdded}" formatName="product.label.date" />) </span>
@@ -120,22 +121,36 @@
 	                    </tr>
 	                </tbody>
 	            </table>
+	            <g:form controller="shoppingCart" action="add">
+	            <g:hiddenField name="sku" value="${productInstance?.sku }"/>
 	            <div class="choose_quantity">
 	                <div class="quantity clearfix">
 	                    <span>Quantity:</span> <a id="qty-dec" href="javascript:void(0);" class="reduce" rel="nofollow"></a>
-	                        <input id="qty" type="text" class="quantity" value="1">
+	                       <g:textField name="quantity" value="1" class="quantity"/>
 	                    <a id="qty-inc" href="javascript:void(0);" class="add" rel="nofollow"></a>
 	                </div>
 	                <div class="btn_cartBox">
-	                        <a id="btn-add-to-cart" href="http://cart.dx.com/shoppingcart.dx/add.159612" class="btn_atcart" rel="nofollow">
-	                        </a>
+	                       <g:actionSubmit class="btn_atcart" action="add" id="btn-add-to-cart" rel="nofollow" value="${message(code: 'default.button.update.label', default: 'Update')}" />
 	                </div>
+                    <div class="share">
+                        <g:each in="${ShippingMethod.list() }" var="shippingMethod" status="i">
+                            ${shippingMethod.name } 
+                            <g:if test="${i == 0 }">
+                                <input type="radio" name="shipMethod" value="${shippingMethod.id }" checked="checked"/>
+                            </g:if>
+                            <g:else>
+                                <input type="radio" name="shipMethod" value="${shippingMethod.id }"/>
+                            </g:else>
+                           
+                        </g:each>                   
+                    </div>
 	                <div class="share">
 	                    <a id="btn-add-wishlist" href="javascript:void(0);" class="addlist add-wish" sku="159612" rel="nofollow">Add to wish list</a>
 	                    <a id="btn-add-pricematch" href="javascript:void(0);" class="match">Price Match</a>
 	                    <a id="btn-add-reportError" href="javascript:void(0);" class="report">Report Error</a>
 	                </div>
 	            </div>
+	            </g:form>
 	        </div>
 	        <div class="product_otherinfo">
 	           <!-- 
@@ -170,7 +185,7 @@
 	    <div id="tabProInfo" class="dxTab">
 	        <div class="cate_tabwrap">
 	            <ul>
-	                <li class=""><a href="http://localhost:8080/shop/product/show/2#overview" rel="nofollow">Overview</a>
+	                <li class="active"><a href="http://localhost:8080/shop/product/show/2#overview" rel="nofollow">Overview</a>
 	                    <div class="cate_tab_l">
 	                    </div>
 	                    <div class="cate_tab_r">
