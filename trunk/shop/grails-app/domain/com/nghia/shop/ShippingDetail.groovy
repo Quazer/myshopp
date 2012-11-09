@@ -1,14 +1,14 @@
 package com.nghia.shop
 
 class ShippingDetail {
-	def name
-	def street1
-	def street2
-	def city
-	def state
-	def country
-	def zip
-	def phone
+	String name
+	String street1
+	String street2
+	String city
+	String state
+	String country
+	String zip
+	String phone
 	
     static constraints = {
     }
