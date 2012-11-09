@@ -33,7 +33,7 @@
          <link charset="utf-8" rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'dialog.en.min.css')}">
          <script chartset="utf-8" type="text/javascript" src="${resource(dir: 'js', file: 'content.axd')}?js=pattaya/mall/mall.min.js,pattaya/mall/affiliate.min.js&amp;v=2.10.0&amp;l=en"></script>
         <script chartset="utf-8" type="text/javascript" src="${resource(dir: 'js', file: 'jquery_v2.10.0.js')}"></script>
-        
+        <link charset="utf-8" rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'cart.css')}">
     <style type="text/css">
         .tab_content > .tab_panel, .tab_content > div
         {
@@ -48,6 +48,8 @@
             margin-top: 0px;
         }
     </style>
+    
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="${resource(dir: 'css', file: 'translateelement.css')}">
     
         <g:layoutHead/>
         <r:layoutResources />
