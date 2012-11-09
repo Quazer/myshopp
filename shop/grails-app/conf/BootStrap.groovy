@@ -1,6 +1,7 @@
 import com.nghia.shop.Category
 import com.nghia.shop.Member
 import com.nghia.shop.Product
+import com.nghia.shop.ShippingMethod;
 class BootStrap {
 
 	def productService
@@ -9,11 +10,14 @@ class BootStrap {
     }
 	
 	def initData() {
-		def admin = new Member(username: "nghia", password: "asdasd").save(flush:true)
-		def supplier1 = new Member(username: "supplier1", password: "asdasd").save(flush:true)
-		def supplier2 = new Member(username: "supplier2", password: "asdasd").save(flush:true)
+		def admin = new Member(username: "nghia", password: "1").save(flush:true)
+		def supplier1 = new Member(username: "supplier1", password: "2").save(flush:true)
+		def supplier2 = new Member(username: "supplier2", password: "3").save(flush:true)
+		
+		
 		def cat1 = new Category(name : "May vi tinh").save(flush:true)
 		cat1.save(flush:true)
+		print "cat1: " + cat1.id
 		
 		for (int i = 0; i<= 20; i++) {
 			def prod = new Product()
@@ -27,8 +31,9 @@ class BootStrap {
 			prod.discount3Item = 0
 			prod.discount5Item = 0
 			prod.discount10Item = 0
+			prod.prodcutKind = "product.productkind.piece"
 			
-			prod.SKU = 1000 + i
+			prod.sku = 1000 + i
 			
 			prod.category = cat1
 //			prod = new Product(name : "product " + i, overview: "overview of " + i,
@@ -38,15 +43,21 @@ class BootStrap {
 			prod.save(flush:true)
 			print "prod " + i + " :" + prod.id
 		}
+	
+		for (int i = 0; i<4; i ++) {
+			def shipMethod = new ShippingMethod()
+			shipMethod.name = "shipping method name " + i
+			shipMethod.description = "shipping description " + i
+			shipMethod.price = 10*i + 1
+			shipMethod.timeOfDeliver = "" + i + " weeks"
+			
+			shipMethod.save(flush:true)
+			
+			print "shipMethod " + i + ": " + shipMethod.id
+		}
+
 		
-//		def cat1 = new Category(name : "May vi tinh").save(flush:true)
-//		cat1.addToProducts(prod)
-//		cat1.save(flush:true)
-		print "cat1 :" + cat1.id
-//		def cat2 = new Category(name : "Iphone case").save(flush:true)
-//		cat2.addToProducts(prod)
-//		cat2.save(flush:true)
-		//print "cat2 :" + cat2.id
+		
 	}
 	
 	
