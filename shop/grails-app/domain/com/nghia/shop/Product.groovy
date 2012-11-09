@@ -6,7 +6,7 @@ class Product {
 	 * Product will be sold by the supplier
 	 */
 	static belongsTo = [supplier : Member, category : Category]
-	String SKU
+	String sku
 	
 	String name
 	String overview
@@ -24,6 +24,9 @@ class Product {
 	int discount5Item = 0
 	int discount10Item = 0
 	
+	// "set", "piece", "lot" ... all value will be Message Key
+	String prodcutKind 
+	
 	ImageStore productImage
 	
 	/**
@@ -39,5 +42,6 @@ class Product {
 		productImage nullable : true
 		supplier nullable : true
 		category nullable : true
+		prodcutKind nullable:true
     }
 }

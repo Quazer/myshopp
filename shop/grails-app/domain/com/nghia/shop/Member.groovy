@@ -9,10 +9,10 @@ class Member {
 
 	String username
 	String password
-	boolean enabled
-	boolean accountExpired
-	boolean accountLocked
-	boolean passwordExpired
+	boolean enabled = true
+	boolean accountExpired = false
+	boolean accountLocked = false
+	boolean passwordExpired = false
 
 	/**
 	 * User Profile 
@@ -25,9 +25,7 @@ class Member {
 	 */
 	boolean canPostProduct = false
 	
-	static hasMany = [orders: Orders, 
-		productPosted: Product,
-		wishList: Product]
+	static hasMany = [orders: Orders, productPosted: Product, wishList: Product]
 	
 	/*****************************
 	 * Constraint
@@ -35,6 +33,12 @@ class Member {
 	static constraints = {
 		username blank: false, unique: true
 		password blank: false
+		// TODO: need to modify
+		shippingDetail nullable:true
+		
+		orders nullable: true
+		productPosted nullable: true
+		wishList nullable: true
 	}
 
 	static mapping = {
