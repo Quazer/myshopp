@@ -292,4 +292,9 @@ class CommonUtils {
 		 // TODO: need to verify productInstance!=null before using
 		 Product.list()
 	 }
+	 
+	 static shippingMethodPrice(price) {
+		 //TODO: need to verify
+		 price
+	 }
 }
