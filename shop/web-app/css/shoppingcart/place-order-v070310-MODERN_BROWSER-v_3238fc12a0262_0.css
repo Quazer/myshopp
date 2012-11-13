@@ -1,0 +1,1536 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, lengend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+body, button, input, select, textarea {
+    font: 12px/1 Arial, Helvetica, sans-serif;  
+}
+body, table, td, div, p{
+	word-wrap:break-word;
+}
+
+h1 { font-size: 18px; }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+h4, h5, h6 { font-size: 100%; }
+
+address, cite, dfn, em, var { font-style: normal; }
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } 
+small { font-size: 12px; } 
+
+ul, ol { list-style: none; }
+
+abbr[title], acronym[title] {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+q:before, q:after { content: ''; }
+legend { color: #000; } 
+fieldset, img { border: none; } 
+button, input, select, textarea {
+    font-size: 100%; 
+}
+hr {
+    border: none;
+    height: 1px;
+}
+/*  - base
+--------------------------------------*/
+body{ background-color:#fff;}
+a:link{color:#039;text-decoration:none;}
+a:visited{color:#969;text-decoration:none;}
+a:hover{color:#f60;text-decoration:underline;}
+form{padding:0;margin:0;}
+/*--------------------------------------
+  end base */
+
+/* - common custom
+--------------------------------------*/
+/*  color */
+.c-black ,.c-black:visited ,.c-black a {color:#000;}
+.c-black:hover,
+.c-black a:hover{color:#FF6600;}
+/*  font */
+.fB{font-weight:bold;}
+.fI{font-style: italic;}
+.f12px{font-size:12px;}
+.f14px{font-size:14px;}
+.f16px{font-size:16px;}
+/*  align */
+.fleft,.fl{float:left;}
+.fright,.fl{float:right;}
+.tleft{text-align:left;}
+.tright{text-align:right;}
+.tcenter{text-align:center;}
+.vmiddle{vertical-align:middle;}
+/*space*/
+.ml20{margin-left:20px;}
+.mt20{margin-top:20px;}
+.mr20{margin-right:20px;}
+.mb20{margin-bottom:20px;}
+.ml10{margin-left:10px;}
+.mt10{margin-top:10px;}
+.mr10{margin-right:10px;}
+.mb10{margin-bottom:10px;}
+.ml5{margin-left:5px;}
+.mt5{margin-top:5px;}
+.mr5{margin-right:5px;}
+.mb5{margin-bottom:5px;}
+/*  clear */
+.clear{ font-size:0px; line-height:0px; height:0px; clear:both;}
+.clearfix {display: inline-table;zoom:1;_height: 1%;display: block;}
+.clearfix:after { content: "."; display: block;font-size:0;line-height:0; height: 0; clear: both; visibility: hidden;}
+/*  - maskIframe ( rewrite for javascript ) */
+.maskIframe{position:absolute;z-index:1;width:1px;height:1px;top:0px;left:0px;border:0px;background:#fff;filter:alpha(opacity=0);-moz-opacity:0;opacity:0;}
+/* - other - */
+.hidden{display:none;}
+.remark{color:#666;font-size:11px;font-family:verdana;}
+.notice{font-family:verdana; font-size:10px; color:#ed1c24;}
+.red-number{color:#ED1C24}
+a:hover .red-number{color:#ff9900;}
+.noborder{border:none!important;}
+.inputHint{color:#999;}
+.imageHelp{cursor:pointer;}
+.tip{color:#666;font-size:11px;}
+.normal-btn{padding:2px 5px;}
+.required{padding-left:10px;background:transparent url(http://i02.i.aliimg.com/images/eng/escrow/bg/mini-icon-16.gif) no-repeat scroll left -21px;}
+.no-bgc {background-color:transparent !important;}
+/* restrict table cell width */
+.widthfixed{table-layout:fixed;word-wrap:break-word; word-break:break-all; word-break/* */:normal;}
+.widthfixed td{word-wrap:break-word; }
+
+.nobg-table th,.nobg-table td{background:none!important;border:none!important;}
+.InputHint{color:#666;}
+.decimal-list  li{list-style: decimal inside;}
+.dotted-list-light li {background:url(http://i03.i.aliimg.com/images/eng/escrow/bg/list_style_bg.gif) no-repeat 0 -8px;padding-left:10px;}
+.dotted-list-grey li {background:url(http://i03.i.aliimg.com/images/eng/escrow/bg/list_style_bg.gif) no-repeat 0 -39px;padding-left:10px;}
+.nosupport-tip{background:url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_info_bc.gif) no-repeat scroll 0 4px ;padding-left:20px;color:#666;font-family:Verdana;height:20px;line-height:20px;}
+.message{background:url(http://i03.i.aliimg.com/images/eng/wholesale/icon/message-icon-small.gif) no-repeat 0 0;display:inline-block;height:15px;padding-left:22px;line-height:13px;font-weight:bold;margin-top:10px;}
+.goto-my-alibaba{position:absolute;right:0;padding-top:37px;}
+.goto-my-alibaba a {cursor:pointer;text-decoration:none;}
+.decimal-list li{list-style:decimal inside;line-height:1.5}
+
+/*--------------------------------------
+  end common custom */
+
+
+/* crumb
+--------------------------------------*/
+.crumb{font:normal normal 10px verdana;}
+
+/*--------------------------------------
+  end crumb */
+
+/* ------  top notice  ----------*/
+.top-notice{ position:relative; padding:5px 0; font:normal 10px/14px verdana; color:#000; text-align:center; background-color:#ffffe1; border-bottom:1px solid #aca899; }
+.top-notice p{ width:950px; text-align:center; margin:0 auto; line-height:120%;}
+
+/*head bar
+--------------------------------------*/
+.utility{text-align:right;padding:3px;height:20px;font:0.85em verdana;}
+.utility #welcome_info{float:left;color:#000;font-size:11px;}
+.utility #log-info{color:#003399;}
+.utility a:link,.utility a:visited{color:#003399;text-decoration:none;}
+.utility a:hover{text-decoration:underline;}
+.utility input{font:10px verdana;}
+.utility form{display:inline;}  
+  
+/*  - header
+--------------------------------------*/
+#header{height:79px;background: url(http://i03.i.aliimg.com/images/eng/style/css_images/navigation/headCap.gif) repeat-x 0 -2px;}
+
+#header-inner{width:950px;margin:0 auto;position:relative;}
+/* - logo */
+#logo {position:absolute;z-index:0;width:180px;height:50px;left:0; top:6px;}
+#logo a {display:block;width:180px;height:50px;overflow:hidden;text-indent:-9999px;background:transparent url(http://i03.i.aliimg.com/images/eng/wholesale/icon/logo_stable_buyer.gif) no-repeat scroll 0 0;}
+.transform760 #aliLogo{margin-left:100px;_margin-left:50px;}
+
+#aliLogo{float:left;margin-right:15px;font:bold 10px verdana;height:53px;}
+#aliLogo a{text-indent:-999px;display:block;overflow:hidden;float:left;width:215px;height:48px;background:url(http://i03.i.aliimg.com/images/eng/style/logo/logo_alibaba.gif) no-repeat 4px 4px;}
+#aliLogo a:hover{background:url(http://i02.i.aliimg.com/images/eng/style/logo/logo_alibaba_hover.gif) no-repeat 0 0;}
+#aliLogo a img{margin:4px 0pt 0pt 4px;}
+#seller-logo a {background:transparent url(http://i03.i.aliimg.com/images/eng/wholesale/icon/logo_stable_seller.gif) no-repeat scroll 0 0;border:0 none;height:40px;margin:5px 0 0;overflow:hidden;padding:0;position:absolute;text-indent:-999px;width:309px;}
+.header960{width:960px;margin: auto;position:relative;z-index:10;}
+.imgSearchBar{background:#fff url(http://i03.i.aliimg.com/images/eng/style/css_images/btm_searchbar.gif) repeat-x scroll 0 -60px;height:30px;margin:auto;overflow:hidden;width:482px;}
+.header960 #headSearch{position:absolute;top:35px;right:0px;width:482px;}
+
+.goto-my-alibaba{float:right;padding-top:37px;}
+.goto-my-alibaba a {cursor:pointer;text-decoration:none;text-indent:-999999;}
+/*--------------------------------------
+  end header */
+
+    /* - template header start
+-------------------------------*/
+.ali-logo{float:left;}
+.help-secure{float:right;width:250px;list-style:none;font-size:11px;}
+.help-secure .help a{background:transparent url(http://i02.i.aliimg.com/images/eng/escrow/bg/mini-icon-16.gif) no-repeat scroll right -7px;padding-right:12px;}
+.help-secure li{text-align:right;line-height:15px;}
+.secure-logo span{position:relative;top:-10px;font-size:11px;color:#666;font-family:Tahoma;}
+/*--------------------------------
+  end template header start  */
+  
+/* Language Switch */
+#headSwitch{position:absolute;top:35px;left:219px;}
+#headSwitch a{display:block;height:20px;line-height:normal;text-decoration:none!important;_float:left;}
+#headSwitch a:hover, #headSwitch a:active, #headSwitch a.onshow{background:url(http://i03.i.aliimg.com/images/eng/style/css_images/sprites/main_navig_sprites.gif) repeat-x 0 -40px;}
+#headSwitch a span{display:block;float:left;color:#003399;}
+#headSwitch a .mn-ls, #headSwitch a .mn-rs{width:5px;height:19px;font-weight:bold;}
+#headSwitch a .mn-ls{text-align:left;}
+#headSwitch a .mn-rs{text-align:right;}
+#headSwitch a .mn-cs{height:12px;width:48px;padding:0 12px 0 4px;font-size:12px;color:#003399;background:url(http://i03.i.aliimg.com/images/eng/style/css_images/sprites/main_navig_sprites.gif) no-repeat 54px 6px;*cursor:pointer;*padding-top:2px;}
+#headSwitch a .mn-ali{font-weight:bold;}
+#headSwitch a:hover .mn-ls, #headSwitch a:active .mn-ls, #headSwitch a.onshow .mn-ls{background:#fff url(http://i03.i.aliimg.com/images/eng/style/css_images/sprites/main_navig_sprites.gif) no-repeat 4px -20px;}
+#headSwitch a:hover .mn-rs, #headSwitch a:active .mn-rs, #headSwitch a.onshow .mn-rs{background:#fff url(http://i03.i.aliimg.com/images/eng/style/css_images/sprites/main_navig_sprites.gif) no-repeat -14px -20px;}
+.gs-switch{left:300px!important;}
+
+#overshowTranslateContent{z-index:1000;position:absolute;right:-1px!important;width:100px;background:transparent!important;}
+#overshowTranslateContent .topHack{height:1px;margin-right:1px;border-left:solid 1px #c7c7c7;border-right:solid 33px #c7c7c7;font-size:0;line-height:0;background:#ffffff;}
+#overshowTranslateContent ul{list-style:none;margin:0;border-left:solid 1px #c7c7c7;border-right:solid 1px #c7c7c7;background:#ffffff;}
+#overshowTranslateContent li{list-style:none;float:none;height:20px;padding:0;}
+#overshowTranslateContent li a{display:block;height:14px;padding:3px 3px 3px 5px!important;_float:none;}
+#overshowTranslateContent li a:hover{background:url(http://i03.i.aliimg.com/images/eng/style/css_images/sprites/main_navig_sprites.gif) repeat-x 0 -80px;color:#003399;}
+#overshowTranslateContent .botHack{height:1px;border-left:solid 1px #ffffff;border-right:solid 1px #ffffff;font-size:0;line-height:0;background:#c7c7c7;}
+/* END language Switch */
+
+/* leftmenu - myalibaba gs online phone */
+#gs-online{border-top:#f4f7fc solid 1px;display:block;padding-left:5px;}    
+#contactEmail{border-bottom:#A2B7D6 solid 1px; padding-bottom:17px;}
+#contact-text{border:1px solid #ccc;display:block;background:#fff;width:140px;height:50px;color:#999;line-height:25px;margin:10px auto;padding:0 5px;cursor:text;text-decoration:none;}
+#contact-text:focus{outline:none;}
+.contact-action{margin:0 0 0 12px;padding-left:22px; background:url(http://i03.i.aliimg.com/images/cms/upload/myalibaba/email.gif) no-repeat 0 -2px;}
+#contact-us {border-top:1px solid #D3E1F0;margin-top:10px;padding:10px;}
+#contactEmail #contact-us-btn,#contactEmail #contact-us-btn:link,#contactEmail #contact-us-btn:visited{color:#0066CC;}
+#contactEmail #contact-us-btn:hover{color:#ff6600;}
+.sub-widget{border-top:#F4F7FC solid 1px;border-bottom:#A2B7D6 solid 1px;display:block;padding:0 0 15px 4px;}
+.cgsEmailUs {margin:0;}
+.cgsEmailUs a{background: url(http://i02.i.aliimg.com/images/eng/style/icon/email.png) no-repeat scroll 6px 0; padding-left:25px;}
+/* END myalibaba gs online phone */
+
+
+/* leftmenu - contact form */
+#contact-inner{position:absolute;top:-37px;z-index:99999;overflow:auto;width:360px;background:#c0d6e5 url(http://i02.i.aliimg.com/images/eng/style/css_images/window/winSkinALeft.gif) no-repeat scroll 0 0;display:none;}
+#contact-inner h3{font-size:12px;margin:0 0 0 2px;font-weight:bold !important;color:#081b39;background:#c0d6e5 url(http://i03.i.aliimg.com/images/eng/style/css_images/window/winSkinARight.gif) no-repeat scroll right top}
+#contact-inner h3 span{float:left;}
+#close-link{float:right;margin:0 10px 0 0;color:#333;}
+.contact-container{position:relative;}
+.contact-wrapper{padding:10px;background:#fff;border:solid 1px #9bbdd3;}
+.contact-subject{margin-bottom:5px;width:326px;}
+.contact-details{width:326px;}
+.contact-btns{text-align:right;margin-top:5px;}
+.contact-trigger{margin:10px auto;}
+.contact-txt{display:block;width:150px;margin:3px auto;}
+.inputField{padding:2px;border:solid 1px;border-color:#666 #aaa #aaa #666;}
+.hint{color:#aaaaaa;}
+/* END contact form*/
+
+/* leftmenu - ggs exports */
+.gs-exports{margin-left:10px;}
+.gs-exports li{margin-bottom:6px;background:url(http://i02.i.aliimg.com/images/eng/style/icon/icon02.gif) no-repeat left 0;padding-left:25px;height:20px;line-height:20px;}
+.gs-exports li a:hover{color:#f26522}
+.gs-exports .txt{color:#455b80;}
+.hot-icon{background:url(http://i02.i.aliimg.com/images/eng/hot.gif) no-repeat ;display:inline-block;height:16px;width:30px;}
+
+/* feedback -  rating */
+a.tl-action{float:left;margin-right:6px;display:block}
+a.tl-action-more{background:url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_tlaction_1.gif) left center no-repeat;height:15px; width:13px; line-height:15px;display:block;float:left;}
+a.tl-action-more:hover{background:url(http://i02.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_tlaction_2.gif) left center no-repeat;}
+
+
+/*  - page
+--------------------------------------*/
+.colL,.colRL,.colLL,.colLv4{float:left;_overflow:hidden;}
+.colR,.colRR,.colLR,.colRv4{float:right;_overflow:hidden;}
+
+.column{float:left;margin-left:5px;}
+
+#page {width:950px;margin:0 auto;}
+#page960,#page760,#page950{margin:auto;text-align:left;}
+#page960{min-width:760px;max-width:960px;width:960px;}
+#page960.frameA .colL{width:180px;}
+#page960.frameA .colR{width:100%;margin-left:-200px;}
+
+#page960.frameA .colR .colRmargin{margin-left:200px;margin-bottom:20px;}
+#page960.frameA .colRL{width:100%;margin-right:-200px;}
+#page960.frameA .colRL .colRLmargin{margin-right:180px;}
+#page960.frameA .colRR{width:160px;}
+#page960.frameB .colR{width:160px;}
+#page960.frameB .colRv4{width:290px;}
+#page960.frameB .colL{width:100%;margin-right:-175px;}
+#page960.frameB .colL .colLmargin{margin-right:175px;}
+#page960.frameB .colLv4{width:100%;margin-right:-300px;}
+#page960.frameB .colLv4 .colLmargin{margin-right:300px;}
+#page960.frameB .colLR{width:100%;margin-left:-200px;}
+#page960.frameB .colLR .colLRmargin{margin-left:200px;}
+#page960.frameB .colLL{width:180px;}
+#page960.listPage.frameB .colR{width:160px;}
+
+/* 解决由于模版的多层嵌套引起的样式错误 */
+#page960.frameA .colR .colR .colRmargin{margin:0;}
+/* 解决由于模版的多层嵌套引起的样式错误 */
+/* fix leftmenu_top.gif problem, 180px in myalibaba,190px here*/
+#page960.frameA .colL img{width:190px;}
+#page960.frameA .colL a img ,#page960.frameA .colL * img{width:auto;*width:auto;}
+
+
+#page960.backOffice{background:url(http://i02.i.aliimg.com/images/eng/style/css_images/menu_leftBg.gif) left repeat-y;border-bottom:1px solid transparent!important;border-bottom:0; }
+#page760{width:760px;}
+#page950{width:950px;}
+/*--------------------------------------
+  end page */
+
+/*  - footer
+--------------------------------------*/
+#footer{clear: both;padding:10px 0 10px 0;text-align:center;border-top:1px solid #ccc; margin-top:15px;font:10px/14px verdana;}
+#footer-inner{}
+/*--------------------------------------
+  end footer */
+
+/* - box module
+----------------------------- */
+.box {margin-bottom:10px;}
+.box .hd, .box .rc-tp, .box .rc-tp span, .box .rc-bt, .box .rc-bt span
+{background:transparent url(http://i02.i.aliimg.com/images/eng/wholesale/box/buyer-box-bg.jpg) no-repeat scroll 0 0;}
+.box .rc-tp, .box .rc-bt {display:block;height:4px;position:relative;z-index:2;}
+.box .rc-tp span, .box .rc-bt span {float:right;height:4px;width:4px;}
+.box .rc-tp {background-position:-3px 0;margin-bottom:-4px;}
+.box .rc-tp span{background-position:0 0;}
+.box .rc-bt {background-position:-3px -3px;margin-top:-4px;}
+.box .rc-bt span {background-position:0 -3px;}
+.box .hd { height:25px;border-color:#ccc #ccc #ccc;border-style:solid solid none;border-width:1px 1px medium;background-color:#fbfbfb;background-position:0 -7px;background-repeat:repeat-x;}
+.box .hd h3 {padding-left:10px;font-size:13px;line-height:25px;color:#333;}
+.box .bd {padding: 7px 11px;border:1px solid #ccc;background-color:#fff; color:#000;}
+.box .rc-tp, .box .rc-tp span, .box .rc-bt, .box .rc-bt span {line-height:0;font-size:0;}
+/*----------------------------
+  end block module  */
+
+
+  
+/*  - boards
+--------------------------------------*/
+.board{margin-bottom:10px; margin-top:10px !important;}
+.board .keywords{font-weight:bold;}
+.board h3{font-weight:bold;}
+.board .block-action{margin-top:10px;}
+.board .important-words{font-size:16px;display:block;line-height:24px;margin-bottom:8px;}
+.board .l{font-size:1.7em;}
+.board .m{font-size:1.3em;}
+.board .s{font:0.85em verdana;}
+
+.board.infoA,
+.board.infoA-naked {background:#e7f4fc url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_info_a.gif) no-repeat 18px 15px;border:1px solid #bbdff7;line-height:26px;padding:15px 20px 15px 65px;}
+.board.infoA-naked{border:none; background-color:#fff;}
+
+.board.all-naked{background:#fff;padding:3px 12px 3px 12px;line-height:20px;font-size:13px;}
+
+.board.infoB,
+.board.infoC{background:#e7f4fc url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_info_bc.gif) no-repeat 12px 10px;border:1px solid #bbdff7;line-height:16px;padding:8px 20px 5px 35px;font-size:10px;font-family:verdana;}
+.board.infoC{border:none; background-color:#fff;}
+
+.board.alertL {background:#fffbd1 url(http://i02.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_alert_l.gif) no-repeat 15px 10px;border:2px solid #fddc9b;line-height:26px;padding:15px 20px 26px 95px;font-size:16px;}
+.board.alertL .important-words {font-size:18px;line-height:24px;display:block;margin-bottom:8px;}
+.board.alertL a.main-action {font-size:20px;font-weight:normal;}
+
+.board.alertA,
+.board.alertA-naked {background:#fffbd1 url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_alert_a.gif) no-repeat 18px 15px;border:1px solid #fddc9b;line-height:26px;padding:15px 20px 15px 65px;}
+.board.alertA-naked {border:none; background-color:#fff;font-size:13px;}
+.board.alertB,
+.board.alertC {background:#fffbd1 url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_alert_bc.gif) no-repeat 12px 8px;border:1px solid #fddc9b;line-height:16px;padding:8px 20px 5px 35px;font-size:10px;font-family:verdana;}
+.board.alertC {border:none; background-color:#fff;}
+
+.board.errorL  {background:#fde8e9 url(http://i02.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_error_l.gif) no-repeat 15px 10px;border:2px solid #fac5c8;line-height:26px;padding:15px 20px 26px 95px;font-size:16px;}
+.board.errorL .important-words {font-size:18px;line-height:24px;display:block;margin-bottom:8px;}
+.board.errorL a.main-action {font-size:20px;font-weight:normal;}
+
+.board.errorA,
+.board.errorA-naked {background:#fde8e9 url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_error_a.gif) no-repeat 18px 15px;;border:1px solid #fac5c8;line-height:26px;padding:15px 20px 15px 65px;}
+.board.errorA-naked {border:none; background-color:#fff;}
+
+.board.errorB,
+.board.errorC {background:#fde8e9 url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_error_bc.gif) no-repeat 12px 8px;border:1px solid #fac5c8;line-height:16px;padding:8px 20px 6px 35px;font-size:10px;font-family:verdana;}
+.board.errorC {border:none; background-color:#fff;}
+
+.alert{color:#ff6600;}
+.board.successA{background:#eff6e4 url(http://i02.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_success_a.gif) no-repeat 18px 15px;border:1px solid #cae2a4;line-height:26px;padding:15px 20px 15px 65px;}
+.board.important{background:#fefbd0 none repeat scroll 0 0;border:1px solid #dbd9b7;font-family:verdana;font-size:10px;line-height:16px;padding:6px 12px;}
+.board.successB,
+.board.successC {background:#eff6e4 url(http://i02.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_success_bc.gif) no-repeat 12px 10px;border:1px solid #cae2a4;line-height:16px;padding:8px 20px 5px 35px;font-size:10px;font-family:verdana;}
+.board.successC {border:none; background-color:#fff;}
+
+.time-left {color:#dc8100;font-weight:bold;margin:0 3px;}
+
+/*--------------------------------------
+  end boards  */
+
+/*  - msgBox
+--------------------------------------*/  
+#xMsgBox {position:absolute;top:50px;left:200px;width:494px;height:auto!important;background:#fff;border:1px solid #5d4f44;border-bottom:0;z-index:9999!important;background:#555;}
+#xMsgBox .msgBoxCloseButtonImg {width:19px;height:19px;background:#f4810c url(http://i02.i.aliimg.com/images/eng/escrow/bg/msgbox_closebnt.gif) no-repeat;position:absolute;top:6px;right:10px;overflow:hidden;}
+#xMsgBox h3 {background-color:#FFE3B7;background-repeat:repeat-x;padding-left:15px;padding-right:15px;margin:0;font-family:arial;color:#000;display:block}
+#msgBoxTitle{border:1px solid #fff;border-bottom:0}
+/* 矮标题 */
+.msgbox h3 {background-image:url(http://i03.i.aliimg.com/images/eng/escrow/bg/msgbox_bg.gif);font-size:13px;height:30px;line-height:30px;font-weight:bold;}
+/* 高标题 */
+.msgbox-L { overflow:hidden; }
+.msgbox-L h3 {background:url(http://i03.i.aliimg.com/images/eng/escrow/bg/msgbox2_bg.gif) repeat-x ;font-size:24px;height:35px;padding-top:30px;line-height:auto;font-weight:normal;}
+.msgbox-L #msgBoxContent{padding:20px!important;width:auto !important;}
+.msgbox-L .msgBoxCloseButtonImg{top:9px!important}
+#msgBoxContent {border-bottom:1px solid #5d4f44;}
+.PopUpMask{position:absolute;z-index:10;left:0;top:0;background:#000;opacity:20;filter: Alpha(Opacity=20);}
+.xwindow-font-a{font-size:14px;font-weight:bold;margin:10px 0;}
+.xwindow-font-b{color:#666;}
+/*--------------------------------------
+  end msgBox  */
+
+/*  - flow map
+--------------------------------------*/
+#flow-img{ margin-bottom:10px; }
+/*--------------------------------------
+  end flow map */
+
+/*  - price
+--------------------------------------*/
+.price  .currency,.price  .value,.price  .comment{color:#bd1a1d;font-weight:bold;font-family:verdana;}
+.price  .separator,.price  .unit{color:#666;font-weight:normal;}
+.price-s,.price-s  .currency,.price-s  .value,.price-s  .separator,.price-s  .unit,.price-s  .comment{font-size:12px;}
+.price-m,.price-m  .currency,.price-m  .value,.price-m  .separator,.price-m  .unit,.price-m  .comment{font-size:14px;}
+.price-l,.price-l  .currency,.price-l  .value,.price-l  .separator,.price-l  .unit,.price-l  .comment{font-size:16px;}
+.price-xl,.price-xl  .currency,.price-xl  .value,.price-xl  .separator,.price-xl  .unit,.price-xl  .comment{font-size:18px;}
+.price-thin,.price-thin  .currency,.price-thin  .value,.price-thin  .separator,.price-thin  .unit,.price-thin  .comment{font-weight:normal;color:#000;}
+.price-del,.price-del  .currency,.price-del  .value{font-weight:normal;color:#666;}
+/*--------------------------------------
+  end price */
+
+/* - ATM icon
+--------------------------------------*/
+
+a.atm16,a.atm32,a.atm32online {display:inline-block;height:20px;padding:2px 2px 2px 18px;text-align:left;font:10px verdana; line-height:2em; background:url(http://i02.i.aliimg.com/images/eng/wholesale/icon/alitalk-s.gif) left 5px no-repeat;}
+a.atm16grey, a.atm16none,a.atm32grey, a.atm32none {display:inline-block;height:20px;padding:2px 2px 2px 18px;text-align:left;font:10px verdana;line-height:2em;background:url(http://i02.i.aliimg.com/images/eng/wholesale/icon/alitalk-s-off.gif) left 5px no-repeat;}
+/*--------------------------------------
+  ATM icon */
+
+/*  - progress
+-------------------------------*/
+/* progress */
+.p4 ul li{width:25%;}
+.p4 ul li.last,.p4 ul li.lastcurrent{width:25.5%;right:0;z-index:1;}
+.p5 ul li{width:20%;}
+.p5 ul li.last,.p5 ul li.lastcurrent{width:20.5%;right:0;z-index:1;}
+
+.progress{height:32px;margin-bottom:20px;overflow:hidden;}
+.progress ul{height:100%;margin:0;padding:0;list-style:none;background:#e4e4e4;position:relative;}
+.progress ul li{position:relative;z-index:100;height:100%;font-weight:bold;font-size:13px;color:#907E61;line-height:32px;float:left;background:#fee6ba url(http://i03.i.aliimg.com/images/eng/escrow/bg/progressbar-bg.gif) no-repeat right -160px;}
+.progress ul li span{height:100%;background:url(http://i03.i.aliimg.com/images/eng/escrow/bg/progressbar-bg.gif) no-repeat 0 16px; }
+.progress ul li.last ,.progress ul li.lastcurrent{background-image:none;position:absolute;}
+.progress ul li span.con{padding-left:15px;}
+.progress ul li.last .con,.progress ul li.lastcurrent .con{padding-left:20px;}
+.progress ul li.current-pre{background-position:right -224px;}
+.progress ul li.current,.progress ul li.firstcurrent,.progress ul li.lastcurrent{background:#EFA334;color:#fff;}
+.progress ul li.current .arr{float:right;width:20px;background-position:right -352px;}
+.progress ul li .cor{width:2px;background-color:#fff;}
+.progress ul li.first .cor{float:left;background-position:0 0;}
+.progress ul li.last .cor{float:right;background-position:right -320px;position:relative;z-index:99}
+.progress ul li.firstcurrent .arr{float:right;width:20px;background-position:right -352px;}
+.progress ul li.firstcurrent .cor{float:left!important;background-position:0 -64px;}
+.progress ul li.lastcurrent .cor{float:right;background-position:right -96px;display:inline;}
+.progress ul li.unreach {background:#e4e4e4;color:#666;}
+.progress ul li.unreach .con{;background-position:right -160px;display:block;position:relative;z-index:1;_margin-left:-15px;_left:15px;_padding-left:15px;}
+.progress ul li.unreach.last .con{background-image:none;_padding-left:20px;}
+
+/*-------------------
+	end progress */
+
+/* ---------- start process status ------------ */
+.p4 ul li{width:25%;}
+.p4 ul li.last,.p4 ul li.lastcurrent{width:25%;}
+.process-min ul{background:#ffe6ba;color:#907e61;list-style:none;height:21px;overflow:hidden;font-size:11px;font-family:Arial;padding:0;margin:0;position:relative;}
+.process-min ul li,.process-min ul li.current span,.process-min ul li.lastcurrent span{background:url(http://i02.i.aliimg.com/images/eng/escrow/bg/process_sprites.png) no-repeat 0 -63px;}
+.process-min ul li{float:left;background-color:#ffe6ba;background-position:right -63px;}	
+.process-min ul li span{padding-left:10px;display:inline-block;height:21px;line-height:21px;}
+.process-min ul li.current{font-weight:bold;color:#fff;background-color:#efa334;background-position:right -21px;}
+.process-min ul li.current span{position:relative;z-index:2;left:-12px;padding-left:22px;background-position:0 0;}
+.process-min ul li.over{background-position:right -42px;background-color:#e4e4e4;color:#666;}	
+.process-min ul li.last{position:absolute;right:0;background-color:#e4e4e4;background-image:none;}	
+.process-min ul li.lastcurrent{font-weight:bold;color:#fff;background-color:#efa334;background-image:none;position:absolute;right:0;}
+.process-min ul li.lastcurrent span{position:relative;z-index:2;left:-12px;padding-left:22px;background-position:0 0;}
+/* ---------- end process status ------------ */
+	
+/* -----------title subject----------- */
+.subject{margin:15px 0 10px;height:25px;}
+.subject h1{font-size:16px;font-weight:bold;margin:0;font-family:arial;float:left;}
+.subject span{font-size:12px;float:right;}
+.subject .clink{float:left; line-height:32px;padding-left:20px;}
+
+	
+/* button
+	----------------------------*/
+input[disabled]{color:#aca899!important;text-shadow:#fff 1px 1px 1px;}
+input.buttonSkinA,input.buttonSkinA-XL,input.buttonSkinB,
+input.buttonSkinC,input.buttonSkinD,
+input.buttonSkinBDisable , input.buttonSkinADisable,
+input.blue {cursor:pointer;}
+input.L{font:bold 14px arial;padding:3px 17px!important;width:auto;overflow:visible;}
+input.XL{font:bold 20px arial !important;padding:4px 24px!important;width:auto;overflow:visible;}
+input.M{font:bold 12px arial;padding:2px 8px 1px 8px!important;width:auto;overflow:visible;}
+input.S{font:bold 10px verdana;padding:2px 8px 1px 8px!important;width:auto;overflow:visible;}
+input.L2{font:normal 14px arial;height:30px;line-height:30px;}
+
+
+
+
+
+input.buttonSkinA{color:#5e2708;background:#feeeb1 url(http://i02.i.aliimg.com/images/eng/style/css_images/buttonSkinAL.gif) bottom repeat-x!important;border-top:1px solid #F1921F!important;border-left:1px solid #F1921F!important;border-right:1px solid #C96315!important;border-bottom:1px solid #C34B0E!important;}
+input.buttonSkinA-XL{color:#5e2708;background:#feeeb1 url(http://i02.i.aliimg.com/images/eng/style/css_images/buttonSkinAXL.gif) bottom repeat-x!important;border-top:1px solid #F1921F!important;border-left:1px solid #F1921F!important;border-right:1px solid #C96315!important;border-bottom:1px solid #C34B0E!important;_vertical-align:top;}
+input.buttonSkinB{color:#033b63;background:#eef4ff url(http://i03.i.aliimg.com/images/eng/style/css_images/buttonSkinBL.gif) bottom repeat-x;border-left:1px solid #BAC6D9;border-top:1px solid #BAC6D9;border-right:1px solid #7A8699;border-bottom:1px solid #7A8699;}
+input.buttonSkinC{background:url(http://i03.i.aliimg.com/images/eng/style/css_images/buttonSkinDL.gif) bottom repeat-x;border:1px solid #f6b02b;color:#000;}
+input.buttonSkinD{background:url(http://i02.i.aliimg.com/images/eng/style/css_images/buttonSkinEL.gif) bottom repeat-x;border:1px solid #b4b4b4;color:#000;}
+input.buttonSkinBDisable , input.buttonSkinADisable{color:#bfbfbf;background:#f3f3f3;border:1px solid #ddd;}
+input.blue{border:1px solid #7e99c3;background:url(http://i03.i.aliimg.com/images/eng/style/css_images/button_bg_blue.gif);height:22px;color:#3d5378;}
+
+a.buttonRadiusA {background:url(http://i02.i.aliimg.com/images/eng/escrow/bg/radius-btn-bg.gif) no-repeat 0 0;padding-left:2px;height:25px;cursor:pointer;overflow:hidden;text-align:center;width:145px;display:block;text-decoration:none!important;}
+a.buttonRadiusA span{background: url(http://i02.i.aliimg.com/images/eng/escrow/bg/radius-btn-bg.gif) no-repeat right -25px;height:25px;display:block;color:#552000;font-weight:bold;font-size:13px;padding:3px 17px;}
+
+a.buttonRadiusB {background:url(http://i03.i.aliimg.com/images/eng/escrow/bg/pay-btn-L.gif) no-repeat 0 0;padding-left:3px;height:37px;cursor:pointer;overflow:hidden;text-align:center;width:150px;display:block;text-decoration:none!important;}
+a.buttonRadiusB span{background: url(http://i03.i.aliimg.com/images/eng/escrow/bg/pay-btn-L.gif) no-repeat right -37px;height:37px;display:block;color:#7a5233;font-weight:bold;font-size:18px;padding:8px 17px;}
+/*--------------------------
+		button*/
+
+/*--link button 
+	------------------------*/		
+.linkbutton-1,.linkbutton-2,.linkbutton-3,
+.linkbutton-1 span,.linkbutton-2 span,.linkbutton-3 span
+{display:inline-block;background-image:url(http://i03.i.aliimg.com/images/eng/style/css_images/linkbutton-sprites.gif);background-repeat:no-repeat;cursor:pointer; text-decoration:none !important;}
+.linkbutton-1 span,.linkbutton-2 span,.linkbutton-3 span{ height:22px;padding:0 12px 0 10px; font:normal 11px/22px tahoma,arial; }
+.linkbutton-1,.linkbutton-2,.linkbutton-3{ padding-left:2px; }
+.linkbutton-1{background-position:0 0;}
+.linkbutton-1 span{background-position:right -50px;color:#5e2708;}
+.linkbutton-2{background-position:0 -100px;}
+.linkbutton-2 span{background-position:right -150px;color:#004a80;}
+.linkbutton-3{background-position:0 -200px;}
+.linkbutton-3 span{background-position:right -250px;color:#000;}
+.btn-m{min-width:72px;_width:72px !important;text-transform:capitalize;}
+/*-- -----------------------------
+	link button  */		
+
+
+/* table 
+	------------------------*/
+.form-table td,.form-table th{padding:5px 8px;font-size:12px;line-height:20px}
+.form-table th{text-align:right;vertical-align:top;font-weight:normal}
+
+
+/* ----------- table a ----------- */
+.table-a{width:100%;font-size:12px;line-height:20px;}
+.table-a th{width:190px;text-align:right; vertical-align:top;color:#666;padding:6px;font-weight:normal;}
+.table-a td{text-align:left; vertical-align:top;padding:6px;}
+.table-a a{text-decoration:underline;color:#0066c8;font-weight:normal;}
+.table-a.writing th{color:#000;font-weight:normal;}
+.table-a.detail th{color:#666;font-weight:normal;}
+.table-a.detail td{font-weight:normal;}
+/* ----------- table a ----------- */
+
+/* ----------- H2 block-title ----------- */
+.block-title{clear:both;height:31px; border-bottom:2px solid #D8E6F3;padding-left:16px;margin-bottom:10px;margin-top:10px;overflow:hidden;}
+.block-title h2{background:#fff;float:left;font-size:13px;font-weight:bold;margin-left:0;padding:0px;color:#003663;}
+
+/*  - table list module
+-------------------------------*/  
+.table-list {width:100%;}
+.table-list .pic{width:48px;height:48px;*font-size:48px;border:0;float:left;margin-right:10px;}
+.table-list th{padding:8px;text-align:left;color:#656565;font-size:12px;font-family:arial;line-height:14px;border-bottom:1px solid #ccc;background:#fff url(http://i03.i.aliimg.com/images/eng/escrow/bg/table_list_th_bg.gif) repeat-x left bottom; font-weight:normal;}
+.table-list td{padding:8px;}
+.table-list th.last{border-right:none;}
+.table-list th.left-border{border-left:1px solid #e0e0e0;}
+.table-list th a.arrows{padding-right:15px;float:left;display:block;white-space:nowrap;}
+.table-list th a.arrows.up{background:url(http://i02.i.aliimg.com/images/eng/escrow/icon/ico_sortarrow_up.gif) right 5px no-repeat;}
+.table-list th a.arrows.down{background:url(http://i03.i.aliimg.com/images/eng/escrow/icon/ico_sortarrow_down.gif) right 5px no-repeat;}
+.table-list th a:hover,.table-list th a:link,.table-list th a:visited{color:#000;}
+.table-list td a:hover,.table-list td a:link,.table-list td a:visited{color:#0067ce; text-decoration:none;}
+.table-list td{border-bottom:1px solid #e0e0e0;font-size:12px;line-height:18px;}
+.table-list tr.noborder td{border:none;}
+.table-list td img.order-list-product-img{width:32px;}
+.table-list td img.sourcing-order-list-img{width:32px;}
+.table-list .confirm-buttons{border:none; }
+/*--------------------------------
+  end table list module  */
+
+
+   
+
+ /*  - table listB
+-------------------------------*/  
+.listB{border-bottom:1px solid #ccc;}
+.listB th{border-bottom:none;}
+.listB td{border-bottom:none!important;}
+.listB .order-list-rowtop a{display:block;float:left;}
+.listB .order-list-rowtop span{display:block;float:right;color:#000;}
+.listB .border td{border-bottom:6px solid #fff;background:#fff url(http://i03.i.aliimg.com/images/eng/escrow/other/line_h_01.gif) repeat-y right top;padding:0 10px;}
+.listB .border td.last{background:none;}
+.listB .border .first {width:300px;padding-left:0;}
+.listB .border .first img{float:left;margin:5px 10px;}
+.listB .border .first span{display:block;width:220px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:normal;}
+.listB .border .last{width:80px;}
+.listB .border .last a{display:block;float:none;margin:5px auto;white-space:nowrap;cursor:default;}
+.listB .border .last a span{text-align:center;cursor:pointer;}
+.listB .order-list-item-title td{padding:5px 8px;border-top:1px solid #ccc;background-color:#e4ecf7;}
+.listB .order-list-item-title td.first{font-weight:bold;}
+.listB .order-list-item-title td.last{text-align:right;}
+.listB .order-list-item-title td img{margin-left:10px;vertical-align:middle;}
+.listB .product-rows td{border-left:1px solid #e4e4e4;vertical-align:middle;font-size:11px;padding:5px 3px;}
+.listB .product-rows .first{border-left:none;}
+.listB .product-rows .last{border-right:none;}
+.listB .product-rows .last a{margin-bottom:5px;}
+.listB .product-rows .product-inner {border-collapse:collapse;}
+.listB .product-rows .product-inner  a{line-height:1.2;}
+.listB .product-rows .product-inner td{border:none;border-top:1px solid #e4e4e4;padding:4px;}
+.listB .product-rows .list-states{color:#029801;}
+.listB .options-table td{padding:0;border:none!important;}
+.listB .product-inner .first-row td{border:none;border-bottom:1px solid #e4e4e4;}
+/*--------------------------------
+  end table listB  */
+
+  /* ----------- page title ----------- */
+.subject{margin:15px 0 10px;height:25px;}
+.subject h1{font-size:16px;font-weight:bold;margin:0;font-family:arial;float:left;}
+.subject span{font-size:12px;float:right;}
+.subject .clink{float:left; line-height:32px;padding-left:20px;}
+/* ----------- - page title  ----------- */
+
+
+ /*  - new tab module
+	------------------------------- */
+.box .roundl,.box .roundr{position:absolute;top:0px;height:2px;width:2px;background-repeat:no-repeat;overflow:hidden;z-index:2;}
+.box .roundl{left:0px;background-position:0 0;}
+.box .roundr{right:0px;-right:-1px;background-position:0 -2px;}
+
+.tab a{cursor:hand;}
+.tab .middle{border:1px solid #ccc;border-bottom:none;position:relative;display:block;float:left;clear:both;}
+.tab{border-bottom:1px solid #ccc;display:block;list-style-type:none;padding:0;}	
+.tab li{float:left;overflow:hidden;width:auto;clear:none;display:list-item;position:relative;}
+.tab li.current{margin-bottom:-1px;}
+.tab .current a{font-weight:bold;cursor:default;}
+.tab-radio .tab{border-bottom:none;}
+
+.skin-a .tab a,.skin-a .tab a:hover,.skin-a .tab a:link,.skin-a .tab a:visited,.skin-a .tab a:active{color:#000;text-decoration:none;font-size:12px;}
+.skin-a	ul.tab,.skin-a ul .middle{border-color:#ccc;}
+.skin-a	ul.tab li{background-color:#f0f0f0;}
+.skin-a	ul.tab li.current{background-color:#fff;}
+.skin-a .box .roundl,.skin-a .box .roundr{background-image:url(http://i02.i.aliimg.com/images/eng/escrow/bg/tab_round_a.png);}
+
+.tab.size-a{height:28px;}
+.tab.size-a li{margin-right:5px;}
+.tab.size-a .middle{height:27px;line-height:27px;padding:0 19px;}
+.tab.size-a .current .middle{height:28px;}
+
+.pos-a .tab{margin:20px 0;}
+/* -------------------------------
+  end tab module */
+  
+/* ----------- tip-popup ----------- */
+.tip-help{cursor:pointer;}
+.tip-popup-trigger {display:inline-block;overflow:hidden;width:13px;height:13px;_margin-bottom:3px;text-indent:-500px;background:url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/tip_popup.gif) no-repeat 0 -40px;}
+.tip-popup {position:absolute;width:220px;border-bottom:solid 4px #cccccc;}
+
+.tip-popup .arrow {float:left;width:15px;height:8px;margin-bottom:-1px;margin-left:10px!important;margin-left:5px;font:0px/1em arial;background:url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/tip_popup.gif) no-repeat;}
+.tip-popup.left .arrow {float:left;margin-left:10px!important;margin-left:5px;}
+.tip-popup.right .arrow {float:right;margin-right:10px!important;margin-right:5px;}
+
+.tip-popup p {margin:0 0 0.5em 0;}
+.tip-popup a {color:#0066cb;text-decoration:underline!important;}
+.tip-popup a:visited {color:#0066cb;}
+.tip-popup .content {clear:both;padding:12px 12px 18px 12px;*padding-top:6px;border:solid 1px #79a2c2;font:normal 10px/1.5em verdana;background:#eef7fc;}
+.tip-popup .close-button {display:block;position:absolute;top:14px;right:7px;overflow:hidden;width:11px;height:11px;text-indent:-500px;background:#eef7fc url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/tip_popup.gif) no-repeat 0 -20px;z-index:99;}
+.tip-popup .title {font-weight:bold; font-size:10px; font-family:verdana;}
+.tip-popup .action {font-size:11px;text-align:center;}
+.hide-tip .tip-popup{ display:none !important; }
+/* ----------- tip-popup ----------- */
+
+
+
+/*  - new button
+------------------------------- */
+.main-btn-M{color:#3d1600;font:normal bold 14px Arial;padding:5px 15px;border:1px solid #f1921f;border-bottom-color:#c34b0e;border-right-color:#c96315;background:url(http://i03.i.aliimg.com/images/eng/escrow/bg/new_btn_bg.png) repeat-x 0 0;cursor:pointer;}
+.minor-btn-M{color:#000;font:normal normal 14px Arial;padding:5px 15px;border:1px solid #a8b6d0;border-top-color:#a8b7ce;border-bottom-color:#768396;border-right-color:808da0;background:url(http://i03.i.aliimg.com/images/eng/escrow/bg/new_btn_bg.png) repeat-x 0 -28px;cursor:pointer;}
+.main-linkbtn{color:#3d1600!important;text-decoration:none!important;font:normal bold 14px Arial;padding:0 15px;display:inline-block;height:28px;line-height:28px;border:1px solid #f1921f;border-bottom-color:#c34b0e;border-right-color:#c96315;background:url(http://i03.i.aliimg.com/images/eng/escrow/bg/new_btn_bg.png) repeat-x 0 0;}
+.minor-linkbtn{color:#3d1600!important;text-decoration:none!important;font:normal normal 14px Arial;padding:0 15px;display:inline-block;height:28px;line-height:28px;border:1px solid #bbb;border-bottom-color:#717171;border-right-color:#909090;background:url(http://i03.i.aliimg.com/images/eng/escrow/bg/new_btn_bg.png) repeat-x 0 -28px;cursor:pointer;}
+.main-btn-M, .minor-btn-M,.main-linkbtn,.minor-linkbtn {white-space:nowrap;}
+.disabled-btn{color:#a7a7a7;display:inline-block;height:28px;line-height:28px;padding:0 15px;border:1px solid #c9c9c9;border-right:1px solid #a4a4a4;border-bottom:1px solid #9a9a9a;background:url(http://i03.i.aliimg.com/images/eng/escrow/bg/new_btn_bg.png) repeat-x 0 -56px;}
+input.minor-linkbtn,input.main-linkbtn {_padding:0 7px;_line-height:14px;curcor:pointer}
+
+.disabled-btn{color:#bfbfbf !important;}
+/* -------------------------------
+  end btn module */
+  
+/* - board module notice status info */
+/* ------------------------------------------------------------ */
+.nt, .st, .inf{background-image:url(http://i03.i.aliimg.com/images/eng/escrow/icon/icon_bg.png); background-repeat: no-repeat;}
+.nt-m, .st-m, .inf-m{margin-top:10px;padding:10px 10px 10px 40px;}
+.nt-m{background-position:-990px -90px;}
+.st-m{background-position:10px 10px;}
+
+/*
+#payment-st{ font:bold 14px/18px Arial;}
+#payment-nt{ font:normal 10px/14px Arial;}
+*/
+/* ------------------------------------------------------------ */
+/* end board module notice status info */
+
+/* calendar begin */
+/* calendar begin version: YUI 2.6.0 */
+.yui-calcontainer { position:relative; padding:5px; background-color:#F7F9FB; border:1px solid #7B9EBD; float:left; _overflow:hidden; /* IE6 only, to clip iframe shim */}
+.yui-calcontainer iframe { position:absolute; border:none; margin:0;padding:0; z-index:0; width:100%; height:100%; left:0px; top:0px;}
+
+/* IE6 only */
+.yui-calcontainer iframe.fixedsize { width:50em; height:50em; top:-1px; left:-1px;}
+.yui-calcontainer.multi { padding:0;}
+.yui-calcontainer.multi .groupcal { padding:5px; background-color:transparent; z-index:1; float:left; position:relative; border:none;}
+.yui-calcontainer .title { font:100% sans-serif; color:#000; font-weight:bold; margin-bottom:5px; height:25px; position:absolute; top:3px;left:5px; z-index:1;}
+.yui-calcontainer .close-icon { position:absolute; overflow:hidden; text-indent:-10000em; right:3px; top:3px; border:none; z-index:1;}
+.yui-calcontainer .calclose { background: url("http://i03.i.aliimg.com/images/eng/style/icon/calx.gif") no-repeat; width:17px; height:13px; cursor:pointer;	}
+/* Calendar element styles */
+.yui-calendar { font:100% sans-serif; text-align:center; border-spacing:0; border-collapse:separate; position:relative;}
+.yui-calcontainer.withtitle { padding-top:1.5em;}
+.yui-calendar .calnavleft { position:absolute; overflow:hidden; text-indent:-10000em; cursor:pointer; top:2px; bottom:0; width:9px; height:12px; left:2px; z-index:1; background: url("http://i03.i.aliimg.com/images/eng/style/icon/icon_callt.gif") no-repeat;}
+.yui-calendar .calnavright { position:absolute; overflow:hidden; text-indent:-10000em; cursor:pointer; top:2px; bottom:0; width:9px; height:12px; right:2px; z-index:1; background: url("http://i03.i.aliimg.com/images/eng/style/icon/icon_calrt.gif") no-repeat;}
+.yui-calendar td.calcell { padding:.1em .2em; border:1px solid #E0E0E0; text-align:center;}
+.yui-calendar td.calcell a { color:#003DB8; text-decoration:none;}
+.yui-calendar td.calcell.today { border:1px solid #000;}
+.yui-calendar td.calcell.oom { cursor:default; color:#999; background-color:#EEE; border:1px solid #E0E0E0;}
+.yui-calendar td.calcell.selected { color:#003DB8; background-color:#FFF19F; border:1px solid #FF9900;}
+.yui-calendar td.calcell.calcellhover { cursor:pointer; color:#FFF; background-color:#FF9900; border:1px solid #FF9900;}
+.yui-calendar td.calcell.calcellhover a { color:#FFF;}
+.yui-calendar td.calcell.restricted { text-decoration:line-through;}
+.yui-calendar td.calcell.previous { color:#CCC;}
+.yui-calendar td.calcell.highlight1 { background-color:#CCFF99; }
+.yui-calendar td.calcell.highlight2 { background-color:#99CCFF; }
+.yui-calendar td.calcell.highlight3 { background-color:#FFCCCC; }
+.yui-calendar td.calcell.highlight4 { background-color:#CCFF99; }
+.yui-calendar .calhead { border:1px solid #E0E0E0; vertical-align:middle; background-color:#FFF;}
+.yui-calendar .calheader { position:relative; width:100%; text-align:center;}
+.yui-calendar .calheader img { border:none;}
+.yui-calendar .calweekdaycell { color:#666; font-weight:normal; text-align:center; width:1.5em;}
+.yui-calendar .calfoot { background-color:#EEE;}
+.yui-calendar .calrowhead, .yui-calendar .calrowfoot { color:#666; font-size:9px; font-style:italic; font-weight:normal; width:15px;}
+.yui-calendar .calrowhead { border-right-width:2px;}
+/* CalendarNavigator */
+.yui-calendar a.calnav { _position:relative; padding-left:2px; padding-right:2px; text-decoration:none; color:#000;}
+.yui-calendar a.calnav:hover { border:1px solid #003366; background-color:#6699cc; background: url(calgrad.png) repeat-x; color:#fff; cursor:pointer;}
+.yui-calcontainer .yui-cal-nav-mask { position:absolute; z-index:2; display:none; margin:0; padding:0; left:0; top:0; width:100%; height:100%; _width:0;    /* IE6, IE7 Quirks - width/height set programmatically to match container */ _height:0; background-color:#000; opacity:0.25; *filter:alpha(opacity=25);}
+.yui-calcontainer .yui-cal-nav { position:absolute; z-index:3; display:none; padding:0; top:1.5em; left:50%; width:12em; margin-left:-6em; border:1px solid #7B9EBD; background-color:#F7F9FB; font-size:93%;}
+.yui-calcontainer.withtitle .yui-cal-nav { top:3.5em;}
+.yui-calcontainer .yui-cal-nav-y,
+.yui-calcontainer .yui-cal-nav-m,
+.yui-calcontainer .yui-cal-nav-b { padding:2px 5px 2px 5px;}
+.yui-calcontainer .yui-cal-nav-b { text-align:center;}
+.yui-calcontainer .yui-cal-nav-e { margin-top:2px; padding:2px; background-color:#EDF5FF; border-top:1px solid black; display:none;}
+.yui-calcontainer .yui-cal-nav label { display:block; font-weight:bold;}
+.yui-calcontainer .yui-cal-nav-mc { width:100%; _width:auto; /* IE6 doesn't like width 100% */}
+.yui-calcontainer .yui-cal-nav-y input.yui-invalid { background-color:#FFEE69; border: 1px solid #000;}
+.yui-calcontainer .yui-cal-nav-yc { width:3em;}
+.yui-calcontainer .yui-cal-nav-b button { font-size:93%; text-decoration:none; cursor: pointer; background-color: #79b2ea; border: 1px solid #003366; border-top-color:#FFF; border-left-color:#FFF; margin:1px;}
+.yui-calcontainer .yui-cal-nav-b .yui-default button { /* not implemented */}
+/* Specific changes for calendar running under fonts/reset */
+.yui-calendar .calbody a:hover {background:inherit;}
+p#clear {clear:left; padding-top:10px;}
+/* calendar end version: 2.6.0 */
+
+.calendarItem{display:inline;} /* add by justin, for two calendar in a line */
+/* calendar end*/
+
+/* ----------- chat-block ----------- */
+.chat-block {font-size:12px;margin-bottom:15px;}
+.chat-block .chatter{width:80px;}
+.chat-block .chatPhoto{border:1px solid #ccc;height:65px;width:65px;font-size:65px;*font-size:60px;}
+.chat-block .chat-date{text-align:right;margin:14px -70px 0 0;font-size:10px;font-family:verdana;color:#666666;}
+.chat-block .contactName{font-family:verdana;font-size:10px;}
+
+.chat-block.left .chatter{float:left;}
+.chat-block.left .chat-body{float:left;width:577px;padding-left:12px;background:url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/chat_block_bg.gif) no-repeat left top;overflow:hidden;}
+.chat-block.left .chat-content{border:1px solid #d7d7d7; border-left:none; background-color:#fff;padding:8px 90px 10px 12px;}
+
+.chat-block.left .chat-body.hightlight{float:left;width:577px;padding-left:12px;background:url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/chat_block_bg2.gif) no-repeat left top;}
+.chat-block.left .chat-body.hightlight .chat-content{border:1px solid #FDDB9B; border-left:none; background-color:#FEFBD0;padding:8px 90px 10px 12px;}
+
+
+
+.chat-block.right .chatter{float:right;}
+.chat-block.right .chat-body{float:right;width:577px;padding-right:12px;background:url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/chat_block_bg.gif) no-repeat right top;overflow:hidden;}
+.chat-block.right .chat-content{border:1px solid #D7D7D7; border-right:none; background-color:#FFFFF2;padding:8px 90px 10px 12px;}
+/* ----------- chat-block ----------- */
+
+.total-costs {padding:0;margin:15px;float:right;}
+.total-costs li{list-style:none;font:normal 13px arial;line-height:30px;font-size:0;}
+.total-costs li span{font-size:12px;}
+.total-costs li .tip{display:inline-block;text-align:right;width:150px;}
+.total-costs .board.important{font:10px verdana;margin:5px 0;padding:8px; }
+
+.price-item{ text-align:right;width:266px !important;position:relative;}
+.price-item span{ display:inline-block; }
+.price-item .item-price { text-align:right;min-width:90px;_width:90px;margin:0 !important;}
+.price-item .red { color:#DC093A; font-weight:bold;}
+.price-item .symbol-minus ,.price-item .symbol-equal ,.price-item .symbol-addition{ left:15px;top:10px;}
+.total-costs .tip-info{position:absolute;text-align:left;left:-370px;top:10px;width:350px;color:#666666;font:normal 10px Verdana;overflow:hidden;}
+
+.order-calculation-link{ position:absolute;right:0px;top:0;float:right;display:block;background-position:-100px -300px;height:20px;line-height:20px;font:10px verdana;padding:0 0 0 20px;}
+
+.calculation-tool th{ text-align:right; font-weight:normal;}
+
+/* ----------- respond-block ----------- */
+.respond-block {font-size:12px;margin-bottom:15px;padding:0 0 0 0;width:680px;overflow:hidden;}
+.respond-block .respond-tag{height:20px;text-align:right;padding:0 15px 0 0;}
+.respond-block .chatter{width:80px;}
+.respond-block .chatPhoto{border:1px solid #ccc;height:65px;width:65px;font-size:65px;*font-size:60px;}
+.respond-block .chat-date{text-align:right;margin:14px -70px 0 0;font-size:10px;font-family:verdana;color:#666666;}
+.respond-block .contactName{font-family:verdana;font-size:10px;}
+.respond-block .respond-button{font:bold 13px arial !important;margin:10px 10px 0 320px;*margin:10px 10px 0 110px;padding:2px 15px;background:url(http://i03.i.aliimg.com/images/eng/style/css_images/buttonSkinBL.gif) repeat scroll 0 0 !important;border:solid 1px #BAC6D9 !important; color:#000000 !important;}
+
+
+
+.history-msg-content .respond-block.left .chatter{float:left;}
+.history-msg-content .respond-block.left .respond-body{float:left;width:570px;padding-left:12px;}
+.history-msg-content .respond-block.left .respond-body textarea{width:100%;height:90px;}
+.history-msg-content .respond-block.left .respond-content{border:1px solid #d7d7d7; border-left:none; background-color:#fff;padding:8px 90px 10px 12px;}
+
+.respond-body #respond-textarea {overflow:auto;padding:5px;}
+
+.history-msg-content .respond-block.right .chatter{float:right;}
+.history-msg-content .respond-block.right .respond-body{float:right;width:570px;padding-right:12px;}
+.history-msg-content .respond-block.right .respond-body textarea{width:100%;height:90px;}
+.history-msg-content .respond-block.right .respond-content{border:1px solid #D7D7D7; border-right:none; background-color:#FFFFF2;padding:8px 90px 10px 12px;}
+.history-msg-content .respond-block.right .respond-btns{margin-left:10px;*margin-left:220px;}
+
+#respond-btns{+text-align:center;}
+/* ----------- respond-block ----------- */
+
+
+/* ----------- 页面信息弹出窗 ----------- */ 
+
+.tip-window {width:100%; margin-bottom:15px; _zoom:1; _display:expression(onmousemove=new Function("if(!this.inited){this.style.zoom=1;this.inited=true;}"));}
+
+.tip-window .action-title {_display:expression(onmousemove=new Function("this.style.zoom=1;"));}
+
+.tip-window .action-title span{display:block;margin-left:15px;}
+.tip-window .action-wrapper {border:1px solid #6CB6DA;padding:1px;background:#fff;}
+.tip-window .action-content{background:#fff;padding:12px;border:5px solid #d8e6f3;}
+.tip-window .shadow-outer {zoom:1;background:url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/tips_window_shadow_2.png) repeat-y left 0;}
+.tip-window .shadow-wrapper {background:url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/tips_window_shadow_2.png) repeat-y right 0;}
+.tip-window .shadow-content {font-size:12px;background:#fff;padding:18px;margin:0 9px;} 
+.tip-window .shadow-foot{padding-left:9px;background:url(http://i02.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/tips_window_shadow.png) no-repeat 0 -339px;height:9px;}
+.tip-window .shadow-foot-right{background:url(http://i02.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/tips_window_shadow.png) no-repeat right -355px;height:9px;}
+
+.tip-window .title-a {position:relative;z-index:3;margin-bottom:-5px!important;background:url(http://i02.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/tips_window_shadow.png) no-repeat 0 -148px;height:29px;}
+.tip-window .title-a span { line-height:21px;background:url(http://i02.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/tips_window_shadow.png) no-repeat scroll right -94px;padding:8px 15px 0 0;}
+.tip-window .title-b {margin-bottom:-3px!important;background:url(http://i02.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/tips_window.gif) no-repeat 0 0;height:44px;font-size:14px;font-weight:bold;line-height:20px;}
+.tip-window .title-b span {background:url(http://i02.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/tips_window.gif) no-repeat scroll right -50px;padding:10px 17px 15px 0;}
+.tip-window .title-c {margin-bottom:-3px!important;height:41px;line-height:18px;margin-bottom:1px !important;font-size:14px;font-weight:bold;background:#fff;}
+.tip-window .title-c span {background:#fff;padding:10px 17px 11px 0px;}
+
+.tip-window.left .action-title{float:left;margin-right:5px;}
+.tip-window.left .title-a {position:relative;z-index:3;margin-bottom:-5px!important;background:url(http://i02.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/tips_window_shadow.png) no-repeat 0 -47px;height:29px;}
+.tip-window.left .shadow-head {background:url(http://i02.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/tips_window_shadow.png) no-repeat 0 -317px;height:9px;padding-left:14px;overflow:hidden;}
+.tip-window.left .shadow-head-right{background:url(http://i02.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/tips_window_shadow.png) no-repeat right -297px;height:9px;overflow:hidden;}
+
+.tip-window.right .action-title{float:right;margin-left:5px;}
+.tip-window.right .shadow-head {background:url(http://i02.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/tips_window_shadow.png) no-repeat 0 -1px;height:9px;padding-left:14px;overflow:hidden;}
+.tip-window.right .shadow-head-right{background:url(http://i02.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/tips_window_shadow.png) no-repeat right -272px;height:9px;overflow:hidden;}
+
+
+
+.tip-window.w320{width:320px;}
+.tip-window.w240{width:280px;}
+.tip-window .action {margin-top:6px;}
+.tip-window .action a{text-decoration:underline;color:#0066c8;}
+
+
+
+
+.tip-window.skin-a .title-c { font-size:1em;font-weight:normal; }
+.tip-window.skin-a .title-b { font-size:1em;font-weight:normal; background-image:url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/tips_window_2.gif)  }
+.tip-window.skin-a .title-b span { background-image:url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/tips_window_2.gif)  }
+.tip-window.skin-a .action-content { border:1px solid #6CB6D9; }
+
+/* ----------- 页面信息弹出窗 ----------- */
+
+/* -----------new me style start -------- */
+
+.tablefixed{table-layout:fixed;word-wrap:break-word;word-break:break-all;word-break/* */:normal;}
+
+.header, .page, .foot {margin:0 auto;width:960px;}
+.page {margin-bottom:10px !important;}
+/* 覆盖原来4v下的backoffice定义的背景(页面重构后可以删掉) */
+#page960.backOffice {background:none !important;}
+.grid-c2-s5 {border-top:6px solid #EDF2F8}
+.col-main {border-top:1px solid #D8E4F0;}
+
+.header {position:relative;_position:relative;z-index:1;height:60px;}
+
+/*new me style hack ,can delete after all replaced*/
+#page960.frameA .colL {width:190px!important;_width:190px;}
+
+.seller-logo, .headSwitch {float:left;}
+.seller-logo {margin:9px 0;padding:1px;width:285px;height:39px;overflow:hidden;}
+.seller-logo a {float:left;width:100%;height:100%;text-indent:-500px;background:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/me_skin.png) no-repeat 0 0;overflow:hidden;}
+
+.headswitch {position:absolute;z-index:1;top:16px;left:295px;color:#666;}
+.currentLang {float:left;padding:0 22px 0 10px;height:21px;font:700 12px/21px Arial;border:1px solid #FFF;border-bottom:0 none;background:#FFF url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/me_skin.png) no-repeat right -942px;cursor:pointer;overflow:hidden;}
+.headswitch-active .currentLang {position:relative;z-index:1;border-color:#CFCFCF;border-bottom:none;}
+/* ul的margin属性被4v下的common.css覆盖了，所以这里需要加important */
+.lang-item {margin:0 !important;display:none;clear:both;float:left;width:90px;border:1px solid #CFCFCF;background:#FFF;overflow:hidden;zoom:1;}
+.headswitch-active .lang-item {display:block;position:relative;z-index:0;top:-1px;}
+.lang-item li {clear:both;float:left;line-height:23px;padding:0 10px;white-space:nowrap;}
+.lang-item li a, .lang-item li a:visited {color:#06c;}
+.lang-item li a:hover {color:#F60;}
+/* 仅作语言切换用 */
+.lang_zh_CN .label_zh_CN, .lang_en_US .label_en_US, .lang_zh_TW .label_zh_TW {display:none;}
+
+.goto-my-alibaba {float:right;position:static !important;margin:45px 5px 0 0;padding-top:0 !important;width:110px;height:10px;background:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/me_skin.png) no-repeat 0 -50px;}
+.goto-my-alibaba a {float:left;width:100%;height:100%;text-indent:-200px;overflow:hidden;}
+
+
+/*--------------------------------
+ * same with me/modules/button.css
+ * buttons */
+.yellowish-btn,.yellow-btn{display:inline-block;zoom:1;border:0 none;background:none;padding:0 20px;+padding:0 10px;border-width:1px;border-style:solid;vertical-align:middle;text-align:center;text-decoration:none;font-size:14px;background-image:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/me_skin.png);background-repeat:repeat-x;overflow:hidden;cursor:pointer;}
+.yellowish-btn:hover,.yellow-btn:hover {text-decoration:none;}
+
+.yellowish-btn input,.yellow-btn input, .yellowish-btn button,.yellow-btn button {float:left;width:100%;border:0 none;font-size:14px;background:none;}
+
+/* 这里的important在页面重构后可以删掉 */
+.yellowish-btn, .yellowish-btn:visited, .yellowish-btn:hover {height:25px;line-height:23px;border-color:#FCCD35 #FAA320 #FAA320;color:#7A2D01 !important;background-position:0 -350px;}
+.yellowish-btn input, .yellowish-btn button {height:27px;color:#7A2D01;}
+
+.yellow-btn, .yellow-btn:visited, .yellow-btn:hover {height:28px;line-height:28px;border-color:#F29120 #C04C0F #C04C0F #F29120;font-weight:700;color:#3C1600;background-position:0 -400px;}
+.yellow-btn input, .yellow-btn button {height:30px;font-weight:700;color:#3C1600;}
+
+.gray-copy-btn {display:inline-block;zoom:1;padding-right:10px;height:21px;line-height:21px;border:2px solid #FFF;border-right-color:#808080;border-bottom-color:#808080;text-indent:25px;background:#D4D0C8 url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/me_skin.png) no-repeat 10px -745px;cursor:pointer;}
+a.gray-copy-btn, .gray-copy-btn:visited, .gray-copy-btn:hover {text-decoration:none;color:#333;}
+
+
+.disabled-btn{color:#a7a7a7!important;display:inline-block;height:28px;line-height:28px;padding:0 15px;border:1px solid #c9c9c9!important;border-right:1px solid #a4a4a4!important;border-bottom:1px solid #9a9a9a!important;background:url(http://i03.i.aliimg.com/images/eng/escrow/bg/new_btn_bg.png) repeat-x 0 -56px!important;}
+
+/* list box-block 
+ * widget container with a title bar
+ * same with "box" module in css/5v/wholesale/me/component/box.css
+ * to prevent conflict name "box" ,change name to "box-block"
+ ------------------------------------------------------------ */
+.box-block {border:1px solid #DAE6F8; margin-bottom:10px;line-height:1.3;}
+.box-block .box-block-title{height:28px;padding:0 12px;font:bold 12px/28px Arial;color:#000;background:#EBF3FF;}
+.box-block .box-block-content{padding:10px 12px; zoom:1;}
+
+
+.box-block-yellow{border-color:#F1D38B; padding:1px;}
+.box-block-yellow .box-block-title{height:26px;padding:0 11px 1px;font:bold 12px/26px Arial;border:1px solid #FCF4CD;border-bottom:0;background:#FFFAE0;}
+.box-block-yellow .box-block-content{border:1px solid #FCF4CD; padding:10px;}
+
+.box-block-green{border-color:#E8E8E8;}
+.box-block-green .box-block-title{background:#F0F5DF;}
+/* ------------------------------------------------------------ */
+/* list box-block */
+
+/* list box-block 
+ * widget container with a title bar
+ * same with "box" module in css/5v/wholesale/me/component/box.css
+ * to prevent conflict name "box" ,change name to "box-block"
+ ------------------------------------------------------------ */
+.colL .box{border:1px solid #DAE6F8; margin-bottom:10px;line-height:1.3;}
+.colL .box .box-title{height:28px;padding:0 12px;font:bold 12px/28px Arial;color:#000;background:#EBF3FF;}
+.colL .box .box-content{padding:10px 12px; zoom:1;}
+
+
+.colL .box-yellow{border-color:#F1D38B; padding:1px;}
+.colL .box-yellow .box-title{height:26px;padding:0 11px 1px;font:bold 12px/26px Arial;border:1px solid #FCF4CD;border-bottom:0;background:#FFFAE0;}
+.colL .box-yellow .box-content{border:1px solid #FCF4CD; padding:10px;}
+
+.colL .box-green{border-color:#E8E8E8;}
+.colL .box-green .box-title{background:#F0F5DF;}
+/* ------------------------------------------------------------ */
+/* list box-block */
+
+/* service 
+ * for service blocks in left sidebar ,mail,xiaohe online ,etc.
+ ------------------------------------------------------------ */
+.sub-service {}
+.sub-service .message {padding-bottom:12px;border-bottom:1px solid #D4E1F1;color:#666;}
+	
+.inp-text {padding:5px 2px 4px;border:1px solid #C0C0C0;height:13px;line-height:13px;color:#666;}
+.inp-text-active {color:#333;}
+.inp-textarea {border:1px solid #C0C0C0;line-height:15px;color:#333;}
+
+.col-sub-ask {padding:15px 0;}
+.col-sub-ask dt {text-indent:35px;line-height:25px;background:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/me_skin.png) no-repeat 0 -500px}
+.col-sub-ask dd {padding-top:5px;text-align:center;}
+.col-sub-ask .inp-text {margin-bottom:10px;width:158px;}
+.col-sub-ask .inp-btn {width:86px;height:22px;border:1px solid #B5B5B5;font:normal 12px/15px Arial;text-align:center;color:#333;background:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/me_skin.png) repeat-x 0 -100px;}
+
+.xh-online {padding:15px 0 0 0;border-top:1px solid #D4E1F1;overflow:hidden;}
+.xh-online a {display:block;padding-top:35px;height:0;width:128px;background:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/me_skin.png) no-repeat 0 -450px;overflow:hidden;}
+.xh-online div {clear:both;margin:3px 0 10px;overflow:hidden;}
+.user-cgs .xh-online div {margin-bottom:0;}
+.xh-online div a, .xh-online div a:visited {display:block;padding:0;height:47px;width:162px;border:1px solid #C0C0C0;color:#333;background:none;}
+.xh-online div a:hover {text-decoration:none;}
+
+.sub-contact {padding-bottom:11px;}
+.sub-contact dt, .sub-contact dd {padding-left:25px;}
+.sub-contact dt {background:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/me_skin.png) no-repeat 0 -599px;}
+.sub-contact dd {color:#666;}
+.sub-contact dd strong {color:#FD7C01;}
+.contact-mail {position:relative;z-index:0;padding-top:13px;border-top:1px solid #D4E1F1;padding-left:25px;background:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/me_skin.png) no-repeat 0 -636px;}
+.contact-mail-active {z-index:1000;}
+.user-cgs .contact-mail {margin-bottom:13px;padding-top:0;border:0 none;background-position:0 -649px;}
+.contact-morehelp {padding:7px 0 7px 25px;background:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/me_skin.png) no-repeat 0 -542px;}
+.contact-morehelp a, .contact-morehelp a:visited {color:#FF6600}
+.contact-morehelp a:hover {color:#06c;}
+.contact-mail .maskIframe {position:absolute !important;}
+.contact-form {position:absolute;top:-41px;left:-10px;visibility:hidden;padding:1px;width:350px;border:1px solid #608CBD;background:#FFF;}
+.contact-mail-active .contact-form {visibility:visible;}
+.contact-form-active {display:block;}
+.contact-form h3 {text-indent:10px;font:700 12px/26px Arial;background:#EAF6F6;}
+.contact-form .close-link {position:absolute;top:4px;right:4px;padding-top:14px;height:0;width:14px;background:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/me_skin.png) no-repeat 0 -1200px;overflow:hidden;}
+.contact-form .contact-wrapper {padding:8px 7px;border:1px solid #EAF6F6;}
+.contact-form p {text-align:right;zoom:1;overflow:hidden;}
+.contact-form .inputfield, .contact-form .email-content {border:1px solid #7BB3E6;text-align:left;color:#666;}
+.contact-form .inputfield {margin-bottom:20px;padding:4px 2px;width:328px;height:13px;line-height:13px;}
+.contact-form .email-content {margin-bottom:10px;width:330px;}
+.contact-form .yellowish-btn {padding:0;width:80px;text-align:center;}
+
+/* ------------------------------------------------------------ */
+/* service */
+
+
+
+/* ------------------------------------------------------------ */
+/* email verify */
+/*---------------------START:email verify ------------------------------*/
+.email-verify-notice{display:none;position:relative; padding-left:30px; line-height:20px; background:#ffffe5; border:1px solid #ffcc33; width:703px; padding:10px 15px 15px 40px; font-size:12px; color:#333; font-family:Arial; margin:20px 0px;}
+.email-verify-notice .icon-notice{position:absolute; width:20px; height:20px; background:url(http://i03.i.aliimg.com/wimg/buyer/sprite/icon-feedback-info.png) 0 -380px no-repeat; left:12px; top:12px;}
+.email-verify-notice .send-email{font-weight:bold;}
+
+/*---------------------END:email verify------------------------------*/
+.menu-box .sourcing-entrance{padding:6px 0 0px 0;height:32px;}
+.menu-box .sourcing-entrance a{height:29px;line-height:12px;padding:3px 0 0 0;}
+.menu-box .sourcing-entrance a span{font-size:10px;display:block;color:#999;padding-top:2px;}
+.menu-box .current a span{color:#F9F9F9;}
+.board-notice,
+.board-notice-simple,
+.board-notice-large,
+.board-success,
+.board-success-simple,
+.board-success-large,
+.board-alert,
+.board-alert-simple,
+.board-alert-large,
+.board-error,
+.board-error-simple,
+.board-error-large{margin:10px 0;border-width:1px;border-style:solid;padding:10px;font-size:12px;background-image:url(http://i03.i.aliimg.com/images/eng/style/css_images/sprites/sprites-notice.png);background-repeat:no-repeat;}
+.board-notice{border-color:#c4d3e5;padding-left:38px;background-color:#f6f9fd;background-position:-350px 0;}
+.board-notice-simple{border:0;padding-left:38px;background-position:-350px 0px;}
+.board-notice-large{border-color:#c4d3e5;padding-left:53px;background-color:#f6f9fd;background-position:-300px -50px;}
+.board-success{border-color:#d1e6b3;padding-left:42px;background-color:#f2fcf1;background-position:-250px -100px;}
+.board-success-simple{border:0;padding-left:42px;background-position:-250px -102px;}
+.board-success-large{border-color:#d1e6b3;padding-left:54px;background-color:#f2fcf1;background-position:-200px -150px;}
+.board-alert{border-color:#fad388;padding-left:42px;background-color:#fffdeb;background-position:-150px -200px;}
+.board-alert-simple{border:0;padding-left:42px;background-position:-150px -200px;}
+.board-alert-large{border-color:#fad388;padding-left:56px;background-color:#fffdeb;background-position:-100px -250px;}
+.board-error{border-color:#ffcacd;padding-left:41px;background-color:#ffeeef;background-position:-50px -300px;}
+.board-error-simple{border:0;padding-left:41px;background-position:-50px -300px;}
+.board-error-large{border-color:#ffcacd;padding-left:54px;background-color:#ffeeef;background-position:0 -350px;}
+.board-notice-middle{margin:10px 0;position:relative;border:1px solid #c4d3e5;background-color:#f6f9fd;overflow:hidden;}
+.board-notice-middle .board-inner{position:relative;float:left;left:50%;}
+.board-notice-middle .board-wrap{position:relative;float:left;left:-50%;padding:17px 10px 17px 53px;font-size:14px;background:url(http://i03.i.aliimg.com/images/eng/style/css_images/sprites/sprites-notice.png) no-repeat -300px -50px;}
+.board-clean{margin:0;border:0;background-color:transparent;}
+
+
+
+/* Start add board attention */
+.board-attention,
+.board-attention-simple,
+.board-attention-large{margin:10px 0;padding:3px;font-family:arial;font-size:12px; color:#404040;border-width:1px;border-style:solid;background-image:url(http://i03.i.aliimg.com/wimg/buyer/sprite/com_board_sprite.png);background-repeat:no-repeat;background-position:-550px 0;}
+
+.board-attention-simple{padding:3px;padding-left:24px;font-size:12px;line-height:16px;}
+.board-attention-large{padding:13px;padding-left:59px;font-size:14px;font-weight:bold;line-height:24px;}
+
+.board-attention {border-color:#86cfff;background-color:#ecf8ff;}
+.board-attention-simple {background-position:-200px -300px;}
+.board-attention-large {background-position:-150px -350px;}
+#country-attention-msg{margin-top:0;}
+#inf-dlg-shipping .caption-selector {
+    margin-bottom: 10px;
+}
+/* End add board attention */
+/* buttons */
+.yellowish-btn,.yellow-btn{display:inline-block;zoom:1;border:0 none;background:none;padding:0 20px;+padding:0 10px;border-width:1px;border-style:solid;vertical-align:middle;text-align:center;text-decoration:none;font-size:14px;background-image:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/me_skin.png);background-repeat:repeat-x;overflow:hidden;cursor:pointer;}
+.yellowish-btn:hover,.yellow-btn:hover {text-decoration:none;}
+.yellowish-btn input,.yellow-btn input, .yellowish-btn button,.yellow-btn button {float:left;width:100%;border:0 none;font-size:14px;background:none;}
+.yellowish-btn, .yellowish-btn:visited, .yellowish-btn:hover {height:25px;line-height:23px;border-color:#FCCD35 #FAA320 #FAA320;color:#7A2D01 !important;background-position:0 -350px;}
+.yellowish-btn input, .yellowish-btn button {height:27px;color:#7A2D01;}
+.yellow-btn, .yellow-btn:visited, .yellow-btn:hover {height:28px;line-height:28px;border-color:#F29120 #C04C0F #C04C0F #F29120;font-weight:700;color:#3C1600!important;text-decoration:none !important;background-position:0 -400px;}
+.yellow-btn input, .yellow-btn button {height:30px;font-weight:700;color:#3C1600;}
+.gray-copy-btn {display:inline-block;zoom:1;padding-right:10px;height:21px;line-height:21px;border:2px solid #FFF;border-right-color:#808080;border-bottom-color:#808080;text-indent:25px;background:#D4D0C8 url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/me_skin.png) no-repeat 10px -745px;cursor:pointer;}
+a.gray-copy-btn, .gray-copy-btn:visited, .gray-copy-btn:hover {text-decoration:none !important;color:#333;}
+.disabled-btn{color:#a7a7a7!important;display:inline-block;height:28px;line-height:28px;padding:0 15px;border:1px solid #c9c9c9!important;border-right:1px solid #a4a4a4!important;border-bottom:1px solid #9a9a9a!important;background:url(http://i03.i.aliimg.com/images/eng/escrow/bg/new_btn_bg.png) repeat-x 0 -56px!important;}
+
+/* 以上按钮的应用场景有数据纵横、营销中心,ME中请使用下面新的组件 */
+.btn-submit-l, .btn-submit-m, .btn-submit-s, .btn-cancel-l, .btn-cancel-m, .btn-cancel-s, .btn-disabled-l, .btn-disabled-m, .btn-disabled-s  {display:inline-block;border:0 none;border:1px solid #666;font-weight:700;font-family:Arial;background:none;background-image:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/me_skin.png);background-repeat:no-repeat;*overflow:hidden;zoom:1;cursor:pointer;}
+.btn-submit-l:hover, .btn-submit-m:hover, .btn-submit-s:hover, .btn-cancel-l:hover, .btn-cancel-m:hover, .btn-cancel-s:hover, .btn-disabled-l:hover, .btn-disabled-m:hover, .btn-disabled-s:hover {text-decoration:none;}
+.btn-submit-l, .btn-submit-m, .btn-submit-s {border-color:#F9A320;border-top-color:#FFCD34;color:#7B2E00 !important;}
+.btn-cancel-l, .btn-cancel-m, .btn-cancel-s {border-color:#B5B5B5;border-top-color:#D1D1D1;color:#333 !important;}
+.btn-disabled-l, .btn-disabled-m, .btn-disabled-s {border-color:#D1D1D1;color:#d1d1d1 !important;}
+.btn-submit-l, .btn-cancel-l, .btn-disabled-l {padding:0 20px;height:35px;line-height:34px;font-size:20px;}
+.btn-submit-m, .btn-cancel-m, .btn-disabled-m {padding:0 14px;height:24px;line-height:23px;font-size:13px;}
+.btn-submit-s, .btn-cancel-s, .btn-disabled-s {padding:0 10px;height:18px;line-height:17px;font-size:11px;}
+.btn-submit-l {background-position:0 -1750px;}
+.btn-submit-m {background-position:0 -1800px;}
+.btn-submit-s {background-position:0 -1850px;}
+.btn-cancel-l, .btn-disabled-l {background-position:0 -1900px;}
+.btn-cancel-m, .btn-disabled-m {background-position:0 -1950px;}
+.btn-cancel-s, .btn-disabled-s {background-position:0 -2000px;}
+/* me dialog */
+.me-dialog, .me-dialog-notitle {position:fixed;_position:absolute;border:1px solid #A1C6FF;width:320px;overflow:hidden;}
+/* 这里用id来定义主要是为了避免a被页面上其它css重定义 */
+#me-dialog .me-dialog-close, #me-dialog .me-dialog-close:visited {position:absolute;padding-top:17px;height:0;width:17px;background:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/me_skin.png) no-repeat 0 -1650px;overflow:hidden;}
+/* 这里用class为了下面能复写 */
+.me-dialog-close {top:5px;right:5px;}
+.me-dialog-notitle .me-dialog-close {top:6px;right:7px;outline:none;}
+#me-dialog .me-dialog-close:hover {background-position:0 -1700px;}
+.me-dialog-title h3 {height:27px;text-indent:15px;font:700 12px/27px Arial;background:#E5F3FF;}
+.me-dialog-bd {padding:15px 15px 10px;background:#FFF;}
+.me-dialog-notitle .me-dialog-bd {border:3px solid #DEECFF;background:#FFF;}
+.me-dialog-btn {padding-top:10px;text-align:center;}
+.me-dialog-btn input {margin:0 5px;}
+
+.me-dialog {opacity:0;-moz-transform:scale(1.2);box-shadow:0 0 15px #888888;}
+.me-dialog-transition {opacity:1;-moz-transform:scale(1);-moz-transition:opacity,-moz-transform .15s ease-in-out 0s;}
+#ae-mask {position:fixed;_position:absolute;top:0;left:0;background:#000;background:-moz-radial-gradient(50% 50%,rgba(0,0,0,0.3),rgba(0,0,0,1) 80%);}
+.sku-Beige{background:#F8F7E7 !important;}
+.sku-Black{background:#000000 !important;}
+.sku-Blue{background:#0080FF !important;}
+.sku-Brown{background:#8d6468 !important;}
+.sku-Champagne{background:#d5b489 !important;}
+.sku-Gold{background:#FFD700 !important;}
+.sku-Gray{background:#999 !important;}
+.sku-Green{background:#006000 !important;}
+.sku-Khaki{background:#dac9b9 !important;}
+.sku-Orange{background:#FFA500 !important;}
+.sku-Pink{background:#FFC0CB !important;}
+.sku-Purple{background:#6C3365 !important;}
+.sku-Red{background:#FF0000 !important;}
+.sku-Silver{background:#CCC !important;}
+.sku-White{background:#FFFFFF !important;}
+.sku-Yellow{background:#FFFF00 !important;}
+.sku-Multi{background:url(http://i02.i.aliimg.com/wimg/buyer/single/sku_color_mutil.gif) 0 0 no-repeat !important;}
+.sku-Clear{background:url(http://i02.i.aliimg.com/wimg/buyer/single/sku_color_clear.gif) 0 0 no-repeat !important;}
+.sku-Ivory {background:#fdfde8 !important;}
+.sku-Army-Green{background:#5d762a !important;}
+.sku-Sky-Blue{background:#1eddff !important;}
+.sku-Dark-Grey{background:#666 !important;}
+.sku-Lavender{background:#dda0dd !important;}
+
+/*色卡样式控制采用颜色值方式,之前的颜色名方式作废*/
+.sku-color-771{background:#F8F7E7 !important;}
+.sku-color-193{background:#000000 !important;}
+.sku-color-173{background:#0080FF !important;}
+.sku-color-365458{background:#8d6468 !important;}
+.sku-color-200001951{background:#d5b489 !important;}
+.sku-color-350850{background:#FFD700 !important;}
+.sku-color-691{background:#999 !important;}
+.sku-color-175{background:#007000 !important;}
+.sku-color-200001438{background:#dac9b9 !important;}
+.sku-color-350852{background:#FFA500 !important;}
+.sku-color-1052{background:#FFC0CB !important;}
+.sku-color-496{background:#6C3365 !important;}
+.sku-color-10{background:#FF0000 !important;}
+.sku-color-350853{background:#CCC !important;}
+.sku-color-29{background:#FFFFFF !important;}
+.sku-color-366{background:#FFFF00 !important;}
+.sku-color-200003699{background:url(http://i02.i.aliimg.com/wimg/buyer/single/sku_color_mutil.gif) 0 0 no-repeat !important;}
+.sku-color-100018786{background:url(http://i02.i.aliimg.com/wimg/buyer/single/sku_color_clear.gif) 0 0 no-repeat !important;}
+.sku-color-200002130 {background:#fdfde8 !important;}
+.sku-color-200004889{background:#7C8C30 !important;}
+.sku-color-1254{background:#1eddff !important;}
+.sku-color-200004890{background:#666 !important;}
+.sku-color-200004891{background:#dda0dd !important;}
+.bp-banner {border: solid #ffcaa6; border-width: 1px 0; height: 65px; width: 100%; background: url(http://i03.i.aliimg.com/images/cms/upload/aliexpress/channel/buyerprotection/banner/bp_banner_718x75_right.png) right no-repeat transparent;}
+.bp-banner a {display: block; width: 100%;}
+.bp-banner .banner-img {margin-top: -9px;}
+/* --------------- Header --------------- */
+#header{_height:65px;min-height:50px;background:none;}
+#header-inner{margin:5px auto 0;width:990px;}
+.help-secure{width:400px;}
+.help-secure li.help{padding:10px 0;}
+.info-title{display:block;}
+.secure-logo{float:right;}
+#page{width:990px;position:relative;}
+/* --------------- Header --------------- */
+
+
+/* --------------- Process Bar --------------- */
+.w950{margin:0 auto;width:950px;overflow:hidden;clear:both;}
+.w990{margin:0 auto;width:990px;overflow:hidden;clear:both;}
+.process-min ul{background-color:#E4E4E4;}
+.process-min li{font-size:12px;text-align:center;}
+.process-min li.current{text-align:left;}
+.process-min li.current span{display:block;text-align:center;}
+/* process-min li span{text-indent:70px !important;} */
+/* --------------- Process Bar --------------- */
+
+
+/* --------------- Order Title --------------- */
+.order-title{height:22px;line-height:22px;margin-bottom:10px;padding-left:5px;}
+.order-title h2{float:left;font-size:16px;width:55%;overflow:hidden;}
+.order-title a{}
+.order-title .lnk-change-wrap{float:right;text-align:right;width:40%;padding-right:5px;outline:none;}
+
+/* --------------- Order Title --------------- */
+
+
+/* --------------- Order Address Blocks --------------- */
+/* --------------- Main Blocks --------------- */
+.order-address,.order-address-item{margin:0 auto;width:100%;overflow:hidden;clear:both;}
+.order-address{padding-top:20px;}
+.order-container{padding-top:10px;}
+.order-address-item{border-top:1px solid #ccc;border-bottom:1px solid #CCC;}
+
+.address-field-buttons button{margin-right:10px;line-height:20px;}
+.address-field-buttons  {*padding-left:0;*padding-right:0;}
+.address-field-buttons .btn-cancel{padding:0 20px;font-size:14px;height:25px;line-height:23px;color: #333 !important;background: url("http://i03.i.aliimg.com/images/eng/wholesale/sprite/me_skin.png") no-repeat scroll 0 -1950px transparent; border: 1px solid #666;border-color: #D1D1D1 #B5B5B5 #B5B5B5;cursor: pointer;font-family: Arial;display:inline-block;vertical-align:middle;}
+.order-address-name{float:left;width:160px;padding:10px 0;font-size:14px;overflow:hidden;}
+.order-address-name label{cursor:pointer;}
+.order-address-manage{float:left;width:740px;overflow:hidden;padding-left:30px;}
+#buyer-name-sidebar{padding-left:20px;}
+.address-form{padding-bottom:20px;}
+/* --------------- Main Blocks --------------- */
+
+
+/* --------------- Address From --------------- */
+/* --------------- Form --------------- */
+.address-field-item{padding-bottom:5px;clear:both;}
+.address-field-item .address-street-box{padding-bottom:15px;}
+.address-field-item h3{font-weight:normal;padding:10px 0;}
+.address-field-item .board{margin:0 !important;padding-top:4px;padding-bottom:0;height:22px;line-height:23px;display:inline-block;border:none;background-color:#FFF;vertical-align:bottom;}
+.address-field-item .board-success-simple{margin-top:0;margin-bottom:0;}
+.order-address-selected label{padding-left:5px;font-weight:bold;}
+#add-street-address-two{display:block;}
+
+.field-span{padding:0 5px;}
+
+.err-item{border:1px solid #FAC5C8;background-color:#FDE8E9;}
+
+.contact-name,.city,.zip-code,.local-number{width:100px;}
+.extra-number{width:40px;}
+.street-address,.province{width:210px;clear:both;}
+.contact-name,.street-address,.city,.province,.zip-code,.extra-number,.local-number,.mobile-number{height:16px;border:1px solid #CCC;padding:3px;margin-right:5px;}
+#country-region,.provinceSelect{height:20px;line-height:18px;}
+#country-region{width:219px;}
+.address-tip{height:20px;line-height:20px;overflow:hidden;font-size:11px;color:#999;}
+#add-street-address-two{display:inline-block;}
+.address-field-buttons{padding:7px 0 25px 0;}
+
+
+.place-order-btn{background: url("http://i02.i.aliimg.com/wimg/buyer/single/place_order.png") no-repeat;color: #7A5233;display: block;font-size: 18px;font-weight: bold;height: 37px;width:157px;padding:0;text-indent:-9999px;border:none;overflow:hideen;cursor:pointer;}
+.place-order-button .disable{background: url("http://i02.i.aliimg.com/images/eng/escrow/bg/placeorder-disable.png") no-repeat;}
+/* --------------- Form --------------- */
+
+
+/* --------------- Address List --------------- */
+.order-address-list{margin:0 auto;overflow:hidden;}
+.order-address-list li{border:1px solid #fff;padding:15px 0;clear:both;overflow:hidden;margin:2px 0;border-top:1px solid #ccc;}
+.order-address-list .order-address-hover{background-color:#fefdf2;border:1px solid #e0e0e0;}
+.order-address-list .order-address-selected{background-color:#fefbde;border:1px solid #d6d6d6;}
+.order-address-list .order-address-main{width:740px;padding-left:10px;}
+.order-address-list .order-address-main p{line-height:150%;color:#999;}
+.order-address-list .order-address-selected p{color:#000;}
+
+.order-address-list .address-list-key{padding-right:5px;}
+.order-address-list .order-address-name{padding-top:3px;padding-left:15px;}
+.order-address-list .default-mark{display:block;padding:10px 0 10px 20px;font-size:12px;color:#999;}
+.address-info{float:left;width:479px;overflow:hidden;}
+.address-opration{float:right;width:240px;padding-left:20px;overflow:hidden;}
+.opt-tip{padding-bottom:20px;padding-top:5px;}
+.lnk-opt{display:block;line-height:22px;height:22px;overflow:hidden;}
+.lnk-edit{display:inline;}
+#lnk-add-new-address{float:left;padding:5px 0;line-height:20px;height:20px;}
+/* --------------- Address List --------------- */
+
+.order-address-list{padding:10px 0;}
+
+
+.address-show-tab{text-align:center;height:35px;}
+.address-show-tab span{margin:0 auto;margin-top:-1px;display:block;width:240px;height:30px;border:1px solid #CCC;border-top:1px solid #FFF;_position:relative;}
+#lnk-address-tab{display:block;height:20px;line-height:20px;width:200px;padding:5px 20px;overflow:hidden;outline:none;background:url("http://i02.i.aliimg.com/images/eng/wholesale/sprite/spr_we_buyer_common.png?v=082311") no-repeat 113px -2532px;}
+.address-show-tab #lnk-address-tab.hide-list{background-position:113px -2452px;}
+/* --------------- Address From --------------- */
+/* --------------- Order Address Main Blocks --------------- */
+
+/* ---------- order list ---------- */
+.order-table{table-layout:fixed;border-collapse:collapse;width:100%;border:1px solid #ccc;margin-bottom:15px;}
+.order-table thead th {background:#E4E7EF;font-weight: normal;text-align:left;padding:7px 10px;line-height:20px;border-bottom:1px solid #ccc;}
+.order-table td{padding:0;vertical-align:top;border-bottom:1px solid #ccc;}    
+.order-table th{}    
+.order-table .order-shipment-info{padding:10px 8px;border:solid #ccc; border-width: 0 0 1px 1px;}
+.order-table .order-product-info{border-bottom:1px solid #ccc;}
+.order-shipment-info .product-shipping-select{background: url("http://i03.i.aliimg.com/images/eng/wholesale/sprite/spr_we_buyer_common.png") no-repeat scroll 100% -2598px #fff; border:1px solid #C6C6C6;clear: both; cursor: pointer; display: inline-block; font-size: 11px; height: 18px; line-height: 18px; padding: 0 19px 0 5px; position: relative;text-align: left; white-space: nowrap; z-index: 1; margin-bottom:10px; width:auto;}
+.order-shipment-info .product-shipping-select-open{border-bottom: 1px solid #FFFFFF;z-index: 100;}
+.order-shipment-info p{padding-bottom:6px;}
+.order-shipment-info .ship-info{padding:4px 0;color:#999;}
+.order-shipment-info .ship-value {padding-left:5px;color:#333;}
+.order-shipment-info .ship-key{}
+.free-shipping {color: #009900;font-weight:bold;}
+
+.order-table .use-coupon{background:#F0F4FE;padding:10px;text-align:right;border-bottom:1px solid #ccc;}
+.order-table .order-price{padding:15px 10px;color:#666;text-align:right;}
+.order-price p{padding:5px 0;}
+.order-price .value{color:#000;padding-left:5px;}
+.order-price .ship-text{margin-left:45px;}
+.order-price .whole-coupon-price, .coupon-price, .unit-price{color:#000;padding-left:5px;}
+.order-price .whole-price{color:#c80000;font-weight:bold;padding-left:5px;}
+.p-name-title{float:left;}
+.p-price-title{float:right;width:160px;padding:0 10px;}
+.item-details-list{}
+.item-details-list li{padding:10px 8px;}
+.item-details .pimg,.feedback-already-list .pimg{float:left;padding-right:10px;width:77px;}
+.item-details .pimg img{width:75px;height:75px;vertical-align:middle;}
+.item-details .p-info{float:left;width:396px;padding-right:10px;padding-bottom:12px;}
+.item-details .p-title,.feedback-already-list .p-title{padding-bottom:10px;line-height:1.4em;}
+.item-details .p-extra{float:right;width:210px;padding:0 10px;}
+.item-details .p-extra .p-price{line-height:16px;}
+.p-price .txt-multiply{padding:0 10px; color:#999;}
+.item-details .product-quantity-input{height:14px;width:28px; background:#fff; border:1px solid #abadb3;}
+.item-details .product-quantity-comment {color: #999999;display: block;font-size: 11px;}
+.p-sku{line-height:16px;padding:2px 0;}
+.p-keys{padding-right:5px;color:#666;}
+.p-color-card{width:14px;height:14px;border:1px solid #999;overflow:hidden;display:inline-block;vertical-align:bottom;}
+.p-color-image{width:16px;height:16px;vertical-align:bottom;}
+.clear-line{height:1px;background:#fff;margin-top:-1px;}
+.p-message{margin-left:85px;color:#999;padding:8px 0;line-height:1.2em;}
+.message-text{margin-top:5px;width:480px;line-height:18px;padding:3px;height:36px;resize:vertical}
+.message-text-tip{padding:5px 0;}
+.no-hit{color:#999;}
+
+/* -- order false table -- */
+#order-false thead th{background-color:#FCEEEE;}
+#order-false tbody td{padding:10px;border-bottom:1px solid #ccc;}
+#order-false tbody .order-error-info{padding:5px 10px;}
+/* -- order false table -- */
+
+/* ---------- order list ---------- */
+
+/* --------------- All Total Price --------------- */
+.all-total-price{margin:10px auto 0 auto;width:100%;hegiht:30px;line-height:30px;text-align:right;overflow:hidden;}
+.all-total-price a{float:left;width:30%;text-align:left;overflow:hidden;}
+.all-total-price em{font-weight:bold;font-size:14px;}
+.all-total-price strong{padding-left:10px;font-size:20px;color:#C80000;}
+/* --------------- All Total Price --------------- */
+
+/*---- captcha-box ----*/
+.captcha-wrap{overflow:hidden;}
+.captcha-box{float:right;line-height:18px;width:160px;}
+.captcha-title{padding:5px 5px 5px 0;}
+.captcha-input{ border: 1px solid #CCCCCC;height: 16px; margin-right: 5px;margin-bottom:3px;padding: 3px 5px;width:140px;}
+.captcha-image img{border:1px solid #ccc;vertical-align:middle;}
+.captcha-box .message-box{}
+
+/*---- captcha-box ----*/
+
+/* --------------- Buttons & Agreement --------------- */
+.place-order-button{margin:0 auto;width:100%;padding-top:10px;text-align:right;overflow:hidden;clear:both;}
+#place-order-btn{float:right;}
+
+.buyer-provide-email{padding-top:10px;text-align:right;float:right;clear:both;}
+
+.agreement{padding:10px 0 10px;width:100%;overflow:hidden;}
+.agreement li{text-align:right;height:16px;line-height:16px;color:#999;overflow:hidden;}
+/* --------------- Buttons & Agreement --------------- */
+
+
+/* --------- message-box ---------*/
+.error-box-max{margin:30px auto;vertical-align:bottom;min-height:22px;line-height:24px;min-width:5px;padding:12px 0 12px 60px;background:url("http://i02.i.aliimg.com/wimg/buyer/sprite/spr_common_message.png") no-repeat -150px -350px #FFF6F6;border:1px solid #FFA8A2;font-size:14px;}
+.warn-box-max{margin:30px auto 0;vertical-align:bottom;min-height:22px;line-height:22px;min-width:5px;padding:20px 0 20px 60px;background:url("http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_info_a.gif") no-repeat 20px 15px #E7F4FC;border:1px solid #BBDFF7;font-size:14px;}
+
+.address-field-item input{*vertical-align:middle;}
+.address-field-item .message-box{display:inline-block;line-height:18px;*display:inline;*vertical-align:middle;*zoom:1;}
+
+.message-box{vertical-align:bottom;min-height:18px;line-height:18px;min-width:5px;padding:3px 10px 3px 25px;}
+.error-box-a,.error-box-b,.warn-box1,.warn-box2,.success-box{background-image: url("http://i02.i.aliimg.com/wimg/buyer/sprite/spr_common_message.png");background-repeat: no-repeat;font-size: 12px;}
+
+
+.error-box-a{color:#ea2b2f;background-position:-225px -50px;} 
+.error-box-b{color:#ea2b2f;background-position:-225px -50px;background-color:#FFF6F6;border:1px solid #FFA8A2;}
+.warn-box1{color:#404040;background-color:#EBF8FF;background-position:-175px -100px;border:1px solid #65D2FF;}
+.warn-box2{color:#404040;background-color:#FFFFE5;background-position:-150px -125px;border:1px solid #FFC974;}
+.success-box{background-position:-275px 0;}
+
+.order-table .message-box{margin-top:5px;}
+.p-message .warn-box2{width:450px;}
+.use-coupon .message-box{float:right;text-align:left;margin-top:8px;}
+.used-coupon-warn {display: inline-block;text-align:left;padding: 3px 10px 3px 25px !important;}
+.order-error-info .message-box{margin-top:0;}
+
+#order-false-warn .message-box{margin-top:15px;}
+#place-order-num-error{clear:both;float:right;margin:10px 8px 0;padding-right:8px;}
+/* --------- message-box ---------*/
+
+
+
+/* --------------- Main Blocks --------------- */
+.order-container{position:relative;z-index:1;width:100%;padding-top:20px;overflow:hidden;}
+.order-error-container{position:relative;z-index:1;width:100%;padding-top:20px;overflow:hidden;}
+.order-container-mask{position:absolute;z-index:6;top:0;left:0;width:100%;height:100%;background-color:#FFF;overflow:hidden;filter:Alpha(opacity=60);opacity:0.6;}
+.order-item{border:1px solid #CCC;margin-bottom:30px;}
+.hack-iframe{position:absolute;margin:0 auto;width:100%;height:100%;border:none;display:block;overflow:hidden;filter:Alpha(opacity=60);opacity:0.6;}
+/* --------------- Main Blocks --------------- */
+
+
+.contant-now {background:url("http://i02.i.aliimg.com/images/eng/wholesale/sprite/spr_we_buyer_common.png?v=082311") no-repeat scroll 0 -449px transparent; display:inline-block; font-size:12px; height:20px; line-height:20px;padding-left:22px; text-decoration:none;margin-left:10px;}
+.hide,.address-field-item .hide,.order-address-list .hide{display:none;}
+
+/** coupon **/
+#coupon-wrapper{width:600px;border:1px solid #FDBD2A;position:fixed;background:#fff;top:0px;left:0px;z-index:999;display:none;*position:absolute;}
+#coupon-wrapper input{vertical-align:middle;}
+.coupon-title-box{background:#FFF4D9;height:30px;line-height:30px;}
+.coupon-title{float:left;padding-left:15px;font-weight:bold;font-size:12px;}
+.close-coupon{float:right;margin-right:20px;background:url("http://i02.i.aliimg.com/wimg/buyer/sprite/place_order_coupon.png?v=201204009") no-repeat scroll 0 -280px transparent;text-indent:-9999px;width:20px;overflow:hidden;}
+.coupon-content-box{padding:10px 20px 20px;}
+.coupon-radio-box{padding:5px;line-height:18px;}
+.coupon-radio-box label{padding-left:10px;}
+.coupon-list-box{padding:0 2px;*width:556px;}
+.coupon-list-slide {float: left;overflow: hidden;position: relative;width: 100%;}
+.coupon-list-container {height: 120px;margin: 0 30px;text-overflow: ellipsis;}
+.coupon-id-box{padding:5px 0 5px 30px;}
+.coupon-list{width:9999999px;}
+.coupon-list li{float:left;width:160px;padding:0 3px;}
+.coupon-list img{cursor:pointer;border:2px solid #fff;margin-top:15px;}
+.coupon-list .coupon-item{cursor:pointer;border:2px solid #fff;margin-top:15px;background:#cc3300;width:152px;position:relative;}
+.coupon-list .coupon-item-info{padding:15px 0;background-color:#ffffcc;color:#cc3300;}
+.coupon-list .coupon-item-off{float:left;font-size:20px;padding:0 4px;}
+
+.coupon-list .denomination-box{float:left;height:22px;vertical-align:bottom;width:70px;text-align:right;}
+.coupon-list .amouunt-limit-box{float:left;height:14px;padding-top:6px;vertical-align:bottom;width:50px;text-align:left;}
+
+.denomination-box .coupon-item-price{font-size:20px;line-height:20px;font-weight:bold;vertical-align:top;}
+.denomination-box .coupon-item-decimals{font-size:12px;line-height:12px;vertical-align:text-top;padding-top:6px;}
+.amouunt-limit-box .coupon-item-price{font-size:13px;line-height:13px;font-weight:bold;vertical-align:top;}
+.amouunt-limit-box .coupon-item-decimals{font-size:10px;line-height:10px;vertical-align:text-top;padding-top:2px;}
+
+.coupon-list .coupon-item-valid-time{height:18px;line-height:18px;font-size:14px;text-align:center;margin-top:1px;border-top:1px dashed #ff9999;color:#fff;font-weight:bold;}
+
+
+.coupon-list .coupon-item-currency{position:absolute;width:35px;height:20px;top:0;right:0;}
+
+.coupon-list .coupon-valid{text-align:right;padding-right:5px;height:20px;line-height:20px;}
+.coupon-list .coupon-denomination{text-align:right;padding:2px 5px 0 80px;height:40px;line-height:40px;font-size:40px;font-weight:bold;color:#D31F00;text-align:center;}
+.coupon-list .coupon-pay-method{position:absolute;width:20px;height:20px;border:1px solid #000;}
+
+.coupon-list .select{border:2px solid #fba17f;}
+#use-coupon-code-text{ border: 1px solid #CCCCCC;height: 16px; margin-right: 5px;padding: 3px 5px;width:140px;}
+.lnk-prev,
+.lnk-next{display:block;width:20px;height:120px;text-indent:-9999px;cursor:pointer;position:relative;background:url('http://i02.i.aliimg.com/wimg/buyer/sprite/place_order_coupon.png?v=201204009') no-repeat #fff;}
+.lnk-prev{float:left;margin-left:-100%;background-position:0px 0px;}
+.lnk-next{float:left;margin-left:-20px;background-position:-22px 0px;}
+.lnk-prev-disabled{background-position:10px -140px;cursor:default;}
+.lnk-next-disabled{background-position:-10px -140px;cursor:default;}
+.coupon-list-slide .sep-mask-right {right: 20px;}
+.coupon-list-slide .sep-mask-left {left: 20px;}
+.coupon-list-slide .sep-mask-left, .coupon-list-slide .sep-mask-right {background: none repeat scroll 0 0 #FFFFFF;height: 120px;position: absolute;width: 10px;z-index:3;}
+#order-full-mask {position:fixed;_position:absolute;top:0;left:0;right:0;bottom:0;background:#000;background:rgba(0,0,0,1) 80%);z-index:100;filter:Alpha(opacity=40);opacity:0.4;}
+.coupon-btn-box{padding:10px 0 0 30px;}
+.coupon-btn-box input{margin-right:10px;}
+
+/** coupon currency**/
+.coupon-mc{background:url('http://i02.i.aliimg.com/wimg/buyer/sprite/place_order_coupon.png?v=201204009') 0 -320px  no-repeat;}
+
+/** coupon currency **/
+
+/** coupon **/
+.select-wrap{display:inline-block;padding:2px 0;*display:inline;*zoom:1;}
+
+.mask-content {border: 4px solid #CBE4F1;width: 400px;height: 80px;background-color: #fff; position: fixed; _position: absolute;padding-top: 20px;}
+.mask-content h3 {position: absolute;top: 0px;left: 7px;margin: 3px 3px;font: bold 13px / 15px arial;color: #4888AB;}
+.mask-content p {position: absolute;margin: 15px 19px;}
+.mask-close {background: url(http://i03.i.aliimg.com/images/eng/style/icon/close.gif) no-repeat scroll -2px -2px transparent;display: block;position: absolute;width: 11px;height: 11px;right: 3px;top: 3px;}
+#ae-mask {position:fixed;_position:absolute;top:0;left:0;background:#000;background:-webkit-radial-gradient(50% 50%,rgba(0,0,0,0.3),rgba(0,0,0,1) 80%);background:-moz-radial-gradient(50% 50%,rgba(0,0,0,0.3),rgba(0,0,0,1) 80%);}
+
+/** 隐藏对话框close按钮 **/
+#me-dialog .me-dialog-close{display:none;}
+
+
+/** info escrow **/
+#inf-escrow {float:left; background:url(http://i03.i.aliimg.com/wimg/buyer/single/buyer_protection_35x41.png) 10px 15px no-repeat; line-height:20px;text-align:left;background-color: #F9F9F9; border:1px solid #E8E8E8; padding:8px 8px 8px 60px;_width:215px;}
+#inf-escrow strong{font-weight:normal;}
+#inf-escrow em {color: #999999;font: 11px/1 Tahoma;margin-left: 15px;}
+.inf-list {margin: 3px 0;}
+.inf-list li {background: url("http://i02.i.aliimg.com/images/eng/wholesale/sprite/spr_we_buyer_common.png?v=082311") no-repeat -5px -3149px #F9F9F9;color: #676767;font: 10px/15px Verdana;padding-left: 8px;}
+.place-order-info{float:right;clear:both;height:20px;line-height:25px;padding-left:30px;font-size:11px;color:#666;}
+
+.order-submit-info{float:right;width:650px;}
+
+/** payment-method **/
+#inf-bp {margin-bottom: 10px; clear: both; text-align: left;}
+.payment-method{clear:both;overflow:hidden;color:#666;text-align:right;clear:both;padding:25px 0 15px 0;*zoom:1;}
+.payment-method .payment-method-title{line-height:30px;margin-right:15px;float:left;}
+.payment-method ul{width:650px;height:30px;overflow:hidden;float:left;}
+.payment-method li{display: block;float: left;height: 25px;margin-right: 5px;margin-top: 3px;text-align:left;text-indent: -9999px;overflow:hidden;background: url("http://i02.i.aliimg.com/wimg/buyer/sprite/spr_we_buyer_shopcart.png") no-repeat scroll -30px -30px transparent;}
+/** payment-method **/
+
+/* 支付类型 */
+/* ----------------------------------------------------------- */
+.pm-type-visa-s{width:49px !important;background-position:-2px -450px !important;}
+.pm-type-mastercard-s{width:42px !important;background-position:-2px -500px !important;}
+.pm-type-paypal-s{width:37px !important;background-position:-2px -850px !important;display:none !important;}
+.pm-type-moneybookers-s{width:57px !important;background-position:-2px -550px !important;}
+.pm-type-maestro-s{width:41px !important;background-position:-2px -600px !important;}
+.pm-type-solo-s{width:19px !important;background-position:-2px -650px !important;}
+.pm-type-cartebleue-s{width:52px !important;background-position:-2px -700px !important;}
+.pm-type-4b-s{width:25px !important;background-position:-2px -750px !important;}
+.pm-type-euro6000-s{width:25px !important;background-position:-2px -800px !important;}
+.pm-type-cartasi-s{width:36px !important;background-position:-2px -900px !important;}
+.pm-type-postepay-s{width:80px !important;background-position:-2px -950px !important;}
+.pm-type-banktransfer-s{width:88px !important;background-position:-2px -1000px !important;}
+.pm-type-westernUnion-s{width:75px !important;background-position:0 -1550px !important;}
+/* ----------------------------------------------------------- */
+/* 支付类型 */
+
+
+
+/* 修改数量 dlalog box */
+/* ----------------------------------------------------------- */
+#dlg-edit-quantity{border-bottom:3px solid #E3E3E3;}
+#dlg-edit-quantity .inner{border:1px solid #C6C6C6;padding:6px 7px;z-index:2;}
+#dlg-edit-quantity{width:auto;font-size:11px;position:absolute;background:#FFF;}
+#txt-editable-quantity{float:left;width:35px;height:14px;font-size:12px;}
+#lbl-unit-quantity{float:left;display:block;overflow:hidden;line-height:18px;margin-left:6px;}
+#btn-cancel-quantity,#btn-ok-quantity{line-height:18px;font-size:11px;cursor:pointer;}
+#btn-cancel-quantity{float:left;}
+#btn-ok-quantity{float:left;display:block;width:31px;height:18px;overflow:hidden;text-indent:-9999px;border:0;background:url(http://i02.i.aliimg.com/wimg/buyer/sprite/spr_we_buyer_shopcart.png) no-repeat 0 -1600px;margin-right:10px;}
+.btn-ok-quantity-disabled{background:url(http://i02.i.aliimg.com/wimg/buyer/sprite/spr_we_buyer_shopcart.png) no-repeat 0 -1650px !important;}
+#btn-cancel-quantity{color:#06C;text-decoration:underline;}
+#dlg-edit-quantity .inventory{margin-top:5px;}
+#dlg-edit-quantity .inventory-error{color:red;}
+.quantity-minus,.quantity-add {margin-top:2px;float:left;text-indent:-999999px;overflow:hidden;display:inline-block;height:15px;width:15px;}
+.quantity-minus{background:url(http://i02.i.aliimg.com/wimg/buyer/sprite/spr_we_buyer_shopcart.png) no-repeat 0 -1900px}
+.quantity-add{background:url(http://i02.i.aliimg.com/wimg/buyer/sprite/spr_we_buyer_shopcart.png) no-repeat 0 -1850px}
+.inventory-wrapper {clear:both;}
+#dlg-unit-quantity {line-height:17px;padding-left:5px;padding-right:5px;font-size:12px;float:left;}
+/* ----------------------------------------------------------- */
+/* 修改数量 dlalog box */
+
+/* shipping cost */
+/* ----------------------------------------------------------- */
+.pnl-shipping{font-size:11px;position:absolute;z-index:1;width:300px;border:1px solid #c6c6c6;border-bottom:2px solid #E3E3E3;background:#FFF;text-align:left;}
+.pnl-shipping .inner{border-bottom:1px solid #C6C6C6;padding:7px 5px;}
+.pnl-shipping .lbl-shipping-remaining,.pnl-shipping .lbl-shipping-price{float:right;text-align:right; font-size:11px;}
+.pnl-shipping .lbl-shipping-remaining{width:65px;color:#999;}
+.pnl-shipping .lbl-shipping-important{color:#bd1a1d;word-break:normal;}
+.pnl-shipping .lbl-shipping-important strong{padding-right:5px; display: inline-block;}
+.pnl-shipping .lbl-shipping-price{width:60px;}
+#page .pnl-shipping .price .currency,#page .pnl-shipping .price .value,#product-list .pnl-shipping .price .value,#page .list-foot .pnl-shipping .price .comment{font-size:12px;color:#BD1A1D; font-family:arial;}
+
+#page .pnl-shipping li{border-bottom:1px solid #EBEBEB;padding: 10px 0 10px 10px;line-height:20px;}
+.pnl-shipping li label{cursor:pointer;}
+.pnl-shipping li label input{margin-right:5px;}
+.pnl-shipping-action{margin:8px 0 5px;text-align:center;}
+.pnl-shipping-action .btn-ok,.pnl-shipping-action .btn-cancel{line-height:22px;font-size:11px;cursor:pointer; vertical-align:middle;}
+.pnl-shipping-action .btn-cancel{text-decoration:underline;}
+.pnl-shipping-action .btn-ok{display:inline-block;width:40px;height:22px;overflow:hidden;border:0;background:url(http://i02.i.aliimg.com/wimg/buyer/sprite/spr_we_buyer_shopcart.png) no-repeat 0 -1597px;}
+.cancel-shipping{margin-left:10px;font-size:11px;text-decoration:underline!important;}
+
+/* ----------------------------------------------------------- */
+/* shipping cost */
