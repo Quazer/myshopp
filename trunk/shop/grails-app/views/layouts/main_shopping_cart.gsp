@@ -16,6 +16,7 @@
         <script type="text/javascript" async="" src="${resource(dir: 'js/shoppingcart', file: 'beacon_ws_async-v_f3043219f4d9_0.js')}"></script>
         <script type="text/javascript" async="" src="${resource(dir: 'js/shoppingcart', file: 'base-mod.js')}"></script>
         <script type="text/javascript" async="" src="${resource(dir: 'js/shoppingcart', file: 'ae.js')}"></script>
+		<link href="${resource(dir: 'css/shoppingcart', file: 'place-order-v070310-MODERN_BROWSER-v_3238fc12a0262_0.css')}" rel="stylesheet" type="text/css" media="all">
         <script type="text/javascript" async="" src="${resource(dir: 'js/shoppingcart', file: 'slidebox_gofirst-MODERN_BROWSER-v_1ec13981fed88_0.js')}"></script>
             
         <g:layoutHead/>
@@ -35,6 +36,7 @@
         })();
         ;
     </script>
+
 
     <script>
 /* <![CDATA[ */
