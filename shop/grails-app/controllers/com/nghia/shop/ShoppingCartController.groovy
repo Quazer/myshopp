@@ -29,9 +29,9 @@ class ShoppingCartController {
 				// TODO: return back to Product detail
 			}
 			
-			//TODO: very important !!!!
-			//TODO: need to check shoppingCart is existing in DB?
-			
+			//TODO: very important !!!! -------------
+			//need to check shoppingCart is existing in DB?
+			//if existing, will increase quantity
 			
 			def shoppingCart = new ShoppingCart()
 			shoppingCart.product = product
