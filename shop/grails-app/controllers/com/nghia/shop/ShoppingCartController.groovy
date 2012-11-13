@@ -53,6 +53,9 @@ class ShoppingCartController {
 		redirect(action: "myCart")
 	}
 	
+	def iframe_proxy = {
+		render view:'test'
+	}
 //    def list(Integer max) {
 //        params.max = Math.min(max ?: 10, 100)
 //        [shoppingCartInstanceList: ShoppingCart.list(params), shoppingCartInstanceTotal: ShoppingCart.count()]
