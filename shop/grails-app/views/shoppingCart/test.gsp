@@ -4,14 +4,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
-<script type="text/javascript" async="" src="./Please Confirm Your Order - AliExpress_files/beacon_ws_async-v_f3043219f4d9_0.js"></script><script type="text/javascript" async="" src="./Please Confirm Your Order - AliExpress_files/base-mod.js"></script><script type="text/javascript" src="./Please Confirm Your Order - AliExpress_files/ae.js"></script>
+<script type="text/javascript" async="" src=".${resource(dir: 'js/shoppingcart', file: 'beacon_ws_async-v_f3043219f4d9_0.js')}"></script>
+<script type="text/javascript" async="" src="${resource(dir: 'js/shoppingcart', file: 'base-mod.js')}"></script>
+<script type="text/javascript" src="${resource(dir: 'js/shoppingcart', file: 'ae.js')}"></script>
 
                                 
                 
 <title>Please Confirm Your Order - AliExpress</title>
-<link href="./Please Confirm Your Order - AliExpress_files/place-order-v070310-MODERN_BROWSER-v_3238fc12a0262_0.css" rel="stylesheet" type="text/css" media="all">
+<link href="${resource(dir: 'css/shoppingcart', file: 'place-order-v070310-MODERN_BROWSER-v_3238fc12a0262_0.css')}" rel="stylesheet" type="text/css" media="all">
 
-<script type="text/javascript" src="./Please Confirm Your Order - AliExpress_files/slidebox_gofirst-MODERN_BROWSER-v_1ec13981fed88_0.js"></script>
+<script type="text/javascript" src="${resource(dir: 'js/shoppingcart', file: 'slidebox_gofirst-MODERN_BROWSER-v_1ec13981fed88_0.js')}"></script>
 
 <script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/document_iterator.js">
 </script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/find_proxy.js">
@@ -66,14 +68,14 @@
     <div class="clearfix" id="header-inner">
         <div class="ali-logo">
             <a href="http://www.aliexpress.com/">
-                <img border="0" src="./Please Confirm Your Order - AliExpress_files/logo_stable_buyer.gif" alt="AliExpress">
+                <img border="0" src="${resource(dir: 'images/shoppingcart', file: 'logo_stable_buyer.gif')}" alt="AliExpress">
             </a>
         </div>
         <ul class="help-secure">
             <li class="order-help">Need help? <a target="_blank" href="http://help.aliexpress.com/categories_Placing_orders.html">Click here</a></li>
             <li class="secure-logo">
                 <a target="_blank" href="https://seal.verisign.com/splash?form_file=fdf/splash.fdf&dn=ESCROW.ALIBABA.COM&lang=en">
-                    <img src="./Please Confirm Your Order - AliExpress_files/icon-other.jpg">
+                    <img src="${resource(dir: 'images/shoppingcart', file: 'icon-other.jpg')}">
                 </a>
                 <span>You are securely signed in</span>
             </li>
@@ -969,7 +971,7 @@
                                                 <a name="anchor-950551662"></a>
                                                     <div class="pimg">
                                                         <a href="http://www.aliexpress.com/item/50-discount-sales-promotion-Lamaze-Musical-lion-plush-educational-bed-bell-toy-yellow-lamaze-bed-hang/608514088.html" target="_blank">
-                                                            <img src="./Please Confirm Your Order - AliExpress_files/50-discount-sales-promotion-Lamaze-Musical-lion-plush-educational-bed-bell-toy-yellow-lamaze-bed-hang.jpg_80x80.jpg" alt="50% discount sales promotion Lamaze Musical lion plush educational bed bell toy,yellow lamaze bed hang/bell baby mobile">
+                                                            <img src="${resource(dir: 'images/shoppingcart', file: '50-discount-sales-promotion-Lamaze-Musical-lion-plush-educational-bed-bell-toy-yellow-lamaze-bed-hang.jpg_80x80.jpg')}" alt="50% discount sales promotion Lamaze Musical lion plush educational bed bell toy,yellow lamaze bed hang/bell baby mobile">
                                                         </a>
                                                     </div>
                                                     <div class="p-info">
@@ -1116,7 +1118,7 @@
                                                 <a name="anchor-950551478"></a>
                                                     <div class="pimg">
                                                         <a href="http://www.aliexpress.com/item/Crystal-Jewelry-Set-Make-With-Swarovski-Elements-Earrings-Necklace-89458/580797773.html" target="_blank">
-                                                            <img src="./Please Confirm Your Order - AliExpress_files/Great-Promotion-Elegant-Butterfly-Jewelry-Set-Make-With-Swarovski-Shining-Rhinestone-5-Colors-For-Choose-89458.jpg_80x80.jpg" alt="Great Promotion Elegant Butterfly Jewelry Set Make With Swarovski Shining Rhinestone 5 Colors For Choose  #89458">
+                                                            <img src="${resource(dir: 'images/shoppingcart', file: 'Great-Promotion-Elegant-Butterfly-Jewelry-Set-Make-With-Swarovski-Shining-Rhinestone-5-Colors-For-Choose-89458.jpg_80x80.jpg')}" alt="Great Promotion Elegant Butterfly Jewelry Set Make With Swarovski Shining Rhinestone 5 Colors For Choose  #89458">
                                                         </a>
                                                     </div>
                                                     <div class="p-info">
@@ -1278,7 +1280,7 @@
                 </ul>
             </div>
             <div class="payment-method">
-                <div id="inf-bp"><div class="bp-banner"><a href="http://www.aliexpress.com/buyerprotection/index.html" rel="nofollow"><img class="banner-img" src="./Please Confirm Your Order - AliExpress_files/bp_banner_975x75.png"></a></div></div>
+                <div id="inf-bp"><div class="bp-banner"><a href="http://www.aliexpress.com/buyerprotection/index.html" rel="nofollow"><img class="banner-img" src="${resource(dir: 'images/shoppingcart', file: 'bp_banner_975x75.png')}"></a></div></div>
                 <span class="payment-method-title">Payment Methods:</span>
                 <ul><li class="pm-type-visa-s"></li><li class="pm-type-mastercard-s"></li><li class="pm-type-westernUnion-s"></li><li class="pm-type-moneybookers-s"></li><li class="pm-type-maestro-s"></li><li class="pm-type-solo-s"></li><li class="pm-type-cartebleue-s"></li><li class="pm-type-4b-s"></li><li class="pm-type-euro6000-s"></li><li class="pm-type-cartasi-s"></li><li class="pm-type-postepay-s"></li><li class="pm-type-banktransfer-s"><strong>Bank Transfer</strong></li></ul>
             </div>
@@ -1374,7 +1376,7 @@
 </div>
 
 <div id="order-full-mask" style="display: none;"><iframe class="hack-iframe" src="about:blank" frameborder="no"></iframe></div>
-<iframe src="./Please Confirm Your Order - AliExpress_files/bp_iframe_proxy.htm" style="display:none" height="0" width="0" id="transactionbp-proxy"></iframe>
+<iframe src="${createLink(controller:'shoppingCart', action:'iframe_proxy')}" style="display:none" height="0" width="0" id="transactionbp-proxy"></iframe>
 
 
 <div class="footer" id="footer">
@@ -1404,7 +1406,7 @@
 
 
                                         
-<script type="text/javascript" src="./Please Confirm Your Order - AliExpress_files/page-timing-MODERN_BROWSER-v_42e38a62962e5_0.js"></script>
+<script type="text/javascript" src="${resource(dir: 'js/shoppingcart', file: 'page-timing-MODERN_BROWSER-v_42e38a62962e5_0.js')}"></script>
 
 
 

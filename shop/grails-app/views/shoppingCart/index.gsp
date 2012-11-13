@@ -1291,7 +1291,7 @@
 </div>
 
 <div id="order-full-mask" style="display: none;"><iframe class="hack-iframe" src="about:blank" frameborder="no"></iframe></div>
-<iframe src="./Please Confirm Your Order - AliExpress_files/bp_iframe_proxy.htm" style="display:none" height="0" width="0" id="transactionbp-proxy"></iframe>
+<iframe src="${createLink(controller:'shoppingCart', action:'iframe_proxy')}" style="display:none" height="0" width="0" id="transactionbp-proxy"></iframe>
 
 
 <div class="footer" id="footer">
@@ -1317,11 +1317,10 @@
     </p>
     <a rel="nofollow" href="http://news.alibaba.com/article/detail/help/100105711-1-product-listing-policy.html">Product Listing Policy</a> - <a rel="nofollow" href="http://news.alibaba.com/article/detail/help/100104162-1-intellectual-property-protection-policy-infringement.html">Intellectual Property Policy and Infringement Claims</a> - <a rel="nofollow" href="http://news.alibaba.com/article/detail/help/100103729-1-privacy-policy.html">Privacy Policy</a> - <a rel="nofollow" href="http://news.alibaba.com/article/detail/help/100103727-1-terms-use.html">Terms of Use</a> - <a rel="nofollow" href="http://escrow.aliexpress.com/buyerprotection/index.html?tracelog=ws_topbar">Safe Trading Tips</a> - <a rel="nofollow" href="http://legal.alibaba.com/legal/site/login/login.htm?site_type=international&language_id=english">Report Intellectual Property Right Infringement</a>
     <br><a rel="nofollow" href="http://www.alibaba.com/trade/servlet/page/static/copyright_policy">Copyright Notice</a> © 1999-2011 Alibaba.com Hong Kong Limited and licensors. All rights reserved.
-</div>
 
 
                                         
-<script type="text/javascript" src=" ${resource(dir: 'js/shoppingcart', file: 'page-timing-MODERN_BROWSER-v_42e38a62962e5_0.js')}"></script>
+<script type="text/javascript" src="${resource(dir: 'js/shoppingcart', file: 'page-timing-MODERN_BROWSER-v_42e38a62962e5_0.js')}"></script>
 
     </body>
 </html>
