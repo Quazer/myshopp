@@ -8,4 +8,8 @@ class ShippingMethod {
 	
     static constraints = {
     }
+	
+	String toString() {
+		name + " (" + CommonUtils.shippingMethodPrice(price)
+	}
 }
