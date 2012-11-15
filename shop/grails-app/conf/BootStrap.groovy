@@ -1,6 +1,7 @@
 import com.nghia.shop.Category
 import com.nghia.shop.Member
 import com.nghia.shop.Product
+import com.nghia.shop.ShippingDetail;
 import com.nghia.shop.ShippingMethod;
 class BootStrap {
 
@@ -10,7 +11,20 @@ class BootStrap {
     }
 	
 	def initData() {
-		def admin = new Member(username: "nghia", password: "1").save(flush:true)
+		def shippingDetail = new ShippingDetail()
+		shippingDetail.name = "Nghia Nguyen"
+		shippingDetail.street1 = "street 1"
+		shippingDetail.street2 = "street 2"
+		shippingDetail.city = "city"
+		shippingDetail.state = "state"
+		shippingDetail.country = "country"
+		shippingDetail.zip = "zip"
+		shippingDetail.mobilePhone = "mobiphone"
+		shippingDetail.homePhone = "home[hon"
+		
+		shippingDetail.save(flush:true)
+		
+		def admin = new Member(username: "nghia", password: "1", shippingDetail: shippingDetail).save(flush:true)
 		def supplier1 = new Member(username: "supplier1", password: "2").save(flush:true)
 		def supplier2 = new Member(username: "supplier2", password: "3").save(flush:true)
 		
@@ -31,7 +45,7 @@ class BootStrap {
 			prod.discount3Item = 0
 			prod.discount5Item = 0
 			prod.discount10Item = 0
-			prod.prodcutKind = "product.productkind.piece"
+			prod.unit = "product.productkind.piece"
 			
 			prod.sku = 1000 + i
 			
