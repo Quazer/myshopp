@@ -8,7 +8,8 @@ class ShippingDetail {
 	String state
 	String country
 	String zip
-	String phone
+	String mobilePhone
+	String homePhone
 	
     static constraints = {
     }
