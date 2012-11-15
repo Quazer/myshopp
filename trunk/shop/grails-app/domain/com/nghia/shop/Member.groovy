@@ -25,7 +25,7 @@ class Member {
 	 */
 	boolean canPostProduct = false
 	
-	static hasMany = [orders: Orders, productPosted: Product, wishList: Product]
+	static hasMany = [orders: Orders, productPosted: Product, wishList: Product, shippingAddress: ShippingDetail]
 	
 	/*****************************
 	 * Constraint
@@ -33,9 +33,11 @@ class Member {
 	static constraints = {
 		username blank: false, unique: true
 		password blank: false
+		
 		// TODO: need to modify
 		shippingDetail nullable:true
 		
+		shippingAddress nullable:true
 		orders nullable: true
 		productPosted nullable: true
 		wishList nullable: true
