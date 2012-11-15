@@ -25,9 +25,13 @@ class Product {
 	int discount10Item = 0
 	
 	// "set", "piece", "lot" ... all value will be Message Key
-	String prodcutKind 
+	String unit 
 	
+	// main product image
 	ImageStore productImage
+	
+	// Remain product in shop
+	int inventory
 	
 	/**
 	 * 1: Thumbnails of product
@@ -42,6 +46,6 @@ class Product {
 		productImage nullable : true
 		supplier nullable : true
 		category nullable : true
-		prodcutKind nullable:true
+		unit nullable:true
     }
 }
