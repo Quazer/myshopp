@@ -78,7 +78,7 @@
 		                                </td>
 		                                <td class="quantity" align="center" id="" style="text-align:left">
 		                                    <g:textField name="quantity"  maxlength="5" class="qty" value="${shoppingCartInstance.quantity } "/>
-		                                    &nbsp;<g:message code="${shoppingCartInstance.product.prodcutKind }"/>
+		                                    &nbsp;<g:message code="${shoppingCartInstance.product.unit }"/>
 		                                    &nbsp;&nbsp;&nbsp;&nbsp;
 		                                    x
 		                                    &nbsp;&nbsp;&nbsp;&nbsp;
