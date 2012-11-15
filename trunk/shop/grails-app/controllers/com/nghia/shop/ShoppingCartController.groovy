@@ -15,7 +15,7 @@ class ShoppingCartController {
 	def myCart = {
 		def currentuserLogin = springSecurityService.currentUser as Member
 		def cartList = ShoppingCart.findAllByMember(currentuserLogin)
-		render view : "index" , model: [cartList : cartList]
+		render view : "mycart" , model: [cartList : cartList, currentuserLogin: currentuserLogin]
 	}
 
 	def add() {
@@ -54,7 +54,7 @@ class ShoppingCartController {
 	}
 	
 	def iframe_proxy = {
-		render view:'test'
+		render view:'mycart'
 	}
 //    def list(Integer max) {
 //        params.max = Math.min(max ?: 10, 100)
