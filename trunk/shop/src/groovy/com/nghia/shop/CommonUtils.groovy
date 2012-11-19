@@ -20,40 +20,38 @@ class CommonUtils {
 		//params
 	}
 	
+	// return price of Product with currency
+	// ex: $32
 	def static productPrice(productInstance, quantity = null) {
 		// TODO: check productInstance != null ?
 		def productPrice = this.priceOfProduct(productInstance)
 		
 		
 		// TODO:check quantity la integer or not
-		return "US" + productPrice
+		//return "{US productPrice}" + productPrice
+		return "{US productPrice}"
 	}
 	
+	// return price of product WITHOUT currency
+	// ex: 32
 	def static priceOfProduct(Object productInstance) {
 		//TODO get product price
-		return 0
+		return "{priceOfProduct}"
 	}
 	
+	def static subTotalPerOrder(product) {
+		return "{subtotal }"
+	}
 	
-	def static totalPriceOfShopCart(cartList, coupon, shipMethod = null) {
-		// TODO: check Coupon is existing in DB or not
-		def couponPrice = 0
+	def static totalPerOrder(ShoppingCart orderItem) {
+		return "{totalPerOrder}"
+	}
+	
+	// arg: list of ShoppingCart
+	def static totalPriceOfShopCart(cartList) {
+		// TODO: check coupon before use it
 		
-		def total = 0
-		for (ShoppingCart item : cartList) {
-			// Total = total + (so luong * product price) - coupon
-			total = total + (item.quantity * priceOfProduct(item.product))
-		}	
-		
-		if (total > 0) {
-			if (shipMethod) {
-				//TODO: get price of Shipping Method before minus the total price
-			}
-			
-			total = total - couponPrice
-		}
-		
-		total
+		return "{totalPriceOfShopCart}"
 	}
 	
 	def static isFreeShipping(productInstance) {
@@ -296,5 +294,44 @@ class CommonUtils {
 	 static shippingMethodPrice(price) {
 		 //TODO: need to verify
 		 price
+	 }
+	 
+	 static shippingMethodTimeOfDeliver(timeOfDeliver) {
+		 timeOfDeliver
+	 }
+	 
+	 static shippingMethodTimeOfVerify(timeOfVerify) {
+		 timeOfVerify
+	 }
+	 
+	 /**
+	 * Copying object's properties
+	 * @param source
+	 * @param target
+	 * @return
+	 */
+	 static copyProperties(def source){
+		def result = source.getClass().newInstance()
+		result.properties = source.properties
+		result
+	 }
+	 
+	 /**
+	  * Auto generate OrderNumber
+	  * @param shoppingCart
+	  * @return
+	  */
+	 static generateOrderNumber(ShoppingCart shoppingCart) {
+		 // TODO: need to get value of "product", "member" to generate unique number
+		 // TODO: it's just suggestion
+		 
+		 // TODO: or use "datetime" create of shoppingCart to generate unique number
+		 Random ran = new Random();
+		 int x = ran.nextInt(999999) + 5;
+		 x
+	 }
+	 
+	 static discountOrCoupon(ShoppingCart shoppingCart) {
+		 return "{discountOrCoupon}"
 	 }
 }
