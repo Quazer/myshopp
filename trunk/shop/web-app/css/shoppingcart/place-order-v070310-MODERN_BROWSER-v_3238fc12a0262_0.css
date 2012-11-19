@@ -264,9 +264,7 @@ a.tl-action-more:hover{background:url(http://i02.i.aliimg.com/images/eng/style/c
 #page960.frameB .colLL{width:180px;}
 #page960.listPage.frameB .colR{width:160px;}
 
-/* 解决由于模版的多层嵌套引起的样式错误 */
 #page960.frameA .colR .colR .colRmargin{margin:0;}
-/* 解决由于模版的多层嵌套引起的样式错误 */
 /* fix leftmenu_top.gif problem, 180px in myalibaba,190px here*/
 #page960.frameA .colL img{width:190px;}
 #page960.frameA .colL a img ,#page960.frameA .colL * img{width:auto;*width:auto;}
@@ -802,7 +800,6 @@ p#clear {clear:left; padding-top:10px;}
 /* ----------- respond-block ----------- */
 
 
-/* ----------- 页面信息弹出窗 ----------- */ 
 
 .tip-window {width:100%; margin-bottom:15px; _zoom:1; _display:expression(onmousemove=new Function("if(!this.inited){this.style.zoom=1;this.inited=true;}"));}
 
@@ -848,7 +845,6 @@ p#clear {clear:left; padding-top:10px;}
 .tip-window.skin-a .title-b span { background-image:url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/tips_window_2.gif)  }
 .tip-window.skin-a .action-content { border:1px solid #6CB6D9; }
 
-/* ----------- 页面信息弹出窗 ----------- */
 
 /* -----------new me style start -------- */
 
@@ -856,7 +852,6 @@ p#clear {clear:left; padding-top:10px;}
 
 .header, .page, .foot {margin:0 auto;width:960px;}
 .page {margin-bottom:10px !important;}
-/* 覆盖原来4v下的backoffice定义的背景(页面重构后可以删掉) */
 #page960.backOffice {background:none !important;}
 .grid-c2-s5 {border-top:6px solid #EDF2F8}
 .col-main {border-top:1px solid #D8E4F0;}
@@ -873,13 +868,11 @@ p#clear {clear:left; padding-top:10px;}
 .headswitch {position:absolute;z-index:1;top:16px;left:295px;color:#666;}
 .currentLang {float:left;padding:0 22px 0 10px;height:21px;font:700 12px/21px Arial;border:1px solid #FFF;border-bottom:0 none;background:#FFF url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/me_skin.png) no-repeat right -942px;cursor:pointer;overflow:hidden;}
 .headswitch-active .currentLang {position:relative;z-index:1;border-color:#CFCFCF;border-bottom:none;}
-/* ul的margin属性被4v下的common.css覆盖了，所以这里需要加important */
 .lang-item {margin:0 !important;display:none;clear:both;float:left;width:90px;border:1px solid #CFCFCF;background:#FFF;overflow:hidden;zoom:1;}
 .headswitch-active .lang-item {display:block;position:relative;z-index:0;top:-1px;}
 .lang-item li {clear:both;float:left;line-height:23px;padding:0 10px;white-space:nowrap;}
 .lang-item li a, .lang-item li a:visited {color:#06c;}
 .lang-item li a:hover {color:#F60;}
-/* 仅作语言切换用 */
 .lang_zh_CN .label_zh_CN, .lang_en_US .label_en_US, .lang_zh_TW .label_zh_TW {display:none;}
 
 .goto-my-alibaba {float:right;position:static !important;margin:45px 5px 0 0;padding-top:0 !important;width:110px;height:10px;background:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/me_skin.png) no-repeat 0 -50px;}
@@ -894,7 +887,6 @@ p#clear {clear:left; padding-top:10px;}
 
 .yellowish-btn input,.yellow-btn input, .yellowish-btn button,.yellow-btn button {float:left;width:100%;border:0 none;font-size:14px;background:none;}
 
-/* 这里的important在页面重构后可以删掉 */
 .yellowish-btn, .yellowish-btn:visited, .yellowish-btn:hover {height:25px;line-height:23px;border-color:#FCCD35 #FAA320 #FAA320;color:#7A2D01 !important;background-position:0 -350px;}
 .yellowish-btn input, .yellowish-btn button {height:27px;color:#7A2D01;}
 
@@ -1068,7 +1060,6 @@ a.gray-copy-btn, .gray-copy-btn:visited, .gray-copy-btn:hover {text-decoration:n
 a.gray-copy-btn, .gray-copy-btn:visited, .gray-copy-btn:hover {text-decoration:none !important;color:#333;}
 .disabled-btn{color:#a7a7a7!important;display:inline-block;height:28px;line-height:28px;padding:0 15px;border:1px solid #c9c9c9!important;border-right:1px solid #a4a4a4!important;border-bottom:1px solid #9a9a9a!important;background:url(http://i03.i.aliimg.com/images/eng/escrow/bg/new_btn_bg.png) repeat-x 0 -56px!important;}
 
-/* 以上按钮的应用场景有数据纵横、营销中心,ME中请使用下面新的组件 */
 .btn-submit-l, .btn-submit-m, .btn-submit-s, .btn-cancel-l, .btn-cancel-m, .btn-cancel-s, .btn-disabled-l, .btn-disabled-m, .btn-disabled-s  {display:inline-block;border:0 none;border:1px solid #666;font-weight:700;font-family:Arial;background:none;background-image:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/me_skin.png);background-repeat:no-repeat;*overflow:hidden;zoom:1;cursor:pointer;}
 .btn-submit-l:hover, .btn-submit-m:hover, .btn-submit-s:hover, .btn-cancel-l:hover, .btn-cancel-m:hover, .btn-cancel-s:hover, .btn-disabled-l:hover, .btn-disabled-m:hover, .btn-disabled-s:hover {text-decoration:none;}
 .btn-submit-l, .btn-submit-m, .btn-submit-s {border-color:#F9A320;border-top-color:#FFCD34;color:#7B2E00 !important;}
@@ -1085,9 +1076,7 @@ a.gray-copy-btn, .gray-copy-btn:visited, .gray-copy-btn:hover {text-decoration:n
 .btn-cancel-s, .btn-disabled-s {background-position:0 -2000px;}
 /* me dialog */
 .me-dialog, .me-dialog-notitle {position:fixed;_position:absolute;border:1px solid #A1C6FF;width:320px;overflow:hidden;}
-/* 这里用id来定义主要是为了避免a被页面上其它css重定义 */
 #me-dialog .me-dialog-close, #me-dialog .me-dialog-close:visited {position:absolute;padding-top:17px;height:0;width:17px;background:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/me_skin.png) no-repeat 0 -1650px;overflow:hidden;}
-/* 这里用class为了下面能复写 */
 .me-dialog-close {top:5px;right:5px;}
 .me-dialog-notitle .me-dialog-close {top:6px;right:7px;outline:none;}
 #me-dialog .me-dialog-close:hover {background-position:0 -1700px;}
@@ -1124,7 +1113,6 @@ a.gray-copy-btn, .gray-copy-btn:visited, .gray-copy-btn:hover {text-decoration:n
 .sku-Dark-Grey{background:#666 !important;}
 .sku-Lavender{background:#dda0dd !important;}
 
-/*色卡样式控制采用颜色值方式,之前的颜色名方式作废*/
 .sku-color-771{background:#F8F7E7 !important;}
 .sku-color-193{background:#000000 !important;}
 .sku-color-173{background:#0080FF !important;}
@@ -1225,8 +1213,8 @@ a.gray-copy-btn, .gray-copy-btn:visited, .gray-copy-btn:hover {text-decoration:n
 .address-field-buttons{padding:7px 0 25px 0;}
 
 
-.place-order-btn{background: url("http://i02.i.aliimg.com/wimg/buyer/single/place_order.png") no-repeat;color: #7A5233;display: block;font-size: 18px;font-weight: bold;height: 37px;width:157px;padding:0;text-indent:-9999px;border:none;overflow:hideen;cursor:pointer;}
-.place-order-button .disable{background: url("http://i02.i.aliimg.com/images/eng/escrow/bg/placeorder-disable.png") no-repeat;}
+.placeOrder-btn{background: url("http://i02.i.aliimg.com/wimg/buyer/single/place_order.png") no-repeat;color: #7A5233;display: block;font-size: 18px;font-weight: bold;height: 37px;width:157px;padding:0;text-indent:-9999px;border:none;overflow:hideen;cursor:pointer;}
+.placeOrder-button .disable{background: url("http://i02.i.aliimg.com/images/eng/escrow/bg/placeorder-disable.png") no-repeat;}
 /* --------------- Form --------------- */
 
 
@@ -1331,8 +1319,11 @@ a.gray-copy-btn, .gray-copy-btn:visited, .gray-copy-btn:hover {text-decoration:n
 /*---- captcha-box ----*/
 
 /* --------------- Buttons & Agreement --------------- */
-.place-order-button{margin:0 auto;width:100%;padding-top:10px;text-align:right;overflow:hidden;clear:both;}
-#place-order-btn{float:right;}
+.placeOrder-button{margin:0 auto;width:100%;padding-top:10px;text-align:right;overflow:hidden;clear:both;}
+#placeOrder-btn{float:right;}
+
+.placeOrder-button{margin:0 auto;width:100%;padding-top:10px;text-align:right;overflow:hidden;clear:both;}
+#placeOrder-btn{float:right;}
 
 .buyer-provide-email{padding-top:10px;text-align:right;float:right;clear:both;}
 
@@ -1448,7 +1439,6 @@ a.gray-copy-btn, .gray-copy-btn:visited, .gray-copy-btn:hover {text-decoration:n
 .mask-close {background: url(http://i03.i.aliimg.com/images/eng/style/icon/close.gif) no-repeat scroll -2px -2px transparent;display: block;position: absolute;width: 11px;height: 11px;right: 3px;top: 3px;}
 #ae-mask {position:fixed;_position:absolute;top:0;left:0;background:#000;background:-webkit-radial-gradient(50% 50%,rgba(0,0,0,0.3),rgba(0,0,0,1) 80%);background:-moz-radial-gradient(50% 50%,rgba(0,0,0,0.3),rgba(0,0,0,1) 80%);}
 
-/** 隐藏对话框close按钮 **/
 #me-dialog .me-dialog-close{display:none;}
 
 
@@ -1490,7 +1480,6 @@ a.gray-copy-btn, .gray-copy-btn:visited, .gray-copy-btn:hover {text-decoration:n
 
 
 
-/* 修改数量 dlalog box */
 /* ----------------------------------------------------------- */
 #dlg-edit-quantity{border-bottom:3px solid #E3E3E3;}
 #dlg-edit-quantity .inner{border:1px solid #C6C6C6;padding:6px 7px;z-index:2;}
@@ -1510,7 +1499,6 @@ a.gray-copy-btn, .gray-copy-btn:visited, .gray-copy-btn:hover {text-decoration:n
 .inventory-wrapper {clear:both;}
 #dlg-unit-quantity {line-height:17px;padding-left:5px;padding-right:5px;font-size:12px;float:left;}
 /* ----------------------------------------------------------- */
-/* 修改数量 dlalog box */
 
 /* shipping cost */
 /* ----------------------------------------------------------- */
