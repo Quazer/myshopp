@@ -4,7 +4,7 @@ class OrderStatusTracking {
 	/**
 	 * Date of status
 	 */
-	Date date
+	Date date = new Date()
 	
 	/**
 	 * "PendingPayment"
@@ -14,7 +14,8 @@ class OrderStatusTracking {
 	 * "Completed"
 	 */
 	String status
-	String note
+	String note = ""
+	static hasMany = [shoppingCart: ShoppingCart]
 	
     static constraints = {
     }
