@@ -1,10 +1,13 @@
+    
     <div class="order-address-item">
 
         <div class="order-address-name order-address-selected " id="buyer-name-sidebar">
             <input type="radio" name="address-edit-item-title" value="zhangsan" checked="checked">
             <label for="address-edit-item-title" id="address-item-title"></label>
         </div>
-
+        
+        <g:form method="POST" useToken="true">
+        
         <div class="order-address-manage">
             <!-- Address info [start] -->
             <div id="address-edit-box">
@@ -745,4 +748,5 @@
                           </div>
             <!-- Address info [end] -->
         </div>
+        </g:form>
     </div>

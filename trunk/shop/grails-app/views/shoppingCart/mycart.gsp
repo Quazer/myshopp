@@ -24,7 +24,7 @@
     <div class="clearfix" id="header-inner">
         <div class="ali-logo">
             <a href="http://www.aliexpress.com/">
-                <img border="0" src="${resource(dir: 'images/shoppingcart', file: 'logo_stable_buyer.gif')}" alt="AliExpress">
+                <img border="0" src="${resource(dir: 'images/shoppingcart', file: 'logo_stable_buyer.gif')}" alt="${message(code: 'default.shop.name')}">
             </a>
         </div>
         <ul class="help-secure">
@@ -57,7 +57,7 @@
             
             
     </div>
-    <g:form name="place-order-form"  id="place-order-form" method="post">
+    <g:form useToken="true" name="place-order-form"  id="place-order-form" method="post" action="actionConfirmOrder">
    
 	    <input type="hidden" id="place-order-action" name="action" value="/order_action">
 	    <input type="hidden" id="place-order-method" name="event_submit_do_create_order" value="anything">  
@@ -137,8 +137,7 @@
     
     
     <!-- edit quantity dialog START -->
-    
-    <form action="http://shoppingcart.aliexpress.com/order/confirm_order.htm?wsOrderFrom=shopcart&affiliate=BBACDEA6E67C159F45EEB9F9022F00A2E7DB350F4C5BBA5AE5049C04F3B14F33D0FAA2B456E90C395DC02F7BC37A3BB74A7FDADFB18DB3E5AF5541DAD9F9214A7D08C4F6894B06ACA2D36965736A28F1C2336C9D1A64BAC95F1DB6F9CC3F5751&availableProductShopcartIds=950551662,950551478,&ws_score_session_id=a9d145fa5244422f82425f942645daaf" method="POST" id="dlg-edit-quantity" style="display: none; z-index: 99; left: 508px; top: 328px;">
+    <g:form useToken="true" action="updateQuantity" method="POST" name="dlg-edit-quantity" style="display: none; z-index: 99; left: 508px; top: 328px;">
         <div class="inner clearfix">
             <input type="hidden" name="productId" id="hid-product-id-quantity" value="608514088">
             <a id="quantity-minus" class="quantity-minus" href="javascript:void(0);">minus</a>
@@ -152,12 +151,12 @@
             <a id="btn-cancel-quantity">Cancel</a>
             <div class="inventory-wrapper" style="display: block;">Maximum:<span id="inventory-value">72</span></div>
         </div>
-    </form>
+    </g:form>
     <!-- edit quantity dialog END -->
     
     <!-- edit shipping form START -->
-    <form action="http://shoppingcart.aliexpress.com/order/confirm_order.htm?wsOrderFrom=shopcart&affiliate=BBACDEA6E67C159F45EEB9F9022F00A2E7DB350F4C5BBA5AE5049C04F3B14F33D0FAA2B456E90C395DC02F7BC37A3BB74A7FDADFB18DB3E5AF5541DAD9F9214A7D08C4F6894B06ACA2D36965736A28F1C2336C9D1A64BAC95F1DB6F9CC3F5751&availableProductShopcartIds=950551662,950551478,&ws_score_session_id=a9d145fa5244422f82425f942645daaf" method="POST" name="shippingEditForm" id="shipping-edit-form" style="display:none;z-index:99;">
-
+    <form action="updateShippingMethod" method="POST" name="shippingEditForm" id="shipping-edit-form" style="display:none;z-index:99;">
+        
     </form>
     <!-- edit shipping form END -->
 </div>
