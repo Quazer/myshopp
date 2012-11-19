@@ -32,6 +32,25 @@ class Product {
 	
 	// Remain product in shop
 	int inventory
+
+	//Price of Shipping
+	// Ex: China post , price = 0	
+	ShippingMethod shippingMethod1
+	ShippingMethod shippingMethod2
+	ShippingMethod shippingMethod3
+	ShippingMethod shippingMethod4
+	ShippingMethod shippingMethod5
+	ShippingMethod shippingMethod6
+	ShippingMethod shippingMethod7
+	ShippingMethod shippingMethod8
+	float shippingMethodPrice1
+	float shippingMethodPrice2
+	float shippingMethodPrice3
+	float shippingMethodPrice4
+	float shippingMethodPrice5
+	float shippingMethodPrice6
+	float shippingMethodPrice7
+	float shippingMethodPrice8
 	
 	/**
 	 * 1: Thumbnails of product
@@ -47,5 +66,24 @@ class Product {
 		supplier nullable : true
 		category nullable : true
 		unit nullable:true
+		inventory nullable: false
+		
+		shippingMethod1 nullable: true
+		shippingMethod2 nullable: true
+		shippingMethod3 nullable: true
+		shippingMethod4 nullable: true
+		shippingMethod5 nullable: true
+		shippingMethod6 nullable: true
+		shippingMethod7 nullable: true
+		shippingMethod8 nullable: true
+		
+		shippingMethodPrice1 nullable:true
+		shippingMethodPrice2 nullable:true
+		shippingMethodPrice3 nullable:true
+		shippingMethodPrice4 nullable:true
+		shippingMethodPrice5 nullable:true
+		shippingMethodPrice6 nullable:true
+		shippingMethodPrice7 nullable:true
+		shippingMethodPrice8 nullable:true
     }
 }
