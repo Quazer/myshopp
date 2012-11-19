@@ -33,6 +33,19 @@ class BootStrap {
 		cat1.save(flush:true)
 		print "cat1: " + cat1.id
 		
+		for (int i = 0; i<4; i ++) {
+			def shipMethod = new ShippingMethod()
+			shipMethod.name = "shipping method name " + i
+			shipMethod.description = "shipping description " + i
+			//shipMethod.price = 10*i + 1
+			shipMethod.timeOfVerify = "" + i + " - " + i + 1+"days"
+			shipMethod.timeOfDeliver = "" + i + " weeks"
+			shipMethod.trackingURL = "http://ems.cn"
+			shipMethod.save(flush:true)
+			
+			print "shipMethod " + i + ": " + shipMethod.id
+		}
+		
 		for (int i = 0; i<= 20; i++) {
 			def prod = new Product()
 			prod.name = "product " + i
@@ -50,25 +63,18 @@ class BootStrap {
 			prod.sku = 1000 + i
 			
 			prod.category = cat1
-//			prod = new Product(name : "product " + i, overview: "overview of " + i,
-//				specification : "specification of " + i)
-//			prod.addToSupplier(supplier1)
-//			prod.addToCategory(cat1)
+			prod.shippingMethod1 = ShippingMethod.findByName("shipping method name 0")
+			prod.shippingMethod2 = ShippingMethod.findByName("shipping method name 1")
+			prod.shippingMethod3 = ShippingMethod.findByName("shipping method name 2")
+			prod.shippingMethodPrice1 = 12.54
+			prod.shippingMethodPrice2 = 12.54
+			prod.shippingMethodPrice3 = 12.54
+			prod.inventory = 40
+			
 			prod.save(flush:true)
 			print "prod " + i + " :" + prod.id
 		}
 	
-		for (int i = 0; i<4; i ++) {
-			def shipMethod = new ShippingMethod()
-			shipMethod.name = "shipping method name " + i
-			shipMethod.description = "shipping description " + i
-			shipMethod.price = 10*i + 1
-			shipMethod.timeOfDeliver = "" + i + " weeks"
-			
-			shipMethod.save(flush:true)
-			
-			print "shipMethod " + i + ": " + shipMethod.id
-		}
 
 		
 		
