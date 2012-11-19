@@ -3,8 +3,9 @@ package com.nghia.shop
 class ShippingMethod {
 	String name
 	String description
-	float price
-	String timeOfDeliver // ex: 4-7 days
+	String timeOfDeliver // ex: 3-4 weeks
+	String timeOfVerify // ex: 2-5 days
+	String trackingURL
 	
     static constraints = {
     }
