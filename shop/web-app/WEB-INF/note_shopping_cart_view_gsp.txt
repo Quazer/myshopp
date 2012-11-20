@@ -1,0 +1,6 @@
+PAGE_TIMING.startRenderImage.src = '${resource(dir: 'images/shoppingcart', file: 'start-render.png')}';   <-- co can http:// hay ko?
+
+2. Su dung encodeAsHTML() cho cac item tren "view"
+3. Tim "save(flush:true)" -> sau doan nay nen check xem object da duoc save ok hay chua? (Object.hasErrors() ????)
+4. use "useToken" for all <g:form>
+5. Remove file "/shop/web-app/WEB-INF/shouldRemove.7z"
