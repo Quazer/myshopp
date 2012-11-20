@@ -43,9 +43,13 @@ class ShoppingCartService {
 			}
 			
 			orderStatusTracking.save(flush:true)
-			print orderStatusTracking.date.time
 			
-			return orderStatusTracking
+			if (orderStatusTracking.hasErrors()) {
+				return null	
+			}
+			
+			return orderStatusTracking.id
+			
 		}
 		else {
 			return null
