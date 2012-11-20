@@ -103,25 +103,28 @@
 	                        </td>
 	                    </tr>
 	                    <tr>
-	                        <td class="label">
-	                            Shipping:
-	                        </td>
+                            <td class="label">
+                                Shipping:
+                            </td>
 	                        <td class="sc">
-	                                <span class="f_shipping">Free Shipping</span> 
-	To                                <strong>VIET NAM</strong>                         </td>
+	                                  <g:render template="/country/list_country"/>
+	                                                            
+                            </td>
+
 	                    </tr>
 	                    <tr>
 	                        <td class="label">
 	                            Delivery:
 	                        </td>
 	                        <td>
-	                                <div id="dDropPanel" class="dinfo dropdown">
-	Typically ships in 7 to 10 days                                </div>
+                               <div id="dDropPanel" class="dinfo dropdown">
+                                ${message(code: 'product.freeshipment.time')}
+                               </div>
 	                        </td>
 	                    </tr>
 	                </tbody>
 	            </table>
-	            <g:form controller="shoppingCart" action="add">
+	            <g:form controller="shoppingCart" action="add" useToken="true">
 	            <g:hiddenField name="sku" value="${productInstance?.sku }"/>
 	            <div class="choose_quantity">
 	                <div class="quantity clearfix">
@@ -130,20 +133,34 @@
 	                    <a id="qty-inc" href="javascript:void(0);" class="add" rel="nofollow"></a>
 	                </div>
 	                <div class="btn_cartBox">
-	                       <g:actionSubmit class="btn_atcart" action="add" id="btn-add-to-cart" rel="nofollow" value="${message(code: 'default.button.update.label', default: 'Update')}" />
+	                       <g:actionSubmit class="btn_atcart" action="add" id="btn-add-to-cart" rel="nofollow" value="${message(code: 'default.button.update.label')}" />
 	                </div>
                     <div class="share">
-                        <g:each in="${ShippingMethod.list() }" var="shippingMethod" status="i">
-                            ${shippingMethod.name } 
-                            <g:if test="${i == 0 }">
-                                <input type="radio" name="shipMethod" value="${shippingMethod.id }" checked="checked"/>
+                       <%
+                         def shipMethodItem
+                         def methodName
+                         for (int i = 1; i <= 8; i++) {
+                             methodName = "shippingMethod" + i
+                             shipMethodItem = productInstance."${methodName}"
+                             methodName = "shippingMethodPrice" + i
+												
+							// TODO: just show "free shipping" only
+                             if (shipMethodItem && (int)productInstance."${methodName}" == 99999) {
+                                
+                        %>
+                            <g:if test="${i == 1 }">
+                                <input type="radio" name="shipMethod" value="${shipMethodItem.id }" checked="checked"/>
                             </g:if>
                             <g:else>
-                                <input type="radio" name="shipMethod" value="${shippingMethod.id }"/>
+                                <input type="radio" name="shipMethod" value="${shipMethodItem.id }"/>
                             </g:else>
-                           
-                        </g:each>                   
+                            <span class="f_shipping">${shipMethodItem.name}</span>
+                         <%
+                             }
+                         }
+                         %>
                     </div>
+                    <br>
 	                <div class="share">
 	                    <a id="btn-add-wishlist" href="javascript:void(0);" class="addlist add-wish" sku="159612" rel="nofollow">Add to wish list</a>
 	                    <a id="btn-add-pricematch" href="javascript:void(0);" class="match">Price Match</a>
