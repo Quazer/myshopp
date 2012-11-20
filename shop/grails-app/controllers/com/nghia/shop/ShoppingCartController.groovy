@@ -22,58 +22,64 @@ class ShoppingCartController {
 	}
 
 	def add() {
-		//TODO: check user logged in before accessing here
-		//TODO: maybe this action will be config in Spring Security
-		def currentuserLogin = springSecurityService.currentUser as Member
-		
-		if(params?.sku?.matches("\\d{1,12}") && params?.quantity?.matches("\\d{1,12}") && params?.shipMethod?.matches("\\d{1,12}")) {
-			def product = Product.findBySku(params?.sku)
-			if (! product) {
-				// TODO: return back to Product detail
-			}
+		withForm {
+			//TODO: check user logged in before accessing here
+			//TODO: maybe this action will be config in Spring Security
+			def currentuserLogin = springSecurityService.currentUser as Member
 			
-			def shippingMethod = ShippingMethod.get(params?.shipMethod)
-			def shippingMethodPrice = 0
-			def tmp
-			def methodName
-			def price
-			for (int i = 1; i <= 8; i++) {
-				methodName = "shippingMethod" + i
-				tmp = product."${methodName}"
-				if (shippingMethod == tmp) {
-					price = "shippingMethodPrice" + i
-					shippingMethodPrice = product."${price}"
-					break
+			if(params?.sku?.matches("\\d{1,12}") && params?.quantity?.matches("\\d{1,12}") && params?.shipMethod?.matches("\\d{1,12}")) {
+				def product = Product.findBySku(params?.sku)
+				if (! product) {
+					// TODO: return back to Product detail
 				}
+				
+				def shippingMethod = ShippingMethod.get(params?.shipMethod)
+				def shippingMethodPrice = 0
+				def tmp
+				def methodName
+				def price
+				for (int i = 1; i <= 8; i++) {
+					methodName = "shippingMethod" + i
+					tmp = product."${methodName}"
+					if (shippingMethod == tmp) {
+						price = "shippingMethodPrice" + i
+						shippingMethodPrice = product."${price}"
+						break
+					}
+				}
+				
+				
+				//TODO: very important !!!! -------------
+				//need to check shoppingCart is existing in DB?
+				//if existing, will increase quantity
+				
+				def shoppingCart = new ShoppingCart()
+				shoppingCart.product = product
+				shoppingCart.member = currentuserLogin
+				shoppingCart.quantity = params?.long("quantity")
+				shoppingCart.shippingMethodPrice = shippingMethodPrice
+				
+				//TODO: modify again
+				// If "shippingMethodPrice = 0" , it should set as "Free shipping"
+				shoppingCart.shippingMethod = shippingMethod
+				shoppingCart.save(flush:true)
+				
+				if (shoppingCart.hasErrors()) {
+					//TODO: return back to Product detail
+				}
+				
+				
 			}
-			
-			
-			//TODO: very important !!!! -------------
-			//need to check shoppingCart is existing in DB?
-			//if existing, will increase quantity
-			
-			def shoppingCart = new ShoppingCart()
-			shoppingCart.product = product
-			shoppingCart.member = currentuserLogin
-			shoppingCart.quantity = params?.long("quantity")
-			shoppingCart.shippingMethodPrice = shippingMethodPrice
-			
-			//TODO: modify again
-			// If "shippingMethodPrice = 0" , it should set as "Free shipping"
-			shoppingCart.shippingMethod = shippingMethod
-			shoppingCart.save(flush:true)
-			
-			if (shoppingCart.hasErrors()) {
+			else {
 				//TODO: return back to Product detail
 			}
 			
-			
+			redirect(action: "myCart")
+		}.invalidToken {
+			// bad request
+			redirect(controller: "product", action: "show", sku: params?.sku)
 		}
-		else {
-			//TODO: return back to Product detail
-		}
-		
-		redirect(action: "myCart")
+
 	}
 	
 	def iframe_proxy = {
@@ -90,7 +96,7 @@ class ShoppingCartController {
 	def actionConfirmOrder() {
 		print "first :" + params
 		// security - Authenticity Token
-		//withForm {
+		withForm {
 			def placeOrderAction = "info"
 			def updateAddressAction = "update"
 			def createAddressAction = "save"
@@ -159,109 +165,141 @@ class ShoppingCartController {
 			}
 			else {
 			}
-		 //}.invalidToken {
+		 }.invalidToken {
 		 	//TODO: ??????
-		 //}
+		 }
 		redirect(action: "myCart")
 		return
 	}
 	
 	def placeOrder() {
-		print params
-		//withForm {
-		if (params.agree-disclose-email) {
-			
-			def productIds = params.purchaseId
-			def orderStatusTracking
-			if (productIds) {
-				def currentuserLogin = springSecurityService.currentUser as Member
-				orderStatusTracking = shoppingCartService.checkout(productIds, currentuserLogin, params)
-			}
-	
-			if (orderStatusTracking) {
-				// show the end day of Order
-				def endDateOfOrder = orderStatusTracking.date + 7
+		withForm {
+			print params
+			def agreeDiscloseEmail = request.getParameter("agree-disclose-email")
+			//withForm {
+			if (agreeDiscloseEmail?.trim()) {
 				
-				[orderStatusTracking : orderStatusTracking, endDateOfOrder: endDateOfOrder.time]
+				def productIds = params.purchaseId
+				def idOrderTracking
+				if (productIds) {
+					def currentuserLogin = springSecurityService.currentUser as Member
+					idOrderTracking = shoppingCartService.checkout(productIds, currentuserLogin, params)
+				}
+		
+				if (idOrderTracking) {
+					// show the end day of Order
+					//def endDateOfOrder = orderStatusTracking.date + 7
+					//session.orderTrackingNumberFromCheckout = idOrderTracking 
+					//redirect(action: "checkout")
+					//return
+					//[orderStatusTracking : orderStatusTracking, endDateOfOrder: endDateOfOrder.time]
+					[orderStatusTracking: idOrderTracking]
+				}
+				else {
+					// TODO: need to set error to flash.message ????
+					redirect(action: "myCart")
+					return
+				}
 			}
 			else {
+				flash.message = "You should agree our policy."
+				
 				// TODO: need to set error to flash.message ????
 				redirect(action: "myCart")
 				return
 			}
-		}
-		else {
-			flash.message = "You should agree our policy."
-		}
+	    }.invalidToken {
+			redirect(action: "myCart")
+			return
+		// bad request
+	    }
+
 		//}.invalidToken {
 		//print flash.invalidToken
 			//TODO: ??????
 		//}
-		
-		// TODO: need to set error to flash.message ????
-		redirect(action: "myCart")
-		return
-	}
-	
-	def checkout2() {
-		def productIds = params.purchaseId
-		def shoppingCartList = new ArrayList()
-		if (productIds) {
-			def currentuserLogin = springSecurityService.currentUser as Member
-			def tmp
-			for (def productId : productIds) {
-				if (productId.matches("\\d{1,12}")) {
-					productId = Long.parseLong(productId)
-					if (productId > 0) {
-						def productInstance = Product.get(productId)
-						if (productInstance) {
-							ShoppingCart shoppingCart = ShoppingCart.findByProductAndMember(productInstance, currentuserLogin)
-							if (shoppingCart) {
-								shoppingCartList.add(shoppingCart)
-							}
-						}
-					}
-				}
-			}
-		}
-		
-		if (shoppingCartList.size > 0) {
-			// show the checkout page
-			[shoppingCartList : shoppingCartList]
-		}
-		else {
-			// TODO: need to set error to flash.message
-			redirect(action: "myCart")
-			return
-		}
-		
 
 	}
+	
+	def checkout() {
+		if (params.orderStatusTracking?.matches("\\d{1,12}")) {
+			def orderStatusTrackingNumber = params.orderStatusTracking
+			def orderStatusTracking = OrderStatusTracking.get(orderStatusTrackingNumber)
+			def currentDate = new Date()
+			if (orderStatusTracking && (orderStatusTracking?.date + 7 >= currentDate)) {
+				[orderStatusTracking : orderStatusTracking, endDateOfOrder: orderStatusTracking.date.time]
+			}
+			else {
+				// TODO:  need to set error to flash.message
+				redirect(action: "myCart")
+				return
+			}
+		}
+	}
+	
+//	def checkout() {
+//		def productIds = params.purchaseId
+//		def shoppingCartList = new ArrayList()
+//		if (productIds) {
+//			def currentuserLogin = springSecurityService.currentUser as Member
+//			def tmp
+//			for (def productId : productIds) {
+//				if (productId.matches("\\d{1,12}")) {
+//					productId = Long.parseLong(productId)
+//					if (productId > 0) {
+//						def productInstance = Product.get(productId)
+//						if (productInstance) {
+//							ShoppingCart shoppingCart = ShoppingCart.findByProductAndMember(productInstance, currentuserLogin)
+//							if (shoppingCart) {
+//								shoppingCartList.add(shoppingCart)
+//							}
+//						}
+//					}
+//				}
+//			}
+//		}
+//		
+//		if (shoppingCartList.size > 0) {
+//			// show the checkout page
+//			[shoppingCartList : shoppingCartList]
+//		}
+//		else {
+//			// TODO: need to set error to flash.message
+//			redirect(action: "myCart")
+//			return
+//		}
+//		
+//
+//	}
 	
 	/**
 	 * Update product quantity in ShoppingCart
 	 * @return
 	 */
 	def updateQuantity() {
-		if (params.productId?.matches("\\d{1,12}") && params.update_quantity?.matches("\\d{1,12}") ) {
-			def product = Product.get(params.productId)
-			if (! product) {
-				//TODO: need throw exception here??????
-				redirect(action: "myCart")
-				return
-			}
-
-			// if Product Inventory is limited
-			int newQuantity = params.int("update_quantity")
-			if (product.inventory < 9999 && newQuantity < product.inventory) {
-				def currentuserLogin = springSecurityService.currentUser as Member
-				ShoppingCart shoppingCart = ShoppingCart.findByProductAndMember(product, currentuserLogin)
-				if (shoppingCart) {
-					shoppingCart.quantity = newQuantity
+		print params
+		withForm {
+			if (params.productId?.matches("\\d{1,12}") && params.update_quantity?.matches("\\d{1,12}") ) {
+				def product = Product.get(params.productId)
+				if (! product) {
+					//TODO: need throw exception here??????
+					redirect(action: "myCart")
+					return
 				}
-			}			
+	
+				// if Product Inventory is limited
+				int newQuantity = params.int("update_quantity")
+				if (product.inventory < 9999 && newQuantity < product.inventory) {
+					def currentuserLogin = springSecurityService.currentUser as Member
+					ShoppingCart shoppingCart = ShoppingCart.findByProductAndMember(product, currentuserLogin)
+					if (shoppingCart) {
+						shoppingCart.quantity = newQuantity
+					}
+				}			
+			}
+		}.invalidToken {
+		//TODO: ??????
 		}
-		
 		redirect(action: "myCart")
 		return
 	}
@@ -270,25 +308,30 @@ class ShoppingCartController {
 	 * Update shippingMethod in ShoppingCart
 	 */
 	def updateShippingMethod() {
-		def productIdParam = request.getParameter("product-id")
-		if (productIdParam?.matches("\\d{1,12}") && params.serviceName) {
-			
-			// get shippingMethod selected
-			def shippingMethod = ShippingMethod.findByName(params.serviceName.trim())
-			def product = Product.get(productIdParam)
-			
-			if (shippingMethod && product) {
-				def currentuserLogin = springSecurityService.currentUser as Member
-				ShoppingCart shoppingCart = ShoppingCart.findByProductAndMember(product, currentuserLogin)
-				if (shoppingCart) {
-					// update shippingMethod selected to ShoppingCart
-					shoppingCart.shippingMethod = shippingMethod
+		withForm {
+			def productIdParam = request.getParameter("product-id")
+			if (productIdParam?.matches("\\d{1,12}") && params.serviceName) {
+				
+				// get shippingMethod selected
+				def shippingMethod = ShippingMethod.findByName(params.serviceName.trim())
+				def product = Product.get(productIdParam)
+				
+				if (shippingMethod && product) {
+					def currentuserLogin = springSecurityService.currentUser as Member
+					ShoppingCart shoppingCart = ShoppingCart.findByProductAndMember(product, currentuserLogin)
+					if (shoppingCart) {
+						// update shippingMethod selected to ShoppingCart
+						shoppingCart.shippingMethod = shippingMethod
+					}
 				}
 			}
+	
+			redirect(action: "myCart")
+			return
+		}.invalidToken {
+		   // bad request
 		}
-
-		redirect(action: "myCart")
-		return
+		
 	}
 //    def list(Integer max) {
 //        params.max = Math.min(max ?: 10, 100)
