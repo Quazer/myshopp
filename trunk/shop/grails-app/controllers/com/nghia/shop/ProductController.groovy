@@ -36,14 +36,17 @@ class ProductController {
 //    }
 
     def show(Long id) {
-        def productInstance = Product.get(id)
-        if (!productInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'product.label', default: 'Product'), id])
-            redirect(action: "list")
-            return
-        }
+		if (params?.sku?.matches("\\d{1,12}")) {
+			def productInstance = Product.findBySku(params?.sku)
+			if (!productInstance) {
+				flash.message = message(code: 'default.not.found.message', args: [message(code: 'product.label', default: 'Product'), id])
+				redirect(action: "list")
+				return
+			}
+	
+			[productInstance: productInstance]
+		}
 
-        [productInstance: productInstance]
     }
 
 //    def edit(Long id) {
