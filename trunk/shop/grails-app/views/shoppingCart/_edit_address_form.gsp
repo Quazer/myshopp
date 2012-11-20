@@ -6,7 +6,7 @@
             <label for="address-edit-item-title" id="address-item-title"></label>
         </div>
         
-        <g:form method="POST" useToken="true">
+        <g:form method="POST" >
         
         <div class="order-address-manage">
             <!-- Address info [start] -->

@@ -1,3 +1,4 @@
+<%@ page import="org.codehaus.groovy.grails.web.servlet.mvc.SynchronizerTokensHolder" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -19,7 +20,10 @@
 </head>
 
 <body>
-
+<%
+def tokenKey = SynchronizerTokensHolder.store(session).generateToken(request.forwardURI)
+ %>
+ 
 <div id="header">
     <div class="clearfix" id="header-inner">
         <div class="ali-logo">
@@ -57,8 +61,10 @@
             
             
     </div>
-    <g:form useToken="true" name="place-order-form"  id="place-order-form" method="post" action="actionConfirmOrder">
-   
+    <g:form name="place-order-form"  id="place-order-form" method="post" action="actionConfirmOrder">
+        <input type="hidden" name="org.codehaus.groovy.grails.SYNCHRONIZER_TOKEN" id="org.codehaus.groovy.grails.SYNCHRONIZER_TOKEN" value="${tokenKey}">
+        <input type="hidden" name="org.codehaus.groovy.grails.SYNCHRONIZER_URI" id="org.codehaus.groovy.grails.SYNCHRONIZER_URI" value="${request.forwardURI }">
+
 	    <input type="hidden" id="place-order-action" name="action" value="/order_action">
 	    <input type="hidden" id="place-order-method" name="event_submit_do_create_order" value="anything">  
 	    <input id="place-order-change-address" type="hidden" name="changeAddressPage" value="false">
@@ -102,11 +108,11 @@
 		    </div>
 		
 		    <!--Address Edit Form -->
-		    <g:render template="edit_address_form"/>
+		    <g:render template="edit_address_form" model="[tokenKey:tokenKey]"/>
 		</div>
 	
 	    <!-- Adddress List -->
-	    <g:render template="address_list_form"/>
+	    <g:render template="address_list_form" model="[tokenKey:tokenKey]"/>
 	
 	
 	    </div>
@@ -114,7 +120,7 @@
         <!--  order info [start]  -->
 	        
         <!-- Order Container -->
-        <g:render template="order_form"/>
+        <g:render template="order_form" model="[tokenKey:tokenKey]"/>
        <!-- order info  [end]-->
     </g:form>
 
@@ -137,14 +143,26 @@
     
     
     <!-- edit quantity dialog START -->
-    <g:form useToken="true" action="updateQuantity" method="POST" name="dlg-edit-quantity" style="display: none; z-index: 99; left: 508px; top: 328px;">
+    <g:form action="updateQuantity" method="POST" name="dlg-edit-quantity" style="display: none; z-index: 99; left: 508px; top: 328px;">
         <div class="inner clearfix">
+		    <script type="text/javascript">
+		    $(function() {
+			    alert('here')
+			    document.write('<a>cecececec</a>')
+		        alert($('#org.codehaus.groovy.grails.SYNCHRONIZER_TOKEN').val())
+		    });
+		    </script>
             <input type="hidden" name="productId" id="hid-product-id-quantity" value="608514088">
             <a id="quantity-minus" class="quantity-minus" href="javascript:void(0);">minus</a>
             <input name="update_quantity" id="txt-editable-quantity" class="layout-input" autocomplete="off">
             <a id="quantity-add" class="quantity-add" href="javascript:void(0);">plus</a>
             <span id="dlg-unit-quantity">piece</span>
             <input type="hidden" name="shopcartId" id="hid-shopcart-id-quantity" value="950551662">
+            
+           
+            <input type="hidden" name="org.codehaus.groovy.grails.SYNCHRONIZER_TOKEN" id="org.codehaus.groovy.grails.SYNCHRONIZER_TOKEN" value="${tokenKey}">
+            <input type="hidden" name="org.codehaus.groovy.grails.SYNCHRONIZER_URI" id="org.codehaus.groovy.grails.SYNCHRONIZER_URI" value="${request.forwardURI }">
+            
             <input type="hidden" name="action" value="ConfirmOrderAction">
             <input type="hidden" name="event_submit_do_update_quantity" value="anything">
             <input type="button" id="btn-ok-quantity" value="OK">
@@ -156,7 +174,9 @@
     
     <!-- edit shipping form START -->
     <form action="updateShippingMethod" method="POST" name="shippingEditForm" id="shipping-edit-form" style="display:none;z-index:99;">
-        
+            <input type="hidden" name="org.codehaus.groovy.grails.SYNCHRONIZER_TOKEN" id="org.codehaus.groovy.grails.SYNCHRONIZER_TOKEN" value="${tokenKey}">
+            <input type="hidden" name="org.codehaus.groovy.grails.SYNCHRONIZER_URI" id="org.codehaus.groovy.grails.SYNCHRONIZER_URI" value="${request.forwardURI }">
+
     </form>
     <!-- edit shipping form END -->
 </div>
@@ -167,7 +187,7 @@
 
 
 <div id="order-full-mask" style="display: none;"><iframe class="hack-iframe" src="about:blank" frameborder="no"></iframe></div>
-<iframe src="${createLink(controller:'shoppingCart', action:'iframe_proxy')}" style="display:none" height="0" width="0" id="transactionbp-proxy"></iframe>
+
 
 
 <div class="footer" id="footer">

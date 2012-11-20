@@ -1,4 +1,4 @@
-
+<%@ page import="com.nghia.shop.CommonUtils" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
@@ -65,10 +65,8 @@
                         <dl>
                 <dt>Payable Total:</dt>
                 <dd>
-                    <span class="price">US $680.00</span>
-                                        <span id="special-coupon-payable-tips" class="save" _originaldisplay="inline" style="display: inline;">
-                                                Save <span class="price">US $5.00</span> on this order by paying with <a href="https://alipay.alibaba.com/checkout.htm?contractId=2012111746552553&showTips=true&wsOrderFrom=product_detail&wsOrderId=1019626884#" class="channel-master">MasterCard</a>!
-                                            </span>
+                    <span class="price">${CommonUtils.totalPriceOfShopCart(orderStatusTracking?.shoppingCart) }</span>
+                    
                                                                             </dd>
             </dl>
             <dl>
@@ -144,7 +142,7 @@
 
                 countdown: {
             show: true,
-            endTime: ${endDateOfOrder},
+            endTime: ${(orderStatusTracking.date + 7).time},
             intervalTime: ${orderStatusTracking.date.time}
         },
 
