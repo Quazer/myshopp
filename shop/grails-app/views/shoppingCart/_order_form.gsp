@@ -5,7 +5,9 @@
         <div class="order-title">
              <h2>${message(code: 'shoppingcart.confirmorder.label')} (${cartList.size} <g:if test="${cartList.size > 1 }">${message(code: 'shoppingcart.items.label')}</g:if><g:else>${message(code: 'shoppingcart.item.label')}</g:else>):</h2>
         </div>
-                    <g:form action="placeOrder" useToken="true" method="POST">
+        <g:form action="placeOrder" method="POST">
+            <input type="hidden" name="org.codehaus.groovy.grails.SYNCHRONIZER_TOKEN" id="org.codehaus.groovy.grails.SYNCHRONIZER_TOKEN" value="${tokenKey}">
+            <input type="hidden" name="org.codehaus.groovy.grails.SYNCHRONIZER_URI" id="org.codehaus.groovy.grails.SYNCHRONIZER_URI" value="${request.forwardURI }">
     <!-- Form for place an order - start -->
                 <!-- Order Item -->
                 <g:each in="${cartList }" var="orderItem">
