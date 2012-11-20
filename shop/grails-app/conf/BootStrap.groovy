@@ -66,7 +66,8 @@ class BootStrap {
 			prod.shippingMethod1 = ShippingMethod.findByName("shipping method name 0")
 			prod.shippingMethod2 = ShippingMethod.findByName("shipping method name 1")
 			prod.shippingMethod3 = ShippingMethod.findByName("shipping method name 2")
-			prod.shippingMethodPrice1 = 12.54
+			prod.shippingMethodPrice1 = 99999
+			
 			prod.shippingMethodPrice2 = 12.54
 			prod.shippingMethodPrice3 = 12.54
 			prod.inventory = 40
