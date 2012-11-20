@@ -85,7 +85,7 @@
                                     <li>
                                         <div class="photo">
                                             <a
-                                                href="${createLink(controller : 'product',action: 'show', id: product?.id)}"
+                                                href="${createLink(controller : 'product',action: 'show', params:[sku: product?.sku])}"
                                                 rel="nofollow"> <img class="lazy"
                                                 title="${product.name }"
                                                 data-src="${product.productImage }"
@@ -94,7 +94,7 @@
                                         </div>
                                         <div class="pi">
                                             <p class="title">
-                                                <a href="${createLink(controller : 'product', action: 'show',id: product?.id)}"
+                                                <a href="${createLink(controller : 'product', action: 'show',params:[sku: product?.sku])}"
                                                     title="${product.name }">${product.name }</a>
                                             </p>
                                             <p class="des">${product.name }</p>
