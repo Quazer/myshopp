@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta name="layout" content="main_product_detail">
-        <g:set var="entityName" value="${message(code: 'product.label', default: 'Product')}" />
+        <g:set var="entityName" value="${message(code: 'product.label')}" />
         <title><g:message code="default.show.label" args="[entityName]" /></title>
     </head>
     <body>
