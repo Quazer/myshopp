@@ -155,7 +155,7 @@
 
                         coremetricsParams: {
             tradeID         : '16748157',
-            tradeGMV        : '680.00',
+            tradeGMV        : '700.00',
             sellerID        : '200037156',
             buyerID         : '131688756',
             buyerCity       : 'Da nang',
