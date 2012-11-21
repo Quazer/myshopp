@@ -28,7 +28,7 @@
 		<p id="special-coupon-amount" style="display: none;"
 			_originaldisplay="block">Save: US $5.00</p>
 		<p>
-			Sum: ${CommonUtils.totalPriceOfShopCart(orderStatusTracking.shoppingCart) }
+			Sum: <span id="sum-payable-amount">${CommonUtils.totalPriceOfShopCart(orderStatusTracking.shoppingCart) }</span> 
 		</p>
 	</div>
 </div>
