@@ -4,3 +4,8 @@ PAGE_TIMING.startRenderImage.src = '${resource(dir: 'images/shoppingcart', file:
 3. Tim "save(flush:true)" -> sau doan nay nen check xem object da duoc save ok hay chua? (Object.hasErrors() ????)
 4. use "useToken" for all <g:form>
 5. Remove file "/shop/web-app/WEB-INF/shouldRemove.7z"
+6. Xoa cac message default (ex: ${message(code: 'product.label', default: 'Product')})
+7. Them cac favicon icon tai cac header cua view
+   Them cac "keyword" , "description" tai <header> cua cac trang
+   
+8. Them productName tren URL (vd: http://xxx/iphone-case-5/38374.html 
