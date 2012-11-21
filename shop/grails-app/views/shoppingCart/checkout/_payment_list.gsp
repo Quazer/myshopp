@@ -1,3 +1,4 @@
+<%@ page import="com.nghia.shop.CommonUtils" %>
 <div class="paymethod-inner">
 	<h2>Choose your payment method</h2>
 
@@ -38,7 +39,7 @@
 				<input type="hidden" id="_fmh.c._0.m" name="_fmh.c._0.m" value="tt">
 				<input type="hidden" id="_fmh.c._0.c" name="_fmh.c._0.c"
 					value="2012111746552553"> <input type="hidden"
-					id="_fmh.c._0.p" name="_fmh.c._0.p" value="680.00"> <input
+					id="_fmh.c._0.p" name="_fmh.c._0.p" value="${CommonUtils.sumPriceOfShopCart(orderStatusTracking.shoppingCart) }"> <input
 					type="hidden" id="_fmh.c._0.pa" name="_fmh.c._0.pa" value="USD">
 				<input type="hidden" id="_fmh.c._0.is" name="_fmh.c._0.is"
 					value="true"> <input type="hidden"
