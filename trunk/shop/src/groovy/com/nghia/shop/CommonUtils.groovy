@@ -47,11 +47,34 @@ class CommonUtils {
 		return "{totalPerOrder}"
 	}
 	
+	/**
+	 * It's use to DISPLAY on the view
+	 * @param cartList
+	 * @return
+	 */
 	// arg: list of ShoppingCart
 	def static totalPriceOfShopCart(cartList) {
-		// TODO: check coupon before use it
+		def price = sumPriceOfShopCart(cartList)
 		
 		return "{totalPriceOfShopCart}"
+	}
+	
+	/**
+	 * It's use to CALCULATION 
+	 * @param cartList
+	 * @return
+	 */
+	def static sumPriceOfShopCart(cartList) {
+		def price = 0.00
+		for (ShoppingCart shopItem : cartList) {
+			if (shopItem.product) {
+				price += shopItem.product?.purchargePrice
+			}
+		}
+		
+		
+		// TODO: add coupon + shippingCost
+		return price
 	}
 	
 	def static isFreeShipping(productInstance) {
