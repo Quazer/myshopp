@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="content-language" content="en">
 <title>
-	${message(code: 'default.website.name ')}
+	${message(code: 'default.website.name')}
 </title>
 <meta name="keywords" content="">
 <meta name="description" content="">
