@@ -7,7 +7,9 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title><g:layoutTitle default="Grails"/></title>
+		<title>
+		  ${message(code: 'default.website.name')}
+        </title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
 		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
@@ -43,11 +45,9 @@
 	<!-- edit here -->
 	<script type="text/javascript">
 	    Pattaya.Global.Config.debug = false;
-	    Pattaya.Global.Page.Config.set({"URL_SEARCH":"http://dx.com/s/", "DX_GLOBAL_COOKIES":{"domain":".dx.com", "key":"DXGlobalization"}, "URL_OFFERS":"/CommonContent/GetOffersProducts" });
-	    Pattaya.BFD.set({"skusInfoRootUrl": "//dx.com", "BFD_ITEM_INFO":{"client": "Ctest_88"}, "PREngine": "bi"});
 	
-	    Pattaya.Global.Page.Header.init("//dx.com");
-	    Pattaya.Cart.MiniCart.init({ "cartRootUrl": "https://cart.dx.com", "portalRootUrl": "//dx.com", "passportRootUrl": "http://passport.dx.com/" });
+	    Pattaya.Global.Page.Header.init("//${message(code: 'default.shop.url')}");
+	    Pattaya.Cart.MiniCart.init({ "cartRootUrl": "https://${message(code: 'default.shop.url')}", "portalRootUrl": "//${message(code: 'default.shop.url')}", "passportRootUrl": "http://${message(code: 'default.shop.url')}" });
 	</script>
 
 
