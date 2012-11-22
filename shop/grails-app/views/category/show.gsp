@@ -16,7 +16,8 @@
                     <div class="filter_result">
                         <div class="whole_result">
                             <strong>${productTotalCount }</strong> Results for <strong>${categoryName}</strong>
-                            <g:paginate total="${productTotalCount}" />
+                            <paging:paginate total="${productTotalCount}" />
+                            </paging:paginate>
                             
                             <div class="pagenumber">
                                 <span>1</span> / 5
@@ -88,7 +89,7 @@
                                                 href="${createLink(controller : 'product',action: 'show', params:[sku: product?.sku])}"
                                                 rel="nofollow"> <img class="lazy"
                                                 title="${product.name }"
-                                                data-src="${product.productImage }"
+                                                data-src="${createLink(controller : 'imageStore',action: 'productImages', id: product?.productImage?.id)}"
                                                 style="display: block;"
                                                 ></a>
                                         </div>
