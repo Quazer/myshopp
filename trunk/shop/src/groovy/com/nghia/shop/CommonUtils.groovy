@@ -77,6 +77,21 @@ class CommonUtils {
 		return price
 	}
 	
+	def static bestSellerOfCategory(categoryName) {
+		def productList
+		try {
+			if (categoryName) {
+				productList = Product.createCriteria().list() {
+					eq("category.name", categoryName)
+				}
+			}
+		}
+		catch (e) {
+			e.printStackTrace()
+		}
+
+		productList
+	}
 	def static isFreeShipping(productInstance) {
 		return true
 	}
