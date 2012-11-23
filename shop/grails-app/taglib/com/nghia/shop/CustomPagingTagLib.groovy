@@ -1,7 +1,7 @@
 package com.nghia.shop
-
-class PagingTabLib {
-	Closure paginate = { attrs ->
+import org.springframework.web.servlet.support.RequestContextUtils as RCU
+class CustomPagingTagLib {
+	Closure paging = { attrs ->
 		def writer = out
 		if (attrs.total == null) {
 			throwTagError("Tag [paginate] is missing required attribute [total]")
