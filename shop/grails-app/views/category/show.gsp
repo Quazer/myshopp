@@ -1,175 +1,313 @@
+<html xmlns="http://www.w3.org/1999/xhtml" style="height: 100%;">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<%@ page import="com.nghia.shop.Category" %>
-<%@ page import="com.nghia.shop.CommonUtils" %>
-<!doctype html>
-<html>
-    <head>
-        <meta name="layout" content="main">
-        <g:set var="entityName" value="${message(code: 'category.label', default: 'Category')}" />
-        <title><g:message code="default.list.label" args="[entityName]" /></title>
-    </head>
-    <body>
-                    <h1>
-                        ${categoryName}
-                    </h1>
-                    <!-- recommended products -->
-                    <div class="filter_result">
-                        <div class="whole_result">
-                            <strong>${productTotalCount }</strong> Results for <strong>${categoryName}</strong>
-                            <paging:paginate total="${productTotalCount}" />
-                            </paging:paginate>
-                            
-                            <div class="pagenumber">
-                                <span>1</span> / 5
-                            </div>
-                            <div class="pageturn clearfix">
-                                <a href="javascript:void(0)" class="prev default"></a> <a
-                                    href="http://dx.com/c/iphone-ipad-ipod-299/cases-protectors-201/stickers-219?utm_rid=%2Fshoppingcart.dx&utm_sid=1&utm_source=affiliate&utm_medium=dealextreme&page=2"
-                                    class="next"> </a>
-                            </div>
-                        </div>
-                        <div class="page_wrapper">
-                            <div class="leftbox">
-                                <span class="view"><strong>View</strong></span> <span
-                                    class="nor"><a id="showNor" class="list_row hovered"
-                                    href="javascript:void(0)" rel="nofollow"> </a></span><span class="spe"><a
-                                    id="showSpe" class="list_column" href="javascript:void(0)"
-                                    rel="nofollow"> </a></span>
-                                <div class="showPdNum">
-                                    <span class="view"><strong>Show</strong></span>
-                                    <ul class="numlist">
-                                        <li><a class="cur"
-                                            href="http://dx.com/c/iphone-ipad-ipod-299/cases-protectors-201/stickers-219?utm_rid=%2Fshoppingcart.dx&utm_sid=1&utm_source=affiliate&utm_medium=dealextreme&pageSize=40">40</a></li>
-                                        <li><a
-                                            href="http://dx.com/c/iphone-ipad-ipod-299/cases-protectors-201/stickers-219?utm_rid=%2Fshoppingcart.dx&utm_sid=1&utm_source=affiliate&utm_medium=dealextreme&pageSize=100">100</a></li>
-                                        <li><a
-                                            href="http://dx.com/c/iphone-ipad-ipod-299/cases-protectors-201/stickers-219?utm_rid=%2Fshoppingcart.dx&utm_sid=1&utm_source=affiliate&utm_medium=dealextreme&pageSize=200">200</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="rightbox">
-                                <strong>Sort by</strong>
-                                <div class="sortby dropdown">
-                                    <a class="sb" href="javascript:void(0)" rel="nofollow">Popularity</a>
-                                    <ul style="display: none;">
-                                        <li
-                                            url="/c/iphone-ipad-ipod-299/cases-protectors-201/stickers-219?utm_rid=%2Fshoppingcart.dx&amp;utm_sid=1&amp;utm_source=affiliate&amp;utm_medium=dealextreme&amp;sort=price&amp;sortType=asc">Price(Low
-                                            to High)</li>
-                                        <li
-                                            url="/c/iphone-ipad-ipod-299/cases-protectors-201/stickers-219?utm_rid=%2Fshoppingcart.dx&amp;utm_sid=1&amp;utm_source=affiliate&amp;utm_medium=dealextreme&amp;sort=price&amp;sortType=desc">Price(High
-                                            to Low)</li>
-                                        <li
-                                            url="/c/iphone-ipad-ipod-299/cases-protectors-201/stickers-219?utm_rid=%2Fshoppingcart.dx&amp;utm_sid=1&amp;utm_source=affiliate&amp;utm_medium=dealextreme&amp;sort=discount&amp;sortType=desc">Discount
-                                            (High to Low)</li>
-                                        <li
-                                            url="/c/iphone-ipad-ipod-299/cases-protectors-201/stickers-219?utm_rid=%2Fshoppingcart.dx&amp;utm_sid=1&amp;utm_source=affiliate&amp;utm_medium=dealextreme&amp;sort=discount&amp;sortType=asc">Discount
-                                            (Low to High)</li>
-                                        <li
-                                            url="/c/iphone-ipad-ipod-299/cases-protectors-201/stickers-219?utm_rid=%2Fshoppingcart.dx&amp;utm_sid=1&amp;utm_source=affiliate&amp;utm_medium=dealextreme&amp;sort=addDate&amp;sortType=desc">Release
-                                            Date</li>
-                                        <li
-                                            url="/c/iphone-ipad-ipod-299/cases-protectors-201/stickers-219?utm_rid=%2Fshoppingcart.dx&amp;utm_sid=1&amp;utm_source=affiliate&amp;utm_medium=dealextreme&amp;sort=rating&amp;sortType=desc">Avg.
-                                            Review</li>
-                                    </ul>
-                                </div>
-                                <a class="pc active desc" href="javascript:void(0)"
-                                    rel="nofollow">Popularity</a> <a class="pc  desc"
-                                    href="http://dx.com/c/iphone-ipad-ipod-299/cases-protectors-201/stickers-219?utm_rid=%2Fshoppingcart.dx&utm_sid=1&utm_source=affiliate&utm_medium=dealextreme&sort=price&sortType=asc"
-                                    rel="nofollow">Price</a>
-                            </div>
-                            <div class="clear"></div>
-                            
-                        </div>
-                        <div id="proList" class="pro_nor">
-                            <ul class="productList subList">
-                                <g:each in="${productList}" var="product">
-                                    <li>
-                                        <div class="photo">
-                                            <a
-                                                href="${createLink(controller : 'product',action: 'show', params:[sku: product?.sku])}"
-                                                rel="nofollow"> <img class="lazy"
-                                                title="${product.name }"
-                                                data-src="${createLink(controller : 'imageStore',action: 'productImages', id: product?.productImage?.id)}"
-                                                style="display: block;"
-                                                ></a>
-                                        </div>
-                                        <div class="pi">
-                                            <p class="title">
-                                                <a href="${createLink(controller : 'product', action: 'show',params:[sku: product?.sku])}"
-                                                    title="${product.name }">${product.name }</a>
-                                            </p>
-                                            <p class="des">${product.name }</p>
-                                            <p class="price">${CommonUtils.productPrice(product) }</p>
-                                            <span class="f_shipping">Free shipping</span>
+<title>
+	${message(code: 'default.shop.name')}
+</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="robots" content="follow,noindex">
 
-                                        </div>
-                                        <div class="po">
-                                            <p class="sku">SKU : ${product.sku }</p>
-                                            <p class="np">
-                                                Price :<span>${CommonUtils.productPrice(product) }</span>
-                                            </p>
-                                            <p>
-                                                <a class="btn_addcart"
-                                                    href="http://cart.dx.com/shoppingcart.dx/add.81064"
-                                                    target="_blank"> Add To Cart</a>
-                                            </p>
-                                            <p>
-                                                <a href="javascript:void(0);" class="btn_wishlist add-wish"
-                                                    sku="81064" title="Add To Wish List"> Add To Wish List</a>
-                                            </p>
-                                        </div>
-                                    </li>
-                                </g:each>
-                            </ul>
-                        </div>
-                        <div class="page_wrapper">
-                            <div class="page_range">
-                            <g:paginate total="${productTotalCount}" />
-                                Page <span class="pageNumber">1</span> of <span
-                                    class="pageCount">5</span>
-                            </div>
-                            <div class="goto">Go to Page:</div>
-                            <div class="page_numb">
-                                <form
-                                    action="./Apple Iphone Ipad Ipod Stickers - Free Shipping - DX_files/Apple Iphone Ipad Ipod Stickers - Free Shipping - DX.htm"
-                                    method="get">
-                                    <input type="hidden" name="utm_rid" value="/shoppingcart.dx"><input
-                                        type="hidden" name="utm_sid" value="1"><input
-                                        type="hidden" name="utm_source" value="affiliate"><input
-                                        type="hidden" name="utm_medium" value="dealextreme"> <input
-                                        type="text" class="put_page" name="page"> <input
-                                        class="go_page" type="submit" value="go">
-                                </form>
-                            </div>
-                            <ul class="page">
-                                <li><span class="pre">Prev</span></li>
-                                <li><span class="cur">1</span></li>
-                                <li><a
-                                    href="http://dx.com/c/iphone-ipad-ipod-299/cases-protectors-201/stickers-219?utm_rid=%2Fshoppingcart.dx&utm_sid=1&utm_source=affiliate&utm_medium=dealextreme&page=2">2</a></li>
-                                <li><a
-                                    href="http://dx.com/c/iphone-ipad-ipod-299/cases-protectors-201/stickers-219?utm_rid=%2Fshoppingcart.dx&utm_sid=1&utm_source=affiliate&utm_medium=dealextreme&page=3">3</a></li>
-                                <li><a
-                                    href="http://dx.com/c/iphone-ipad-ipod-299/cases-protectors-201/stickers-219?utm_rid=%2Fshoppingcart.dx&utm_sid=1&utm_source=affiliate&utm_medium=dealextreme&page=4">4</a></li>
-                                <li><a
-                                    href="http://dx.com/c/iphone-ipad-ipod-299/cases-protectors-201/stickers-219?utm_rid=%2Fshoppingcart.dx&utm_sid=1&utm_source=affiliate&utm_medium=dealextreme&page=5">5</a></li>
-                                <li><a
-                                    href="http://dx.com/c/iphone-ipad-ipod-299/cases-protectors-201/stickers-219?utm_rid=%2Fshoppingcart.dx&utm_sid=1&utm_source=affiliate&utm_medium=dealextreme&page=2"
-                                    class="next">Next</a></li>
-                            </ul>
-                            <script type="text/javascript">
-    Pattaya.Mall.Pagination.init();
-    </script>
-                        </div>
+<link rel="shortcut icon" type="image/x-icon"
+	href="${resource(dir: 'images', file: 'myshop.ico')}">
+<link rel="stylesheet" type="text/css" media="all"
+	href="${resource(dir: 'css/category', file: 'search_common-MODERN_BROWSER-v_9764ede3127a8_0.css')}">
+<link
+	href="${resource(dir: 'css/category', file: 'express-MODERN_BROWSER-v_b89460b918b55_0.css')}"
+	rel="stylesheet" type="text/css" media="all">
 
-                    </div>
-                    <script type="text/javascript">
-                    /**
-    (function () {
-        Pattaya.Mall.lazyLoadPic();
+<script type="text/javascript" async=""
+	src="${resource(dir: 'js/shoppingcart', file: 'beacon_ws.js')}"></script>
+<script type="text/javascript" async=""
+	src="${resource(dir: 'js/shoppingcart', file: 'base-mod.js')}"></script>
 
-        Pattaya.Account.Wish.init('http://ad.com');
-    } ());
-    **/
+<link type="text/css" rel="stylesheet" charset="UTF-8"
+	href="${resource(dir: 'css/category', file: 'translateelement.css')}">
+<script type="text/javascript" charset="UTF-8"
+	src="${resource(dir: 'js/index', file: 'main_vi.js')}"></script>
+<script type="text/javascript" charset="UTF-8"
+	src="${resource(dir: 'js/index', file: 'element_main.js')}"></script>
+	
+<!-- script type="text/javascript" async=""
+	src="http://style.alibaba.com/js/5v/lib/_hozmod/addon/base-mod.js"></script -->
+
+<script id="yui__dyn_0" type="text/javascript" charset="utf-8"
+	src="http://www.aliexpress.com/b2bad.html?keyword=choker%20necklace&amp;ip=49.156.52.23&amp;mt=e&amp;dcatid=0&amp;pageId=7f0000017f00000150aee44e13b2b68d27e8cacc6c&amp;categoryBrowse=0&amp;count=5&amp;dl=r&amp;offset=0&amp;pid=801_0000_0103&amp;type=side&amp;cb=AE.P4P.ExpressView.sideListCallback&amp;t=13536429883481730"></script>
+	
+<script id="yui__dyn_1" type="text/javascript" charset="utf-8"
+	src="${resource(dir: 'js/category', file: 'MODERN_BROWSER_v_8780d1b35126_0.js')}"></script>
+	
+<script id="yui__dyn_2" type="text/javascript" charset="utf-8"
+	src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	
+<script id="yui__dyn_3" type="text/javascript" charset="utf-8"
+	src="http://atmamos.im.alisoft.com/muliuserstatusx.atc?beginnum=0;8pctgRBMALMxqM2+6JFlWuDC8ZhFVE4A;8pctgRBMALNzKGN5PYRgYzUwgRtIcpLJ;8pctgRBMALMxqM2+6JFlWgbR4lLcxlHu;8pctgRBMALOT5B6TB9rWQabncguwdH1K;8pctgRBMALP1783BiI0m+k6XLaBchkFa;8pctgRBMALNbKGSLv2vYzaxNWx23NpEP;8pctgRBMALPU1ckH6EWH5V730RgXgE9G;8pctgRBMALMjtxLsHQij1bD9CNS3DtTl;8pctgRBMALMxqM2+6JFlWgbR4lLcxlHu;8pctgRBMALO2kOa+8imSdzpMLKTOn5nt;8pctgRBMALMRNZaIv/X0UTSzIHdsxiT0;8pctgRBMALO8o7k2e0UjQBU8JHRC5X7L;8pctgRBMALMRNZaIv/X0UTSzIHdsxiT0;8pctgRBMALO9c+iXopS4Th54IRgFSurz;8pctgRBMALO9c+iXopS4Th54IRgFSurz;8pctgRBMALPU1ckH6EWH5V730RgXgE9G;8pctgRBMALMjtxLsHQij1bD9CNS3DtTl;8pctgRBMALP1783BiI0m+k6XLaBchkFa;8pctgRBMALPRutP5GkaqOPVm7oxX+vhy;8pctgRBMALOaCsYmRbrwvfUVzm7Sz7U/"></script>
+	
+<script id="yui__dyn_4" type="text/javascript" charset="utf-8"
+	src="http://atmamos.im.alisoft.com/muliuserstatusx.atc?beginnum=0;8pctgRBMALMxqM2+6JFlWuDC8ZhFVE4A;8pctgRBMALNzKGN5PYRgYzUwgRtIcpLJ;8pctgRBMALMxqM2+6JFlWgbR4lLcxlHu;8pctgRBMALOT5B6TB9rWQabncguwdH1K;8pctgRBMALP1783BiI0m+k6XLaBchkFa;8pctgRBMALNbKGSLv2vYzaxNWx23NpEP;8pctgRBMALPU1ckH6EWH5V730RgXgE9G;8pctgRBMALMjtxLsHQij1bD9CNS3DtTl;8pctgRBMALMxqM2+6JFlWgbR4lLcxlHu;8pctgRBMALO2kOa+8imSdzpMLKTOn5nt;8pctgRBMALMRNZaIv/X0UTSzIHdsxiT0;8pctgRBMALO8o7k2e0UjQBU8JHRC5X7L;8pctgRBMALMRNZaIv/X0UTSzIHdsxiT0;8pctgRBMALO9c+iXopS4Th54IRgFSurz;8pctgRBMALO9c+iXopS4Th54IRgFSurz;8pctgRBMALPU1ckH6EWH5V730RgXgE9G;8pctgRBMALMjtxLsHQij1bD9CNS3DtTl;8pctgRBMALP1783BiI0m+k6XLaBchkFa;8pctgRBMALPRutP5GkaqOPVm7oxX+vhy;8pctgRBMALOaCsYmRbrwvfUVzm7Sz7U/"></script>
+	
+<script id="yui__dyn_5" type="text/javascript" charset="utf-8"
+	src="http://www.aliexpress.com/b2bad.html?keyword=choker%20necklace&amp;ip=49.156.52.23&amp;mt=e&amp;dcatid=200000111,200000114,100006750,200000110&amp;pageId=7f0000017f00000150aee44e13b2b68d27e8cacc6c&amp;categoryBrowse=0&amp;count=4&amp;dl=r&amp;offset=0&amp;pid=801_0000_0102&amp;type=bottom&amp;_custid=214048058,114177938,213693235,213721359,50067652&amp;cb=AE.P4P.ExpressView.bottomListCallback&amp;t=13536429890881158"></script>
+
+<script id="yui__dyn_9" type="text/javascript" charset="utf-8"
+	src="http://atmamos.im.alisoft.com/muliuserstatusx.atc?beginnum=0;8pctgRBMALMxqM2+6JFlWuDC8ZhFVE4A;8pctgRBMALNzKGN5PYRgYzUwgRtIcpLJ;8pctgRBMALMxqM2+6JFlWgbR4lLcxlHu;8pctgRBMALOT5B6TB9rWQabncguwdH1K;8pctgRBMALP1783BiI0m+k6XLaBchkFa;8pctgRBMALNbKGSLv2vYzaxNWx23NpEP;8pctgRBMALPU1ckH6EWH5V730RgXgE9G;8pctgRBMALMjtxLsHQij1bD9CNS3DtTl;8pctgRBMALMxqM2+6JFlWgbR4lLcxlHu;8pctgRBMALO2kOa+8imSdzpMLKTOn5nt;8pctgRBMALMRNZaIv/X0UTSzIHdsxiT0;8pctgRBMALO8o7k2e0UjQBU8JHRC5X7L;8pctgRBMALMRNZaIv/X0UTSzIHdsxiT0;8pctgRBMALO9c+iXopS4Th54IRgFSurz;8pctgRBMALO9c+iXopS4Th54IRgFSurz;8pctgRBMALPU1ckH6EWH5V730RgXgE9G;8pctgRBMALMjtxLsHQij1bD9CNS3DtTl;8pctgRBMALP1783BiI0m+k6XLaBchkFa;8pctgRBMALPRutP5GkaqOPVm7oxX+vhy;8pctgRBMALOaCsYmRbrwvfUVzm7Sz7U/"></script>
+	
+<script id="yui__dyn_10" type="text/javascript" charset="utf-8"
+	src="http://atmamos.im.alisoft.com/muliuserstatusx.atc?beginnum=20;8pctgRBMALNSjz9KgL1ZLO5LL+MSPBPY;8pctgRBMALMDuKsxoW04sVGpS9uA5Qjg;8pctgRBMALMBpxUwAXKSx9q5tHN0FyD9;8pctgRBMALNDgyX/ogd9UmwKtJcNcRWM;8pctgRBMALMfdKgGLDhm44yVBf6Emhy6;8pctgRBMALPRutP5GkaqOPVm7oxX+vhy;8pctgRBMALMBpxUwAXKSx9q5tHN0FyD9;8pctgRBMALOQs65He8a0TQTBYWnS4LDl;8pctgRBMALNH9A4HaOz1/d1FPi30XrNk;8pctgRBMALMLfv+CrWzGp0lh0/XSTWJp;8pctgRBMALNZsS3WAu8KBP9gA13+Ku3+;8pctgRBMALNbKGSLv2vYzaxNWx23NpEP;8pctgRBMALO8o7k2e0UjQBU8JHRC5X7L;8pctgRBMALM3c7iyY3hI5AsT1HUz45pA;8pctgRBMALPsn/Yo71MWC4pKhj0EdTTn;8pctgRBMALNzKGN5PYRgYzUwgRtIcpLJ"></script>
+	
+<script id="yui__dyn_11" type="text/javascript" charset="utf-8"
+	src="http://atmamos.im.alisoft.com/muliuserstatusx.atc?beginnum=20;8pctgRBMALNSjz9KgL1ZLO5LL+MSPBPY;8pctgRBMALMDuKsxoW04sVGpS9uA5Qjg;8pctgRBMALMBpxUwAXKSx9q5tHN0FyD9;8pctgRBMALNDgyX/ogd9UmwKtJcNcRWM;8pctgRBMALMfdKgGLDhm44yVBf6Emhy6;8pctgRBMALPRutP5GkaqOPVm7oxX+vhy;8pctgRBMALMBpxUwAXKSx9q5tHN0FyD9;8pctgRBMALOQs65He8a0TQTBYWnS4LDl;8pctgRBMALNH9A4HaOz1/d1FPi30XrNk;8pctgRBMALMLfv+CrWzGp0lh0/XSTWJp;8pctgRBMALNZsS3WAu8KBP9gA13+Ku3+;8pctgRBMALNbKGSLv2vYzaxNWx23NpEP;8pctgRBMALO8o7k2e0UjQBU8JHRC5X7L;8pctgRBMALM3c7iyY3hI5AsT1HUz45pA;8pctgRBMALPsn/Yo71MWC4pKhj0EdTTn;8pctgRBMALNzKGN5PYRgYzUwgRtIcpLJ"></script>
+<script id="yui__dyn_12" type="text/javascript" charset="utf-8"
+	src="http://atmamos.im.alisoft.com/muliuserstatusx.atc?beginnum=20;8pctgRBMALNSjz9KgL1ZLO5LL+MSPBPY;8pctgRBMALMDuKsxoW04sVGpS9uA5Qjg;8pctgRBMALMBpxUwAXKSx9q5tHN0FyD9;8pctgRBMALNDgyX/ogd9UmwKtJcNcRWM;8pctgRBMALMfdKgGLDhm44yVBf6Emhy6;8pctgRBMALPRutP5GkaqOPVm7oxX+vhy;8pctgRBMALMBpxUwAXKSx9q5tHN0FyD9;8pctgRBMALOQs65He8a0TQTBYWnS4LDl;8pctgRBMALNH9A4HaOz1/d1FPi30XrNk;8pctgRBMALMLfv+CrWzGp0lh0/XSTWJp;8pctgRBMALNZsS3WAu8KBP9gA13+Ku3+;8pctgRBMALNbKGSLv2vYzaxNWx23NpEP;8pctgRBMALO8o7k2e0UjQBU8JHRC5X7L;8pctgRBMALM3c7iyY3hI5AsT1HUz45pA;8pctgRBMALPsn/Yo71MWC4pKhj0EdTTn;8pctgRBMALNzKGN5PYRgYzUwgRtIcpLJ"></script>
+	
+</head>
+<body id="we-wholesale-search-list" style="position: relative; min-height: 100%; top: 0px;">
+	<script type="text/javascript" async=""
+		src="${resource(dir: 'js/index', file: 'dc.js')}"></script>
+	<script type="text/javascript" async=""
+		src="${resource(dir: 'js/category', file: 'beacon_ws_async-v_f3043219f4d9_0.js')}"></script>
+	<script type="text/javascript">
+	var dmtrack_c = '{ali_resin_trace=ws_se_rst=52234|ws_set=3|ws_se_pn=1|ws_ser=1|ws_sek=choker+necklace|c-ws_ali_ab=240f55c46198418ba9fd7d89536ab04d|ws_sefilter=1|ws_ab_test=304_3|ws_sclkid=0|ws_semi=0}';
+	var dmtrack_pageid = '7f0000017f0000011353638990';
+	(function() {
+		var beacon = document.createElement('script');
+		beacon.type = 'text/javascript';
+		beacon.async = true;
+		beacon.src = 'http://style.aliunicorn.com/run/pool/monitor/beacon_ws_async|v_f3043219f4d9_0.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(beacon, s);
+	})();
+	;
 </script>
-    </body>
+
+<script>
+var PAGE_TIMING = {
+    pageType: 'list'
+};
+PAGE_TIMING.startRenderImage = new Image();
+PAGE_TIMING.startRenderImage.onload = function() {
+    PAGE_TIMING.startRender = new Date().getTime();
+};
+PAGE_TIMING.startRenderImage.src = 'http://i02.i.aliimg.com/wimg/monitor/start-render.png';
+</script>
+
+
+    
+<style type="text/css">
+    .bulletin-top { display:none !important; }
+</style>
+<div class="christ-sale-top-banner" style="">
+		<a href="/" class="header" style="display: block; height: 70px; background: #d40001 url(${resource(dir: 'images/index', file: 'top_adv.jpg')}) no-repeat 50% 0;"
+			title=""> 
+	   </a>
+</div>
+<input id="web-info:ws-reg-ori" type="hidden" value="searchList">
+<input id="web-info:ws-is-auto-width" type="hidden" value="t">
+
+<input type="hidden" id="isSeller" value="false">
+<input type="hidden" id="userCountryCode" value="VN">
+<input type="hidden" id="isNewHeader" value="true">
+<!-- header -->
+<div id="header" class="header">
+  <g:render template="header"/>
+</div>
+<!-- end header -->
+        
+                                                
+
+<input id="usaeServer" name="usaeServer" type="hidden" value="http://us.ae.alibaba.com">
+    
+<script type="text/javascript">
+
+//<![CDATA[
+    
+	var runParams = {
+		"homeUrl" : "http://www.aliexpress.com",
+		"pageType" : "product",
+		"firstPage" : "http://www.aliexpress.com/wholesale/wholesale-choker-necklace.html",
+		"shopcartUrl" : "http://shoppingcart.aliexpress.com",
+		"object_ids" : "663291743,1;544552633,1;506882749,1;629676920,1;620155557,1;667956049,1;566388494,1;636613256,1;633496990,1;609102394,1;658186757,1;534739288,1;621556858,1;581205095,1;549872038,1;593807085,1;637151646,1;566429328,1;624037632,1;623583984,1;671117433,1;636054293,1;634678593,1;674138473,1;682912560,1;650742485,1;596559592,1;624934114,1;506609177,1;643803174,1;587094034,1;465914513,1;587250791,1;662149311,1;646950702,1;535647052,1;",
+		"category_id" : "0",
+		"keyword" : "choker necklace",
+		"p4pObjectConfig" : {},
+		"page_no" : "1",
+		"ctr_type" : "1",
+		"ws_set" : "3",
+		"showRecommended" : "",
+		"showType" : "showMain",
+		"tagId" : "",
+		"countryCode" : "",
+		"recomUrl" : "http://hotproducts.aliexpress.com",
+		"recomServer" : "http://hotproducts.aliexpress.com/wsproduct-recommend-server.html",
+		"slideCount" : "",
+		"isZeroResult" : "false",
+		"priceTrendData" : "",
+		"companyIds" : "",
+		"coremetrics_customParams" : "-_--_-0-_--_-",
+		"ws_page_type" : "10",
+		"ws_abtest_area" : "",
+		"manual" : "f",
+		"resultCount" : "52234",
+
+		"sale_items" : "f",
+
+		"attribute" : "",
+		"ship_to" : "vn",
+		"shipping_method" : "",
+
+		"deliver" : "all",
+
+		"atm_online" : "f",
+
+		"price" : "",
+
+		"sort_by" : "f",
+
+		"view" : "list",
+
+		"top_rate_tab" : "f",
+
+		"refineAttrs" : "",
+
+		"new_exception_words" : "",
+		"new_keywords" : "choker necklace",
+		"isContainingMarketingCategory" : "f",
+		"is_bucket_test" : "y",
+		"new_selState" : "0-0-0-0-0"
+
+	}
+	//
+</script>
+
+
+
+	<div id="page" class="categories-collapse autosize_wrap">
+		<g:render template="navigator" />
+
+		<div class="grid-c2-s5">
+			<div class="col-main">
+				<div id="main-wrap" class=" main-wrap ">
+
+					<!-- Keyword -->
+					<g:render template="keyword_section" />
+
+					<!-- Filter bar -->
+					<g:render template="filter_bar" />
+
+					<!-- Product list -->
+					<g:render template="product_list" />
+
+
+					<textarea id="alitalks" style="display: none;">8pctgRBMALMxqM2+6JFlWuDC8ZhFVE4A;8pctgRBMALNzKGN5PYRgYzUwgRtIcpLJ;8pctgRBMALMxqM2+6JFlWgbR4lLcxlHu;8pctgRBMALOT5B6TB9rWQabncguwdH1K;8pctgRBMALP1783BiI0m+k6XLaBchkFa;8pctgRBMALNbKGSLv2vYzaxNWx23NpEP;8pctgRBMALPU1ckH6EWH5V730RgXgE9G;8pctgRBMALMjtxLsHQij1bD9CNS3DtTl;8pctgRBMALMxqM2+6JFlWgbR4lLcxlHu;8pctgRBMALO2kOa+8imSdzpMLKTOn5nt;8pctgRBMALMRNZaIv/X0UTSzIHdsxiT0;8pctgRBMALO8o7k2e0UjQBU8JHRC5X7L;8pctgRBMALMRNZaIv/X0UTSzIHdsxiT0;8pctgRBMALO9c+iXopS4Th54IRgFSurz;8pctgRBMALO9c+iXopS4Th54IRgFSurz;8pctgRBMALPU1ckH6EWH5V730RgXgE9G;8pctgRBMALMjtxLsHQij1bD9CNS3DtTl;8pctgRBMALP1783BiI0m+k6XLaBchkFa;8pctgRBMALPRutP5GkaqOPVm7oxX+vhy;8pctgRBMALOaCsYmRbrwvfUVzm7Sz7U/;8pctgRBMALNSjz9KgL1ZLO5LL+MSPBPY;8pctgRBMALMDuKsxoW04sVGpS9uA5Qjg;8pctgRBMALMBpxUwAXKSx9q5tHN0FyD9;8pctgRBMALNDgyX/ogd9UmwKtJcNcRWM;8pctgRBMALMfdKgGLDhm44yVBf6Emhy6;8pctgRBMALPRutP5GkaqOPVm7oxX+vhy;8pctgRBMALMBpxUwAXKSx9q5tHN0FyD9;8pctgRBMALOQs65He8a0TQTBYWnS4LDl;8pctgRBMALNH9A4HaOz1/d1FPi30XrNk;8pctgRBMALMLfv+CrWzGp0lh0/XSTWJp;8pctgRBMALNZsS3WAu8KBP9gA13+Ku3+;8pctgRBMALNbKGSLv2vYzaxNWx23NpEP;8pctgRBMALO8o7k2e0UjQBU8JHRC5X7L;8pctgRBMALM3c7iyY3hI5AsT1HUz45pA;8pctgRBMALPsn/Yo71MWC4pKhj0EdTTn;8pctgRBMALNzKGN5PYRgYzUwgRtIcpLJ</textarea>
+
+					<g:render template="paging_bottom" />
+
+
+					<script>
+						runParams.p4pObjectConfig['Bcfg'] = {
+							"urlPrefix" : "http://www.aliexpress.com/b2bad.html",
+							"count" : 4,
+							"mt" : "e",
+							"categoryBrowse" : 0,
+							"keyword" : "choker necklace",
+							"dl" : "r",
+							"dcatid" : "200000111,200000114,100006750,200000110",
+							"pid" : "801_0000_0102",
+							"offset" : 0,
+							"ip" : "49.156.52.23",
+							"pageIndex" : 1
+						};
+					</script>
+					<!-- Premium bottom -->
+					<g:render template="premium_product_bottom" />
+
+
+
+					<div id="secure-info" class="secure-info">
+						All Products are verified by
+						${message(code: 'default.website.domain')}
+					</div>
+					<div id="bp-banner">
+						<div class="bp-banner">
+							<a href="http://www.aliexpress.com/buyerprotection/index.html"
+								rel="nofollow"><img class="banner-img"
+								src="${resource(dir: 'images/index', file: 'buy_protection.gif')}"></a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+		<div class="col-sub">
+		    <!-- left menu -->
+		    <g:render template="left_menu"/>
+
+            <style type="text/css">
+            .layout{ margin-bottom:10px;}
+            </style>
+            
+            <!-- last reviewed item -->
+            <g:render template="last_reviewed_item"/>
+        </div>
+
+
+
+		<script>
+			runParams.p4pObjectConfig['Scfg'] = {
+				"urlPrefix" : "http://www.aliexpress.com/b2bad.html",
+				"count" : 5,
+				"mt" : "e",
+				"categoryBrowse" : 0,
+				"keyword" : "choker necklace",
+				"dl" : "r",
+				"dcatid" : "0",
+				"pid" : "801_0000_0103",
+				"offset" : 0,
+				"ip" : "49.156.52.23",
+				"pageIndex" : 1
+			};
+		</script>
+
+        <!-- right menu -->
+        <g:render template="right_menu"/>
+        
+		</div>
+
+</div>
+    <g:render template="large_product_image"/>
+
+	<!-- ws_search_list_keyword_feature_words -->
+
+
+
+    <!-- Footer -->
+    <g:render template="footer"/>
+
+
+<script type="text/javascript" src="${resource(dir: 'js/index', file: 'ae-MODERN_BROWSER-v_7c68886d0f51_0.js')}"></script>
+
+<%--   
+<script type="text/javascript">
+        YUE.on(window, 'load', function(){
+            var fpApi = 'http://style.aliunicorn.com/lib/porto_collection/porto|MODERN_BROWSER|v_8780d1b35126_0.js'.replace(/^\s*/,'');
+
+            YAHOO.util.Get.script(fpApi, {
+                onSuccess : function () {
+                    porto.init({
+                        partnerCode : "alibaba",
+                        serviceUrl : "http://fp-us.alibaba.com/porto-collection/fp/porto.json",
+                        sessionId : "8e0329f93c964d708b9d7a314af70b5a",
+                        appName : "b2b-ae-p4p"
+                    });
+                }
+            });
+        })
+</script>
+ --%>
+ 
+<script type="text/javascript" src="${resource(dir: 'js/category', file: 'search-list-aw-MODERN_BROWSER-v_7c262e7ebd78a_158d3040a0bea0.js')}"></script>
+
+</body>
 </html>
