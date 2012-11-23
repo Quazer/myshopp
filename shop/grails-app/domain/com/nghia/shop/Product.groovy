@@ -23,6 +23,11 @@ class Product {
 	int discount3Item = 0
 	int discount5Item = 0
 	int discount10Item = 0
+
+	// it's used for "discount7" div at "/category/_product_list.gsp"	
+	float discountPrice = 0.00
+	float discountPriceFixed = 0.00
+	
 	
 	// "set", "piece", "lot" ... all value will be Message Key
 	String unit 
