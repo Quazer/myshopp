@@ -20,12 +20,26 @@ class CommonUtils {
 		//params
 	}
 	
+	// arg maybe "int" or "float"
+	def static showPriceWithCurrency(def price) {
+		"{showPriceWithCurrency} VND"
+	}
+	
+	def static showSaleOffWithFixedPrice(discountPrice, discountPriceFixed) {
+		//discountPrice = $15
+		//discountPriceFixed = $150
+		//${CommonUtils.showPriceWithCurrency(productInstance.discountPrice) } + ${message(code: 'category.label', default: 'Category')} + ${CommonUtils.showPriceWithCurrency(productInstance.discountPriceFixed) }
+		
+		"{showSaleOffWithFixedPrice : 15.000VND off per 150.000VND} "
+	}
+	
 	// return price of Product with currency
 	// ex: $32
 	def static productPrice(productInstance, quantity = null) {
 		// TODO: check productInstance != null ?
 		def productPrice = this.priceOfProduct(productInstance)
 		
+		def currentcy = showCurrency(productPrice)
 		
 		// TODO:check quantity la integer or not
 		//return "{US productPrice}" + productPrice
@@ -372,4 +386,14 @@ class CommonUtils {
 	 static discountOrCoupon(ShoppingCart shoppingCart) {
 		 return "{discountOrCoupon}"
 	 }
+	 
+	 static urlWithProductName(productInstace) {
+		//${createLink(controller : 'product',action: 'show', params:[sku: product?.sku])}
+		return "http://localhost:8080/shop/product/" + productInstace?.id
+	 }
+	 
+	 static urlWithProductNameForImage(productInstace) {
+		 //${createLink(controller : 'imageStore',action: 'productImages', id: product?.productImage?.id)}
+		 return "http://localhost:8080/shop/imageStore/productImages" + productInstace?.productImage?.id
+	  }
 }
