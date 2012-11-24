@@ -39,8 +39,6 @@
                                 <input value="${params.minQuantity }" name="minQuantity" type="hidden">  
                                 <input value="${params.maxQuantity }" name="maxQuantity" type="hidden">
                                 
-                                <input value="${params.offset }" name="offset" type="hidden">
-                                <input value="${params.max }" name="max" type="hidden">
                                 <input value="${params.sortBy }" name="sortBy" type="hidden">
                                 <input value="${params.orderby }" name="orderby" type="hidden">
                             </g:form>
@@ -68,8 +66,6 @@
                                 <input value="${params.minPrice }" name="minPrice" type="hidden">
                                 <input value="${params.maxPrice }" name="maxPrice" type="hidden">
                                 
-                                <input value="${params.offset }" name="offset" type="hidden">
-                                <input value="${params.max }" name="max" type="hidden">
                                 <input value="${params.sortBy }" name="sortBy" type="hidden">
                                 <input value="${params.orderby }" name="orderby" type="hidden">
 
