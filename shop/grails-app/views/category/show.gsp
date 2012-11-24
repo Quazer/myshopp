@@ -28,7 +28,7 @@
 	src="${resource(dir: 'js/index', file: 'main_vi.js')}"></script>
 <script type="text/javascript" charset="UTF-8"
 	src="${resource(dir: 'js/index', file: 'element_main.js')}"></script>
-	
+<jawr:script src="/i18n/messages.js"/>
 <!-- script type="text/javascript" async=""
 	src="http://style.alibaba.com/js/5v/lib/_hozmod/addon/base-mod.js"></script -->
 
