@@ -35,13 +35,17 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
 		runtime 'postgresql:postgresql:9.0-801.jdbc4'
         // runtime 'mysql:mysql-connector-java:5.1.20'
+		
     }
 
     plugins {
         runtime ":hibernate:$grailsVersion"
         runtime ":jquery:1.7.2"
         runtime ":resources:1.1.6"
-
+		
+		// Load Jawr plugin (refer to http://grails.org/plugin/jawr)
+		compile ":jawr:3.3.3"
+		
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0"
         //runtime ":cached-resources:1.0"

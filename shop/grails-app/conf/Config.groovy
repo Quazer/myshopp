@@ -33,7 +33,9 @@ grails.mime.types = [
 //grails.urlmapping.cache.maxsize = 1000
 
 // What URL patterns should be processed by the resources plugin
-grails.resources.adhoc.patterns = ['/images/*', '/css/*', '/js/*', '/plugins/*']
+grails.resources.adhoc.patterns = ['/images/*', '/js/*', '/plugins/*']
+grails.resources.adhoc.excludes = ['/image/','/css/*']
+grails.resources.rewrite.css = false
 
 // The default codec used to encode data with ${}
 grails.views.default.codec = "none" // none, html, base64
@@ -94,3 +96,24 @@ log4j = {
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.nghia.shop.Member'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.nghia.shop.UserRole'
 grails.plugins.springsecurity.authority.className = 'com.nghia.shop.Role'
+
+// call i18n in javascript/css 
+jawr {
+	js {
+		// Specific mapping to disable resource handling by plugin.
+		mapping = '/jawr/'
+		bundle {
+			lib {
+				// Bundle id is used in views.
+				id = '/i18n/messages.js'
+				
+				// Tell which messages need to localized in Javascript.
+				mappings = 'messages:grails-app.i18n.messages[js]'
+				}
+			}
+		}
+	locale {
+		// Define resolver so ?lang= Grails functionality works with controllers.
+		resolver = 'net.jawr.web.resource.bundle.locale.SpringLocaleResolver'
+		}
+	}
