@@ -102,7 +102,7 @@ class CategoryController {
 			
 		
 		//def productTotalCount = categoryInstance?.products?.size()
-		[categoryName: categoryInstance?.name, productTotalCount : totalRecCount, productList : productList]
+		[categoryName: categoryInstance?.name, categoryId: categoryInstance?.id, productTotalCount : totalRecCount, productList : productList]
         
     }
 
