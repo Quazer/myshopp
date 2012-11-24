@@ -94,7 +94,6 @@ class ShoppingCartController {
 	 * - Place an order	
 	 */
 	def actionConfirmOrder() {
-		print "first :" + params
 		// security - Authenticity Token
 		withForm {
 			def placeOrderAction = "info"
