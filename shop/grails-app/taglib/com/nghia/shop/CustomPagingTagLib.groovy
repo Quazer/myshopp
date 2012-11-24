@@ -48,19 +48,20 @@ class CustomPagingTagLib {
 		int currentstep = (offset / max) + 1
 		int firststep = 1
 		int laststep = Math.round(Math.ceil(total / max))
-
+		def isWrited
 		// display previous link when not on firststep unless omitPrev is true
 		if (currentstep > firststep && !attrs.boolean('omitPrev')) {
-			linkTagAttrs.class = 'prevLink'
+			//linkTagAttrs.class = 'page-start'
 			linkParams.offset = offset - max
 			writer << link(linkTagAttrs.clone()) {
 				(attrs.prev ?: messageSource.getMessage('paginate.prev', null, messageSource.getMessage('default.paginate.prev', null, 'Previous', locale), locale))
 			}
+			isWrited = true
 		}
 
 		// display steps when steps are enabled and laststep is not firststep
 		if (steps && laststep > firststep) {
-			linkTagAttrs.class = 'step'
+			//linkTagAttrs.class = 'step'
 
 			// determine begin and endstep paging variables
 			int beginstep = currentstep - Math.round(maxsteps / 2) + (maxsteps % 2)
@@ -82,41 +83,55 @@ class CustomPagingTagLib {
 			if (beginstep > firststep && !attrs.boolean('omitFirst')) {
 				linkParams.offset = 0
 				writer << link(linkTagAttrs.clone()) {firststep.toString()}
+				isWrited = true
 			}
 			//show a gap if beginstep isn't immediately after firststep, and if were not omitting first or rev
 			if (beginstep > firststep+1 && (!attrs.boolean('omitFirst') || !attrs.boolean('omitPrev')) ) {
-				writer << '<li><span class="step gap">..</span></li>'
+				writer << '<span class="step gap">..</span>'
+				isWrited = true
 			}
 
 			// display paginate steps
 			(beginstep..endstep).each { i ->
 				if (currentstep == i) {
-					writer << "<li><span class=\"cur\">${i}</span></li>"
+					writer << "<span class=\"page-cur\">${i}</span>"
 				}
 				else {
 					linkParams.offset = (i - 1) * max
-					writer << "<li>"+link(linkTagAttrs.clone()) {i.toString()} +"</li>"
+					writer << link(linkTagAttrs.clone()) {i.toString()}
 				}
 			}
+			
+			isWrited = true
 
 			//show a gap if beginstep isn't immediately before firststep, and if were not omitting first or rev
 			if (endstep+1 < laststep && (!attrs.boolean('omitLast') || !attrs.boolean('omitNext'))) {
-				writer << '<li><span class="step gap">..</span></li>'
+				writer << '<span class="step gap">..</span>'
+				isWrited = true
 			}
 			// display laststep link when endstep is not laststep
 			if (endstep < laststep && !attrs.boolean('omitLast')) {
 				linkParams.offset = (laststep - 1) * max
-				writer << "<li>"+link(linkTagAttrs.clone()) { laststep.toString() } + "</li>"
+				writer << link(linkTagAttrs.clone()) { laststep.toString() }
+				isWrited = true
 			}
 		}
 
 		// display next link when not on laststep unless omitNext is true
 		if (currentstep < laststep && !attrs.boolean('omitNext')) {
-			linkTagAttrs.class = 'nextLink'
+			linkTagAttrs.class = 'page-next'
 			linkParams.offset = offset + max
+//			<a rel="nofollow"
+//			href="http://www.aliexpress.com/wholesale?needQuery=n&amp;SearchText=choker%2Bnecklace&amp;CatId=0&amp;page=2"
+//			class="page-next">Next</a>
 			writer << link(linkTagAttrs.clone()) {
 				(attrs.next ? attrs.next : messageSource.getMessage('paginate.next', null, messageSource.getMessage('default.paginate.next', null, 'Next', locale), locale))
 			}
+			isWrited = true
+		}
+		
+		if (!isWrited) {
+			writer << "<span class='page-start' style='display:none'>Previous</span><span class=\"page-cur\">1</span><a rel='nofollow' href='' class='page-next' style='display:none'>Next</a>"
 		}
 	}
 }
