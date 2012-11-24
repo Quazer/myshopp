@@ -59,37 +59,86 @@ class CategoryController {
 		
 		def totalRecCount = 0
 		
-		def listSortBy = ['id']
+		def listSortBy = ['id','purchargePrice','dateAdded']
 		
-		if (params.sort == null || !listSortBy.contains(params.sort)) {
-			params.sort = listSortBy[0]
-			params.order = "asc"
+		// get Price arrange
+		float maxPrice = 999999999.00
+		float minPrice = 0.00
+		
+		if (params.maxPrice?.matches("\\d{1,12}")) {
+			maxPrice = Float.parseFloat(params.maxPrice.toString()) 
 		}
+		if (params.minPrice?.matches("\\d{1,12}")) {
+			minPrice = Float.parseFloat(params.minPrice.toString())
+		}
+		
+		if (minPrice > 0.00 && maxPrice < minPrice) {
+			maxPrice = 999999999.00
+		}
+		
+		// get Quantity arrange
+		def maxQuantity = 999999999
+		def minQuantity = 1
+		if (params.maxQuantity?.matches("\\d{1,12}")) {
+			maxQuantity = params.int("maxQuantity") 
+		}
+		if (params.minQuantity?.matches("\\d{1,12}")) {
+			minQuantity = params.int("minQuantity")
+		}
+		
+		if (minQuantity > 0 && maxQuantity < minQuantity) {
+			maxQuantity = 999999999
+		}
+		
+		// default sorting is Newest product
+		def sortedByColumn = "dateAdded"
+		def orderBy = "desc"
+		if (params.sortBy == "price") {
+			sortedByColumn = "purchargePrice"
+		}
+		if (params.orderby == "asc") {
+			orderBy = "asc"
+		}
+		
+		params.order = orderBy
+		params.sort = sortedByColumn
 		
 		def productList
 		
-		if (params.pattern && !''.equals(params.pattern.toString())) {
-			paramsForPaging['pattern'] = params.pattern.toString()
-			def pattern = '%'+ CommonUtils.convertSpecialCharactersForSearch(params.pattern) + '%'
+		if (params.SearchText && !''.equals(params.SearchText.toString())) {
+			//paramsForPaging['SearchText'] = params.SearchText.toString()
+			def pattern = '%'+ CommonUtils.convertSpecialCharactersForSearch(params.SearchText) + '%'
 			
 			totalRecCount = Product.createCriteria().count {
 				ilike("name", pattern)
 				eq("category.id", categoryInstance.id)
+				between('purchargePrice', minPrice, maxPrice)
+				between('inventory', minQuantity, maxQuantity)
 			}
 			
 			params.properties = CommonUtils.validateParamsForPaging(params, params.gotoPage, totalRecCount, 10, 100, listSortBy)
-			
+
 			productList = Product.createCriteria().list(params) {
 				ilike("name", pattern)
 				eq("category.id", categoryInstance.id)
+				between('purchargePrice', minPrice, maxPrice)
+				between('inventory', minQuantity, maxQuantity)
 			}
 		} else {
 
-			totalRecCount = Product.createCriteria().count{params}
+			totalRecCount = Product.createCriteria().count {
+				eq("category.id", categoryInstance.id)
+				between('purchargePrice', minPrice, maxPrice)
+				between('inventory', minQuantity, maxQuantity)
+			} 
 
 			params.properties = CommonUtils.validateParamsForPaging(params, params.gotoPage, totalRecCount, 10, 100, listSortBy)
-
-			productList = Product.createCriteria().list(params){}
+			
+			productList = Product.createCriteria().list(params) {
+				eq("category.id", categoryInstance.id)
+				between('purchargePrice', minPrice, maxPrice)
+				between('inventory', minQuantity, maxQuantity)
+			}
 		}
 		
 		
