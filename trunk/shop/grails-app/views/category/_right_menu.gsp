@@ -2,7 +2,7 @@
                 style="display: block;">
                 <div class="autosize-list-p4p p4pExpress p4p-side"
                     id="p4pHotProductsSide">
-                    <h4>Premium Related Productsasdasd</h4>
+                    <h4>Premium Related </h4>
                     <div class="p4p-side-container">
                         <ul id="p4p-side-content" class="p4p-side-content clearfix">
                             <li class="p4p-list-item"

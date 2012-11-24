@@ -16,7 +16,8 @@
                                         id="ipt-exc" name="exception" autocomplete="off"
                                         maxlength="30">
                                 </div>
-
+								
+								<%--
                                 <div class="label">Ship to</div>
                                 <div id="country-selector" class="link-fake-selector">
                                     <div class="list-title">
@@ -575,8 +576,10 @@
                                 <iframe class="maskIframe"
                                     style="display: none; z-index: 98; top: 0px; left: 0px;"
                                     frameborder="0"></iframe>
+                                    
+                                     --%>
                             </div>
-                            <div id="filter-options">
+                            <div id="filter-options" style="display:none">
 
                                 <span class="sel-free"><input type="checkbox"
                                     id="isFreeShip" name="isFreeShip" value="y"><label

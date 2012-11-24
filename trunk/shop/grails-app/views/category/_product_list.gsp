@@ -1,4 +1,5 @@
 <%@ page import="com.nghia.shop.CommonUtils" %>
+<%@ page import="com.nghia.shop.Feedback" %>
     <ul id="list-items" class="clearfix lazy-load">
                 <g:each in="${productList }" var="productInstance">
                        <li class="list-item  clearfix"
@@ -30,20 +31,30 @@
                                </h3>
 
                                <span class="brief"> </span>
-
+								
                                <div class="rate-history">
-                                   <span class="star star-s" title="Star Rating: 4.6 out of 5">
-                                       <span class="rate-percent" style="width: 92.8%;"></span>
-                                   </span> <a class="rate-num"
+                               		<%--
+                                   <span class="star star-s" title="Star Rating: 0 out of 5">
+                                       <span class="rate-percent" style="width: 0%;"></span>
+                                   </span> 
+                                    --%>
+                                   <%--
+                                   <a class="rate-num"
                                        href="http://www.aliexpress.com/item/New-style-Retro-hollow-flower-metal-Choker-necklaces-Simulated-collar-necklaces-Min-order-15-mix-order/566388494.html#feedback"
-                                       rel="nofollow" target="_blank">Feedback (111)</a> <span
+                                       rel="nofollow" target="_blank">
+                                       <g:message code="default.feedback.name"/> (${Feedback.count{ 
+										   eq ("product" : productInstance)
+										   }
+									   })</a> 
+                                       
+                                       <span
                                        class="rate-separator">|</span> <span rel="nofollow"
                                        class="order-num"> <a class="order-num-a"
                                        href="http://www.aliexpress.com/item/New-style-Retro-hollow-flower-metal-Choker-necklaces-Simulated-collar-necklaces-Min-order-15-mix-order/566388494.html#thf"
                                        rel="nofollow" target="_blank"><em title="Total Orders">
                                                Orders (247)</em></a></span>
+                                    --%>
                                </div>
-
 
                                <div class="clearfix address-chat">
                                 <%--
