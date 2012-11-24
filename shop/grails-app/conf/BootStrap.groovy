@@ -52,7 +52,7 @@ class BootStrap {
 			prod.overview = "overview of " + i
 			prod.specification = "specification of " + i
 			
-			prod.purchargePrice = 100
+			prod.purchargePrice = 100 + i
 			prod.importPrice = 76
 			prod.discount = 0
 			prod.discount3Item = 0
