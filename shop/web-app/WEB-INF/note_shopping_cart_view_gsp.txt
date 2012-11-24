@@ -11,3 +11,5 @@ PAGE_TIMING.startRenderImage.src = '${resource(dir: 'images/shoppingcart', file:
 8. Them productName tren URL (vd: http://xxx/iphone-case-5/38374.html
 9. Them meta title vao toan bo cac trang 
 10. tai cac man hinh nhu : index, category,.. dang co' hidden item "userCountryCode" = VN <-- can sua lai
+11. replace toan bo ky tu "http://localhost:8080/shop/" thanh domain khac (hien dang su dung domain local de lay image trong CSS)
+12. trong 1 so hinh tai folder "web-app/image/" van con hinh cua Aliexp 
