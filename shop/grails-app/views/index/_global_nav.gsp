@@ -55,19 +55,5 @@
                 </ul></li>
             <li class="site-nav-alibaba">Go to<a rel="nofollow"
                 href="http://www.alibaba.com/" id="h-alibaba">alibaba.com</a></li>
-            
-            <li class="site-nav-google-translate" id="site-nav-google-translate"
-                style="margin-left: 9px; background-position: -419px -94px;"><div
-                    id="google-translate-mask" class="google-translate-mask"></div>
-                <div id="google-translate-tip" class="google-translate-tip">
-                    <dl class="gt-info">
-                        <dt>Please kindly note:</dt>
-                        <dd>1. All translations are provided by the add-on tool from
-                            Google. There's a possibility of inaccurate translations.</dd>
-                        <dd>2. If you want to change back to English, please select
-                            "English" in the top bar menu or click the button "Show
-                            original".</dd>
-                        <dd class="gt-action"><a href="javascript:void(0)" id="google-translate-goon">Confirm</a></dd></dl>
-                </div>
-                <div id="google_translate_element"></div></li>
+           
         </ul>
