@@ -22,77 +22,79 @@
                         <div class="narrow-down-bg" style="left: 290px;">
 
 							<g:form name="filter-form">
-								<input type="hidden" name="id" id="id" value="${params.id }">
+								<input type="hidden" name="id" id="id" value="${categoryId }">
                                 <span id="filter-price"><span>${message(code: 'cat.filter.price.label')}:</span> 
                                 	<input
 	                                    tabindex="20" name="minPrice" id="filter-price-from"
-	                                    autocomplete="off" value=""> <span>-</span> 
+	                                    autocomplete="off" value="${params.minPrice }"> <span>-</span> 
 	                                <input
 	                                    tabindex="20" name="maxPrice" id="filter-price-to"
-	                                    autocomplete="off" value=""> 
+	                                    autocomplete="off" value="${params.maxPrice }"> 
                                 </span> <span class="narrow-go" id="filter-submit" style="display: none"></span> 
                                 <a
                                     href="javascript:void(0)" class="narrow-go-cancel"
                                     id="narrow-go-cancel" style="display: none">Cancel</a> 
                                     
-                                 <input
-                                    type="hidden" name="SearchText" value="${params.SearchText }">
-                                	<input type="hidden" name="shipCountry" value=""> 
-                                 <input
-                                    type="hidden" name="isRtl" value="all"> <input
-                                    type="hidden" name="isOnSale" value="all"> <input
-                                    id="narrowDownCate" type="hidden" name="CatId" value="0">
-
-
-
-
+                                 <input type="hidden" name="SearchText" value="${params.SearchText }">
+                                <input value="${params.minQuantity }" name="minQuantity" type="hidden">  
+                                <input value="${params.maxQuantity }" name="maxQuantity" type="hidden">
+                                
+                                <input value="${params.offset }" name="offset" type="hidden">
+                                <input value="${params.max }" name="max" type="hidden">
+                                <input value="${params.sortBy }" name="sortBy" type="hidden">
+                                <input value="${params.orderby }" name="orderby" type="hidden">
                             </g:form>
 
 
 
                         </div>
                         <div class="narrow-down-bg">
-                            <form method="get" id="quantity-form"
-                                action="http://www.aliexpress.com/wholesale">
-                                <span id="filter-quantity-c"><span>Quantity:</span> <input
-                                    value="" autocomplete="off" id="filter-quantity-from"
-                                    name="minQuantity" tabindex="22"> <span>-</span> <input
-                                    value="" autocomplete="off" id="filter-quantity-to"
-                                    name="maxQuantity" tabindex="23"> </span> <span
+                            <g:form name="quantity-form">
+                                <span id="filter-quantity-c">
+                                <span>Quantity:</span> 
+                                <input type="hidden" name="id" id="id" value="${categoryId }">
+                                <input
+                                    value="${params.minQuantity }" autocomplete="off" id="filter-quantity-from"
+                                    name="minQuantity" tabindex="22"> <span>-</span> 
+                                <input
+                                    value="${params.maxQuantity }" autocomplete="off" id="filter-quantity-to"
+                                    name="maxQuantity" tabindex="23"> 
+                                 </span> 
+                                 <span
                                     style="display: none" id="quantity-submit" class="narrow-go"></span>
                                 <a style="display: none" id="quantity-cancel"
-                                    class="narrow-go-cancel" href="javascript:void(0)">Cancel</a> <input
-                                    type="hidden" name="SearchText" value="choker necklace">
-                                <input type="hidden" name="shipCountry" value="vn"> <input
-                                    type="hidden" name="isRtl" value="all"> <input
-                                    type="hidden" name="isOnSale" value="all"> <input
-                                    id="narrowDownCate" type="hidden" name="CatId" value="0">
-                                <input type="hidden" name="filterCat"
-                                    value="200000111,200004077,200000114"> <input
-                                    type="hidden" name="needQuery" value="n">
+                                    class="narrow-go-cancel" href="javascript:void(0)">Cancel</a> 
+                                <input type="hidden" name="SearchText" value="${params.SearchText }">
+                                <input value="${params.minPrice }" name="minPrice" type="hidden">
+                                <input value="${params.maxPrice }" name="maxPrice" type="hidden">
+                                
+                                <input value="${params.offset }" name="offset" type="hidden">
+                                <input value="${params.max }" name="max" type="hidden">
+                                <input value="${params.sortBy }" name="sortBy" type="hidden">
+                                <input value="${params.orderby }" name="orderby" type="hidden">
 
 
-
-                            </form>
+                            </g:form>
                         </div>
                         <div id="sort-by-container" style="display: none; z-index: 99;">
                             <a
-                                href="${createLink(controller : 'category',action: 'show', params: [id: categoryId, sortBy : 'price', orderby : 'asc'])}"
+                                href="${createLink(controller : 'category',action: 'show', 
+									params: [id: categoryId, sortBy : 'price', orderby : 'asc', SearchText : params?.SearchText, 
+                                       maxPrice: params?.maxPrice, minPrice:params.minPrice, maxQuantity: params?.maxQuantity, 
+                                       minQuantity: params?.minQuantity])}"
                                 rel="nofollow" class="sort_price_asc">Price (Lowest first)</a> 
                             <a
-                                href="${createLink(controller : 'category',action: 'show', params: [id: categoryId, sortBy : 'price', orderby : 'desc'])}"
+                                href="${createLink(controller : 'category',action: 'show', params: 
+									[id: categoryId, sortBy : 'price', orderby : 'desc', SearchText : params?.SearchText, 
+									   maxPrice: params?.maxPrice, minPrice:params.minPrice, maxQuantity: params?.maxQuantity, 
+									   minQuantity: params?.minQuantity])}"
                                 rel="nofollow" class="sort_price_desc">Price (Highest first)</a>
                             <a
-                                href="${createLink(controller : 'category',action: 'show', params: [id: categoryId, sortBy : 'date', orderby : 'desc'])}"
+                                href="${createLink(controller : 'category',action: 'show', 
+									params: [id: categoryId, sortBy : 'date', orderby : 'desc', SearchText : params?.SearchText, 
+                                       maxPrice: params?.maxPrice, minPrice:params.minPrice, maxQuantity: params?.maxQuantity, 
+                                       minQuantity: params?.minQuantity])}"
                                 rel="nofollow" class="sort_create_desc">Newest Products</a> 
                         </div>
 
-                        <a href="javascript:void(0)" class="narrow-close-btn"
-                            id="narrow-down-close" style="display: none;"></a>
-                        <iframe class="maskIframe"
-                            style="display: none; z-index: 98; top: 0px; left: 0px;"
-                            frameborder="0"></iframe>
-                        <iframe class="maskIframe"
-                            style="display: none; z-index: 98; top: 0px; left: 0px;"
-                            frameborder="0"></iframe>
                     </div>
