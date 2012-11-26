@@ -389,7 +389,7 @@ class CommonUtils {
 	 
 	 static urlWithProductName(productInstace) {
 		//${createLink(controller : 'product',action: 'show', params:[sku: product?.sku])}
-		return "http://localhost:8080/shop/product/" + productInstace?.id
+		return "http://localhost:8080/shop/product/show/" + productInstace?.id
 	 }
 	 
 	 static urlWithProductNameForImage(productInstace) {
