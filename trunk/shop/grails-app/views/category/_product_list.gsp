@@ -7,9 +7,9 @@
 
                            <div class="img">
                                <a id="limagebox_${productInstance.sku}" class="picRind history-item"
-                                   href="${CommonUtils.urlWithProductName(productInstace)}"
+                                   href="${CommonUtils.urlWithProductName(productInstance)}"
                                    target="_blank">
-                                   <img id="limage_${productInstance.sku}" class="picCore" src="${CommonUtils.urlWithProductNameForImage(productInstace)}"
+                                   <img id="limage_${productInstance.sku}" class="picCore" src="${CommonUtils.urlWithProductNameForImage(productInstance)}"
                                    style="visibility: visible;"></a>
                                <g:if test="${productInstance.discount > 0 }">
 	                               <div class="discount-rate">
@@ -23,7 +23,7 @@
                            <div class="detail">
                                <h3 class="icon-hotproduct">
                                    <a class="history-item product"
-                                       href="${CommonUtils.urlWithProductName(productInstace)}"
+                                       href="${CommonUtils.urlWithProductName(productInstance)}"
                                        title="${productInstance.name }"
                                        target="_blank">${productInstance.name }
                                        
