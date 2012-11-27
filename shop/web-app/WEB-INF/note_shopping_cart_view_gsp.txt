@@ -12,4 +12,12 @@ PAGE_TIMING.startRenderImage.src = '${resource(dir: 'images/shoppingcart', file:
 9. Them meta title vao toan bo cac trang 
 10. tai cac man hinh nhu : index, category,.. dang co' hidden item "userCountryCode" = VN <-- can sua lai
 11. replace toan bo ky tu "http://localhost:8080/shop/" thanh domain khac (hien dang su dung domain local de lay image trong CSS)
-12. trong 1 so hinh tai folder "web-app/image/" van con hinh cua Aliexp 
+12. trong 1 so hinh tai folder "web-app/image/" van con hinh cua Aliexp
+13. Tham khao link sau de security cho app
+    http://grails-plugins.github.com/grails-spring-security-core/docs/manual/guide/13%20URL%20Properties.html
+    
+    Note: su dung "grails.plugins.springsecurity.xxxx" de override config key cua spring security plugin
+    vd: 
+    grails.plugins.springsecurity.logout.handlerNames = [
+        'rememberMeServices', 'securityContextLogoutHandler', 'myLogoutHandler'
+    ]
