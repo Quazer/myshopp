@@ -1,6 +1,6 @@
-var globalImgServer = 'http://style.alibaba.com';
+var globalImgServer = ''//= 'http://style.alibaba.com';
 if (location.protocol === "https:") {
-	globalImgServer = 'https://ipaystyle.alibaba.com';
+	globalImgServer = ''//= 'https://ipaystyle.alibaba.com';
 };
 
 eval(function(p, a, c, k, e, d) {
