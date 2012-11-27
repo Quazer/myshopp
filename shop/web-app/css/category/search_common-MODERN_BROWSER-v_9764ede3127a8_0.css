@@ -68,7 +68,7 @@ a:hover{color:#f60;text-decoration:underline;}
 
 /* view-more */
 /* ------------------------------------------------------------ */
-.view-more, .view-less{ display:inline-block; font:bold 11px tahoma !important; background-image:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/arrow-a.gif); background-repeat:no-repeat;}
+.view-more, .view-less{ display:inline-block; font:bold 11px tahoma !important; background-image:url(http://localhost:8080/shop/image/arrow-a.gif); background-repeat:no-repeat;}
 .view-more{ padding-right:15px; background-position:right -294px;}
 .view-less{ padding-right:15px; background-position:right -344px;}
 /* ------------------------------------------------------------ */
@@ -99,8 +99,8 @@ a:hover{color:#f60;text-decoration:underline;}
 /* ------------------------------------------------------------ */
 /* flow map */
 
-.country-flag{background:transparent url(http://i03.i.aliimg.com/wimg/buyer/sprite/sprites_countryFlag_s_fix_2.png?v=111214) no-repeat;}
-.css_flag{display:block;float:left;padding:0 0 0 25px;line-height:15px;background:url(http://i03.i.aliimg.com/wimg/buyer/sprite/sprites_countryFlag_s_fix_2.png?v=111214) no-repeat;}
+.country-flag{background:transparent url(http://localhost:8080/shop/image/sprites_countryFlag_s_fix_2.png) no-repeat;}
+.css_flag{display:block;float:left;padding:0 0 0 25px;line-height:15px;background:url(http://localhost:8080/shop/image/sprites_countryFlag_s_fix_2.png) no-repeat;}
 /* A */
 .css_ae{background-position:0 -78px;}
 .css_af{background-position:0 -158px;}
@@ -440,10 +440,10 @@ a:hover{color:#f60;text-decoration:underline;}
 .box .hd { height:25px;border-color:#ccc #ccc #ccc;border-style:solid solid none;border-width:1px 1px medium;background-color:#f0f0f0;background-position:0 -7px;background-repeat:repeat-x;}
 .box .hd h3 {padding-left:10px;font-size:13px;line-height:25px;color:#333;}
 .box .bd {padding: 7px 11px;border:1px solid #ccc;border-top:none;background-color:#fff; color:#000;}
-.tip-popup-trigger {display:inline-block;overflow:hidden;width:13px;height:13px;_margin-bottom:3px;text-indent:-500px;background:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/spr_we_buyer_common.png?v=110309) no-repeat 0 -4550px;}
+.tip-popup-trigger {display:inline-block;overflow:hidden;width:13px;height:13px;_margin-bottom:3px;text-indent:-500px;background:url(http://localhost:8080/shop/image/spr_we_buyer_common.png) no-repeat 0 -4550px;}
 .tip-popup {position:relative;width:220px;border-bottom:solid 4px #cccccc;}
 
-.tip-popup .arrow {float:left;width:15px;height:8px;margin-bottom:-1px;margin-left:10px!important;margin-left:5px;font:0px/1em arial;background:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/spr_we_buyer_common.png?v=110309) 0 -4450px no-repeat;}
+.tip-popup .arrow {float:left;width:15px;height:8px;margin-bottom:-1px;margin-left:10px!important;margin-left:5px;font:0px/1em arial;background:url(http://localhost:8080/shop/image/spr_we_buyer_common.png) 0 -4450px no-repeat;}
 .tip-popup.left .arrow {float:left;margin-left:10px!important;margin-left:5px;}
 .tip-popup.right .arrow {float:right;margin-right:10px!important;margin-right:5px;}
 
@@ -451,12 +451,12 @@ a:hover{color:#f60;text-decoration:underline;}
 .tip-popup a {color:#06C;text-decoration:underline!important;}
 .tip-popup .content,
 .tip-popup .tip-popup-content{clear:both;padding:12px 12px 18px 12px;*padding-top:6px;border:solid 1px #79a2c2;font:normal 10px/1.5em verdana;background:#eef7fc;}
-.tip-popup .close-button {display:block;position:absolute;top:14px;right:7px;overflow:hidden;width:11px;height:11px;text-indent:-500px;background:#eef7fc url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/spr_we_buyer_common.png?v=110309) no-repeat 0 -4500px;z-index:99;}
+.tip-popup .close-button {display:block;position:absolute;top:14px;right:7px;overflow:hidden;width:11px;height:11px;text-indent:-500px;background:#eef7fc url(http://localhost:8080/shop/image/spr_we_buyer_common.png) no-repeat 0 -4500px;z-index:99;}
 .tip-popup .title {font-weight:bold; font-size:10px; font-family:verdana;}
 .tip-popup .action {font-size:11px;text-align:center;}
 
 .tip-popup-down {border:none;border-top:solid 4px #cccccc;}
-.tip-popup-down .arrow {background:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/spr_we_buyer_common.png?v=110309)  no-repeat 0 -4600px; position:absolute; bottom:-6px;margin-left:10px!important;}
+.tip-popup-down .arrow {background:url(http://localhost:8080/shop/image/spr_we_buyer_common.png)  no-repeat 0 -4600px; position:absolute; bottom:-6px;margin-left:10px!important;}
 .tip-popup-down .close-button {top:6px;right:7px;}
 .tip-popup-down .content {padding:12px 12px 12px 12px;}
 
@@ -470,34 +470,34 @@ a:hover{color:#f60;text-decoration:underline;}
 .board .s{font:0.85em verdana;}
 
 .board.infoA,
-.board.infoA-naked {background:#e7f4fc url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_info_a.gif) no-repeat 18px 15px;border:1px solid #bbdff7;line-height:26px;padding:15px 20px 15px 65px;}
+.board.infoA-naked {background:#e7f4fc url(http://localhost:8080/shop/image/icon_info_a.gif) no-repeat 18px 15px;border:1px solid #bbdff7;line-height:26px;padding:15px 20px 15px 65px;}
 .board.infoA-naked{border:none; background-color:#fff;}
 
 .board.infoB,
-.board.infoC{background:#e7f4fc url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_info_bc.gif) no-repeat 12px 10px;border:1px solid #bbdff7;line-height:16px;padding:6px 20px 5px 35px;font-size:10px;font-family:verdana;}
+.board.infoC{background:#e7f4fc url(http://localhost:8080/shop/image/icon_info_bc.gif) no-repeat 12px 10px;border:1px solid #bbdff7;line-height:16px;padding:6px 20px 5px 35px;font-size:10px;font-family:verdana;}
 .board.infoC{border:none; background-color:#fff;}
 
-.board.alertL {background:#fffbd1 url(http://i02.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_alert_l.gif) no-repeat 15px 10px;border:2px solid #fddc9b;line-height:26px;padding:15px 20px 26px 95px;font-size:16px;}
+.board.alertL {background:#fffbd1 url(http://localhost:8080/shop/image/icon_alert_l.gif) no-repeat 15px 10px;border:2px solid #fddc9b;line-height:26px;padding:15px 20px 26px 95px;font-size:16px;}
 .board.alertL .important-words {font-size:18px;line-height:24px;display:block;margin-bottom:8px;}
 .board.alertL a.main-action {font-size:20px;font-weight:normal;}
 
 .board.alertA,
-.board.alertA-naked {background:#fffbd1 url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_alert_a.gif) no-repeat 18px 15px;border:1px solid #fddc9b;line-height:26px;padding:15px 20px 15px 65px;}
+.board.alertA-naked {background:#fffbd1 url(http://localhost:8080/shop/image/icon_alert_a.gif) no-repeat 18px 15px;border:1px solid #fddc9b;line-height:26px;padding:15px 20px 15px 65px;}
 .board.alertA-naked {border:none; background-color:#fff;font-size:13px;}
 .board.alertB,
-.board.alertC {background:#fffbd1 url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_alert_bc.gif) no-repeat 12px 10px;border:1px solid #fddc9b;line-height:16px;padding:6px 20px 5px 35px;font-size:10px;font-family:verdana;}
+.board.alertC {background:#fffbd1 url(http://localhost:8080/shop/image/icon_alert_bc.gif) no-repeat 12px 10px;border:1px solid #fddc9b;line-height:16px;padding:6px 20px 5px 35px;font-size:10px;font-family:verdana;}
 .board.alertC {border:none; background-color:#fff;}
 
-.board.errorL  {background:#fde8e9 url(http://i02.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_error_l.gif) no-repeat 15px 10px;border:2px solid #fac5c8;line-height:26px;padding:15px 20px 26px 95px;font-size:16px;}
+.board.errorL  {background:#fde8e9 url(http://localhost:8080/shop/image/icon_error_l.gif) no-repeat 15px 10px;border:2px solid #fac5c8;line-height:26px;padding:15px 20px 26px 95px;font-size:16px;}
 .board.errorL .important-words {font-size:18px;line-height:24px;display:block;margin-bottom:8px;}
 .board.errorL a.main-action {font-size:20px;font-weight:normal;}
 
 .board.errorA,
-.board.errorA-naked {background:#fde8e9 url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_error_a.gif) no-repeat 18px 15px;;border:1px solid #fac5c8;line-height:26px;padding:15px 20px 15px 65px;}
+.board.errorA-naked {background:#fde8e9 url(http://localhost:8080/shop/image/icon_error_a.gif) no-repeat 18px 15px;;border:1px solid #fac5c8;line-height:26px;padding:15px 20px 15px 65px;}
 .board.errorA-naked {border:none; background-color:#fff;}
 
 .board.errorB,
-.board.errorC {background:#fde8e9 url(http://i03.i.aliimg.com/images/eng/style/css_images/myalibaba/escrow/icon_error_bc.gif) no-repeat 12px 10px;border:1px solid #fac5c8;line-height:16px;padding:6px 20px 5px 35px;font-size:10px;font-family:verdana;}
+.board.errorC {background:#fde8e9 url(http://localhost:8080/shop/image/icon_error_bc.gif) no-repeat 12px 10px;border:1px solid #fac5c8;line-height:16px;padding:6px 20px 5px 35px;font-size:10px;font-family:verdana;}
 .board.errorC {border:none; background-color:#fff;}
 
 .price .currency,.price .value,.price .comment{color:#BD1A1D;font-weight:bold;}
@@ -509,10 +509,10 @@ a:hover{color:#f60;text-decoration:underline;}
 .price-thin,.price-thin .currency,.price-thin .value,.price-thin .separator,.price-thin .unit,.price-thin .comment{font-weight:normal;color:#000;}
 .price-del,.price-del .currency,.price-del .value{font-weight:normal;color:#666;}
 
-a.atm32 {display:block;float:left;_height:1%;padding:8px 5px 10px 37px;font:bold 11px/1.2em arial;text-decoration:underline!important;background:url(http://i03.i.aliimg.com/images/eng/style/icon/atm_32.gif) left no-repeat;}
-a.atm32grey, a.atm32none {display:block;float:left;_height:1%;padding:8px 5px 10px 37px;font:normal 11px/2.4em arial;background:url(http://i03.i.aliimg.com/images/eng/style/icon/atm_32_grey.gif) left no-repeat;}
+a.atm32 {display:block;float:left;_height:1%;padding:8px 5px 10px 37px;font:bold 11px/1.2em arial;text-decoration:underline!important;background:url(http://localhost:8080/shop/image/atm_32.gif) left no-repeat;}
+a.atm32grey, a.atm32none {display:block;float:left;_height:1%;padding:8px 5px 10px 37px;font:normal 11px/2.4em arial;background:url(http://localhost:8080/shop/image/atm_32_grey.gif) left no-repeat;}
 
-a.atm16,a.atm16grey,a.atm16none{display:block;float:left;height:20px;padding:2px 2px 2px 18px;text-align:left;font:10px verdana; line-height:2em;background:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/spr_we_buyer_common.png?v=110309) no-repeat 0 -548px;}
+a.atm16,a.atm16grey,a.atm16none{display:block;float:left;height:20px;padding:2px 2px 2px 18px;text-align:left;font:10px verdana; line-height:2em;background:url(http://localhost:8080/shop/image/spr_we_buyer_common.png) no-repeat 0 -548px;}
 a.atm16grey, a.atm16none {background-position:0 -598px;}
 
 #page .gallery-mode .list-item .store-name-chat a.atm16,#page .gallery-mode .list-item .store-name-chat a.atm16grey{width:0px;overflow:hidden;}
@@ -527,7 +527,7 @@ a.atm16grey, a.atm16none {background-position:0 -598px;}
 .pagination a:hover , .pagination .page-next:hover , .pagination .page-previous:hover { text-decoration:none; background-color:#C8DFF9; border-color:#72ADEF;}
 .pagination .page-cur { border:none; font-weight:bold; color:#06C;}
 
-.pagination .page-previous,.pagination .page-next,.pagination .page-start,.pagination .page-end{height:14px;background:url(http://i03.i.aliimg.com/wimg/buyer/sprite/spr_we_buyer_common.png) no-repeat;}
+.pagination .page-previous,.pagination .page-next,.pagination .page-start,.pagination .page-end{height:14px;background:url(http://localhost:8080/shop/image/spr_we_buyer_common.png) no-repeat;}
 .pagination .page-previous{padding-left:18px;background-position:0 -2248px;}
 .pagination .page-next{padding-right:18px;background-position:100% -2398px;}
 .pagination .page-start{padding-left:18px;cursor:default;color:#B2B2B2;background-position:0 -2648px;}
@@ -537,13 +537,13 @@ a.atm16grey, a.atm16none {background-position:0 -598px;}
 .pagination .page-skip{position:absolute;top:0;right:5px;height:25px; }
 .pagination input { font-size:13px; vertical-align:middle; }
 .pagination-input { width:35px;}
-.pagination-goto{ width:37px; height:22px; border:none; cursor:pointer; background:url(http://i02.i.aliimg.com/images/eng/wholesale/icon/go-a.gif) no-repeat 0 0;}
+.pagination-goto{ width:37px; height:22px; border:none; cursor:pointer; background:url(http://localhost:8080/shop/image/go-a.gif) no-repeat 0 0;}
 /* ------------------------------------------------------------ */
 /* pagination */
 /* pledge issued icon */
 /* ------------------------------------------------------------ */
 .aa16,a.aa16{
-	background:url(http://i02.i.aliimg.com/wimg/buyer/single/accuracy_assured_16x16.png) no-repeat 0 2px;
+	background:url(http://localhost:8080/shop/image/accuracy_assured_16x16.png) no-repeat 0 2px;
 	color:#000;
 	display:inline-block;
 	font:10px verdana;
@@ -576,7 +576,7 @@ a.aa16:hover{color:#000;text-decoration:none;}
 .board-tips-simple,
 .board-tips-large,
 .board-safe,
-.board-safe-large {margin:10px 0;padding:3px;font-family:arial;font-size:12px; color:#404040;border-width:1px;border-style:solid;background-image:url(http://i03.i.aliimg.com/wimg/buyer/sprite/com_board_sprite.png);background-repeat:no-repeat;background-position:-550px 0;}
+.board-safe-large {margin:10px 0;padding:3px;font-family:arial;font-size:12px; color:#404040;border-width:1px;border-style:solid;background-image:url(http://localhost:8080/shop/image/com_board_sprite.png);background-repeat:no-repeat;background-position:-550px 0;}
 
 .board-error-simple,
 .board-success-simple,
@@ -618,13 +618,13 @@ a.aa16:hover{color:#000;text-decoration:none;}
 .crumb.global{font:0.8em verdana;padding:0;} 
 .crumb.global h1{display:inline;font:bold 1em verdana;}
 .crumb.global h2{ margin-right:4px; }
-.crumb.stepGuide span.current{background:url(http://i02.i.aliimg.com/images/eng/style/css_images/join_current.gif) right 18px no-repeat; padding-bottom:10px; border-bottom:none;font-weight:bold;color:#f60;}
+.crumb.stepGuide span.current{background:url(http://localhost:8080/shop/image/join_current.gif) right 18px no-repeat; padding-bottom:10px; border-bottom:none;font-weight:bold;color:#f60;}
 .crumb.stepGuide span{border-bottom:4px solid #ccc;padding:3px 5px;margin: 0 2px;color:#777;}
 .crumb.stepGuide{text-align:right;}
 .crumb h2{display:inline;font-style:normal;font-size:100%;}
 
 #fixed-feedback{display:block;position:fixed;_position:absolute;right:0;z-index:999;}
-#fixed-feedback a{display:block;position:relative;width:30px;height:91px;border:1px solid #E5E2DA;border-right:0;background:#F47C15 url(http://i03.i.aliimg.com/images/eng/wholesale/icon/fixed-feedback.png?v=110817) no-repeat 0 0;}
+#fixed-feedback a{display:block;position:relative;width:30px;height:91px;border:1px solid #E5E2DA;border-right:0;background:#F47C15 url(http://localhost:8080/shop/image/fixed-feedback.png) no-repeat 0 0;}
 #fixed-feedback a:hover{width:31px;}
 
 #footer{clear: both;padding:10px 0 10px 0;text-align:center;border-top:1px solid #ccc; margin-top:15px;font:0.85em/14px verdana;}
@@ -648,14 +648,14 @@ a.aa16:hover{color:#000;text-decoration:none;}
 .cart-atm .add-to-cart a.atc-button{height:20px;margin-top:7px;}
 .cart-atm .atm16{width:60px;overflow:hidden;}
 /* go-top按钮 */
-#go-top{background:url(http://i02.i.aliimg.com/wimg/buyer/single/go-top.png) no-repeat;width:48px;height:48px;display:none;position:fixed;_position:absolute;cursor:pointer}
+#go-top{background:url(http://localhost:8080/shop/image/go-top.png) no-repeat;width:48px;height:48px;display:none;position:fixed;_position:absolute;cursor:pointer}
 
-#go-top:hover{background:url(http://i02.i.aliimg.com/wimg/buyer/single/go-top.png) no-repeat -57px 0;width:48px;height:48px;display:none;position:fixed;_position:absolute;cursor:pointer}
+#go-top:hover{background:url(http://localhost:8080/shop/image/go-top.png) no-repeat -57px 0;width:48px;height:48px;display:none;position:fixed;_position:absolute;cursor:pointer}
 
 
 .maskIframe{z-index:1 !important;}
 
-.view-more,.view-less{background:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/spr_we_buyer_common.png?v=110309) no-repeat;text-decoration:none;cursor:pointer;}
+.view-more,.view-less{background:url(http://localhost:8080/shop/image/spr_we_buyer_common.png) no-repeat;text-decoration:none;cursor:pointer;}
 .view-more{background-position: 100% -2201px;}
 .view-less{background-position: 100% -2101px;}
 .view-more-right{background-position:62px -2350px;padding: 0 12px 0 5px;}
