@@ -15,8 +15,7 @@
 										  ${productInstance.name }
 										</h1>
 
-										<form
-											action="http://shoppingcart.aliexpress.com/order/confirm_order.htm"
+										<form action="http://shoppingcart.aliexpress.com/order/confirm_order.htm"
 											class="buy-now-form" id="buy-now-form" name="buyNowForm">
 											<input type="hidden" name="objectId" value="688800292">
 											<input type="hidden" value="wholesaleProduct"> 
@@ -57,7 +56,7 @@
 												<dl>
 													<dt>
 														<span>
-														  <g:message code="cat.filter.price.label"/>:
+														  <g:message code="product.bulkprice.label"/>:
 														 </span>
 													</dt>
 													<dd>
@@ -84,41 +83,20 @@
 												</dd>
 											</dl>
 
-                                            <dl class="sku-row">
-                                                    <dt class="pp-dt-ln sku-title">
-                                                        Shoe US Size:
-                                                    </dt>
-                                                    <dd>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <ul id="sku-sku2" class="sku-attr sku-checkbox clearfix">
-                                                        <li><a class="sku-value attr-checkbox" id="sku-2-200000286" href="javascript:void(0)"><span>5.5</span></a></li>
-                                                            <li><a class="sku-value attr-checkbox" id="sku-2-1394" href="javascript:void(0)"><span>6</span></a></li>
-                                                            <li><a class="sku-value attr-checkbox" id="sku-2-200000287" href="javascript:void(0)"><span>6.5</span></a></li>
-                                                            <li><a class="sku-value attr-checkbox" id="sku-2-3434" href="javascript:void(0)"><span>7</span></a></li>
-                                                            <li class="active"><a class="sku-value attr-checkbox" id="sku-2-200000288" href="javascript:void(0)"><span>7.5</span></a><i>selected</i></li>
-                                                            <li><a class="sku-value attr-checkbox" id="sku-2-699" href="javascript:void(0)"><span>8</span></a></li>
-                                                            <li><a class="sku-value attr-checkbox" id="sku-2-200000289" href="javascript:void(0)"><span>8.5</span></a></li>
-                                                                                                                    </ul>
-                                                        <div id="inf-msg-size" class="msg-selected sku-msg" style="display: none;">
-                                                            Please select a Shoe US Size
-                                                        </div>
-                                                    </dd>
-                                                </dl>
+											<g:render template="ajax/product_size"/>
 
 
 											<dl>
 												<dt>Quantity:</dt>
 												<dd>
 													<div id="inf-pnl-quantity" class="pnl-quantity">
-														<div id="inf-msg-quantity" class="msg-quantity"
-															style="visibility: hidden;"></div>
+														<div id="inf-msg-quantity" class="msg-quantity" style="visibility: hidden;"></div>
 
-														<input type="text" name="quantity" id="inf-txt-quantity"
-															class="txt-quantity" maxlength="5" value="1"> <span
-															id="inf-lbl-unit" class="lbl-unit">lot</span> <input
-															type="hidden" id="oddUnitName_id" value="lot"> <input
-															type="hidden" id="multiUnitName_id" value="lots">
-														<img id="inf-bnt-quantity-calculate"
-															src="./product detail_files/calculate.gif" alt="">
+														<input type="text" name="quantity" id="inf-txt-quantity" class="txt-quantity" maxlength="5" value="1"> 
+														<span id="inf-lbl-unit" class="lbl-unit">lot</span> 
+														<input type="hidden" id="oddUnitName_id" value="lot"> 
+														<input type="hidden" id="multiUnitName_id" value="lots">
+														<img id="inf-bnt-quantity-calculate" src="${resource(dir: 'images/product', file: 'calculate.gif')}" alt="" style="visibility: visible;">
 
 
 														<p id="inf-msg-stockpile"
@@ -133,23 +111,26 @@
 											<dl>
 												<dt>Shipping Cost:</dt>
 												<dd>
-													<div id="inf-pnl-shipping" class="clearfix"
-														style="visibility: visible;">
-														<span id="inf-pnl-shipping-cost" class="shipping-cost"><span
-															class="free">Free Shipping</span></span> <span
-															class="shipping-to">to</span> <a id="inf-lnk-shipping"
+													<div id="inf-pnl-shipping" class="clearfix" style="visibility: visible;">
+														<span id="inf-pnl-shipping-cost" class="shipping-cost">
+															<span class="free">Free Shipping</span>
+														</span> 
+														
+														<%--
+														<span class="shipping-to">to</span> 
+														<a id="inf-lnk-shipping"
 															class="shipping-link" rel="nofollow"
-															href="javascript:void(0);"><span
-															id="shipping-country-name">Vietnam</span> <span
-															class="shipping-via">Via</span> EMS</a>
+															href="javascript:void(0);">
+														<span id="shipping-country-name">Vietnam</span> 
+														<span class="shipping-via">Via</span> EMS</a>
+														 --%>
 													</div>
 												</dd>
 											</dl>
 											<dl>
 												<dt>Delivery Time:</dt>
 												<dd>
-													<span id="inf-pnl-delivery-time" class="delivery-time">4-10
-														days</span>
+													<span id="inf-pnl-delivery-time" class="delivery-time">4-10 days</span>
 												</dd>
 											</dl>
 
