@@ -12,6 +12,9 @@ class Product {
 	String overview
 	String specification
 	
+	//Ex: 100 pieces / lot , $1.05 / piece
+	String note = ""
+	
 	//User supplier
 	//Category category
 	/**
@@ -20,10 +23,10 @@ class Product {
 	float purchargePrice
 	float importPrice // root price
 	int discount = 0
-	int discount3Item = 0
-	int discount5Item = 0
-	int discount10Item = 0
-
+	
+	float bulkprice = 0.00
+	int bulkItem = 1
+	
 	// it's used for "discount7" div at "/category/_product_list.gsp"	
 	float discountPrice = 0.00
 	float discountPriceFixed = 0.00
@@ -33,7 +36,7 @@ class Product {
 	String unit 
 	
 	// main product image
-	ImageStore productImage
+	ImageStore productImage // prop of this object "isSelected" will be set as TRUE when CREATE Product
 	
 	// Remain product in shop
 	int inventory
@@ -91,4 +94,5 @@ class Product {
 		shippingMethodPrice7 nullable:true
 		shippingMethodPrice8 nullable:true
     }
+
 }
