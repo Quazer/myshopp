@@ -1,6 +1,7 @@
 import com.nghia.shop.Category
 import com.nghia.shop.Member
 import com.nghia.shop.Product
+import com.nghia.shop.ProductExtend;
 import com.nghia.shop.ShippingDetail;
 import com.nghia.shop.ShippingMethod;
 class BootStrap {
@@ -71,6 +72,21 @@ class BootStrap {
 			
 			prod.save(flush:true)
 			print "prod " + i + " :" + prod.id
+			
+			def productExtend = new ProductExtend()
+			productExtend.product = prod
+			productExtend.productColor = "color " + 1
+			productExtend.productSize = "size " + i
+			productExtend.isDefault = false
+			productExtend.save(flush:true)
+			
+			def productExtend2 = new ProductExtend()
+			productExtend2.product = prod
+			productExtend2.productColor = "color " + 1
+			productExtend2.productSize = "size " + i + 1
+			productExtend2.isDefault = true
+			productExtend2.save(flush:true)
+			print "productExtend: " + productExtend?.id
 		}
 	
 
