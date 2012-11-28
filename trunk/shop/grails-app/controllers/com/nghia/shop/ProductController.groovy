@@ -45,7 +45,8 @@ class ProductController {
 				return
 			}
 	
-			[productInstance: productInstance]
+			[productInstance: productInstance, sizeOfProd : sizesOfProduct(productInstance), 
+				productColors: colorsOfProduct(productInstance)]
 		}
 		else {
 			//TODO: set error to flash
@@ -57,6 +58,20 @@ class ProductController {
 
     }
 
+	def sizesOfProduct(productInstance) {
+		def sizesOfProd = ProductExtend.executeQuery("from ProductExtend where product = :productInstance", 
+			[productInstance: productInstance])
+		
+		return sizesOfProd  
+	}
+	
+	def colorsOfProduct(productInstance) {
+		def productColor = ProductExtend.executeQuery("from ProductExtend where product = :productInstance",
+			[productInstance: productInstance])
+		
+		return productColor
+	}
+	
 //    def edit(Long id) {
 //        def productInstance = Product.get(id)
 //        if (!productInstance) {
