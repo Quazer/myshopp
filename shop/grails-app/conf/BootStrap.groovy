@@ -55,9 +55,6 @@ class BootStrap {
 			prod.purchargePrice = 100 + i
 			prod.importPrice = 76
 			prod.discount = 0
-			prod.discount3Item = 0
-			prod.discount5Item = 0
-			prod.discount10Item = 0
 			prod.unit = "product.productkind.piece"
 			
 			prod.sku = 1000 + i
