@@ -387,13 +387,18 @@ class CommonUtils {
 		 return "{discountOrCoupon}"
 	 }
 	 
-	 static urlWithProductName(productInstace) {
+	 static urlWithProductName(productInstance) {
 		//${createLink(controller : 'product',action: 'show', params:[sku: product?.sku])}
-		return "http://localhost:8080/shop/product/show/" + productInstace?.id
+		return "http://localhost:8080/shop/product/show/?sku=" + productInstance?.sku
 	 }
 	 
-	 static urlWithProductNameForImage(productInstace) {
+	 static urlWithProductNameForImage(productInstance) {
 		 //${createLink(controller : 'imageStore',action: 'productImages', id: product?.productImage?.id)}
-		 return "http://localhost:8080/shop/imageStore/productImages" + productInstace?.productImage?.id
-	  }
+		 return "http://localhost:8080/shop/imageStore/productImages" + productInstance?.productImage?.id
+	 }
+	 
+	 static bulkPriceWithCurrency(productInstance) { 
+		 return "{bulkPriceWithCurrency} VND"
+		 
+	 }
 }
