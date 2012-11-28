@@ -40,22 +40,22 @@
 <script type="text/javascript" async=""
 	src="${resource(dir: 'js/index', file: 'base-mod.js')}"></script>
 
-<%--
+
 <script type="text/javascript" async=""
 	src="http://style.alibaba.com/js/5v/lib/_hozmod/addon/base-mod.js"></script>
- --%>
+
 
 <script type="text/javascript"
 	src="${resource(dir: 'js/index', file: 'ae-MODERN_BROWSER-v_7c68886d0f51_0.js')}"></script>
 
 <script id="yui__dyn_0" type="text/javascript" charset="utf-8"
-	src="${resource(dir: 'js/category', file: 'wishlist_item_count.htm')}"></script>
+	src="${resource(dir: 'js/product', file: 'wishlist_item_count.htm')}"></script>
 <script id="yui__dyn_2" type="text/javascript" charset="utf-8"
 	src="${resource(dir: 'js/category', file: 'ajax_buyer_shopcart_num.htm')}"></script>
 <script id="yui__dyn_3" type="text/javascript" charset="utf-8"
-	src="${resource(dir: 'js/category', file: 'messageUnreadCountAjaxService.htm')}"></script>
+	src="${resource(dir: 'js/product', file: 'messageUnreadCountAjaxService.htm')}"></script>
 <script id="yui__dyn_4" type="text/javascript" charset="utf-8"
-	src="${resource(dir: 'js/category', file: 'muliuserstatusx.atc')}"></script>
+	src="${resource(dir: 'js/product', file: 'muliuserstatusx.atc')}"></script>
 <script id="yui__dyn_5" type="text/javascript" charset="utf-8"
 	src="${resource(dir: 'js/index', file: 'element.js')}"></script>
 <link type="text/css" rel="stylesheet" charset="UTF-8"
@@ -105,18 +105,16 @@
 
 		<g:render template="navigation" />
 
-		<g:render template="product_detail_header" />
+		<g:render template="product_detail_header" model="[productInstance:productInstance]"/>
 
 		<script type="text/javascript"
 			src="${resource(dir: 'js/product', file: 'detail_sku-MODERN_BROWSER-v_b96cd5de3605_da0eefee6f6e2.js')}"></script>
 		<script>
-	/* <![CDATA[ */
 		PAGE_TIMING.firstScreenImage = new Image();
 		PAGE_TIMING.firstScreenImage.onload = function() {
 			PAGE_TIMING.firstScreen = new Date().getTime();
 		};
 		PAGE_TIMING.firstScreenImage.src = 'http://i02.i.aliimg.com/wimg/monitor/first-screen.png';
-	/* ]]> */
 	</script>
 
 		<div id="bp-banner">
@@ -880,7 +878,7 @@ _gaq.push(['_trackPageview']);
 
 
 	<script type="text/javascript"
-		src="./product detail_files/userstatusx2.atc"></script>
+		src="${resource(dir: 'js/product', file: 'userstatusx2.atc')}"></script>
 	<div id="inf-dlg-shipping" class="mask-content"
 		style="display: none; z-index: 1025; left: 293.5px; top: 70px; width: 693px;">
 		<a

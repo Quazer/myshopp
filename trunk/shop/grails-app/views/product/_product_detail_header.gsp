@@ -1,3 +1,4 @@
+<%@ page import="com.nghia.shop.CommonUtils" %>
 		<div id="base">
 			<div class="grid-c2-s6f">
 				<div class="col-main" itemscope=""
@@ -10,29 +11,20 @@
 								<div id="inf">
 									<div class="inf-inner">
 										<!--real-time-->
-										<h1 id="product-name" class="fn" itemprop="name">New
-											Style Clear Soft TPU Gel Case for LG Nexus 4 E960 Free
-											Shipping</h1>
-
-
-										<div id="rateHistory" class="rate-history clearfix">
-											<span class="history">History:</span> <a id="thfViewHistory"
-												class="history-num" href="javascript:;" rel="nofollow">
-												Past 6 months: 2 orders (200 pieces) </a>
-										</div>
+										<h1 id="product-name" class="fn" itemprop="name">
+										  ${productInstance.name }
+										</h1>
 
 										<form
 											action="http://shoppingcart.aliexpress.com/order/confirm_order.htm"
 											class="buy-now-form" id="buy-now-form" name="buyNowForm">
 											<input type="hidden" name="objectId" value="688800292">
-											<input type="hidden" value="wholesaleProduct"> <input
-												type="hidden" name="from" value="aliexpress"> <input
-												type="hidden" name="countryCode" value="VN"
-												id="inf-hid-country-code"> <input type="hidden"
-												name="shippingCompany" value="EMS"
-												id="inf-hid-shipping-company"> <input type="hidden"
-												name="" id="objectStockpile" value=""> <input
-												type="hidden" name="wsOrderFrom" value="product_detail">
+											<input type="hidden" value="wholesaleProduct"> 
+											<input type="hidden" name="from" value="aliexpress"> 
+											<input type="hidden" name="countryCode" value="VN" id="inf-hid-country-code"> 
+											<input type="hidden" name="shippingCompany" value="EMS" id="inf-hid-shipping-company">
+											<input type="hidden" name="" id="objectStockpile" value=""> 
+											<input type="hidden" name="wsOrderFrom" value="product_detail">
 
 											<input type="hidden" id="hid-product-id" value="688800292">
 											<input type="hidden" name="ws_score_session_id" value="">
@@ -41,29 +33,32 @@
 												<dl>
 													<input type="hidden" id="sku-price-store" value="105.00">
 													<input type="hidden" id="bulk-order-store" value="4">
-													<input type="hidden" id="act-sku-bulk-price-store"
-														value="100.80">
+													<input type="hidden" id="act-sku-bulk-price-store" value="100.80">
 
-													<dt>Price:</dt>
+													<dt><g:message code="cat.filter.price.label"/>:</dt>
 													<dd>
-														<div class="price price-highlight" itemprop="offers"
-															itemscope="" itemtype="http://schema.org/Offer">
-															<span class="currency notranslate"
-																itemprop="priceCurrency" content="USD">US $</span><span
-																class="value" id="sku-price" itemprop="price">105.00</span>
-															<span class="separator">/</span> <span class="unit">
-																lot </span>
+														<div class="price price-highlight" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+														    <%-- 
+															<span class="currency notranslate" itemprop="priceCurrency" content="AUD">US $</span>
+															--%>
+															<span class="value" id="sku-price" itemprop="price">
+															     ${CommonUtils.showPriceWithCurrency(productInstance.purchargePrice) }</span>
+															<span class="separator">/</span> 
+														    <span class="unit">
+															     <g:message code="${productInstance.unit }"/> 
+															</span>
 														</div>
 
-														<span class="unit-disc"> 100 pieces / lot , $<span
-															id="sku-per-piece-price">1.05</span> / piece
+														<span class="unit-disc">${productInstance.note }
 														</span>
 													</dd>
 
 												</dl>
 												<dl>
 													<dt>
-														<span>Bulk Price:</span>
+														<span>
+														  <g:message code="cat.filter.price.label"/>:
+														 </span>
 													</dt>
 													<dd>
 														<div style="display: none">
@@ -71,8 +66,8 @@
 																class="separator">/</span> <span class="unit">piece
 															</span>
 														</div>
-														<span id="sku-bulk-price">US $100.80 / lot </span>(4 lots
-														or more)
+														<span id="sku-bulk-price">${CommonUtils.bulkPriceWithCurrency(productInstance) } / <g:message code="${productInstance.unit }"/>  </span>
+														(${productInstance.bulkItem } <g:message code="${productInstance.unit }"/>(s) <g:message code="product.bulkquantity.label"/>)
 
 													</dd>
 												</dl>
@@ -81,23 +76,33 @@
 												<dt class="pp-dt-ln sku-color-title">Color:</dt>
 												<dd>
 													<ul id="sku-color" class="sku-attr sku-color clearfix">
-														<li class="active"><a class="sku-value attr-sku1"
-															id="sku-1-193" title="Black" href="javascript:void(0)"><span
-																class="color sku-color-193" title="Black"></span></a><i>selected</i></li>
-														<li><a class="sku-value attr-sku1"
-															id="sku-1-100018786" title="Clear"
-															href="javascript:void(0)"><span
-																class="color sku-color-100018786" title="Clear"></span></a></li>
-														<li><a class="sku-value attr-sku1" id="sku-1-691"
-															title="Gray" href="javascript:void(0)"><span
-																class="color sku-color-691" title="Gray"></span></a></li>
+														<g:render template="ajax/product_color"/>
 													</ul>
-													<div id="inf-msg-color" class="msg-selected sku-msg"
-														style="display: none;">Please select a Color</div>
+													<div id="inf-msg-color" class="msg-selected sku-msg" style="display: none;">
+													   Please select a Color
+													</div>
 												</dd>
 											</dl>
 
-
+                                            <dl class="sku-row">
+                                                    <dt class="pp-dt-ln sku-title">
+                                                        Shoe US Size:
+                                                    </dt>
+                                                    <dd>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <ul id="sku-sku2" class="sku-attr sku-checkbox clearfix">
+                                                        <li><a class="sku-value attr-checkbox" id="sku-2-200000286" href="javascript:void(0)"><span>5.5</span></a></li>
+                                                            <li><a class="sku-value attr-checkbox" id="sku-2-1394" href="javascript:void(0)"><span>6</span></a></li>
+                                                            <li><a class="sku-value attr-checkbox" id="sku-2-200000287" href="javascript:void(0)"><span>6.5</span></a></li>
+                                                            <li><a class="sku-value attr-checkbox" id="sku-2-3434" href="javascript:void(0)"><span>7</span></a></li>
+                                                            <li class="active"><a class="sku-value attr-checkbox" id="sku-2-200000288" href="javascript:void(0)"><span>7.5</span></a><i>selected</i></li>
+                                                            <li><a class="sku-value attr-checkbox" id="sku-2-699" href="javascript:void(0)"><span>8</span></a></li>
+                                                            <li><a class="sku-value attr-checkbox" id="sku-2-200000289" href="javascript:void(0)"><span>8.5</span></a></li>
+                                                                                                                    </ul>
+                                                        <div id="inf-msg-size" class="msg-selected sku-msg" style="display: none;">
+                                                            Please select a Shoe US Size
+                                                        </div>
+                                                    </dd>
+                                                </dl>
 
 
 											<dl>
@@ -300,47 +305,23 @@
 			</div>
 		</div>
 		<div class="col-extra" id="extra" style="display: block;">
-	<div class="box"><input type="hidden" id="hid_storeId" value="503423">
-    <div class="bd" style="border-top:1px solid #ccc; padding-top:7px;">
-        <div class="info">
-            <div class="company-name">
-            	            	<a href="http://www.aliexpress.com/store/503423" title="ShenZhen Greely Technology Co.,Ltd">ShenZhen Greely Technology Co.,Ltd</a>
-            	            </div>
-            <address>
-              China (Mainland) (Guangdong)             </address>
-			<!--
-            <div class="company-year">
-                                    	3<sup>rd</sup> year
-                         </div>
-			-->
-			    					<p class="store-feedback"><a target="_blank" href="http://www.aliexpress.com/store/feedback-score/503423.html" rel="nofollow" class="feedback-score" title="Feedback Score 1044">1044</a>&nbsp;<a target="_blank" href="http://www.aliexpress.com/store/feedback-score/503423.html" rel="nofollow"><span class="feedback-level"><img alt="" src="./product detail_files/22-s.gif" title="This is the Feedback Symbol for Feedback Scores from 1000-1999."></span></a></p>
-
-        </div>
-        
-		<div id="extra-feedback" class="feedback clearfix" style="display: block;">
-            <div style="display: block; background-image: none; padding-bottom: 4px; background-position: initial initial; background-repeat: initial initial;" class="feedback-text">
-                <p>
-					<a class="feedback-rate" rel="nofollow" href="http://www.aliexpress.com/store/feedback-score/503423.html" target="_blank">96.3%</a>
-					Positive feedback
-				</p>
-                <p style="display:none;"><a class="feedback-time" rel="nofollow" href="http://www.aliexpress.com/store/feedback-score/503423.html" target="_blank">349</a><span class="feedback-time-unit">&nbsp;Ratings</span>&nbsp;<span class="feedback-level"></span></p>
-            </div>
-        <dl class="dsr-content-m" id="dsr-content"><dt>Detailed seller ratings <span>(out of 5)</span></dt><dd><ul class="dsr-list"><li title="4.7 out of 5 (176 ratings), 5.15% higher than other sellers" class="dsr-score-above"><div class="dsr-title">Item as Described:</div><div class="dsr-score-m">4.7</div><a href="http://www.aliexpress.com/store/feedback-score/503423.html" class="dsr-compare" target="_blank">Above Average</a></li><li title="4.6 out of 5 (176 ratings), 2.91% higher than other sellers" class="dsr-score-above"><div class="dsr-title">Communication:</div><div class="dsr-score-m">4.6</div><a href="http://www.aliexpress.com/store/feedback-score/503423.html" class="dsr-compare" target="_blank">Above Average</a></li><li title="4.6 out of 5 (177 ratings), 4.78% higher than other sellers" class="dsr-score-above"><div class="dsr-title">Shipping Speed:</div><div class="dsr-score-m">4.6</div><a href="http://www.aliexpress.com/store/feedback-score/503423.html" class="dsr-compare" target="_blank">Above Average</a></li></ul></dd></dl><dl class="dsr-content-m" id="dsr-content"><dd class="no-dsr-text">Detailed Seller Ratings information is unavailable when there're less than 10 ratings.</dd></dl></div>
-		<div class="tip-popup right" id="extra-pnl-feedback-tip" style="position:absolute;display:none;">
-			<div class="arrow"></div>
-			<a class="close-button" href="javascript:void(0);"></a>
-			<div class="tip-popup-content">
-				<p>Our Feedback Rating System was launched on 06 Jan 2010. There is no Feedback Rating for this supplier yet.</p>
-				<p>Please check back regularly for updates on this supplier's Feedback Rating.</p>
+            <!-- Seller's info/Notice -->
+            <%--
+            <g:render template="seller_info"/>
+             --%>
+             
+			<div class="box contact contact-supplier" id="atm_plus"
+				style="display: block; padding: 12px; cursor: auto;">
+				<div class="caption">${message(code: 'default.buyer.notice')}</div>
+				<div class="linkmen clearfix">
+				    ${message(code: 'default.buyer.notice_detail')}
+				</div>
+				<div id="contact-ways" class="contact-ways clearfix">
+					<a class="contact-mail" href="javascript:void(0)"
+						title="${message(code: 'default.buyer.contactnow.tooltip')}">${message(code: 'default.buyer.contact.label')}</a>
+				</div>
 			</div>
 		</div>
-        <div class="view-products">
-							<a href="http://www.aliexpress.com/store/503423" rel="nofollow" title="View my Store">View my Store</a>
-					</div>
-    </div>
-	</div>
-	<div class="box contact contact-supplier" id="atm_plus" style="display: block; padding: 12px; cursor: auto;"><div class="caption">Contact Seller</div><div class="linkmen clearfix">Contact Person: Brown su</div><div id="contact-ways" class="contact-ways clearfix"><a class="contact-mail" href="javascript:void(0)" title="Click &quot;Contact Now&quot; to send an inquiry direct to the supplier's Message Center.">Contact Now</a><a href="javascript:void(0)" title="Chat with me now" class="atm16 atm16-online" online="1" from="11" memberid="8pctgRBMALMLdOSKi+TGn4BG0bKdGUrt" id1="688800292">Chat now!</a></div></div>
-</div>
 
 	</div>
 </div>
