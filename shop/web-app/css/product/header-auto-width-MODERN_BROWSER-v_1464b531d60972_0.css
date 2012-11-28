@@ -602,10 +602,8 @@ a.atm16grey, a.atm16none {background-position:0 -598px;}
 
 #footer{clear: both;padding:10px 0 10px 0;text-align:center;border-top:1px solid #ccc; margin-top:15px;font:0.85em/14px verdana;}
 #footer p{margin:0;padding:0}
-/* Detail 评论融合 */
 #thf #thf-records{float:right}#thf #thf-table{margin-top:5px}#thf .rating-table th.buyer-th{width:13%}#thf .rating-table th.tran-info-th{width:30%}#thf .rating-table th.feedback-th{width:auto}#thf .country{margin-top:3px}#thf .thf-rank{margin-top:5px;margin-left:-3px}#thf .thf-price{font-weight:700;color:#BD1A1D}#thf .thf-quantity-unit,#thf .thf-option{color:#666}#thf .thf-date{line-height:20px;color:#999}#thf .thf-stardate{height:20px}#thf .star{overflow:hidden;margin-top:0;float:left;display:inline}#thf .feedback-td p{margin-bottom:10px}#thf .no-records-td{font:700 16px/70px Arial;text-align:center;color:#999}#thf .rating-table .explanation{padding:10px 0 0 0}#thf .rating-table .explanation .green{float:left;margin-bottom:0;margin-right:10px}#thf #thf-info{margin-top:5px}#thf .complain-enter{padding:0}
 
-/* 评论融合调整 */
 #thf-hd{line-height:22px;}
 #thf-hd h5{padding:0;}
 #thf-hd .thf-hd-title{float:left;}
@@ -636,7 +634,6 @@ a.atm16grey, a.atm16none {background-position:0 -598px;}
 .thf-digg-no{background-position:0 -49px;display:inline-block !important;}
 .thf-digg-num{color:#f60;}
 
-/*评价search排序 begin*/
 .link-fake-selector,#company-selector,#deliver-selector{margin-right:16px;float:left;position:relative;width:104px;height:18px;background:url(http://i03.i.aliimg.com/images/eng/wholesale/sprite/spr_we_buyer_common.png?v=110309) no-repeat 100% -3300px;padding-right:16px;border:1px solid #AAAAAC;}
 .link-fake-selector .list-title,#company-selector .list-title,#deliver-selector .list-title{height:17px;background:#FFF;padding:0 11px 0 5px;font:11px/17px Tahoma;border:1px solid #dedede;border-width:1px 0 0 1px;overflow:hidden;cursor:default;}
 .link-fake-selector .list-container{display:none;position:absolute;left:-1px;top:18px;width:159px;padding:5px 0px;background-color:#FFF;border:1px solid #8ba0ce;}
@@ -653,7 +650,6 @@ a.atm16grey, a.atm16none {background-position:0 -598px;}
 #sort-by-container{position:absolute;top:18px;width:117px;padding:5px 0px;background-color:#FFF;border:1px solid #A6A6A6;border-top:0;}
 #sort-by-container a{display:block;float:none;margin:0px 3px !important;padding:2px 5px;font:11px Tahoma;color:#105cb6;border:1px solid #FFF;text-decoration:none;}
 #sort-by-container a:hover{background-color:#F5FAFF none;border:1px solid #C4D8E6;text-decoration:none;}
-/*评价search排序 end*/
 
 /* horiz */
 /* ------------------------------------------------------------ */
@@ -869,7 +865,6 @@ a.atm16none{background-position:0 -600px;}
 #buy-now-form dl{display:inline-block;}
 
 #inf #buy-now-form dl{display:block;}
-#inf #buy-now-form dl{height:1%;}
 #buy-now-form dl{margin-bottom:2px;}
 #buy-now-form dt,.page-tool dt{float:left;width:105px;font-size:10px;color:#696969;text-align:right;padding:4px 0 0;}
 #buy-now-form dt.pp-dt-ln{line-height:18px;}
@@ -1732,7 +1727,6 @@ body #transaction-complain { display:none; }
 /* ------------------------------------------------------------ */
 /* survey pop */
 
-/*** 中美专线物流方式 ***/
 #direct-shipping-wrapper{overflow:hidden;*zoom:1;}
 #shipping-hd{border-left:1px solid #DAE6F8;border-bottom:1px solid #DAE6F8;}
 #shipping-hd .ss-title{float:left;border:0 none;border-top:1px solid #DAE6F8;border-right:1px solid #DAE6F8;padding:0 10px;}
@@ -1829,7 +1823,6 @@ body #transaction-complain { display:none; }
 #wish-list-joinfreenow #wl-create-acc{width:151px;}
 #wish-list-joinfreenow #wl-signin{font:700 12px Verdana;text-decoration:underline;margin-left:30px;}
 
-/* 收藏成功弹窗 */
 #wish-list-dialog.wish-list-dialog-success{width:388px;}
 .wish-list-success{padding:12px 0 10px;}
 .wish-list-success #success-info{width:250px;background-position:0 -35px;}
@@ -1838,25 +1831,21 @@ body #transaction-complain { display:none; }
 .wish-list-success-product #success-info{background-position:0 -35px; margin-bottom:5px;}
 .wish-list-success-product .submit-box{display:none;}
 
-/* 收藏数量超限弹窗 */
 #wish-list-dialog.wish-list-dialog-overLimit{width:388px;}
 #wish-list-over-limit{padding:10px 0 2px;}
 #wish-list-over-limit #over-limit-info{background:0 none;padding:0;}
 #wish-list-over-limit #over-limit-info h5{background:url(http://i03.i.aliimg.com/wimg/buyer/sprite/wishlist_dialog_icon.png) no-repeat 0 -229px;padding-left:41px;}
 #wish-list-over-limit p{padding-left:41px;}
 
-/* 重复收藏 */
 #wish-list-dialog.wish-list-dialog-addAgain{width:388px;}
 #wish-list-add-again{padding:10px 0 2px;}
 #wish-list-add-again #add-again-info{width:282px;background-position:0 -158px;}
 
-/* 帐户类型不支持提示弹窗 */
 #wish-list-dialog.wish-list-dialog-toBuyers{width:388px;}
 #wish-list-tobuyers{padding:10px 0 2px;}
 #wish-list-tobuyers #tobuyers-info{width:282px;height:44px;background-position:0 -158px;}
 #wish-list-tobuyers #tobuyers-info h5{line-height:44px;}
 
-/* 收藏失败弹窗 */
 #wish-list-dialog.wish-list-dialog-error{width:388px;}
 #wish-list-error{padding:10px 0 2px;}
 #wish-list-error #error-info{width:240px;height:35px;background-position:0 -92px;}
@@ -1874,7 +1863,6 @@ body #transaction-complain { display:none; }
 #wish-list-login .xman-box-content #forgotPwId{margin-bottom:8px;}
 #wish-list-login .xman-box-content #xman_join_btn{margin-bottom:8px;}
 
-/* 验证码弹窗 */
 #wish-list-dialog.wish-list-dialog-checkcode{width:388px;}
 #wish-list-checkcode{padding:10px 0 2px;}
 #wish-list-checkcode #checkcode-info{width:280px;height:32px;background-position:0 -240px;}
@@ -1883,7 +1871,6 @@ body #transaction-complain { display:none; }
 #wish-list-checkcode .error-tip{text-align:left;margin:0 auto 11px;}
 #wish-list-checkcode li{text-align:center;margin-bottom:11px;}
 
-/* 已删除提示弹窗 */
 #wish-list-dialog.wish-list-dialog-noExist{width:388px;}
 #wish-list-noexist{padding:10px 0 2px;}
 #wish-list-noexist #noexist-info{width:240px;height:35px;background-position:0 -92px;}
@@ -1913,7 +1900,6 @@ body #transaction-complain { display:none; }
 #go-top:hover{background:url(http://i02.i.aliimg.com/wimg/buyer/single/go-top.png) no-repeat -57px 0;width:48px;height:48px;display:none;position:fixed;_position:absolute;cursor:pointer}
 
 
-/* 小包默认调整 */
 #shipping-info{width:158px;margin-top:10px;}
 #shipping-parcel-box{margin-top:-10px;}
 #inf-dlg-shipping .company-item-wrapper li,#inf-dlg-shipping-company .company-item-wrapper li{height:150px;}
@@ -2020,7 +2006,6 @@ body #transaction-complain { display:none; }
 .dsr-score{float:left;font-weight:bold;color:#F36422;}
 .no-dsr-text{color:#999;padding:5px;line-height:16px;font-size:10px;}
 
-/*新加样式DSR 开始*/
 .dsr-list a{text-decoration:none;}
 .dsr-score-above, .dsr-score-above a{color:#198303;}
 .dsr-score-below, .dsr-score-below a{color:#ad2330;}
@@ -2034,7 +2019,6 @@ body #transaction-complain { display:none; }
 .dsr-content-m{width:208px; padding-bottom:4px;}
 .dsr-content-m dt{color:#333;font-weight:bold;height:22px;line-height:22px;}
 .dsr-content-m dt span{color:#666;font-weight:normal;}
-/*新加样式DSR 结束*/
 
 /* sale items tip */
 #sale-items-tip{background-color:#EBF8FF;border:1px solid #65D2FF;color:#404040;font-size:12px;min-height:18px;line-height:18px;padding:3px 10px 3px 25px;width:250px;float:left;}
@@ -2077,11 +2061,9 @@ body #transaction-complain { display:none; }
 /* landing tip end */
 
 /* 6v/seeds/mod/button/button-alibaba.css */
-/* landing弹框用到了button 样式，之后会去掉 */
 .ui-button{display:inline-block;*display:inline;*zoom:1;position:relative;overflow:visible}.ui-button-primary,.ui-button-normal,.ui-button-primary-s,.ui-button-normal-s{margin:0;font-family:Arial;text-align:center;vertical-align:middle;color:#333;border:solid 1px #bcbcbc;background-color:#f7f7f7;cursor:pointer;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;-webkit-box-shadow:0 1px 2px 0 rgba(0,0,0,.15);-moz-box-shadow:0 1px 2px 0 rgba(0,0,0,.15);box-shadow:0 1px 2px 0 rgba(0,0,0,.15)}.ui-button-primary:hover,.ui-button-normal:hover,.ui-button-primary-s:hover,.ui-button-normal-s:hover{color:#333;background-color:#f8f8f8}.ui-button-primary:active,.ui-button-normal:active,.ui-button-primary-s:active,.ui-button-normal-s:active{color:#333;-webkit-box-shadow:0 0 0 0 transparent,inset 0 1px 2px rgba(0,0,0,.15),0 0 0 rgba(0,0,0,.05),0 0 0 0 transparent,0 1px 2px 0 rgba(0,0,0,.15);-moz-box-shadow:0 0 0 0 transparent,inset 0 1px 2px rgba(0,0,0,.15),0 0 0 rgba(0,0,0,.05),0 0 0 0 transparent,0 1px 2px 0 rgba(0,0,0,.15);box-shadow:0 0 0 0 transparent,inset 0 1px 2px rgba(0,0,0,.15),0 0 0 rgba(0,0,0,.05),0 0 0 0 transparent,0 1px 2px 0 rgba(0,0,0,.15)}button.ui-button-disabled,button.ui-button-disabled:hover,button.ui-button-disabled:active,input.ui-button-disabled,input.ui-button-disabled:hover,input.ui-button-disabled:active{color:#cbcbcb;border:solid 1px #d4d4d4;cursor:default;background:-moz-linear-gradient(top,#f5f5f5,#e6e6e6 100%);background:-webkit-gradient(linear,0 0,0 100%,from(#f5f5f5),to(#e6e6e6));background:-ms-linear-gradient(top,#f5f5f5,#e6e6e6);background:-webkit-linear-gradient(top,#f5f5f5,#e6e6e6);background:-o-linear-gradient(top,#f5f5f5,#e6e6e6);background:linear-gradient(top,#f5f5f5,#e6e6e6);background-color:#e6e6e6;text-shadow:#fff 0 1px 1px;-webkit-box-shadow:0 1px 2px 0 rgba(0,0,0,.15);-moz-box-shadow:0 1px 2px 0 rgba(0,0,0,.15);box-shadow:0 1px 2px 0 rgba(0,0,0,.15)}.ui-button-primary,.ui-button-normal{font-size:14px;font-weight:bold;line-height:18px;*line-height:14px;padding:3px 15px;*padding:2px 15px}.ui-button-primary-s,.ui-button-normal-s{font-size:12px;font-weight:bold;line-height:14px;*line-height:12px;padding:2px 15px;*padding:1px 15px}.ui-button-primary:hover,.ui-button-primary-s:hover{color:#fff;background:-moz-linear-gradient(top,#ffbc35,#f2a210 100%);background:-webkit-gradient(linear,0 0,0 100%,from(#ffbc35),to(#f2a210));background:-ms-linear-gradient(top,#ffbc35,#f2a210);background:-webkit-linear-gradient(top,#ffbc35,#f2a210);background:-o-linear-gradient(top,#ffbc35,#f2a210);background:linear-gradient(top,#ffbc35,#f2a210);background-color:#f8af23}.ui-button-primary,.ui-button-primary-s,.ui-button-primary:active,.ui-button-primary-s:active{color:#fff;border:solid 1px #e87b0e;background:-moz-linear-gradient(top,#ffab02,#ff8a28 100%);background:-webkit-gradient(linear,0 0,0 100%,from(#ffab02),to(#ff8a28));background:-ms-linear-gradient(top,#ffab02,#ff8a28);background:-webkit-linear-gradient(top,#ffab02,#ff8a28);background:-o-linear-gradient(top,#ffab02,#ff8a28);background:linear-gradient(top,#ffab02,#ff8a28);background-color:#ff9917}.ui-button-normal:hover,.ui-button-normal-s:hover{color:#333;background:-moz-linear-gradient(top,#fafafa,#f2f2f2 100%);background:-webkit-gradient(linear,0 0,0 100%,from(#fafafa),to(#f2f2f2));background:-ms-linear-gradient(top,#fafafa,#f2f2f2);background:-webkit-linear-gradient(top,#fafafa,#f2f2f2);background:-o-linear-gradient(top,#fafafa,#f2f2f2);background:linear-gradient(top,#fafafa,#f2f2f2);background-color:#fdfdfd}.ui-button-normal,.ui-button-normal-s,.ui-button-normal:active,.ui-button-normal-s:active{background:-moz-linear-gradient(top,#fafafa,#e8e8e8 100%);background:-webkit-gradient(linear,0 0,0 100%,from(#fafafa),to(#e8e8e8));background:-ms-linear-gradient(top,#fafafa,#e8e8e8);background:-webkit-linear-gradient(top,#fafafa,#e8e8e8);background:-o-linear-gradient(top,#fafafa,#e8e8e8);background:linear-gradient(top,#fafafa,#e8e8e8);background-color:#eee}
 /* 6v/seeds/mod/button/button-alibaba.css */
 
-/* magnet-list 自适应宽度 如果以后magnet修改 */
 .magnet-list{width:100%;}
 .magnet-list .table-list li .product{width:48%;padding-left:1%;}
 .magnet-list .table-list li .product .pdt-name{width:auto;overflow:hidden;float:none;}
@@ -2094,12 +2076,9 @@ body #transaction-complain { display:none; }
 
 /**  sku max width **/
 .sku-row{max-width:500px;}
-/* 增加限时达样式 start*/
 #promise-time{line-height:16px; color:#666; margin-top:10px; padding:8px 0; border-top:1px solid #e6e6e6;}
 #promise-time img{vertical-align:top; padding:0 10px 0 8px;}
-/* 增加限时达样式 end*/
 
-/*增加左侧边栏缩进 start*/
 #switch-main{position: relative;}
 
 .switch-bar a span {background: url("http://i03.i.aliimg.com/wimg/buyer/sprite/detail-groups-sprite.png") no-repeat scroll 3px 20px; transparent;background-color:#ddd;cursor: pointer;display: block;height: 47px;left: 1px;position: absolute;text-indent: -999em;top: 300px;width: 10px;z-index: 10;}
@@ -2130,7 +2109,6 @@ body #transaction-complain { display:none; }
 #col-sub div.more-products {margin-top:8px;font-weight:bold;}
 #col-sub div.more-products a{float:right;}
 
-/*增加左侧边栏缩进 end*/
 /* A Plus ATM */
 #atm_plus{position:relative;z-index:1;padding:0;_padding-bottom:10px;cursor:pointer;background-color:#FFF;}
 #atm_plus .atm16grey,.contact .atm16{padding-right:15px;width:60px;overflow:hidden;margin-top:4px;margin-bottom:5px;}
@@ -2227,7 +2205,6 @@ a.nohover:hover {text-decoration:none;}
 .sku-Dark-Grey{background:#666 !important;}
 .sku-Lavender{background:#dda0dd !important;}
 
-/*色卡样式控制采用颜色值方式,之前的颜色名方式作废*/
 .sku-color-771{background:#F8F7E7 !important;}
 .sku-color-193{background:#000000 !important;}
 .sku-color-173{background:#0080FF !important;}
@@ -2325,7 +2302,6 @@ a.nohover:hover {text-decoration:none;}
 #ws-xman-wrapper .ws-xman-register-table{width:420px;margin:0 10px 10px 70px;}
 #ws-xman-register-refresh-code, #ws-xman-login-refresh-code {float:left;display:inline-block;line-height:40px;padding-left:5px;}
 #ws-xman-register-checkcode-img, #ws-xman-login-checkcode-img{float:left;}
-/* 被调整为code在上面后，感觉去掉边框比较好
 #ws-xman-register-checkcode-img{float:left;border:1px solid #eee;}
  */
 .ws-xman-mask-content {border: 1px solid #fcbb29;width: 525px;height: auto;background-color: #fff; position: fixed; _position: absolute; _width: 540px;}
@@ -2341,7 +2317,6 @@ a.nohover:hover {text-decoration:none;}
 #ws-xman-wrapper .ws-xman-login-table{width:420px;margin:0 10px 10px 70px;}
 
 
-/* 由于买家没有组件库，按钮样式暂时使用如下样式 */
 .buttonSkinA1,
 .buttonSkinB1,
 .buttonSkinC1{display:inline-block;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;cursor:pointer;height:14px;font-size:14px;font-weight: bold;font-family:arial;padding: 3px 15px 3px 15px;background: url(http://i02.i.aliimg.com/wimg/buyer/sprite/spr_we_buyer_shopcart.png) 0 -1950px repeat-x;}
@@ -2353,7 +2328,6 @@ a.nohover:hover {text-decoration:none;}
 .buttonSkinC1:hover{color:#cbcbcb !important; text-decoration:none;}
 .clearfix{*clear:both;}
 
-/* 原xman代码的样式控制，珠穆朗玛里面目前用到，之后会统一 */
 .xman_box_inner .yui-navset .yui-nav a {background-image:none !important; border-color:#ffcc99 !important;}
 .xman_box_inner .yui-navset .yui-content {border-color:#ffcc99 !important;}
 .xman_box_inner .yui-navset .yui-nav .selected {background-color:#fff !important;}
@@ -2405,7 +2379,6 @@ a.nohover:hover {text-decoration:none;}
 .bp-banner {border: solid #ffcaa6; border-width: 1px 0; height: 65px; width: 100%; background: url(http://i03.i.aliimg.com/images/cms/upload/aliexpress/channel/buyerprotection/banner/bp_banner_718x75_right.png) right no-repeat transparent;}
 .bp-banner a {display: block; width: 100%;}
 .bp-banner .banner-img {margin-top: -9px;}
-/* 卖家提供的服务 */
 /* ------------------------------------------------------------ */
 #seller-promise-main {border-top:1px solid #E6E6E6;padding:8px 0;font-size:11px;color:#666;line-height:16px;margin-top:10px;}
 #seller-promise-main .sp-title {float:left;width:105px;padding-top:2px;text-align:right;}
@@ -2418,7 +2391,6 @@ a.nohover:hover {text-decoration:none;}
 .sp-none {display:none;}
 .sp-block {display:block;}
 /* ------------------------------------------------------------ */
-/* 卖家提供的服务 */
 .ui-button{display:inline-block;*display:inline;*zoom:1;position:relative;overflow:visible}.ui-button-primary,.ui-button-normal,.ui-button-primary-s,.ui-button-normal-s,.ui-button-primary-l,.ui-button-normal-l{margin:0;font-family:Arial;text-align:center;vertical-align:middle;color:#333;border:solid 1px #bcbcbc;background-color:#f7f7f7;cursor:pointer;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;-webkit-box-shadow:0 1px 2px 0 rgba(0,0,0,.15);-moz-box-shadow:0 1px 2px 0 rgba(0,0,0,.15);box-shadow:0 1px 2px 0 rgba(0,0,0,.15)}.ui-button-primary:hover,.ui-button-normal:hover,.ui-button-primary-s:hover,.ui-button-normal-s:hover,.ui-button-primary-l:hover,.ui-button-normal-l:hover{color:#333;background-color:#f8f8f8}.ui-button-primary:active,.ui-button-normal:active,.ui-button-primary-s:active,.ui-button-normal-s:active,.ui-button-primary-l:active,.ui-button-normal-l:active{color:#333;-webkit-box-shadow:0 0 0 0 transparent,inset 0 1px 2px rgba(0,0,0,.15),0 0 0 rgba(0,0,0,.05),0 0 0 0 transparent,0 1px 2px 0 rgba(0,0,0,.15);-moz-box-shadow:0 0 0 0 transparent,inset 0 1px 2px rgba(0,0,0,.15),0 0 0 rgba(0,0,0,.05),0 0 0 0 transparent,0 1px 2px 0 rgba(0,0,0,.15);box-shadow:0 0 0 0 transparent,inset 0 1px 2px rgba(0,0,0,.15),0 0 0 rgba(0,0,0,.05),0 0 0 0 transparent,0 1px 2px 0 rgba(0,0,0,.15)}button.ui-button-disabled,button.ui-button-disabled:hover,button.ui-button-disabled:active,input.ui-button-disabled,input.ui-button-disabled:hover,input.ui-button-disabled:active{color:#cbcbcb;border:solid 1px #d4d4d4;cursor:default;background:-moz-linear-gradient(top,#f5f5f5,#e6e6e6 100%);background:-webkit-gradient(linear,0 0,0 100%,from(#f5f5f5),to(#e6e6e6));background:-ms-linear-gradient(top,#f5f5f5,#e6e6e6);background:-webkit-linear-gradient(top,#f5f5f5,#e6e6e6);background:-o-linear-gradient(top,#f5f5f5,#e6e6e6);background:linear-gradient(top,#f5f5f5,#e6e6e6);background-color:#e6e6e6;text-shadow:#fff 0 1px 1px;-webkit-box-shadow:0 1px 2px 0 rgba(0,0,0,.15);-moz-box-shadow:0 1px 2px 0 rgba(0,0,0,.15);box-shadow:0 1px 2px 0 rgba(0,0,0,.15)}.ui-button-primary,.ui-button-normal{font-size:14px;font-weight:bold;line-height:18px;*line-height:14px;padding:3px 15px;*padding:2px 15px}.ui-button-primary-s,.ui-button-normal-s{font-size:12px;font-weight:bold;line-height:14px;*line-height:12px;padding:2px 15px;*padding:1px 15px}.ui-button-primary-l,.ui-button-normal-l{font-size:16px;font-weight:bold;line-height:18px;*line-height:17px;padding:8px 15px;*padding:6px 15px}.ui-button-primary:hover,.ui-button-primary-s:hover,.ui-button-primary-l:hover{color:#fff;background:-moz-linear-gradient(top,#ffbc35,#f2a210 100%);background:-webkit-gradient(linear,0 0,0 100%,from(#ffbc35),to(#f2a210));background:-ms-linear-gradient(top,#ffbc35,#f2a210);background:-webkit-linear-gradient(top,#ffbc35,#f2a210);background:-o-linear-gradient(top,#ffbc35,#f2a210);background:linear-gradient(top,#ffbc35,#f2a210);background-color:#f8af23}.ui-button-primary,.ui-button-primary-s,.ui-button-primary-l,.ui-button-primary:active,.ui-button-primary-s:active,.ui-button-primary-l:active{color:#fff;border:solid 1px #e87b0e;background:-moz-linear-gradient(top,#ffab02,#ff8a28 100%);background:-webkit-gradient(linear,0 0,0 100%,from(#ffab02),to(#ff8a28));background:-ms-linear-gradient(top,#ffab02,#ff8a28);background:-webkit-linear-gradient(top,#ffab02,#ff8a28);background:-o-linear-gradient(top,#ffab02,#ff8a28);background:linear-gradient(top,#ffab02,#ff8a28);background-color:#ff9917}.ui-button-normal:hover,.ui-button-normal-s:hover,.ui-button-normal-l:hover{color:#333;background:-moz-linear-gradient(top,#fafafa,#f2f2f2 100%);background:-webkit-gradient(linear,0 0,0 100%,from(#fafafa),to(#f2f2f2));background:-ms-linear-gradient(top,#fafafa,#f2f2f2);background:-webkit-linear-gradient(top,#fafafa,#f2f2f2);background:-o-linear-gradient(top,#fafafa,#f2f2f2);background:linear-gradient(top,#fafafa,#f2f2f2);background-color:#fdfdfd}.ui-button-normal,.ui-button-normal-s,.ui-button-normal-l,.ui-button-normal:active,.ui-button-normal-s:active,.ui-button-normal-l:active{background:-moz-linear-gradient(top,#fafafa,#e8e8e8 100%);background:-webkit-gradient(linear,0 0,0 100%,from(#fafafa),to(#e8e8e8));background:-ms-linear-gradient(top,#fafafa,#e8e8e8);background:-webkit-linear-gradient(top,#fafafa,#e8e8e8);background:-o-linear-gradient(top,#fafafa,#e8e8e8);background:linear-gradient(top,#fafafa,#e8e8e8);background-color:#eee}
 
 
@@ -2477,7 +2449,6 @@ a.nohover:hover {text-decoration:none;}
 .welcome a:hover {text-decoration:underline;color:#F60;}
 #ws-sign-facebook {display:inline-block;padding-right:20px;height:20px;line-height:21px;background:url(http://i03.i.aliimg.com/wimg/buyer/sprite/ws-header.png) no-repeat right -1398px;zoom:1;}
 .vip-icon {display:inline-block;*display:inline;zoom:1;width:0;height:13px;vertical-align:middle;overflow:hidden;}
-/* 先把宽度设成0,再改回来是为了避免异步加载导致的文字抖动情况 */
 .vip-icon-platinum, .vip-icon-gold, .vip-icon-silver {margin:4px 1px 6px 4px;width:13px;}
 .vip-icon-platinum {background:url(http://i02.i.aliimg.com/wimg/buyer/single/vip_platinum_13x13.gif) no-repeat 0 0;}
 .vip-icon-gold {background:url(http://i02.i.aliimg.com/wimg/buyer/single/vip_gold_13x13.gif) no-repeat 0 0;}
@@ -2524,7 +2495,6 @@ zoom:1;cursor:pointer;border-color:#B5B5B5;border-top-color:#D1D1D1;color:#333 !
 .site-subnav li {display:block;padding:0 3px;height:21px;background:#FFF;overflow:hidden;}
 .site-subnav li a {display:block;padding:0 5px;height:23px;line-height:23px;white-space:nowrap;text-align:left;overflow:hidden;}
 .site-subnav li a:hover {display:block;background:#DDD;color:#666;}
-/* ie6\7下需要设置下拉菜单中li的宽度 */
 .site-nav-seller ul {width:210px;}
 .site-nav-seller li {float:left;width:98px;}
 .site-nav-me ul {width:140px;}
@@ -2539,10 +2509,8 @@ zoom:1;cursor:pointer;border-color:#B5B5B5;border-top-color:#D1D1D1;color:#333 !
 .site-nav-help a {width:109px;font-weight:100;}
 .site-nav-bbs ul {width:131px;}
 .site-nav-bbs a {width:115px;font-weight:100;}
-/* 我的速卖通 */
 .site-nav-cnme ul {width:99px;}
 .site-nav-cnme a {width:83px;}
-/* 卖家频道 */
 .site-nav-cnchannel ul {width:87px;}
 .site-nav-cnchannel a {width:72px;}
 /* -------------------------------------------- */
@@ -2561,7 +2529,6 @@ zoom:1;cursor:pointer;border-color:#B5B5B5;border-top-color:#D1D1D1;color:#333 !
 
 /* categories */
 /* -------------------------------------------- */
-/* 类目-频道公用定义 */
 .channel-wrap {position:absolute; left:0;top:80px;right:0;}
 /* 类目 */
 .cate-box {position:relative;z-index:1;float:left;width:190px;height:42px;background-image:url(http://i03.i.aliimg.com/wimg/buyer/sprite/ws-header.png); background-repeat:repeat-x ;}
@@ -2612,7 +2579,6 @@ zoom:1;cursor:pointer;border-color:#B5B5B5;border-top-color:#D1D1D1;color:#333 !
 .cate-list-item:hover .cate-name a, .cate-list-item:hover .cate-name a:visited {position:absolute;top:-1px;left:0px;width:189px;border-top:1px solid #999999;border-bottom:1px solid #DDDDDD;border-left:none;font-weight:700;text-decoration:none;color:#FF9900;background-color:#FFF;z-index:1;}
 .cate-current .sub-cate-list, .cate-list-item:hover .sub-cate-list {z-index:0;visibility:visible;}
 
-/* 类目-频道 {环境中的简版头} */
 .cw-intl {}
 /* 类目 */
 .cw-intl .cate-box {background-position:0 -690px;}
@@ -2629,7 +2595,6 @@ zoom:1;cursor:pointer;border-color:#B5B5B5;border-top-color:#D1D1D1;color:#333 !
 .cw-promote .cate-box .cat {}
 
 
-/* 频道 */
 
 .channel li {float:left;position:relative;z-index:0;padding:0 10px;height:42px;background:url(http://i03.i.aliimg.com/wimg/buyer/sprite/ws-header.png) no-repeat right -640px;}
 .channel li a{font-weight:700;font-size:12px;line-height:39px;color:#000000;}
@@ -2640,13 +2605,11 @@ zoom:1;cursor:pointer;border-color:#B5B5B5;border-top-color:#D1D1D1;color:#333 !
 
 /* search */
 /* -------------------------------------------- */
-/* 搜索公用定义 */
 .search {min-width:800px;height:42px;background:url(http://i03.i.aliimg.com/wimg/buyer/sprite/ws-header.png) repeat-x 0 -690px;padding-left:190px;*padding-left:10px;*zoom:1;*min-width:790px;}
 #searchTabsBox {display:none;}
 #search-panel{height:42px;padding-left:38px;position:relative;}
 select#searchCategory {display:none;}
 
-/*  搜索条form */
 #SearchForm{position:absolute;left:29px;right:200px;zoom:1;_background:#000;}
 
 /* 输入框 */
@@ -2660,7 +2623,6 @@ select#searchCategory {display:none;}
 .search-key:before{width:47px;height:43px;background:url('http://i02.i.aliimg.com/wimg/buyer/single/chrimas-20121115.jpg') no-repeat transparent;background-color:transparent;content:'.';text-indent:-1000px;display:block;position:absolute;top:-10px;left:0px;}
 .intelligentList{z-index:1;}
 
-/* 推荐搜索 */
 .search .optionBox {top:28px;}
 .intelligent input {float:left;width:178px;}
 .intelligentIframeMask, .intelligentList {position:absolute;top:20px;left:0;visibility:hidden;background:#FFF;zoom:1;}
@@ -2681,7 +2643,6 @@ select#searchCategory {display:none;}
 .search-cate {position:absolute;top:0px;right:100px;z-index:1;margin-top:6px;}
 .search-cate label {float:left;height:26px;white-space:nowrap;padding:0 25px 0 10px;border:1px solid #c5c5c5;background:url(http://i03.i.aliimg.com/wimg/buyer/sprite/ws-header.png) no-repeat right -540px;}
 .search-cate label input {float:left;padding:0;width:90px;height:26px;line-height:26px;color:#666;cursor:default;border:none;background:url(http://i03.i.aliimg.com/wimg/buyer/sprite/ws-header.png) no-repeat -150px -540px;}
-/* 类目菜单 */
 .search-cate .optionBox {position:absolute;display:none;left:0;visibility:hidden;background-color:#FFF;border:1px solid #7F9DB9;height:320px;*width:250px;overflow:auto;overflow-x:hidden;}
 .search-cate li {line-height:1.5;}
 .search-cate .optionOl {float:left;*width:100%;list-style:none;margin:0px;padding:0px;}
@@ -2714,7 +2675,6 @@ select#searchCategory {display:none;}
 /* rewrite for shopcart 页 */
 #product-list .list-body .list-ul {background: url("http://i03.i.aliimg.com/wimg/buyer/sprite/ul_line_v031515.png") repeat-y 0 0;}
 #product-list .cell-product {width: 340px;}
-/* 夏季大促  */
 .annive-top-v1 {z-index: 101;position:relative;width:992px;margin:0 auto;background:url(http://i03.i.aliimg.com/images/cms/upload/wholesale/home_banner/2012/07/summer_sale/summer_sale_banner.png) no-repeat top center;height:52px;overflow:hidden;}
 .annive-top-v1 a.popup-btn-v1 {display:block;position:absolute;left:0;top:0;width:100%;height:100%;}
 .annive-top-v1 a.current {}
@@ -2751,7 +2711,6 @@ select#searchCategory {display:none;}
 .laura-mercier {width:990px;height:66px;margin:0 auto;overflow:hidden;background:url(http://i02.i.aliimg.com/images/cms/upload/wholesale/promotion/2012/04/annirersar/top_banner051420.jpg) no-repeat;}
 .laura-mercier a {width:990px;height:66px;display:block;}
 
-/* 布局宽度 不应该写在header里 */
 #page, .page{width:auto;margin:10px auto 0;}
 #page{width:auto;min-width:990px;max-width:1210px;width:97%;}
 /*类目导航改版2012.10.18*/
