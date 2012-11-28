@@ -31,7 +31,6 @@ class Product {
 	float discountPrice = 0.00
 	float discountPriceFixed = 0.00
 	
-	
 	// "set", "piece", "lot" ... all value will be Message Key
 	String unit 
 	
@@ -63,6 +62,7 @@ class Product {
 	/**
 	 * 1: Thumbnails of product
 	 * 2: Other products related to this product
+	 * 3: Product Color
 	 */
 	static hasMany = [images: ImageStore, productRelated: Product]
 	
@@ -75,6 +75,7 @@ class Product {
 		category nullable : true
 		unit nullable:true
 		inventory nullable: false
+		productColors : nullable: false
 		
 		shippingMethod1 nullable: true
 		shippingMethod2 nullable: true
