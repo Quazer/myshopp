@@ -11,8 +11,7 @@
 		})();
 		;
 	</script>
-
- <![CDATA[
+    <script type="text/javascript">
 
 	var PAGE_TIMING = {
 		pageType: 'detail'
@@ -22,7 +21,6 @@
 		PAGE_TIMING.startRender = new Date().getTime();
 	};
 	PAGE_TIMING.startRenderImage.src = 'http://i02.i.aliimg.com/wimg/monitor/start-render.png';
- ]]> 
 </script>
 
 	<!--skylight-wholesale/common/top_notice.html -start -->
@@ -104,6 +102,7 @@
 		no-repeat 50% 0;
 }
 </style>
+
 	<div id="christSaleTopBanner" class="christ-sale-top-banner">
 		<div class="christ-sale-wrap">
 			<a id="christSaleBanner"
@@ -119,7 +118,7 @@
 
 	</div>
 	<script type="text/javascript"
-		src="./product detail_files/timer-lite.js"></script>
+		src="${resource(dir: 'js/product', file: 'timer-lite.js')}"></script>
 	<script>
 /* <![CDATA[ */
 
