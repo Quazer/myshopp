@@ -39,12 +39,20 @@ class ProductController {
 		if (params?.sku?.matches("\\d{1,12}")) {
 			def productInstance = Product.findBySku(params?.sku)
 			if (!productInstance) {
-				flash.message = message(code: 'default.not.found.message', args: [message(code: 'product.label', default: 'Product'), id])
+				//TODO: set error to flash
+				// change redirect to where????
 				redirect(action: "list")
 				return
 			}
 	
 			[productInstance: productInstance]
+		}
+		else {
+			//TODO: set error to flash
+			//change redirect to where????
+			redirect(action: "list")
+			return
+
 		}
 
     }
