@@ -21,3 +21,54 @@ PAGE_TIMING.startRenderImage.src = '${resource(dir: 'images/shoppingcart', file:
     grails.plugins.springsecurity.logout.handlerNames = [
         'rememberMeServices', 'securityContextLogoutHandler', 'myLogoutHandler'
     ]
+    
+14. Hien he thong co nhung product color (refer: /product/show/) nhu sau:
+
+.sku-Beige{background:#F5F5DC !important;}
+.sku-Black{background:#000000 !important;}
+.sku-Blue{background:#0080FF !important;}
+.sku-Brown{background:#8d6468 !important;}
+.sku-Champagne{background:#d5b489 !important;}
+.sku-Gold{background:#FFD700 !important;}
+.sku-Gray{background:#BEBEBE !important;}
+.sku-Green{background:#006000 !important;}
+.sku-Khaki{background:#dac9b9 !important;}
+.sku-Orange{background:#FFA500 !important;}
+.sku-Pink{background:#FFC0CB !important;}
+.sku-Purple{background:#6C3365 !important;}
+.sku-Red{background:#FF0000 !important;}
+.sku-Silver{background:#C0C0C0 !important;}
+.sku-White{background:#FFFFFF !important;}
+.sku-Yellow{background:#FFFF00 !important;}
+.sku-Multi{background:url(http://localhost:8080/shop/image/sku_color_mutil.gif) 0 0 no-repeat !important;;}
+.sku-Clear{background:url(http://localhost:8080/shop/image/sku_color_clear.gif) 0 0 no-repeat !important;;}
+.sku-Ivory {background:#fefdd4 !important;}
+.sku-Army-Green{background:#5d762a !important;}
+.sku-Sky-Blue{background:#1eddff !important;}
+.sku-Dark-Grey{background:#666 !important;}
+.sku-Lavender{background:#dda0dd !important;}
+
+.sku-color-771{background:#F8F7E7 !important;}
+.sku-color-193{background:#000000 !important;}
+.sku-color-173{background:#0080FF !important;}
+.sku-color-365458{background:#8d6468 !important;}
+.sku-color-200001951{background:#d5b489 !important;}
+.sku-color-350850{background:#FFD700 !important;}
+.sku-color-691{background:#999 !important;}
+.sku-color-175{background:#007000 !important;}
+.sku-color-200001438{background:#dac9b9 !important;}
+.sku-color-350852{background:#FFA500 !important;}
+.sku-color-1052{background:#FFC0CB !important;}
+.sku-color-496{background:#6C3365 !important;}
+.sku-color-10{background:#FF0000 !important;}
+.sku-color-350853{background:#CCC !important;}
+.sku-color-29{background:#FFFFFF !important;}
+.sku-color-366{background:#FFFF00 !important;}
+.sku-color-200003699{background:url(http://localhost:8080/shop/image/sku_color_mutil.gif) 0 0 no-repeat !important;}
+.sku-color-100018786{background:url(http://localhost:8080/shop/image/sku_color_clear.gif) 0 0 no-repeat !important;}
+.sku-color-200002130 {background:#fdfde8 !important;}
+.sku-color-200004889{background:#7C8C30 !important;}
+.sku-color-1254{background:#1eddff !important;}
+.sku-color-200004890{background:#666 !important;}
+.sku-color-200004891{background:#dda0dd !important;}
+
