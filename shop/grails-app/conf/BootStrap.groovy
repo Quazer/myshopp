@@ -68,7 +68,7 @@ class BootStrap {
 			
 			prod.shippingMethodPrice2 = 12.54
 			prod.shippingMethodPrice3 = 12.54
-			prod.inventory = 40
+			//prod.inventory = 40
 			
 			prod.save(flush:true)
 			print "prod " + i + " :" + prod.id
@@ -78,6 +78,7 @@ class BootStrap {
 			productExtend.productColor = "color " + 1
 			productExtend.productSize = "size " + i
 			productExtend.isDefault = false
+			productExtend.inventory = i + 1
 			productExtend.save(flush:true)
 			
 			def productExtend2 = new ProductExtend()
@@ -85,6 +86,7 @@ class BootStrap {
 			productExtend2.productColor = "color " + 1
 			productExtend2.productSize = "size " + i + 1
 			productExtend2.isDefault = true
+			productExtend.inventory = i + 2
 			productExtend2.save(flush:true)
 			print "productExtend: " + productExtend?.id
 		}
