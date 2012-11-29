@@ -44,9 +44,17 @@ class ProductController {
 				redirect(action: "list")
 				return
 			}
-	
-			[productInstance: productInstance, sizeOfProd : sizesOfProduct(productInstance), 
-				productColors: colorsOfProduct(productInstance)]
+			
+			def inventory
+			if (params.productColor && params.productSize) {
+				inventory = productInventory(params.productColor?.trim, params.productSize?.trim, productInstance)
+			}
+			
+			
+			[productInstance: productInstance, 
+				sizeOfProd : sizesOfProduct(productInstance, null), 
+				productColors: colorsOfProduct(productInstance, null), 
+				inventory: inventory]
 		}
 		else {
 			//TODO: set error to flash
@@ -58,20 +66,75 @@ class ProductController {
 
     }
 
-	def sizesOfProduct(productInstance) {
-		def sizesOfProd = ProductExtend.executeQuery("from ProductExtend where product = :productInstance", 
-			[productInstance: productInstance])
+	def sizesOfProduct(productInstance,productSizeStr) {
+		def	sizesOfProd = ProductExtend.executeQuery("from ProductExtend where product = :productInstance",
+				[productInstance: productInstance])
+
+		if (productSizeStr) {
+			sizesOfProd?.each {
+				if(it.productSize == productSizeStr) {
+					it.isSelected = true
+				}
+			}
+		}
 		
-		return sizesOfProd  
+		sizesOfProd  
 	}
 	
-	def colorsOfProduct(productInstance) {
-		def productColor = ProductExtend.executeQuery("from ProductExtend where product = :productInstance",
-			[productInstance: productInstance])
-		
-		return productColor
+	def colorsOfProduct(productInstance,productColorStr) {
+		def productColor 
+		if (productColorStr) {
+			productColor = ProductExtend.executeQuery("from ProductExtend where product = :productInstance and productColor = :productColor",
+				[productInstance: productInstance, productColor : productColorStr])
+		}
+		else {
+			productColor = ProductExtend.executeQuery("from ProductExtend where product = :productInstance",
+				[productInstance: productInstance])
+		}
+		productColor
 	}
 	
+	/**
+	 * Get product Inventory
+	 * @param params
+	 * @param productInstance
+	 * @return
+	 */
+	def productInventory(productColor, productSize, productInstance) {
+		def inventory = ProductExtend.executeQuery(
+			"select inventory from ProductExtend where product = :productInstance and productColor = :productColor and productSize = :productSize",
+			[productInstance: productInstance, productColor: productColor , productSize : productSize])
+		
+		inventory
+	}
+	
+	def ajaxBuyerEditProduct = {
+		if (params?.sku?.matches("\\d{1,12}")) {
+			def productInstance = Product.findBySku(params?.sku)
+			if (!productInstance) {
+				//TODO: set error to flash
+				// change redirect to where????
+				//render blank page, because it's calling via ajax???
+				redirect(action: "list")
+				return
+			}
+			else {
+				// Select product COLOR
+				def inventory
+				if (params.colorVal && params.sizeVal) {
+					inventory = productInventory(params.colorVal, params.sizeVal , productInstance)
+				}
+				
+				render( template : "product_detail_header", model: [productInstance: productInstance,
+					sizeOfProd : sizesOfProduct(productInstance, params.sizeVal),
+					productColors: colorsOfProduct(productInstance, params.colorVal),
+					inventory: inventory])
+			}
+		}
+		else {
+			//render blank page, because it's calling via ajax ???
+		}
+	}
 //    def edit(Long id) {
 //        def productInstance = Product.get(id)
 //        if (!productInstance) {

@@ -113,7 +113,7 @@ class CategoryController {
 				ilike("name", pattern)
 				eq("category.id", categoryInstance.id)
 				between('purchargePrice', minPrice, maxPrice)
-				between('inventory', minQuantity, maxQuantity)
+				//between('inventory', minQuantity, maxQuantity)
 			}
 			
 			params.properties = CommonUtils.validateParamsForPaging(params, params.gotoPage, totalRecCount, 10, 100, listSortBy)
@@ -122,14 +122,14 @@ class CategoryController {
 				ilike("name", pattern)
 				eq("category.id", categoryInstance.id)
 				between('purchargePrice', minPrice, maxPrice)
-				between('inventory', minQuantity, maxQuantity)
+				//between('inventory', minQuantity, maxQuantity)
 			}
 		} else {
 
 			totalRecCount = Product.createCriteria().count {
 				eq("category.id", categoryInstance.id)
 				between('purchargePrice', minPrice, maxPrice)
-				between('inventory', minQuantity, maxQuantity)
+				//between('inventory', minQuantity, maxQuantity)
 			} 
 
 			params.properties = CommonUtils.validateParamsForPaging(params, params.gotoPage, totalRecCount, 10, 100, listSortBy)
@@ -137,7 +137,7 @@ class CategoryController {
 			productList = Product.createCriteria().list(params) {
 				eq("category.id", categoryInstance.id)
 				between('purchargePrice', minPrice, maxPrice)
-				between('inventory', minQuantity, maxQuantity)
+				//between('inventory', minQuantity, maxQuantity)
 			}
 		}
 		
