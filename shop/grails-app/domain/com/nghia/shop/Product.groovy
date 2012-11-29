@@ -38,7 +38,7 @@ class Product {
 	ImageStore productImage // prop of this object "isSelected" will be set as TRUE when CREATE Product
 	
 	// Remain product in shop
-	int inventory
+	//int inventory
 
 	//Price of Shipping
 	// Ex: China post , price = 0	
@@ -74,7 +74,7 @@ class Product {
 		supplier nullable : true
 		category nullable : true
 		unit nullable:true
-		inventory nullable: false
+		//inventory nullable: false
 		productColors : nullable: false
 		
 		shippingMethod1 nullable: true

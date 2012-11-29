@@ -8,6 +8,9 @@ class ProductExtend {
 	
 	transient isSelected = false
 	
+	// Remain product in shop
+	int inventory
+	
 	//TODO: need to check again
     static constraints = {
 		productColor nullable: true
