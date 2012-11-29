@@ -72,3 +72,6 @@ PAGE_TIMING.startRenderImage.src = '${resource(dir: 'images/shoppingcart', file:
 .sku-color-200004890{background:#666 !important;}
 .sku-color-200004891{background:#dda0dd !important;}
 
+
+15. Chinh sua lai file "js/common.js" 
+  vd: WEB_ROOT 
