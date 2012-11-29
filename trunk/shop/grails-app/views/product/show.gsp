@@ -105,7 +105,99 @@
 
 		<g:render template="navigation" />
 
-		<g:render template="product_detail_header" model="[productInstance:productInstance]"/>
+        <div id="base">
+            <div class="grid-c2-s6f">
+                <div class="col-main" itemscope=""
+                    itemtype="http://schema.org/Product">
+                    <div class="main-wrap">
+
+                        <div class="info-box">
+                            <div id="sc-coupon-wrap"></div>
+                            <div class="inner clearfix">
+                                <div id="inf">
+            <g:render template="product_detail_header" model="[productInstance:productInstance]"/>
+
+                                 </div>
+                                <!--real-time-->
+                                <div id="img" style="position:relative;z-index:120;">
+                                                        <div itemprop="image" class="image-item"><a style="margin-top: 45px; display: inline-block; text-decoration: initial; position: relative;" href="http://www.aliexpress.com/item-img/New-Style-Clear-Soft-TPU-Gel-Case-for-LG-Nexus-4-E960-Free-Shipping/688800292.html" target="_blank"><img style="margin-top: 0pt; display: block;" src="http://i00.i.aliimg.com/wsphoto/v0/688800292/New-Style-Clear-Soft-TPU-Gel-Case-for-LG-Nexus-4-E960-Free-Shipping.jpg" height="159" width="250"><iframe src="http://style.alibaba.com/js/blank.html" style="display: none; visibility: hidden;"></iframe><div class="viewport" style="display: none; visibility: hidden;"><div class="visible" style="border: 5px solid rgb(204, 204, 204); width: 320px; height: 240px; overflow: hidden;"><img src="http://i00.i.aliimg.com/wsphoto/v0/688800292/New-Style-Clear-Soft-TPU-Gel-Case-for-LG-Nexus-4-E960-Free-Shipping.jpg" alt=""></div></div><span class="glass" style="display: none; visibility: hidden; width: 140px; height: 105px; background-color: rgb(255, 255, 255); border: 1px solid rgb(153, 153, 153); margin-left: -1px; margin-top: -1px; position: absolute; left: 0px; top: 0px; cursor: move; opacity: 0.5; background-position: initial initial; background-repeat: initial initial;"></span></a></div>
+                                                                    <div class="img-zoom-in"><span>See Larger Image:</span> <a href="http://www.aliexpress.com/item-img/New-Style-Clear-Soft-TPU-Gel-Case-for-LG-Nexus-4-E960-Free-Shipping/688800292.html" id="lnk-enlarge-image" target="_blank" title="New Style Clear Soft TPU Gel Case for LG Nexus 4 E960 Free Shipping">New Style Clear Soft TPU Gel Case for LG Nexus 4 E960 Free Shipping Picture</a></div>
+                                                                
+                                    
+                                    <div class="prod-id">Product ID: 688800292</div>
+                                
+                                    <div class="sns-tool">      
+                                      <div class="fb-like" id="fb-like" style="overflow: visible;">
+                                        <div id="fb-root" style="display: block;" class=" fb_reset fb_reset"><fb:like show_faces="false" width="240" height="60" fb-xfbml-state="rendered" class="fb_edge_widget_with_comment fb_iframe_widget"><span style="height: 28px; width: 240px;"><iframe id="f2b8429124" name="f2779bce5c" scrolling="no" style="border: none; overflow: hidden; height: 28px; width: 240px;" title="Like this content on Facebook." class="fb_ltr" src="./product detail_files/like.htm"></iframe></span></fb:like><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe id="fb_xdm_frame_http" name="fb_xdm_frame_http" src="./product detail_files/xd_arbiter.htm"></iframe><iframe id="fb_xdm_frame_https" name="fb_xdm_frame_https" src="./product detail_files/xd_arbiter(1).htm"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+                                        <img id="like-loading" src="./product detail_files/fb-loading.gif" style="display: none;">
+                                      </div>
+                                          <div id="divShareURL" coupon_status="login">
+                                            <a href="javascript:void(0)" share_url="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.aliexpress.com%2Fitem%2FNew-Style-Clear-Soft-TPU-Gel-Case-for-LG-Nexus-4-E960-Free-Shipping%2F688800292.html%3Fsrc%3Dsns%26cn%3Dfeedback_coupon%26isdl%3Dy%26af%3DedddPNqAm3Y%253D"><span id="divShareURLfb"></span></a>
+                                            <a href="javascript:void(0)" share_url="http://twitter.com/home?status=http%3A%2F%2Fwww.aliexpress.com%2Fitem%2F%2F688800292.html%3Fsrc%3Dsns%26cn%3Dfeedback_coupon%26isdl%3Dy%26af%3DedddPNqAm3Y%253D%2B-%2Bfor+LG+Nexus+4+case+on+AliExpress.com.+%24105.00"><span id="divShareURLtwitter"></span></a>
+                                            <a href="javascript:void(0)" share_url="http://vk.com/share.php?url=http%3A%2F%2Fwww.aliexpress.com%2Fitem%2FNew-Style-Clear-Soft-TPU-Gel-Case-for-LG-Nexus-4-E960-Free-Shipping%2F688800292.html%3Fsrc%3Dsns%26cn%3Dfeedback_coupon%26isdl%3Dy%26af%3DedddPNqAm3Y%253D"><span id="divShareURLvk"></span></a>
+                                            <a href="javascript:void(0)" share_url="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.aliexpress.com%2Fitem%2FNew-Style-Clear-Soft-TPU-Gel-Case-for-LG-Nexus-4-E960-Free-Shipping%2F688800292.html%3Fsrc%3Dsns%26cn%3Dfeedback_coupon%26isdl%3Dy%26af%3DedddPNqAm3Y%253D&amp;media=http%3A%2F%2Fimg.alibaba.com%2Fwsphoto%2Fv0%2F688800292%2FNew-Style-Clear-Soft-TPU-Gel-Case-for-LG-Nexus-4-E960-Free-Shipping.jpg&amp;description=New+Style+Clear+Soft+TPU+Gel+Case+for+LG+Nexus+4+E960+Free+Shipping+on+AliExpress.com.+%24105.00"><span id="divShareURLpinit"></span></a>
+                                          </div>
+                                                    <p style="margin:5px 0 0 0;font-family:Arial;">Share this with your friends, get a $5 coupon!</p>
+                                                  </div>
+                                </div>
+                                <script type="text/javascript">
+                                        if(!window.runParams) {
+                                        window.runParams = {};
+                                        }
+                                        window.runParams.imageServer="http://i00.i.aliimg.com";
+                                        window.runParams.imageDetailPageURL="http://www.aliexpress.com/item-img/New-Style-Clear-Soft-TPU-Gel-Case-for-LG-Nexus-4-E960-Free-Shipping/688800292.html";
+                                                            window.runParams.imageURL=["http://i00.i.aliimg.com/wsphoto/v0/688800292/New-Style-Clear-Soft-TPU-Gel-Case-for-LG-Nexus-4-E960-Free-Shipping.jpg"];
+                                        </script>
+                                
+                                <!--real-time-->
+                                                    </div>
+                                                    <script type="text/javascript">
+                                                            if(!window.runParams) {
+                                                            window.runParams = {};
+                                                            }
+                                                            window.runParams.transactionHistoryServer="http://www.aliexpress.com";
+                                                            window.runParams.shopcartServer="http://shoppingcart.aliexpress.com";
+                                                                                        window.runParams.serverUrl="http://www.aliexpress.com";
+                                                            window.runParams.countryServer="http://www.aliexpress.com";
+                                                            window.runParams.feedbackServer="http://feedback.aliexpress.com";
+                                                            window.runParams.freightServer="http://freight.aliexpress.com";
+                                                            window.runParams.feedbackMessageServer="http://message.aliexpress.com";
+                                                            window.runParams.adminSeq="112687601";
+                                                            window.runParams.companyId="102867765";
+                                                            window.runParams.vipLevelServerUrl="http://www.aliexpress.com/help/ajax/get_wsbuyer_level_for_ajax.htm";
+                                                            window.runParams.personalServer="http://hotproducts.aliexpress.com/wsproduct-personal-server.html";
+                                                            window.runParams.interested="1";
+                                                            window.runParams.coremetrics_customParams="688800292-_-new style clear soft tpu gel case for lg nexus 4 e960 free shipping-_-380230-_-phones &amp; telecommunications_mobile phone accessories &amp; parts_mobile phone bags &amp; cases";
+                                                            window.runParams.usaeServer="http://us.ae.alibaba.com";
+                                                            window.runParams.registerFrom="product_detail";
+                                                            window.runParams.viewMyCoupon="http://escrow.alibaba.com";
+                                
+                                                    </script>
+                                                </div>
+                                
+                                            </div>
+                                        </div>
+                                        <div class="col-extra" id="extra" style="display: block;">
+                                            <!-- Seller's info/Notice -->
+                                            <%--
+                                            <g:render template="seller_info"/>
+                                             --%>
+                                             
+                                            <div class="box contact contact-supplier" id="atm_plus"
+                                                style="display: block; padding: 12px; cursor: auto;">
+                                                <div class="caption">${message(code: 'default.buyer.notice')}</div>
+                                                <div class="linkmen clearfix">
+                                                    ${message(code: 'default.buyer.notice_detail')}
+                                                </div>
+                                                <div id="contact-ways" class="contact-ways clearfix">
+                                                    <a class="contact-mail" href="javascript:void(0)"
+                                                        title="${message(code: 'default.buyer.contactnow.tooltip')}">${message(code: 'default.buyer.contact.label')}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                
+                                    </div>
+                                </div>		
 
 		<script type="text/javascript"
 			src="${resource(dir: 'js/product', file: 'detail_sku-MODERN_BROWSER-v_b96cd5de3605_da0eefee6f6e2.js')}"></script>
@@ -890,12 +982,19 @@ _gaq.push(['_trackPageview']);
 		<a href="javascript:void(0);" class="close"></a>
 	</div>
 	<!-- ws_portal_detail_feature_words -->
+	<script type="text/javascript"
+        src="${resource(dir: 'js', file: 'jquery-1.8.1.js')}"></script>
 
 	<script type="text/javascript"
 		src="${resource(dir: 'js/product', file: 'detail-extend-MODERN_BROWSER-v_7a0ac940a1fad_103026fdbb362d.js')}"></script>
 
+    <script type="text/javascript"
+        src="${resource(dir: 'js', file: 'common.js')}"></script>
+        
+    <script type="text/javascript"
+        src="${resource(dir: 'js/product', file: 'n_product.js')}"></script>
 
-
+    
 	<div id="ws-xman-temp-mask-content" class="ws-xman-mask-content"
 		style="display: none;">
 		<a class="mask-close"
