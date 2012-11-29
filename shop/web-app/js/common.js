@@ -1,0 +1,1 @@
+var WEB_ROOT = "http://localhost:8080/shop"
