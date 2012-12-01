@@ -14,4 +14,84 @@ class ProductService {
 			print Product.count()
 		}
     }
+	
+	/**
+	 * get sizesOfProduct
+	 * @param productInstance
+	 * @param productColorStr
+	 * @param productSizeStr
+	 * @return
+	 */
+	def sizesOfProduct(productInstance,productColorStr, productSizeStr, action) {
+		def	sizesOfProd = ProductExtend.executeQuery("from ProductExtend where product = :productInstance",
+				[productInstance: productInstance])
+		
+		def isSelected
+		if (productSizeStr) {
+			sizesOfProd?.each {
+
+				if (action == "size") {
+					// Truong hop Buyer click "Size"
+					if (it.productColor != productColorStr) {
+						// disable color
+						it.enableColor4Buyer = false
+					}
+					
+					if(it.productSize == productSizeStr) {
+						it.isSizeSelected = true
+					}
+				}
+				else {
+					
+				}
+				
+			}
+		}
+		
+		sizesOfProd
+	}
+	
+	/**
+	 * get colorsOfProduct
+	 * @param productInstance
+	 * @param productColorStr
+	 * @param productSizeStr
+	 * @return
+	 */
+	def colorsOfProduct(productInstance,productColorStr, productSizeStr, action) {
+		def productColor = ProductExtend.executeQuery("from ProductExtend where product = :productInstance group by productColor order by id",
+				[productInstance: productInstance])
+		
+		if (productColorStr) {
+			productColor?.each {
+				if (action == "color") {
+					if(it.productColor == productColorStr) {
+						it.isColorSelected = true
+					}
+					
+					// Truong hop Buyer click "Size"
+				
+					if (it.productSize != productSizeStr) {
+						// disable cac color
+						it.enableSize4Buyer = false
+					}
+				}
+			}
+		}
+		productColor
+	}
+	
+	/**
+	 * Get product Inventory
+	 * @param params
+	 * @param productInstance
+	 * @return
+	 */
+	def productInventory(productColor, productSize, productInstance) {
+		def inventory = ProductExtend.executeQuery(
+			"select inventory from ProductExtend where product = :productInstance and productColor = :productColor and productSize = :productSize",
+			[productInstance: productInstance, productColor: productColor , productSize : productSize])
+		
+		inventory
+	}
 }
