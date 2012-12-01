@@ -22,7 +22,7 @@ $(function() {
 					}
 				})
 				alert("colortValue: " + colorValue)
-				refreshProductDetailHeader(colorValue,sizeValue)
+				refreshProductDetailHeader("color", colorValue,sizeValue)
 			})
 		}
 	);
@@ -43,7 +43,7 @@ $(function() {
 				
 				alert("sizeValue: " + sizeValue)
 				
-				refreshProductDetailHeader(colorValue,sizeValue)
+				refreshProductDetailHeader("size", colorValue,sizeValue)
 			})
 		}
 	);
@@ -63,7 +63,7 @@ $(function() {
 		
 });
 
-function refreshProductDetailHeader(colorVal, sizeVal) {
+function refreshProductDetailHeader(action, colorVal, sizeVal) {
 	/**
 	jQuery.ajax({
 		type:'post',
@@ -82,8 +82,9 @@ function refreshProductDetailHeader(colorVal, sizeVal) {
 	$.ajax({
 		type: 'POST',
 		async: false,
-		url: WEB_ROOT + '/product/ajaxBuyerEditProduct',
+		url: WEB_ROOT + '/ajax/buyerEditProduct',
 		data: {
+			act : action,
 			colorVal : colorVal,
 			sizeVal : sizeVal,
 			selectedQuantity: selectedQuantity,
