@@ -6,7 +6,11 @@ class ProductExtend {
 	String productSize
 	boolean isDefault
 	
-	transient isSelected = false
+	transient isColorSelected = false
+	transient isSizeSelected = false
+	
+	transient enableColor4Buyer = true
+	transient enableSize4Buyer = true
 	
 	// Remain product in shop
 	int inventory
