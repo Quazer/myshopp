@@ -1,4 +1,6 @@
 <%@ page import="com.nghia.shop.CommonUtils" %>
+    <script type="text/javascript"
+        src="${resource(dir: 'js/product', file: 'n_product.js')}"></script>
 									<div class="inf-inner">
 										<!--real-time-->
 										<h1 id="product-name" class="fn" itemprop="name">
@@ -65,7 +67,7 @@
 												<dt class="pp-dt-ln sku-color-title">Color:</dt>
 												<dd>
 													<ul id="sku-color" class="sku-attr sku-color clearfix">
-														<g:render template="ajax/product_color"/>
+														<g:render template="/product/ajax/product_color"/>
 													</ul>
 													<div id="inf-msg-color" class="msg-selected sku-msg" style="display: none;">
 													   Please select a Color
@@ -73,9 +75,9 @@
 												</dd>
 											</dl>
 
-											<g:render template="ajax/product_size"/>
+											<g:render template="/product/ajax/product_size"/>
 									
-									       <g:render template="ajax/select_product_quantity"/>
+									       <g:render template="/product/ajax/select_product_quantity"/>
 
 											<dl>
 												<dt>Shipping Cost:</dt>
