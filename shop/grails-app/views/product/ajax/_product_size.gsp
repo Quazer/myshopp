@@ -14,6 +14,12 @@
 			                    	<span>${productExtend.productSize }</span></a><i>selected</i>
 			                    </li>
                    			</g:if>
+                   			<g:elseif test="${!productExtend.enableSize4Buyer}">
+                   				<li class="disabled">
+                   					<a class="sku-value attr-checkbox" id="sku-2-${productInstance.sku }" title="${productExtend.productSize }" href="javascript:void(0)">
+                   					<span>${productExtend.productSize }</span></a>
+                   				</li>
+                   			</g:elseif>
                    			<g:else>
                    				<li>
                    					<a class="sku-value attr-checkbox" id="sku-2-${productInstance.sku }" title="${productExtend.productSize }" href="javascript:void(0)">
@@ -22,10 +28,24 @@
                    			</g:else>
                    		</g:if>
 	                   <g:else>
-	             				<li>
-	             					<a class="sku-value attr-checkbox" id="sku-2-${productInstance.sku }" title="${productExtend.productSize }" href="javascript:void(0)">
-	             					<span>${productExtend.productSize }</span></a>
-	             				</li>
+                   			<g:if test="${productExtend.isSizeSelected}">
+			                    <li class="active" id="${productExtend.productSize }">
+			                    	<a class="sku-value attr-checkbox" id="sku-2-${productInstance.sku }" title="${productExtend.productSize }" href="javascript:void(0)">
+			                    	<span>${productExtend.productSize }</span></a><i>selected</i>
+			                    </li>
+                   			</g:if>
+                   			<g:elseif test="${!productExtend.enableSize4Buyer}">
+                   				<li class="disabled">
+                   					<a class="sku-value attr-checkbox" id="sku-2-${productInstance.sku }" title="${productExtend.productSize }" href="javascript:void(0)">
+                   					<span>${productExtend.productSize }</span></a>
+                   				</li>
+                   			</g:elseif>
+                   			<g:else>
+                   				<li>
+                   					<a class="sku-value attr-checkbox" id="sku-2-${productInstance.sku }" title="${productExtend.productSize }" href="javascript:void(0)">
+                   					<span>${productExtend.productSize }</span></a>
+                   				</li>
+                   			</g:else>
 	                   </g:else>
                    </g:each>
 
