@@ -75,7 +75,7 @@ class BootStrap {
 			
 			def productExtend = new ProductExtend()
 			productExtend.product = prod
-			productExtend.productColor = "color " + 1
+			productExtend.productColor = "color " + i
 			productExtend.productSize = "size " + i
 			productExtend.isDefault = false
 			productExtend.inventory = i + 1
