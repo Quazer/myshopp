@@ -55,4 +55,54 @@ class ShoppingCartService {
 			return null
 		}
 	}
+	
+	/**
+	 * Add product to ShoppingCart
+	 * @return
+	 */
+	def addShoppingCart(Product product, currentuserLogin, params) {
+		def shippingMethod = ShippingMethod.findByName(params?.shipMethod)
+		def shippingMethodPrice = 0
+		def tmp
+		def methodName
+		def price
+		for (int i = 1; i <= 8; i++) {
+			methodName = "shippingMethod" + i
+			tmp = product."${methodName}"
+			if (shippingMethod == tmp) {
+				price = "shippingMethodPrice" + i
+				shippingMethodPrice = product."${price}"
+				break
+			}
+		}
+		
+		
+		//TODO: very important !!!! -------------
+		//need to check shoppingCart is existing in DB?
+		//if existing, will increase quantity
+		
+		//TODO: hien tai chua the copy duoc properties
+		//TODO: can phai chuyen sang dung productOrdered cho ShoppingCart
+		// Luu product vao gio hang
+//		def productOrdered = new ProductOrdered()
+//		productOrdered.properties = product.properties
+//		productOrdered.save(flush:true)
+		
+//		if (productOrdered.hasErrors()) {
+//			return null
+//		}
+		
+		def shoppingCart = new ShoppingCart()
+		shoppingCart.product = product
+		shoppingCart.member = currentuserLogin
+		shoppingCart.quantity = params?.long("quantity")
+		shoppingCart.shippingMethodPrice = shippingMethodPrice
+		
+		//TODO: modify again
+		// If "shippingMethodPrice = 0" , it should set as "Free shipping"
+		shoppingCart.shippingMethod = shippingMethod
+		shoppingCart.save(flush:true)
+		
+		shoppingCart
+	}
 }
