@@ -1,7 +1,10 @@
 	<g:if test="${sizeOfProd && sizeOfProd?.size > 0 }">
+			<%
+				def hiddenSizeGenerated
+			 %>
            <dl class="sku-row">
                <dt class="pp-dt-ln sku-title">
-                   Shoe US Size:
+                   Size:
                </dt>
                <dd>
                    <ul id="sku-sku2" class="sku-attr sku-checkbox clearfix">
@@ -11,7 +14,12 @@
                    			<g:if test="${productExtend.id == params.productSize || productExtend.isSelected}">
 			                    <li class="active" id="${productExtend.productSize }">
 			                    	<a class="sku-value attr-checkbox" id="sku-2-${productInstance.sku }" title="${productExtend.productSize }" href="javascript:void(0)">
-			                    	<span>${productExtend.productSize }</span></a><i>selected</i>
+			                    	<span>${productExtend.productSize }</span></a>
+			                    	<i>selected</i>
+			                    	<g:hiddenField name="productSize" value="${productExtend.productSize.encodeAsHTML() }"/>
+			                    	<%
+									hiddenSizeGenerated = true
+									 %>
 			                    </li>
                    			</g:if>
                    			<g:elseif test="${!productExtend.enableSize4Buyer}">
@@ -31,7 +39,12 @@
                    			<g:if test="${productExtend.isSizeSelected}">
 			                    <li class="active" id="${productExtend.productSize }">
 			                    	<a class="sku-value attr-checkbox" id="sku-2-${productInstance.sku }" title="${productExtend.productSize }" href="javascript:void(0)">
-			                    	<span>${productExtend.productSize }</span></a><i>selected</i>
+			                    	<span>${productExtend.productSize }</span></a>
+			                    	<i>selected</i>
+			                    	<g:hiddenField name="productSize" value="${productExtend.productSize.encodeAsHTML() }"/>
+			                    	<%
+									hiddenSizeGenerated = true
+									 %>
 			                    </li>
                    			</g:if>
                    			<g:elseif test="${!productExtend.enableSize4Buyer}">
@@ -48,12 +61,18 @@
                    			</g:else>
 	                   </g:else>
                    </g:each>
-
+                   	<%
+					if (!hiddenSizeGenerated) {
+					%>
+						<g:hiddenField name="productSize"/>
+					<%
+					}
+					 %>
                    
                     
                    </ul>
                    <div id="inf-msg-size" class="msg-selected sku-msg" style="display: none;">
-                       Please select a Shoe US Size
+                       Please select a Size
                    </div>
                </dd>
            </dl>

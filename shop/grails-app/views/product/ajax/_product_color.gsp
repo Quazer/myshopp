@@ -1,13 +1,19 @@
-
+		<%
+			def hiddenColorGenerated
+		 %>
 		<g:each in="${productColors }" var="productExtend" status="i">
 			<%-- Color selected by BUYER --%>
 			<g:if test="${params?.productColor?.matches('\\d{1,12}') }">
 				<g:if test="${productExtend.id == params.productColor || productExtend.productExtend}">
-					<li class="active" id="${productExtend.productColor }">
-						<a class="sku-value attr-sku1" id="sku-1-${i }" title="${productExtend.productColor }" href="javascript:void(0)">
-				      		<span class="color ${productExtend.productColor }" title="Clear"></span>
+					<li class="active" id="${productExtend.productColor.encodeAsHTML() }">
+						<a class="sku-value attr-sku1" id="sku-1-${i }" title="${productExtend.productColor.encodeAsHTML() }" href="javascript:void(0)">
+				      		<span class="color ${productExtend.productColor.encodeAsHTML() }" title="Clear"></span>
 				  		</a>
 				  		<i>selected</i>
+				  		<g:hiddenField name="productColor" value="${productExtend.productColor.encodeAsHTML() }"/>
+				  		<%
+						  hiddenColorGenerated = true
+						  %>
 					</li>
 				</g:if>
 				<g:elseif test="${!productExtend.enableColor4Buyer}">
@@ -31,6 +37,10 @@
 			      		<span class="color ${productExtend.productColor }" title="Clear"></span>
 			  		</a>
 			  		<i>selected</i>
+			  		<g:hiddenField name="productColor" value="${productExtend.productColor.encodeAsHTML() }"/>
+			  		<%
+					  hiddenColorGenerated = true
+					  %>
 				</li>
 			</g:elseif>
 				<g:elseif test="${!productExtend.enableColor4Buyer}">
@@ -49,3 +59,9 @@
 			</g:else>
 
 		</g:each>
+  		<%
+		  if (! hiddenColorGenerated) {
+		%>
+			<g:hiddenField name="productColor" />
+		<%  }
+		  %>
