@@ -8,6 +8,7 @@ class ShoppingCartController {
 	def springSecurityService
 	def memberService
 	def shoppingCartService 
+	def productService
 	
     def index() {
         //redirect(action: "list", params: params)
@@ -22,51 +23,71 @@ class ShoppingCartController {
 	}
 
 	def add() {
-		withForm {
+		//withForm {
 			//TODO: check user logged in before accessing here
 			//TODO: maybe this action will be config in Spring Security
 			def currentuserLogin = springSecurityService.currentUser as Member
 			
-			if(params?.sku?.matches("\\d{1,12}") && params?.quantity?.matches("\\d{1,12}") && params?.shipMethod?.matches("\\d{1,12}")) {
-				def product = Product.findBySku(params?.sku)
+			if(params?.objectId?.matches("\\d{1,12}") && params?.quantity?.matches("\\d{1,12}")) {
+				def product = Product.findBySku(params?.objectId)
 				if (! product) {
 					// TODO: return back to Product detail
 				}
 				
-				def shippingMethod = ShippingMethod.get(params?.shipMethod)
-				def shippingMethodPrice = 0
-				def tmp
-				def methodName
-				def price
-				for (int i = 1; i <= 8; i++) {
-					methodName = "shippingMethod" + i
-					tmp = product."${methodName}"
-					if (shippingMethod == tmp) {
-						price = "shippingMethodPrice" + i
-						shippingMethodPrice = product."${price}"
-						break
+				// Kiem tra kho hang
+				def productColorParam = params.productColor
+				def productSizeParam = params.productSize
+				def inventory = 10
+				//= productService.productInventory(productColorParam, productSizeParam, product)
+				
+				// Truong hop con hang
+				if (inventory > 0 && inventory > params?.int("quantity")) {
+					def shoppingCart = shoppingCartService.addShoppingCart(product, currentuserLogin, params)
+					if (shoppingCart.hasErrors()) {
+						print "error"
 					}
+					else {
+						print "shoppingCart: " + shoppingCart.id
+					}
+//					def shippingMethod = ShippingMethod.get(params?.shipMethod)
+//					def shippingMethodPrice = 0
+//					def tmp
+//					def methodName
+//					def price
+//					for (int i = 1; i <= 8; i++) {
+//						methodName = "shippingMethod" + i
+//						tmp = product."${methodName}"
+//						if (shippingMethod == tmp) {
+//							price = "shippingMethodPrice" + i
+//							shippingMethodPrice = product."${price}"
+//							break
+//						}
+//					}
+//					
+//					
+//					//TODO: very important !!!! -------------
+//					//need to check shoppingCart is existing in DB?
+//					//if existing, will increase quantity
+//					
+//					def productOrdered = new ProductOrdered()
+//					productOrdered.properties = product.properties
+//					def shoppingCart = new ShoppingCart()
+//					shoppingCart.product = product
+//					shoppingCart.member = currentuserLogin
+//					shoppingCart.quantity = params?.long("quantity")
+//					shoppingCart.shippingMethodPrice = shippingMethodPrice
+//					
+//					//TODO: modify again
+//					// If "shippingMethodPrice = 0" , it should set as "Free shipping"
+//					shoppingCart.shippingMethod = shippingMethod
+//					shoppingCart.save(flush:true)
+//					
+//					if (shoppingCart.hasErrors()) {
+//						//TODO: return back to Product detail
+//					}
 				}
 				
-				
-				//TODO: very important !!!! -------------
-				//need to check shoppingCart is existing in DB?
-				//if existing, will increase quantity
-				
-				def shoppingCart = new ShoppingCart()
-				shoppingCart.product = product
-				shoppingCart.member = currentuserLogin
-				shoppingCart.quantity = params?.long("quantity")
-				shoppingCart.shippingMethodPrice = shippingMethodPrice
-				
-				//TODO: modify again
-				// If "shippingMethodPrice = 0" , it should set as "Free shipping"
-				shoppingCart.shippingMethod = shippingMethod
-				shoppingCart.save(flush:true)
-				
-				if (shoppingCart.hasErrors()) {
-					//TODO: return back to Product detail
-				}
+
 				
 				
 			}
@@ -75,10 +96,10 @@ class ShoppingCartController {
 			}
 			
 			redirect(action: "myCart")
-		}.invalidToken {
+		//}.invalidToken {
 			// bad request
-			redirect(controller: "product", action: "show", sku: params?.sku)
-		}
+			//redirect(controller: "product", action: "show", sku: params?.sku)
+		//}
 
 	}
 	
