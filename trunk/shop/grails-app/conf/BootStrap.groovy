@@ -78,7 +78,7 @@ class BootStrap {
 			productExtend.productColor = "color " + i
 			productExtend.productSize = "size " + i
 			productExtend.isDefault = false
-			productExtend.inventory = i + 1
+			productExtend.inventory = 1 + i
 			productExtend.save(flush:true)
 			
 			def productExtend2 = new ProductExtend()
@@ -86,7 +86,7 @@ class BootStrap {
 			productExtend2.productColor = "color " + 1
 			productExtend2.productSize = "size " + i + 1
 			productExtend2.isDefault = true
-			productExtend.inventory = i + 2
+			productExtend.inventory = 2 + i
 			productExtend2.save(flush:true)
 			print "productExtend: " + productExtend?.id
 		}
