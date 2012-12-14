@@ -7,19 +7,28 @@
 										  ${productInstance?.name }
 										</h1>
 
-										<form action="http://shoppingcart.aliexpress.com/order/confirm_order.htm"
-											class="buy-now-form" id="buy-now-form" name="buyNowForm">
+										<g:form controller="shoppingCart" action="add" useToken="true" class="buy-now-form" id="buy-now-form" name="buy-now-form">
+										
+											
 											<input type="hidden" name="objectId" id="objectId" value="${productInstance.sku }">
+											
+											<%-- 
 											<input type="hidden" value="wholesaleProduct"> 
-											<input type="hidden" name="from" value="aliexpress"> 
-											<input type="hidden" name="countryCode" value="VN" id="inf-hid-country-code"> 
-											<input type="hidden" name="shippingCompany" value="EMS" id="inf-hid-shipping-company">
+											<input type="hidden" name="from" value="aliexpress">
 											<input type="hidden" name="" id="objectStockpile" value=""> 
 											<input type="hidden" name="wsOrderFrom" value="product_detail">
-
 											<input type="hidden" id="hid-product-id" value="688800292">
 											<input type="hidden" name="ws_score_session_id" value="">
 											<input type="hidden" id="inf-sel-standard" name="standard">
+											--%>
+											
+											<%-- TEST ONLY --%>
+ 											<g:hiddenField name="shipMethod" value="shipping method name 0"/>
+ 											
+											<input type="hidden" name="countryCode" value="VN" id="inf-hid-country-code"> 
+											<input type="hidden" name="shippingCompany" value="EMS" id="inf-hid-shipping-company">
+
+											
 											<div class="inf-pnl-price-detail">
 												<dl>
 													<input type="hidden" id="sku-price-store" value="105.00">
@@ -53,7 +62,7 @@
 													</dt>
 													<dd>
 														<div style="display: none">
-															<strong class="cost cost-m">US $ 105.00</strong> <span
+															<strong class="cost cost-m">US $ 103.00</strong> <span
 																class="separator">/</span> <span class="unit">piece
 															</span>
 														</div>
@@ -162,7 +171,7 @@
 
 											<input id="skuAttr" name="skuAttr" type="hidden" value="14:193">
 											
-										</form>
+										</g:form>
 
 										<div id="seller-promise-main" class="sp-none">
 										    <span class="sp-title">Seller Promise:</span>
