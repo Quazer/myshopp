@@ -23,7 +23,7 @@ class ProductService {
 	 * @return
 	 */
 	def sizesOfProduct(productInstance,productColorStr, productSizeStr, action) {
-		def	sizesOfProd = ProductExtend.executeQuery("from ProductExtend where product = :productInstance",
+		def	sizesOfProd = ProductExtend.executeQuery("from ProductExtend where product = :productInstance and productSize <> ''",
 				[productInstance: productInstance])
 		
 		def isSelected
@@ -59,7 +59,7 @@ class ProductService {
 	 * @return
 	 */
 	def colorsOfProduct(productInstance,productColorStr, productSizeStr, action) {
-		def productColor = ProductExtend.executeQuery("from ProductExtend where product = :productInstance group by productColor order by id",
+		def productColor = ProductExtend.executeQuery("from ProductExtend where product = :productInstance",
 				[productInstance: productInstance])
 		
 		if (productColorStr) {
@@ -92,6 +92,11 @@ class ProductService {
 			"select inventory from ProductExtend where product = :productInstance and productColor = :productColor and productSize = :productSize",
 			[productInstance: productInstance, productColor: productColor , productSize : productSize])
 		
-		inventory
+		if (inventory.size() == 0) {
+			return 0
+		}
+		else {
+			return inventory[0]
+		}
 	}
 }
