@@ -3,7 +3,7 @@ package com.nghia.shop
 class ProductExtend {
 	Product product
 	String productColor
-	String productSize
+	String productSize = ''
 	boolean isDefault
 	
 	transient isColorSelected = false
