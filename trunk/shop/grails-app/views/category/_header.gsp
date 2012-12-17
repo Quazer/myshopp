@@ -1,8 +1,8 @@
 
 
-  <div class="logo"><a href="${createLink(url:'/')}" title="Online Shopping">www.aliexpress.com</a></div>
-        <div id="ws-welcome" class="welcome">
-    Welcome to AliExpress! <a rel="nofollow" href="${createLink(controller : 'login',action: 'register')}">Join Free</a> | <span><a rel="nofollow" href="${createLink(controller : 'login',action: 'auth')}">Sign In</a></span>
+  <div class="logo"><a href="${createLink(url:'/')}" title="Online Shopping">/</a></div>
+        <div class="welcome">
+    ${message(code: 'header.label')} <a rel="nofollow" href="${createLink(controller : 'login',action: 'register')}">${message(code: 'joinfree.label')}</a> | <span><a rel="nofollow" href="${createLink(controller : 'login',action: 'auth')}">${message(code: 'signin.label')}</a></span>
     </div>
         <ul class="site-nav" id="site-nav" style="width: auto;">
             <li class="site-subnav site-nav-me"><span><a
@@ -63,8 +63,30 @@
 
 <div id="channel-wrap" class="channel-wrap cw-intl clearfix">
     <div id="categories-title" class="cate-box">
-      <div class="categories-main">CATEGORIES</div>
+    <script type="text/javascript" src="${resource(dir: 'js', file: 'jquery-1.8.1.js')}"></script>
+      <script type="text/javascript">
       
+      	var hideListFlag = 0
+		function showList(flg) {
+      		hideListFlag = flg
+			document.getElementById("categoriesLst").style.display = "block";
+		}
+
+		
+		function hideCatList(flg) {
+			hideListFlag = flg
+			hideCatListWithTime()
+		}
+
+		function hideCatListWithTime() {
+			if (hideListFlag == 2 || hideListFlag == 3) {
+				document.getElementById("categoriesLst").style.display = "none";
+			}
+			
+		}
+      </script>
+      <div class="categories-main" onmousemove="showList(1)" onmouseout="hideCatList(1)">CATEGORIES</div>
+      <g:render template="/api/listCategory"/>
     </div>
               
                                         
@@ -79,28 +101,22 @@
         </ul>
 
         <div id="search-panel">
-          <form id="SearchForm" name="SearchForm" method="get" action="http://www.aliexpress.com/wholesale" onsubmit="return false;">
+          <form id="searchForm" name="searchForm" method="get" >
             <label class="search-key" id="searchIntelligent">
-              <input id="SearchTextIdx" name="SearchText" type="text" value="choker necklace" autocomplete="off" maxlength="50">
+              <input id="SearchTextIdx" name="SearchText" type="text" value="${params.SearchText }" autocomplete="off" maxlength="50">
             </label>
-            <div id="fakeSelectorBox" class="search-cate">
-              <label>
-                <input class="inputEl" type="text" value="All Categories" readonly="true">
-              </label>
-              <div id="searchCategory" class="optionBox"></div>
-            </div>
             <input id="searchSubmit" type="submit" hidefocus="true" value="" class="search-btn">
             <input type="hidden" id="catId" name="catId" value="0">
             <input type="hidden" id="historyTab">
             <input type="hidden" id="historySearchInput">
             <input type="hidden" id="historySearchCountry">
-        <input type="hidden" name="manual" value="y">
           </form>
-          <a id="cart-lnk" class="cart-lnk" href="http://shoppingcart.aliexpress.com/shopcart/shopcartDetail.htm"><b id="my-shopcarts">0</b>Cart</a>
-          <a id="wish-lnk" class="wish-lnk" href="http://us.ae.alibaba.com/wishlist/wish_list_product_list.htm">Wish <b>List</b></a>
+          
+          <g:link class="cart-lnk" controller="shoppingCart" action="myCart"><b id="my-shopcarts">0</b>Cart</g:link>
+          <a id="wish-lnk" class="wish-lnk" >Wish <b>List</b></a>
        </div>
  </div>
 
     
   </div>
-  <div class="channel-extra"><a href="http://www.aliexpress.com/buyerprotection/index.html" rel="nofollow" id="h-aliexpress-buyer-protection">Buyer Protection</a></div>
+  

@@ -1,4 +1,4 @@
-
+<%-- 
                 <div id="refine-category">
 
                     <div class="title">
@@ -129,3 +129,4 @@
                     </div>
 
                 </div>
+--%>                
