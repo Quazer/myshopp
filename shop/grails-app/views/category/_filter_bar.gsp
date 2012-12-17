@@ -13,10 +13,10 @@
                         </div>
                        
                         <div class="narrow-down-bg" >
-                            <a rel="nofollow"
-                                href="http://www.aliexpress.com/wholesale/wholesale-choker-necklace.html?needQuery=n&amp;SearchText=choker%2Bnecklace&amp;CatId=0&amp;SortType=price_asc&amp;filterCat=200000111,200004077,200000114">
+							
+                            
                                 <span class="narrow-price" id="price_lowest_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                ${message(code: 'cat.filter.price.label')}</span></a>
+                                ${message(code: 'cat.filter.price.label')}</span>
                         </div>
 
                         <div class="narrow-down-bg" style="left: 290px;">

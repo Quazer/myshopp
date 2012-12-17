@@ -1,5 +1,4 @@
-                    <form id="narrow-form" method="get"
-                        action="http://www.aliexpress.com/wholesale">
+                    <form id="narrow-form" method="get">
                         <input type="hidden" id="shipCountry" name="shipCountry"
                             value="vn"> <input type="hidden" id="shipCompanies"
                             name="shipCompanies" value="">

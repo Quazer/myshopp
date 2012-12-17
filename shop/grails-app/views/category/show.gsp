@@ -29,11 +29,10 @@
 <script type="text/javascript" charset="UTF-8"
 	src="${resource(dir: 'js/index', file: 'element_main.js')}"></script>
 <jawr:script src="/i18n/messages.js"/>
-<!-- script type="text/javascript" async=""
-	src="http://style.alibaba.com/js/5v/lib/_hozmod/addon/base-mod.js"></script -->
+
 
 <script id="yui__dyn_0" type="text/javascript" charset="utf-8"
-	src="http://www.aliexpress.com/b2bad.html?keyword=choker%20necklace&amp;ip=49.156.52.23&amp;mt=e&amp;dcatid=0&amp;pageId=7f0000017f00000150aee44e13b2b68d27e8cacc6c&amp;categoryBrowse=0&amp;count=5&amp;dl=r&amp;offset=0&amp;pid=801_0000_0103&amp;type=side&amp;cb=AE.P4P.ExpressView.sideListCallback&amp;t=13536429883481730"></script>
+	src="${resource(dir: 'js/index', file: 'yui_dyn_0.js')}"></script>
 	
 <script id="yui__dyn_1" type="text/javascript" charset="utf-8"
 	src="${resource(dir: 'js/category', file: 'MODERN_BROWSER_v_8780d1b35126_0.js')}"></script>
@@ -42,24 +41,24 @@
 	src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	
 <script id="yui__dyn_3" type="text/javascript" charset="utf-8"
-	src="http://atmamos.im.alisoft.com/muliuserstatusx.atc?beginnum=0;8pctgRBMALMxqM2+6JFlWuDC8ZhFVE4A;8pctgRBMALNzKGN5PYRgYzUwgRtIcpLJ;8pctgRBMALMxqM2+6JFlWgbR4lLcxlHu;8pctgRBMALOT5B6TB9rWQabncguwdH1K;8pctgRBMALP1783BiI0m+k6XLaBchkFa;8pctgRBMALNbKGSLv2vYzaxNWx23NpEP;8pctgRBMALPU1ckH6EWH5V730RgXgE9G;8pctgRBMALMjtxLsHQij1bD9CNS3DtTl;8pctgRBMALMxqM2+6JFlWgbR4lLcxlHu;8pctgRBMALO2kOa+8imSdzpMLKTOn5nt;8pctgRBMALMRNZaIv/X0UTSzIHdsxiT0;8pctgRBMALO8o7k2e0UjQBU8JHRC5X7L;8pctgRBMALMRNZaIv/X0UTSzIHdsxiT0;8pctgRBMALO9c+iXopS4Th54IRgFSurz;8pctgRBMALO9c+iXopS4Th54IRgFSurz;8pctgRBMALPU1ckH6EWH5V730RgXgE9G;8pctgRBMALMjtxLsHQij1bD9CNS3DtTl;8pctgRBMALP1783BiI0m+k6XLaBchkFa;8pctgRBMALPRutP5GkaqOPVm7oxX+vhy;8pctgRBMALOaCsYmRbrwvfUVzm7Sz7U/"></script>
+	src="${resource(dir: 'js/common', file: 'yui_dyn_3.js')}"></script>
 	
 <script id="yui__dyn_4" type="text/javascript" charset="utf-8"
-	src="http://atmamos.im.alisoft.com/muliuserstatusx.atc?beginnum=0;8pctgRBMALMxqM2+6JFlWuDC8ZhFVE4A;8pctgRBMALNzKGN5PYRgYzUwgRtIcpLJ;8pctgRBMALMxqM2+6JFlWgbR4lLcxlHu;8pctgRBMALOT5B6TB9rWQabncguwdH1K;8pctgRBMALP1783BiI0m+k6XLaBchkFa;8pctgRBMALNbKGSLv2vYzaxNWx23NpEP;8pctgRBMALPU1ckH6EWH5V730RgXgE9G;8pctgRBMALMjtxLsHQij1bD9CNS3DtTl;8pctgRBMALMxqM2+6JFlWgbR4lLcxlHu;8pctgRBMALO2kOa+8imSdzpMLKTOn5nt;8pctgRBMALMRNZaIv/X0UTSzIHdsxiT0;8pctgRBMALO8o7k2e0UjQBU8JHRC5X7L;8pctgRBMALMRNZaIv/X0UTSzIHdsxiT0;8pctgRBMALO9c+iXopS4Th54IRgFSurz;8pctgRBMALO9c+iXopS4Th54IRgFSurz;8pctgRBMALPU1ckH6EWH5V730RgXgE9G;8pctgRBMALMjtxLsHQij1bD9CNS3DtTl;8pctgRBMALP1783BiI0m+k6XLaBchkFa;8pctgRBMALPRutP5GkaqOPVm7oxX+vhy;8pctgRBMALOaCsYmRbrwvfUVzm7Sz7U/"></script>
+	src="${resource(dir: 'js/common', file: 'yui_dyn_4.js')}"></script>
 	
 <script id="yui__dyn_5" type="text/javascript" charset="utf-8"
-	src="http://www.aliexpress.com/b2bad.html?keyword=choker%20necklace&amp;ip=49.156.52.23&amp;mt=e&amp;dcatid=200000111,200000114,100006750,200000110&amp;pageId=7f0000017f00000150aee44e13b2b68d27e8cacc6c&amp;categoryBrowse=0&amp;count=4&amp;dl=r&amp;offset=0&amp;pid=801_0000_0102&amp;type=bottom&amp;_custid=214048058,114177938,213693235,213721359,50067652&amp;cb=AE.P4P.ExpressView.bottomListCallback&amp;t=13536429890881158"></script>
+	src="${resource(dir: 'js/common', file: 'yui_dyn_5.js')}"></script>
 
 <script id="yui__dyn_9" type="text/javascript" charset="utf-8"
-	src="http://atmamos.im.alisoft.com/muliuserstatusx.atc?beginnum=0;8pctgRBMALMxqM2+6JFlWuDC8ZhFVE4A;8pctgRBMALNzKGN5PYRgYzUwgRtIcpLJ;8pctgRBMALMxqM2+6JFlWgbR4lLcxlHu;8pctgRBMALOT5B6TB9rWQabncguwdH1K;8pctgRBMALP1783BiI0m+k6XLaBchkFa;8pctgRBMALNbKGSLv2vYzaxNWx23NpEP;8pctgRBMALPU1ckH6EWH5V730RgXgE9G;8pctgRBMALMjtxLsHQij1bD9CNS3DtTl;8pctgRBMALMxqM2+6JFlWgbR4lLcxlHu;8pctgRBMALO2kOa+8imSdzpMLKTOn5nt;8pctgRBMALMRNZaIv/X0UTSzIHdsxiT0;8pctgRBMALO8o7k2e0UjQBU8JHRC5X7L;8pctgRBMALMRNZaIv/X0UTSzIHdsxiT0;8pctgRBMALO9c+iXopS4Th54IRgFSurz;8pctgRBMALO9c+iXopS4Th54IRgFSurz;8pctgRBMALPU1ckH6EWH5V730RgXgE9G;8pctgRBMALMjtxLsHQij1bD9CNS3DtTl;8pctgRBMALP1783BiI0m+k6XLaBchkFa;8pctgRBMALPRutP5GkaqOPVm7oxX+vhy;8pctgRBMALOaCsYmRbrwvfUVzm7Sz7U/"></script>
+	src="${resource(dir: 'js/common', file: 'yui_dyn_9.js')}"></script>
 	
 <script id="yui__dyn_10" type="text/javascript" charset="utf-8"
-	src="http://atmamos.im.alisoft.com/muliuserstatusx.atc?beginnum=20;8pctgRBMALNSjz9KgL1ZLO5LL+MSPBPY;8pctgRBMALMDuKsxoW04sVGpS9uA5Qjg;8pctgRBMALMBpxUwAXKSx9q5tHN0FyD9;8pctgRBMALNDgyX/ogd9UmwKtJcNcRWM;8pctgRBMALMfdKgGLDhm44yVBf6Emhy6;8pctgRBMALPRutP5GkaqOPVm7oxX+vhy;8pctgRBMALMBpxUwAXKSx9q5tHN0FyD9;8pctgRBMALOQs65He8a0TQTBYWnS4LDl;8pctgRBMALNH9A4HaOz1/d1FPi30XrNk;8pctgRBMALMLfv+CrWzGp0lh0/XSTWJp;8pctgRBMALNZsS3WAu8KBP9gA13+Ku3+;8pctgRBMALNbKGSLv2vYzaxNWx23NpEP;8pctgRBMALO8o7k2e0UjQBU8JHRC5X7L;8pctgRBMALM3c7iyY3hI5AsT1HUz45pA;8pctgRBMALPsn/Yo71MWC4pKhj0EdTTn;8pctgRBMALNzKGN5PYRgYzUwgRtIcpLJ"></script>
+	src="${resource(dir: 'js/common', file: 'yui_dyn_10.js')}"></script>
 	
 <script id="yui__dyn_11" type="text/javascript" charset="utf-8"
-	src="http://atmamos.im.alisoft.com/muliuserstatusx.atc?beginnum=20;8pctgRBMALNSjz9KgL1ZLO5LL+MSPBPY;8pctgRBMALMDuKsxoW04sVGpS9uA5Qjg;8pctgRBMALMBpxUwAXKSx9q5tHN0FyD9;8pctgRBMALNDgyX/ogd9UmwKtJcNcRWM;8pctgRBMALMfdKgGLDhm44yVBf6Emhy6;8pctgRBMALPRutP5GkaqOPVm7oxX+vhy;8pctgRBMALMBpxUwAXKSx9q5tHN0FyD9;8pctgRBMALOQs65He8a0TQTBYWnS4LDl;8pctgRBMALNH9A4HaOz1/d1FPi30XrNk;8pctgRBMALMLfv+CrWzGp0lh0/XSTWJp;8pctgRBMALNZsS3WAu8KBP9gA13+Ku3+;8pctgRBMALNbKGSLv2vYzaxNWx23NpEP;8pctgRBMALO8o7k2e0UjQBU8JHRC5X7L;8pctgRBMALM3c7iyY3hI5AsT1HUz45pA;8pctgRBMALPsn/Yo71MWC4pKhj0EdTTn;8pctgRBMALNzKGN5PYRgYzUwgRtIcpLJ"></script>
+	src="${resource(dir: 'js/common', file: 'yui_dyn_11.js')}"></script>
 <script id="yui__dyn_12" type="text/javascript" charset="utf-8"
-	src="http://atmamos.im.alisoft.com/muliuserstatusx.atc?beginnum=20;8pctgRBMALNSjz9KgL1ZLO5LL+MSPBPY;8pctgRBMALMDuKsxoW04sVGpS9uA5Qjg;8pctgRBMALMBpxUwAXKSx9q5tHN0FyD9;8pctgRBMALNDgyX/ogd9UmwKtJcNcRWM;8pctgRBMALMfdKgGLDhm44yVBf6Emhy6;8pctgRBMALPRutP5GkaqOPVm7oxX+vhy;8pctgRBMALMBpxUwAXKSx9q5tHN0FyD9;8pctgRBMALOQs65He8a0TQTBYWnS4LDl;8pctgRBMALNH9A4HaOz1/d1FPi30XrNk;8pctgRBMALMLfv+CrWzGp0lh0/XSTWJp;8pctgRBMALNZsS3WAu8KBP9gA13+Ku3+;8pctgRBMALNbKGSLv2vYzaxNWx23NpEP;8pctgRBMALO8o7k2e0UjQBU8JHRC5X7L;8pctgRBMALM3c7iyY3hI5AsT1HUz45pA;8pctgRBMALPsn/Yo71MWC4pKhj0EdTTn;8pctgRBMALNzKGN5PYRgYzUwgRtIcpLJ"></script>
+	src="${resource(dir: 'js/common', file: 'yui_dyn_12.js')}"></script>
 	
 </head>
 <body id="we-wholesale-search-list" style="position: relative; min-height: 100%; top: 0px;">
@@ -70,15 +69,7 @@
 	<script type="text/javascript">
 	var dmtrack_c = '{ali_resin_trace=ws_se_rst=52234|ws_set=3|ws_se_pn=1|ws_ser=1|ws_sek=choker+necklace|c-ws_ali_ab=240f55c46198418ba9fd7d89536ab04d|ws_sefilter=1|ws_ab_test=304_3|ws_sclkid=0|ws_semi=0}';
 	var dmtrack_pageid = '7f0000017f0000011353638990';
-	(function() {
-		var beacon = document.createElement('script');
-		beacon.type = 'text/javascript';
-		beacon.async = true;
-		beacon.src = 'http://style.aliunicorn.com/run/pool/monitor/beacon_ws_async|v_f3043219f4d9_0.js';
-		var s = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(beacon, s);
-	})();
-	;
+
 </script>
 
 <script>
@@ -97,11 +88,15 @@ PAGE_TIMING.startRenderImage.src = 'http://i02.i.aliimg.com/wimg/monitor/start-r
 <style type="text/css">
     .bulletin-top { display:none !important; }
 </style>
+
+<!--
+banner advertiment 
 <div class="christ-sale-top-banner" style="">
 		<a href="/" class="header" style="display: block; height: 70px; background: #d40001 url(${resource(dir: 'images/index', file: 'top_adv.jpg')}) no-repeat 50% 0;"
 			title=""> 
 	   </a>
 </div>
+ -->
 <input id="web-info:ws-reg-ori" type="hidden" value="searchList">
 <input id="web-info:ws-is-auto-width" type="hidden" value="t">
 
@@ -190,7 +185,7 @@ PAGE_TIMING.startRenderImage.src = 'http://i02.i.aliimg.com/wimg/monitor/start-r
 				<div id="main-wrap" class=" main-wrap ">
 
 					<!-- Keyword -->
-					<g:render template="keyword_section" />
+					
 
 					<!-- Filter bar -->
 					<g:render template="filter_bar" />
@@ -205,19 +200,7 @@ PAGE_TIMING.startRenderImage.src = 'http://i02.i.aliimg.com/wimg/monitor/start-r
 
 
 					<script>
-						runParams.p4pObjectConfig['Bcfg'] = {
-							"urlPrefix" : "http://www.aliexpress.com/b2bad.html",
-							"count" : 4,
-							"mt" : "e",
-							"categoryBrowse" : 0,
-							"keyword" : "",
-							"dl" : "r",
-							"dcatid" : "200000111,200000114,100006750,200000110",
-							"pid" : "801_0000_0102",
-							"offset" : 0,
-							"ip" : "49.156.52.23",
-							"pageIndex" : 1
-						};
+
 					</script>
 					<!-- Premium bottom -->
 					<g:render template="premium_product_bottom" />
@@ -255,19 +238,7 @@ PAGE_TIMING.startRenderImage.src = 'http://i02.i.aliimg.com/wimg/monitor/start-r
 
 
 		<script>
-			runParams.p4pObjectConfig['Scfg'] = {
-				"urlPrefix" : "http://www.aliexpress.com/b2bad.html",
-				"count" : 5,
-				"mt" : "e",
-				"categoryBrowse" : 0,
-				"keyword" : "",
-				"dl" : "r",
-				"dcatid" : "0",
-				"pid" : "801_0000_0103",
-				"offset" : 0,
-				"ip" : "49.156.52.23",
-				"pageIndex" : 1
-			};
+
 		</script>
 
         <!-- right menu -->
