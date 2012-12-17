@@ -299,23 +299,34 @@ class ShoppingCartController {
 	def updateQuantity() {
 		print params
 		withForm {
-			if (params.productId?.matches("\\d{1,12}") && params.update_quantity?.matches("\\d{1,12}") ) {
-				def product = Product.get(params.productId)
-				if (! product) {
-					//TODO: need throw exception here??????
-					redirect(action: "myCart")
-					return
-				}
-	
-				// if Product Inventory is limited
-				int newQuantity = params.int("update_quantity")
-				if (product.inventory < 9999 && newQuantity < product.inventory) {
-					def currentuserLogin = springSecurityService.currentUser as Member
-					ShoppingCart shoppingCart = ShoppingCart.findByProductAndMember(product, currentuserLogin)
-					if (shoppingCart) {
+			if (params.productId?.matches("\\d{1,12}") && params.update_quantity?.matches("\\d{1,12}") && params.shopcartId?.matches("\\d{1,12}") ) {
+				ShoppingCart shoppingCart = ShoppingCart.get(params.shopcartId)
+				if (shoppingCart) {
+					def productExtend = shoppingCart.productExtend
+					def inventory = productExtend?.inventory
+					int newQuantity = params.int("update_quantity")
+					// Con hang
+					if (inventory < 9999 && inventory >= newQuantity) {
 						shoppingCart.quantity = newQuantity
+						shoppingCart.save(flush:true)
 					}
-				}			
+				}
+//				def product = Product.get(params.productId)
+//				if (! product) {
+//					//TODO: need throw exception here??????
+//					redirect(action: "myCart")
+//					return
+//				}
+//	
+//				// if Product Inventory is limited
+//				int newQuantity = params.int("update_quantity")
+//				if (product.inventory < 9999 && newQuantity < product.inventory) {
+//					def currentuserLogin = springSecurityService.currentUser as Member
+//					ShoppingCart shoppingCart = ShoppingCart.findByProductAndMember(product, currentuserLogin)
+//					if (shoppingCart) {
+//						shoppingCart.quantity = newQuantity
+//					}
+//				}			
 			}
 		}.invalidToken {
 		//TODO: ??????

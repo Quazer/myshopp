@@ -10,6 +10,8 @@ class ShoppingCart {
 	ShippingMethod shippingMethod
 	float shippingMethodPrice
 	
+	ProductExtend productExtend
+	
 	String messageToShop = ""
 	
 	Date dateAdded = new Date()
@@ -22,7 +24,7 @@ class ShoppingCart {
     static constraints = {
 		shippingMethod nullable:true
 		messageToShop blank:true
-		
+		productExtend nullable:true
 //		year(matches:/\d{4}/)
 //		month(matches:/\d{2}/)
 //		day(matches:/\d{2}/)
