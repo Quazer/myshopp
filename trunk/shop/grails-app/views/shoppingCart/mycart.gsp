@@ -10,7 +10,7 @@
 
                                 
                 
-<title>Please Confirm Your Order - AliExpress</title>
+<title>Please Confirm Your Order</title>
 <link href="${resource(dir: 'css/shoppingcart', file: 'place-order-v070310-MODERN_BROWSER-v_3238fc12a0262_0.css')}" rel="stylesheet" type="text/css" media="all">
 
 <script type="text/javascript" src="${resource(dir: 'js/shoppingcart', file: 'slidebox_gofirst-MODERN_BROWSER-v_1ec13981fed88_0.js')}"></script>

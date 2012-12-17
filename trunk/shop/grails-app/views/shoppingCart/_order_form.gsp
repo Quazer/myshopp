@@ -51,11 +51,12 @@
                                                     <span class="txt-unit-quantity"><g:message code="${orderItem.product.unit }"/></span> 
                                                     <span class="txt-multiply">×</span>
                                                     <span>${CommonUtils.productPrice(orderItem.product) }</span>
-                                                    <input class="hid-shopcart-id" type="hidden" value="${orderItem.product.sku }" name="shopcartId">
+                                                    <input class="hid-shopcart-id" type="hidden" value="${orderItem.id }" name="shopcartId">
                                                     <!--Only the promotion product need inventory, the default is 9999-->
-                                                    <input class="hid-inventory" type="hidden" value="${orderItem.product.inventory }">
-                                                    <g:if test="${orderItem.product.inventory < 9999 }">
-                                                        <div class="product-quantity-comment"><g:message code="shoppingcart.maximumitem.label"/>: ${orderItem.product.inventory }</div>
+
+                                                    <input class="hid-inventory" type="hidden" value="${orderItem.productExtend?.inventory }">
+                                                    <g:if test="${orderItem.productExtend?.inventory < 9999 }">
+                                                        <div class="product-quantity-comment"><g:message code="shoppingcart.maximumitem.label"/>: ${orderItem.productExtend?.inventory }</div>
                                                     </g:if>
                                                     
                                                 </div>

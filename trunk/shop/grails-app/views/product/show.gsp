@@ -37,46 +37,6 @@
 	href="${resource(dir: 'css/product', file: 'header-auto-width-MODERN_BROWSER-v_1464b531d60972_0.css')}"
 	rel="stylesheet" type="text/css" media="all">
 
-<script type="text/javascript" async=""
-	src="${resource(dir: 'js/index', file: 'base-mod.js')}"></script>
-
-
-<script type="text/javascript" async=""
-	src="http://style.alibaba.com/js/5v/lib/_hozmod/addon/base-mod.js"></script>
-
-
-<script type="text/javascript"
-	src="${resource(dir: 'js/index', file: 'ae-MODERN_BROWSER-v_7c68886d0f51_0.js')}"></script>
-
-<script id="yui__dyn_0" type="text/javascript" charset="utf-8"
-	src="${resource(dir: 'js/product', file: 'wishlist_item_count.htm')}"></script>
-<script id="yui__dyn_2" type="text/javascript" charset="utf-8"
-	src="${resource(dir: 'js/category', file: 'ajax_buyer_shopcart_num.htm')}"></script>
-<script id="yui__dyn_3" type="text/javascript" charset="utf-8"
-	src="${resource(dir: 'js/product', file: 'messageUnreadCountAjaxService.htm')}"></script>
-<script id="yui__dyn_4" type="text/javascript" charset="utf-8"
-	src="${resource(dir: 'js/product', file: 'muliuserstatusx.atc')}"></script>
-<script id="yui__dyn_5" type="text/javascript" charset="utf-8"
-	src="${resource(dir: 'js/index', file: 'element.js')}"></script>
-<link type="text/css" rel="stylesheet" charset="UTF-8"
-	href="http://translate.googleapis.com/translate_static/css/translateelement.css">
-
-<script type="text/javascript" charset="UTF-8"
-	src="http://translate.googleapis.com/translate_static/js/element/main_vi.js"></script>
-
-<%--
-<script id="yui__dyn_6" type="text/javascript" charset="utf-8" src="./product detail_files/we_facebook_like.js"></script>
- --%>
-
-<script id="yui__dyn_7" type="text/javascript" charset="utf-8"
-	src="${resource(dir: 'js/index', file: 'all.js')}"></script>
-
-
-<script type="text/javascript" charset="UTF-8"
-	src="http://translate.googleapis.com/translate_static/js/element/11/element_main.js"></script>
-<script id="yui__dyn_1" type="text/javascript" charset="utf-8src="
-	//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 <%--
 <script id="yui__dyn_2" type="text/javascript" charset="utf-8" src="http://style.aliexpress.com/js/5v/run/pool/we_facebook_like.js"></script>
  --%>

@@ -33,13 +33,17 @@ class CommonUtils {
 		"{showSaleOffWithFixedPrice : 15.000VND off per 150.000VND} "
 	}
 	
+	def static showCurrency() {
+		return "{showCurrency}"
+	}
+	
 	// return price of Product with currency
 	// ex: $32
 	def static productPrice(productInstance, quantity = null) {
 		// TODO: check productInstance != null ?
 		def productPrice = this.priceOfProduct(productInstance)
 		
-		def currentcy = showCurrency(productPrice)
+		//def currentcy = showCurrency(productPrice)
 		
 		// TODO:check quantity la integer or not
 		//return "{US productPrice}" + productPrice
