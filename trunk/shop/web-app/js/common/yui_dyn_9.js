@@ -1,0 +1,1 @@
+online[0]=1;online[1]=0;online[2]=1;online[3]=1;online[4]=1;online[5]=0;online[6]=1;online[7]=1;online[8]=1;online[9]=0;online[10]=1;online[11]=1;online[12]=1;online[13]=0;online[14]=0;online[15]=1;online[16]=1;online[17]=1;online[18]=0;online[19]=1;
