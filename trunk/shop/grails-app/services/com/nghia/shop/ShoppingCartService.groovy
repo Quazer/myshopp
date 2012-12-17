@@ -2,7 +2,6 @@ package com.nghia.shop
 
 class ShoppingCartService {
 	static transactional = true
-	
 	def checkout(productIds, currentuserLogin, params) {
 		def error
 		def tmp
@@ -91,9 +90,21 @@ class ShoppingCartService {
 //		if (productOrdered.hasErrors()) {
 //			return null
 //		}
+		def productColorParam = params.productColor
+		def productSizeParam = params.productSize
+		
+		// Get productExtend to get product color/size
+		def productExtendList = ProductExtend.executeQuery(
+			"from ProductExtend where product = :productInstance and productColor = :productColor and productSize = :productSize",
+			[productInstance: product, productColor: productColorParam , productSize : productSizeParam])
+		def productExtend
+		if (productExtendList?.size > 0) {
+			productExtend = productExtend.get(0)
+		}
 		
 		def shoppingCart = new ShoppingCart()
 		shoppingCart.product = product
+		shoppingCart.productExtend = productExtend
 		shoppingCart.member = currentuserLogin
 		shoppingCart.quantity = params?.long("quantity")
 		shoppingCart.shippingMethodPrice = shippingMethodPrice
