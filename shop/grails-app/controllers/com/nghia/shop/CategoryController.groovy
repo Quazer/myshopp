@@ -44,12 +44,23 @@ class CategoryController {
 //    }
 
     def show(Long id) {
-		Category categoryInstance = Category.get(params?.id)
+		// **********************************************
+		// TODO: need define default categoryID in here
+		// **********************************************
+		def catId = 0
+		if (params?.id.matches("\\d{1,12}")) {
+			catId = params?.id
+		}
+		
+		Category categoryInstance = Category.get(catId)
 		if (!categoryInstance) {
 			//TODO : nedd to modify
 			flash.message = message(code: 'default.not.found.message', args: [message(code: 'category.label', default: 'Category'), params?.id])
 			//redirect(action: "list")
 			return
+		}
+		if (params.back) {
+			params.properties = session.searchParams.properties
 		}
 		
 		// trim strings in params
@@ -149,7 +160,9 @@ class CategoryController {
         //redirect(action: "list", params: params)
 
 			
-		
+		session.categoryNameSelected = categoryInstance?.name
+		session.categoryIdSelected = categoryInstance?.id
+		session.searchParams = params
 		//def productTotalCount = categoryInstance?.products?.size()
 		[categoryName: categoryInstance?.name, categoryId: categoryInstance?.id, productTotalCount : totalRecCount, productList : productList]
         
