@@ -1,12 +1,12 @@
 <div class="box historyouterbox" id="historyOuterBox"
-                style="display: block;">
+                style="display: none;">
                 <div class="hd">
                     <h3>${message(code: 'cat.viewedItem.label')}</h3>
                 </div>
-                <div class="bd historyBox3">
+                <div class="bd historyBox">
                     <div class="historylog">
-                        <div id="PSHistoryBox3">
-                            <ul id="product_selloffer_hispanel2" class="productimage2">
+                        <div id="PSHistoryBox">
+                            <ul id="product_selloffer_hispanel" class="productimage">
                                 <li id="product_selloffer_li_0"><div
                                         onmouseover="onPSHistoryItemsMouseOver(0);">
                                         <a

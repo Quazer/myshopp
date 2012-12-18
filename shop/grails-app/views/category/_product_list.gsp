@@ -100,6 +100,8 @@
 									  }
 									  
 							    %>
+							    
+							    <!-- {showPriceWithCurrency} -->
                                <span class="value notranslate">${CommonUtils.showPriceWithCurrency(priceAfterDiscount) }</span> <span
                                    class="separator">/</span> 
                                    <span class="unit"><g:message code="${productInstance.unit }"/></span>
@@ -114,7 +116,7 @@
                                <p class="tip">
                                    <span class="min-order"> </span>
                                </p>
-                               <div class="add-to-wishlist">
+                               <div class="add-to-wishlist" style="display:none">
                                    <a class="atwl-button" href="javascript:;">+Add to Wish List</a>
                                </div>
 

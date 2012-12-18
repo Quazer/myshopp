@@ -211,9 +211,9 @@ banner advertiment
 						All Products are verified by
 						${message(code: 'default.website.domain')}
 					</div>
-					<div id="bp-banner">
+					<div id="bp-banner" style="display:none">
 						<div class="bp-banner">
-							<a href="http://www.aliexpress.com/buyerprotection/index.html"
+							<a 
 								rel="nofollow"><img class="banner-img"
 								src="${resource(dir: 'images/index', file: 'buy_protection.gif')}"></a>
 						</div>
