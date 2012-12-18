@@ -103,10 +103,9 @@
 }
 </style>
 
-	<div id="christSaleTopBanner" class="christ-sale-top-banner">
+	<div id="christSaleTopBanner" class="christ-sale-top-banner" style="display:none">
 		<div class="christ-sale-wrap">
 			<a id="christSaleBanner"
-				href="http://www.aliexpress.com/activities/aliexpress-promotion/index.html?from=site-top&amp;t=121126"
 				class="christ-sale-banner christ-sale-begin christ-sale-going"
 				style="" title="Holiday Shopping Mania"> </a>
 			<div id="J-count-down" class="christ-sale-count"
