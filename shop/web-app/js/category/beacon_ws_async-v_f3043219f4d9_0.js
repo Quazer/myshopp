@@ -1,6 +1,6 @@
-var globalImgServer = ''//'http://style.alibaba.com';
+var globalImgServer = ''
 if (location.protocol === "https:") {
-	globalImgServer = ''//'https://ipaystyle.alibaba.com';
+	globalImgServer = ''
 };
 
 if (!dmtrack) {
@@ -10,13 +10,12 @@ dmtrack.send_head = document.location.protocol + "//";
 dmtrack.MSG_Img;
 dmtrack.profile_site = 5;
 dmtrack.ver = 40;
-dmtrack.err_url = dmtrack.send_head //+ "stat.china.alibaba.com/dw/error.html";
-dmtrack.tracelog_url = dmtrack.send_head// + "tracelog.www.alibaba.com/null.gif";
-dmtrack.acookie_url = dmtrack.send_head// + "acookie.aliexpress.com/1.gif";
+dmtrack.err_url = dmtrack.send_head 
+dmtrack.tracelog_url = dmtrack.send_head
+dmtrack.acookie_url = dmtrack.send_head
 dmtrack.feedback_url = dmtrack.send_head
-		//+ "page.china.alibaba.com/shtml/static/forfeedbacklog.html";
-dmtrack.beacon_url = dmtrack.send_head //+ "dmtracking2.alibaba.com/b.jpg";
-dmtrack.beacon2_url = dmtrack.send_head // + "dmtracking2.alibaba.com/c.jpg";
+dmtrack.beacon_url = dmtrack.send_head 
+dmtrack.beacon2_url = dmtrack.send_head
 dmtrack.acookieSupport = true;
 dmtrack.getCookieFromAcookie = false;
 dmtrack.isgetApacheId = true;
