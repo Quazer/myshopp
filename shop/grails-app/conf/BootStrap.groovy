@@ -55,9 +55,12 @@ class BootStrap {
 			
 			prod.purchargePrice = 100 + i
 			prod.importPrice = 76
-			prod.discount = 0
-			prod.unit = "product.productkind.piece"
-			
+			prod.discount = 10
+			prod.unit = "product.productkind.lot"
+			prod.itemUnit = "product.productkind.piece"
+			prod.numberItemPerUnit = 100
+			prod.packageSize = "20cm x 10cm x 10cm (7.87in x 3.94in x 3.94in) (7.87in x 3.94in x 3.94in)"
+			prod.packageWeight = "3.0kg (6.614lb.) (6.614lb.)"
 			prod.sku = 1000 + i
 			
 			prod.category = cat1
