@@ -5,59 +5,26 @@
     ${message(code: 'header.label')} <a rel="nofollow" href="${createLink(controller : 'login',action: 'register')}">${message(code: 'joinfree.label')}</a> | <span><a rel="nofollow" href="${createLink(controller : 'login',action: 'auth')}">${message(code: 'signin.label')}</a></span>
     </div>
         <ul class="site-nav" id="site-nav" style="width: auto;">
-            <li class="site-subnav site-nav-me"><span><a
-                    rel="nofollow"
-                    href="http://us.ae.alibaba.com/index.htm?tracelog=ws_topbar"
-                    id="h-my-aliexpress">My AliExpress</a></span>
+            <li class="site-subnav site-nav-me"><span>
+            	<g:link controller="member" action="profile">My MaiKex</g:link>
+            	</span>
                 <ul>
-                    <li class="myaliexpress-gap" style="display: none;"><a
-                        class="myaliexpress-strong" id="h-unread-messages"
-                        href="http://us.ae.alibaba.com/message/message_list.htm"><b
-                            id="my-messages"><b style="color: #f7941d;">(0)</b></b> Unread
-                            Messages</a></li>
-                    <li><a rel="nofollow"
-                        href="http://escrow.alibaba.com/order/business_order_buyer_list.htm?ctmenu=current_orders"
-                        id="h-my-orders">My Orders <b id="my-orders"
-                            style="display: none"></b></a></li>
-                    <li><a rel="nofollow"
-                        href="http://us.ae.alibaba.com/message/message_list.htm"
-                        id="h-my-messages">Message Center</a></li>
-                    <li><a rel="nofollow"
-                        href="http://us.ae.alibaba.com/wishlist/wish_list_product_list.htm"
-                        id="h-my-list">My Lists</a></li>
-                    <li><a rel="nofollow"
-                        href="http://escrow.alibaba.com/coupon/buyerCouponList.htm?sortBy=2"
-                        id="h-my-coupons">My Coupons <b id="my-coupons"
-                            style="display: none"></b></a></li>
-                </ul></li>
+                    <li>
+                    	<g:link controller="member" action="myOrders">My Orders</g:link>
+                    </li>
+                </ul>
+            </li>
 
             <li class="site-subnav site-nav-help"><span><a
-                    rel="nofollow"
-                    href="http://www.aliexpress.com/help/home.html#center" id="h-help">Help</a></span>
+                    rel="nofollow" id="h-help">Help</a></span>
                 <ul>
-                    <li><a rel="nofollow"
-                        href="http://www.aliexpress.com/help/home.html#center"
+                    <li><a rel="nofollow" 
                         id="h-help-center">Help Center</a></li>
                     <li><a rel="nofollow"
-                        href="https://login.aliexpress.com/buyer.htm?return_url=http://channel.alibaba.com/complaint/home.htm"
                         id="h-submit-complaint">Submit a Complaint</a></li>
                 </ul></li>
-            <li class="site-subnav site-nav-bbs"><span><a
-                    rel="nofollow"
-                    href="http://community.aliexpress.com/forum.php?tracelog=ws_topbar"
-                    id="h-community">Community</a></span>
-                <ul>
-                    <li><a rel="nofollow"
-                        href="http://community.aliexpress.com/forum.php" id="h-buy-forum">Buyer
-                            Forum</a></li>
-                    <li><a rel="nofollow" href="http://blog.aliexpress.com/"
-                        id="h-aliexpress-blog">AliExpress Blog</a></li>
-                    <li><a rel="nofollow"
-                        href="http://www.facebook.com/shopaliexpress"
-                        id="h-aliexpress-facebook">AliExpress Facebook</a></li>
-                </ul></li>
-            <li class="site-nav-alibaba">Go to<a rel="nofollow"
-                href="http://www.alibaba.com/" id="h-alibaba">alibaba.com</a></li>
+
+
            
         </ul>
 
@@ -101,15 +68,18 @@
         </ul>
 
         <div id="search-panel">
+		  <g:form id="${params.id?: session.categoryIdSelected }" name="searchForm" controller="category" action="show">
+	          <input id="searchSubmit" type="submit" hidefocus="true" value="" class="search-btn">
+	            <label class="search-key" id="searchIntelligent">
+	              <input id="SearchTextIdx" name="SearchText" type="text" value="${params.SearchText }" autocomplete="off" maxlength="50">
+	            </label>
+	            <g:hiddenField name="id" value="${params.id }"/>
+	            <input type="hidden" id="historyTab">
+	            <input type="hidden" id="historySearchInput">
+	            <input type="hidden" id="historySearchCountry">		  
+		  </g:form>
           <form id="searchForm" name="searchForm" method="get" >
-            <label class="search-key" id="searchIntelligent">
-              <input id="SearchTextIdx" name="SearchText" type="text" value="${params.SearchText }" autocomplete="off" maxlength="50">
-            </label>
-            <input id="searchSubmit" type="submit" hidefocus="true" value="" class="search-btn">
-            <input type="hidden" id="catId" name="catId" value="0">
-            <input type="hidden" id="historyTab">
-            <input type="hidden" id="historySearchInput">
-            <input type="hidden" id="historySearchCountry">
+
           </form>
           
           <g:link class="cart-lnk" controller="shoppingCart" action="myCart"><b id="my-shopcarts">0</b>Cart</g:link>
