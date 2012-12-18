@@ -133,5 +133,8 @@ class CustomPagingTagLib {
 		if (!isWrited) {
 			writer << "<span class='page-start' style='display:none'>Previous</span><span class=\"page-cur\">1</span><a rel='nofollow' href='' class='page-next' style='display:none'>Next</a>"
 		}
+		else {
+			writer << "<a rel='nofollow' href='' class='page-next' style='display:none'>Next</a>"
+		}	
 	}
 }
