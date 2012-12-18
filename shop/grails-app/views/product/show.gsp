@@ -1,3 +1,4 @@
+<%@ page import="com.nghia.shop.CommonUtils" %>
 <html xmlns:og="http://ogp.me/ns#" style="height: 100%;">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -80,25 +81,29 @@
                                  </div>
                                 <!--real-time-->
                                 <div id="img" style="position:relative;z-index:120;">
-                                                        <div itemprop="image" class="image-item"><a style="margin-top: 45px; display: inline-block; text-decoration: initial; position: relative;" href="http://www.aliexpress.com/item-img/New-Style-Clear-Soft-TPU-Gel-Case-for-LG-Nexus-4-E960-Free-Shipping/688800292.html" target="_blank"><img style="margin-top: 0pt; display: block;" src="http://i00.i.aliimg.com/wsphoto/v0/688800292/New-Style-Clear-Soft-TPU-Gel-Case-for-LG-Nexus-4-E960-Free-Shipping.jpg" height="159" width="250"><iframe src="http://style.alibaba.com/js/blank.html" style="display: none; visibility: hidden;"></iframe><div class="viewport" style="display: none; visibility: hidden;"><div class="visible" style="border: 5px solid rgb(204, 204, 204); width: 320px; height: 240px; overflow: hidden;"><img src="http://i00.i.aliimg.com/wsphoto/v0/688800292/New-Style-Clear-Soft-TPU-Gel-Case-for-LG-Nexus-4-E960-Free-Shipping.jpg" alt=""></div></div><span class="glass" style="display: none; visibility: hidden; width: 140px; height: 105px; background-color: rgb(255, 255, 255); border: 1px solid rgb(153, 153, 153); margin-left: -1px; margin-top: -1px; position: absolute; left: 0px; top: 0px; cursor: move; opacity: 0.5; background-position: initial initial; background-repeat: initial initial;"></span></a></div>
-                                                                    <div class="img-zoom-in"><span>See Larger Image:</span> <a href="http://www.aliexpress.com/item-img/New-Style-Clear-Soft-TPU-Gel-Case-for-LG-Nexus-4-E960-Free-Shipping/688800292.html" id="lnk-enlarge-image" target="_blank" title="New Style Clear Soft TPU Gel Case for LG Nexus 4 E960 Free Shipping">New Style Clear Soft TPU Gel Case for LG Nexus 4 E960 Free Shipping Picture</a></div>
-                                                                
+									<div itemprop="image" class="image-item">
+										<img
+											style="margin-top: 0pt; display: block;"
+											src="${CommonUtils.urlWithProductNameForImage(productInstance)}"
+											height="159" width="250">
+										<iframe src="http://style.alibaba.com/js/blank.html"
+												style="display: none; visibility: hidden;"></iframe>
+											<div class="viewport"
+												style="display: none; visibility: hidden;">
+												<div class="visible"
+													style="border: 5px solid rgb(204, 204, 204); width: 320px; height: 240px; overflow: hidden;">
+													<img
+														src="${CommonUtils.urlWithProductNameForImage(productInstance)}"
+														alt="">
+												</div>
+											</div>
+											<span class="glass"
+											style="display: none; visibility: hidden; width: 140px; height: 105px; background-color: rgb(255, 255, 255); border: 1px solid rgb(153, 153, 153); margin-left: -1px; margin-top: -1px; position: absolute; left: 0px; top: 0px; cursor: move; opacity: 0.5; background-position: initial initial; background-repeat: initial initial;"></span></a>
+									</div>
                                     
-                                    <div class="prod-id">Product ID: 688800292</div>
+                                    <div class="prod-id">Product ID: ${productInstance.sku }</div>
                                 
-                                    <div class="sns-tool">      
-                                      <div class="fb-like" id="fb-like" style="overflow: visible;">
-                                        <div id="fb-root" style="display: block;" class=" fb_reset fb_reset"><fb:like show_faces="false" width="240" height="60" fb-xfbml-state="rendered" class="fb_edge_widget_with_comment fb_iframe_widget"><span style="height: 28px; width: 240px;"><iframe id="f2b8429124" name="f2779bce5c" scrolling="no" style="border: none; overflow: hidden; height: 28px; width: 240px;" title="Like this content on Facebook." class="fb_ltr" src="./product detail_files/like.htm"></iframe></span></fb:like><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe id="fb_xdm_frame_http" name="fb_xdm_frame_http" src="./product detail_files/xd_arbiter.htm"></iframe><iframe id="fb_xdm_frame_https" name="fb_xdm_frame_https" src="./product detail_files/xd_arbiter(1).htm"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
-                                        <img id="like-loading" src="./product detail_files/fb-loading.gif" style="display: none;">
-                                      </div>
-                                          <div id="divShareURL" coupon_status="login">
-                                            <a href="javascript:void(0)" share_url="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.aliexpress.com%2Fitem%2FNew-Style-Clear-Soft-TPU-Gel-Case-for-LG-Nexus-4-E960-Free-Shipping%2F688800292.html%3Fsrc%3Dsns%26cn%3Dfeedback_coupon%26isdl%3Dy%26af%3DedddPNqAm3Y%253D"><span id="divShareURLfb"></span></a>
-                                            <a href="javascript:void(0)" share_url="http://twitter.com/home?status=http%3A%2F%2Fwww.aliexpress.com%2Fitem%2F%2F688800292.html%3Fsrc%3Dsns%26cn%3Dfeedback_coupon%26isdl%3Dy%26af%3DedddPNqAm3Y%253D%2B-%2Bfor+LG+Nexus+4+case+on+AliExpress.com.+%24105.00"><span id="divShareURLtwitter"></span></a>
-                                            <a href="javascript:void(0)" share_url="http://vk.com/share.php?url=http%3A%2F%2Fwww.aliexpress.com%2Fitem%2FNew-Style-Clear-Soft-TPU-Gel-Case-for-LG-Nexus-4-E960-Free-Shipping%2F688800292.html%3Fsrc%3Dsns%26cn%3Dfeedback_coupon%26isdl%3Dy%26af%3DedddPNqAm3Y%253D"><span id="divShareURLvk"></span></a>
-                                            <a href="javascript:void(0)" share_url="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.aliexpress.com%2Fitem%2FNew-Style-Clear-Soft-TPU-Gel-Case-for-LG-Nexus-4-E960-Free-Shipping%2F688800292.html%3Fsrc%3Dsns%26cn%3Dfeedback_coupon%26isdl%3Dy%26af%3DedddPNqAm3Y%253D&amp;media=http%3A%2F%2Fimg.alibaba.com%2Fwsphoto%2Fv0%2F688800292%2FNew-Style-Clear-Soft-TPU-Gel-Case-for-LG-Nexus-4-E960-Free-Shipping.jpg&amp;description=New+Style+Clear+Soft+TPU+Gel+Case+for+LG+Nexus+4+E960+Free+Shipping+on+AliExpress.com.+%24105.00"><span id="divShareURLpinit"></span></a>
-                                          </div>
-                                                    <p style="margin:5px 0 0 0;font-family:Arial;">Share this with your friends, get a $5 coupon!</p>
-                                                  </div>
+
                                 </div>
                                 <script type="text/javascript">
                                         if(!window.runParams) {
@@ -169,13 +174,6 @@
 		PAGE_TIMING.firstScreenImage.src = 'http://i02.i.aliimg.com/wimg/monitor/first-screen.png';
 	</script>
 
-		<div id="bp-banner">
-			<div class="bp-banner">
-				<a href="http://www.aliexpress.com/buyerprotection/index.html"
-					rel="nofollow"><img class="banner-img"
-					src="http://img.alibaba.com/images/cms/upload/aliexpress/channel/buyerprotection/banner/bp_banner_975x75.png"></a>
-			</div>
-		</div>
 
 		<div id="magnet-see-full" style="display: block;">
 			<a class="click-stat" href="#anchor-full-item-description"
@@ -190,12 +188,12 @@
 		<div id="magnet-marketing" class="clearfix" style="display: block;">
 			<a class="click-stat magnet-col-left"
 				name="anchor-full-item-description"
-				href="http://www.aliexpress.com/activities/superdeals.html"
 				target="_blank"><img
-				src="http://img.alibaba.com/images/cms/upload/aliexpress/promotions/2012/08/magnet_detail_banner_50off.jpg"></a><a
+				src="${resource(dir: 'images/product', file: 'banner-discount.jpg')}"></a>
+			<a
 				class="click-stat magnet-col-right" style="margin: 0px 0px 0px 10px"
-				href="http://www.aliexpress.com/about/trial.html" target="_blank"><img
-				src="http://img.alibaba.com/images/cms/upload/aliexpress/promotions/2012/08/magnet_detail_banner_amazing.jpg"></a>
+				target="_blank"><img
+				src="${resource(dir: 'images/product', file: 'banner_amazing.jpg')}"></a>
 		</div>
 
 		<div id="switch-main" style="margin-left: 240px;">
@@ -219,19 +217,10 @@
 				<div id="tabbed-pane">
 					<div id="tabs" class="tabs">
 						<ul>
-							<li id="tab-pdt" class="tabbed-pane-tab  current"><a>Product
-									Details</a></li>
-							<li id="tab-feedback" class="tabbed-pane-tab"><a>Feedback
-									(0)</a></li>
-							<li id="tab-sap" class="tabbed-pane-tab"><a>Shipping
-									&amp; Packaging</a></li>
-							<li id="tab-payment" class="tabbed-pane-tab"><a>Buyer
-									Protection</a></li>
+							<li id="tab-pdt" class="tabbed-pane-tab  current"><a>Product Details</a></li>
 						</ul>
 						<div class="tab-border"></div>
-						<a
-							href="http://channel.alibaba.com/complaint/aeReportHome.htm?product_id=688800292&amp;b_login_id=cn112758015"
-							target="_blank" class="report-item-link">Report item</a>
+						
 					</div>
 
 					<!-- product detail -->
@@ -965,79 +954,7 @@ _gaq.push(['_trackPageview']);
 		style="display: none; width: 620px; position: fixed; border: 1px solid rgb(252, 187, 41); background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;">
 		<a href="javascript:void(0);" class="mask-close"></a>
 	</div>
-	<div id="goog-gt-tt" class="skiptranslate" dir="ltr">
-		<div style="padding: 8px;">
-			<div>
-				<div class="logo">
-					<img src="./product detail_files/translate-32.png" width="20"
-						height="20">
-				</div>
-			</div>
-		</div>
-		<div class="top" style="padding: 8px; float: left; width: 100%;">
-			<h1 class="title gray">Văn bản gốc</h1>
-		</div>
-		<div class="middle" style="padding: 8px;">
-			<div class="original-text"></div>
-		</div>
-		<div class="bottom" style="padding: 8px;">
-			<div class="activity-links">
-				<span class="activity-link">Đóng góp bản dịch hay hơn</span><span
-					class="activity-link"></span>
-			</div>
-			<div class="started-activity-container">
-				<hr
-					style="color: #CCC; background-color: #CCC; height: 1px; border: none;">
-				<div class="activity-root"></div>
-			</div>
-		</div>
-		<div class="status-message" style="display: none;"></div>
-	</div>
-	<div id="dialogShareURLLogin" class="divShareURLMaskContent"
-		style="display: none; width: 580px; position: fixed; border: 1px solid rgb(252, 187, 41); background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;">
-		<a href="javascript:void(0);" class="mask-close"></a>
-	</div>
-	<iframe frameborder="0" class="goog-te-menu-frame skiptranslate"
-		style="visibility: visible; box-sizing: content-box; width: 783px; height: 274px; display: none;"></iframe>
-	<div id="go-top" style="top: 386px;"></div>
-	<div id="dialogShareURLTip" class="divShareURLMaskContent"
-		style="display: none; width: 620px; position: fixed; border: 1px solid rgb(252, 187, 41); background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;">
-		<a href="javascript:void(0);" class="mask-close"></a>
-	</div>
-	<div id="goog-gt-tt" class="skiptranslate" dir="ltr">
-		<div style="padding: 8px;">
-			<div>
-				<div class="logo">
-					<img
-						src="http://www.google.com/images/icons/product/translate-32.png"
-						width="20" height="20">
-				</div>
-			</div>
-		</div>
-		<div class="top" style="padding: 8px; float: left; width: 100%;">
-			<h1 class="title gray">Văn bản gốc</h1>
-		</div>
-		<div class="middle" style="padding: 8px;">
-			<div class="original-text"></div>
-		</div>
-		<div class="bottom" style="padding: 8px;">
-			<div class="activity-links">
-				<span class="activity-link">Đóng góp bản dịch hay hơn</span><span
-					class="activity-link"></span>
-			</div>
-			<div class="started-activity-container">
-				<hr
-					style="color: #CCC; background-color: #CCC; height: 1px; border: none;">
-				<div class="activity-root"></div>
-			</div>
-		</div>
-		<div class="status-message" style="display: none;"></div>
-	</div>
-	<div id="dialogShareURLLogin" class="divShareURLMaskContent"
-		style="display: none; width: 580px; position: fixed; border: 1px solid rgb(252, 187, 41); background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;">
-		<a href="javascript:void(0);" class="mask-close"></a>
-	</div>
-	<iframe frameborder="0" class="goog-te-menu-frame skiptranslate"
-		style="visibility: visible; box-sizing: content-box; width: 783px; height: 274px; display: none;"></iframe>
+
+
 </body>
 </html>

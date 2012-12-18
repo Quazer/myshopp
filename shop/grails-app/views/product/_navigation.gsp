@@ -1,19 +1,11 @@
 		<div id="magnet-search-keyword"></div>
 		<div id="detail-to-order-abtest-div" style="display: none"></div>
-
+        
 		<div class="crumb global">
-			<span class="lnk-back"><a rel="nofollow"
-				href="http://www.aliexpress.com/wholesale?SearchText=nexus+4&amp;catId=509&amp;manual=y">Back
-					to search results</a></span> <a rel="nofollow"
-				href="http://www.aliexpress.com/">Home</a> &gt; <a
-				href="http://www.aliexpress.com/all-wholesale-products.html">All
-				Categories</a> &gt; <a
-				href="http://www.aliexpress.com/category/509/phones-telecommunications.html">Phones
-				&amp; Telecommunications</a> &gt; <a
-				href="http://www.aliexpress.com/category/200002258/mobile-phone-telephone-accessories.html">Mobile
-				Phone &amp; Telephone Accessories</a> &gt; <a
-				href="http://www.aliexpress.com/category/5090302/mobile-phone-accessories.html">Mobile
-				Phone Accessories</a> &gt; <a
-				href="http://www.aliexpress.com/category/380230/phone-bags-cases.html">Phone
-				Bags &amp; Cases</a>
+			<span class="lnk-back">
+			<g:link controller="category" action="show" params="[id:session.categoryIdSelected , back:true]">Back to search results</g:link>
+			</span> 
+			
+           	<g:link title="Home" controller="index">${message(code: 'cat.home.link.label')}</g:link> 
+           	&gt;<h2><g:link controller="category" action="show" id="${session.categoryIdSelected }">${session.categoryNameSelected }</g:link></h2>
 		</div>
