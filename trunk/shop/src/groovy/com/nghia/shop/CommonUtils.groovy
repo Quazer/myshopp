@@ -22,7 +22,7 @@ class CommonUtils {
 	
 	// arg maybe "int" or "float"
 	def static showPriceWithCurrency(def price) {
-		"{showPriceWithCurrency} VND"
+		price + " VND"
 	}
 	
 	def static showSaleOffWithFixedPrice(discountPrice, discountPriceFixed) {
