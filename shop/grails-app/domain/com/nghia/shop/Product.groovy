@@ -34,6 +34,17 @@ class Product {
 	// "set", "piece", "lot" ... all value will be Message Key
 	String unit 
 	
+	// Package info --------------------
+	// su dung tai "product detail", phan "packing details"
+	// ex: "1" piece
+	//  "100" {itemUnit}/lot 
+	int numberItemPerUnit = 1 //default
+	// "set", "piece", "lot" ... all value will be Message Key
+	String itemUnit = unit
+	String packageWeight
+	String packageSize
+	// Package info --------------------
+	
 	// main product image
 	ImageStore productImage // prop of this object "isSelected" will be set as TRUE when CREATE Product
 	
@@ -74,6 +85,7 @@ class Product {
 		supplier nullable : true
 		category nullable : true
 		unit nullable:true
+		itemUnit nullable:true
 		//inventory nullable: false
 		productColors : nullable: false
 		
