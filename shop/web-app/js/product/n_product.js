@@ -18,10 +18,10 @@ $(function() {
 				$("#sku-sku2 li").each(function() {
 					if ($(this).hasClass('active')) {
 						sizeValue = jQuery(this).attr("id");
-						alert('ze size, colorValue:' + colorValue)
+						
 					}
 				})
-				alert("colortValue: " + colorValue)
+				
 				refreshProductDetailHeader("color", colorValue,sizeValue)
 			})
 		}
@@ -37,11 +37,9 @@ $(function() {
 				$(".sku-color li").each(function() {
 					if ($(this).hasClass('active')) {
 						colorValue = jQuery(this).attr("id");
-						alert('ze color, sizeValue:' + sizeValue)
+						
 					}
 				})
-				
-				alert("sizeValue: " + sizeValue)
 				
 				refreshProductDetailHeader("size", colorValue,sizeValue)
 			})
@@ -50,8 +48,7 @@ $(function() {
 	
 	// Truong hop size duoc click
 	if (sizeClicked == true) {
-		alert('abc')
-
+		
 	}
 	
 	if (colorClicked == true) {
@@ -92,12 +89,9 @@ function refreshProductDetailHeader(action, colorVal, sizeVal) {
 			sku : objectId
 		},
 		success:function(data,textStatus){
-			alert('yes')
 			jQuery('#inf').html(data);
-			alert('ok')
 		},
 		error: function(XMLHttpRequest,textStatus,errorThrown) {
-			alert(errorThrown)
 		}
 	})
 }
