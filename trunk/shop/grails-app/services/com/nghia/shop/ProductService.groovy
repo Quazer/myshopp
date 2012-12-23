@@ -30,21 +30,22 @@ class ProductService {
 		if (productSizeStr) {
 			sizesOfProd?.each {
 
-				if (action == "size") {
-					// Truong hop Buyer click "Size"
-					if (it.productColor != productColorStr) {
-						// disable color
-						it.enableColor4Buyer = false
-					}
-					
-					if(it.productSize == productSizeStr) {
-						it.isSizeSelected = true
-					}
-				}
-				else {
-					
-				}
+//				if (action == "size") {
+//					// Truong hop Buyer click "Size"
+//					if (it.productColor != productColorStr) {
+//						// disable color
+//						it.enableColor4Buyer = false
+//					}
+//
+//				}
+//				else {
+//					
+//				}
 				
+				
+				if(it.productSize == productSizeStr) {
+					it.isSizeSelected = true
+				}
 			}
 		}
 		
@@ -64,17 +65,19 @@ class ProductService {
 		
 		if (productColorStr) {
 			productColor?.each {
-				if (action == "color") {
-					if(it.productColor == productColorStr) {
-						it.isColorSelected = true
-					}
-					
-					// Truong hop Buyer click "Size"
+//				if (action == "color") {
+//
+//					
+//					// Truong hop Buyer click "Size"
+//				
+//					if (it.productSize != productSizeStr) {
+//						// disable cac color
+//						it.enableSize4Buyer = false
+//					}
+//				}
 				
-					if (it.productSize != productSizeStr) {
-						// disable cac color
-						it.enableSize4Buyer = false
-					}
+				if(it.productColor == productColorStr) {
+					it.isColorSelected = true
 				}
 			}
 		}
@@ -88,15 +91,15 @@ class ProductService {
 	 * @return
 	 */
 	def productInventory(productColor, productSize, productInstance) {
-		def inventory = ProductExtend.executeQuery(
-			"select inventory from ProductExtend where product = :productInstance and productColor = :productColor and productSize = :productSize",
-			[productInstance: productInstance, productColor: productColor , productSize : productSize])
+		def productExtendList = ProductExtend.executeQuery(
+			"from ProductExtend where product = :productInstance and productColor = :productColor",
+			[productInstance: productInstance, productColor: productColor])
 		
-		if (inventory.size() == 0) {
-			return 0
+		if (productExtendList.size() == 0) {
+			return null
 		}
 		else {
-			return inventory[0]
+			return productExtendList.get(0)
 		}
 	}
 }

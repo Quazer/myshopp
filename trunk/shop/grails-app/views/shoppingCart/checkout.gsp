@@ -65,9 +65,9 @@
                         <dl>
                 <dt>Payable Total:</dt>
                 <dd>
-                    <span class="price">${CommonUtils.totalPriceOfShopCart(orderStatusTracking?.shoppingCart) }</span>
-                    
-                                                                            </dd>
+                    <span class="price">${CommonUtils.totalPriceOfShopCart(orderStatusTracking?.shoppingCart) }</span> 
+                    <span style="color: #CB1F16;font-weight: bold;">${CommonUtils.showCurrency()}</span>
+                </dd>
             </dl>
             <dl>
                 <dt>Date:</dt>
@@ -109,8 +109,8 @@
 
         var G_FIELD = {
         contractId: "_fmh.c._0.c",
-        orderAmount: "_fmh.c._0.p",
-        payableCurrency: "_fmh.c._0.pa",
+        orderAmount: "total_prices",
+        payableCurrency: "total_prices_currency",
         paymentMethod: "_fmh.c._0.m",
         cardNumber: "_fmh.c._0.car",
         firstName: "_fmh.c._0.f",

@@ -31,7 +31,7 @@
 	                                        <div class="item-details clearfix">
 	                                            <a name="anchor-${orderItem.product.sku }"></a>
 	                                            <div class="pimg">
-	                                               <g:link controller="product" action="show" params="[id:orderItem.product.id ]" target="_blank">
+	                                               <g:link controller="product" action="show" params="[sku:orderItem.product.sku ]" target="_blank">
 	                                                   <img src="${createLink(controller : 'imageStore',action: 'productImages', id: orderItem.product.productImage?.id)}" alt="${orderItem.product.name.encodeAsHTML() }">
 	                                               </g:link>
 	                                                
@@ -39,9 +39,18 @@
                                             <div class="p-info">
                                                 <input type="hidden" class="ae-product-id" value="${orderItem.product.id }">
                                                 <div class="p-title">
-                                                    <g:link controller="product" action="show" params="[id:orderItem.product.id ]" target="_blank">
+                                                    <g:link controller="product" action="show" params="[sku:orderItem.product.sku ]" target="_blank">
                                                         ${orderItem.product.name.encodeAsHTML() }
                                                     </g:link>
+                                                    
+                                                </div>
+                                                <div style="padding-top: 25px;">
+                                                
+                                                	Color: ${orderItem.productExtend?.productColor.encodeAsHTML().toUpperCase() }
+                                                <g:if test="${orderItem.productExtend?.productSize != '' }">
+                                                	<br>
+                                                	Size: ${orderItem.productExtend?.productSize.encodeAsHTML().toUpperCase() }
+                                                </g:if>
                                                 </div>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
                                             </div>
@@ -50,7 +59,7 @@
                                                     <input class="product-quantity-input" readonly="readonly" value="${orderItem.quantity}"> 
                                                     <span class="txt-unit-quantity"><g:message code="${orderItem.product.unit }"/></span> 
                                                     <span class="txt-multiply">×</span>
-                                                    <span>${CommonUtils.productPrice(orderItem.product) }</span>
+                                                    <span>${CommonUtils.productPriceAfterDiscount(orderItem.product, orderItem.productExtend)} ${CommonUtils.showCurrency()}</span>
                                                     <input class="hid-shopcart-id" type="hidden" value="${orderItem.id }" name="shopcartId">
                                                     <!--Only the promotion product need inventory, the default is 9999-->
 
@@ -66,7 +75,7 @@
 	                                        <div class="p-message">
 	                                            <div><g:message code="shoppingcart.msgaboutitem.label"/></div>
 	                                            <textarea name="messageToShop-${orderItem.product.id }" id="messageToShop-${orderItem.product.id }" cols="100" rows="1" class="message-text no-hit">
-	                                            ${orderItem.messageToShop} asdsad
+	                                            ${orderItem.messageToShop}
 	                                            </textarea>
 	                                            <p class="message-text-tip"><g:message code="shoppingcart.msgaboutitem.detail.label"/></p>
 	                                        </div>
@@ -136,7 +145,7 @@
 	                                <input type="hidden" name="coupon-code-item-201013235" class="coupon-code-input" value="">
 	                                <input type="hidden" class="son-order-price" value="41.74">
 	                                <p>
-	                                   <span>Subtotal:</span><span class="value">${CommonUtils.subTotalPerOrder(orderItem.product) }</span>
+	                                   <span>Subtotal:</span><span class="value">${CommonUtils.subTotalPerOrder(orderItem)} ${CommonUtils.showCurrency()}</span>
 	                                   <span class="ship-text">Shipping:</span> <span class="value">${CommonUtils.shippingMethodPrice(orderItem.shippingMethodPrice) }</span>
 	                                                                  </p>
 	                                                              <!--coupon start -->
@@ -150,7 +159,7 @@
 	                                                           -->
 	                                                                <!-- coupon end-->
 	                                <p class="whole-coupon-box hide">Coupon:<span class="whole-coupon-price"></span></p>
-	                                <p>Total:<span class="whole-price">${CommonUtils.totalPerOrder(orderItem) }</span></p>
+	                                <p>Total:<span class="whole-price">${CommonUtils.totalPerOrder(orderItem)} ${CommonUtils.showCurrency()}</span></p>
 	                            </td>
 	                        </tr>
 	                    </tfoot>
@@ -161,8 +170,8 @@
         <!-- All Total Price -->
         <div class="all-total-price">
             <a name="anchor-code"></a>
-                        <a href="http://shoppingcart.aliexpress.com/shopcart/shopcartDetail.htm">&lt; Return to Shopping Cart</a> 
-                        <span><em>All Total:</em><strong><span id="all-totalfee">${CommonUtils.totalPriceOfShopCart(cartList) }</span></strong></span>
+                        <a href="">&lt; Return to Shopping</a> 
+                        <span><em>All Total:</em><strong><span id="all-totalfee">${CommonUtils.totalPriceOfShopCart(cartList)} ${CommonUtils.showCurrency()}</span></strong></span>
         </div>
         <!-- -->
         <div class="foot-info-wrap clearfix">
@@ -184,19 +193,14 @@
         
                 
                                 <!-- Buyer Provide Email -->
-                <div class="buyer-provide-email">
-                     <input type="checkbox" checked="checked" id="cb-buyer-provide-email" name="agree-disclose-email">
-                     <input type="hidden" name="need-build-relation" value="true">
-                     <label for="cb-buyer-provide-email">I agree to disclose my email address to this member.</label>
-                </div>
+
                                 
                 <!-- Agreement -->
                 <ul class="agreement">
                     <li>Upon clicking 'Place Order', I acknowledge I have read and agreed to:</li>
-                    <li>- <a target="_blank" href="http://news.alibaba.com/article/detail/help/100454419-1-alibaba.com-transaction-services-agreement-international.html">Alibaba.com Transaction Services Agreement</a></li>
-                    <li>- <a target="_blank" href="http://news.alibaba.com/article/detail/help/100454412-1-alipay-escrow-services-agreement.html">Escrow Services Agreement</a></li>
-                    <li>- <a target="_blank" href="http://news.alibaba.com/article/detail/product-listing-policy-for-transaction-services/100130971-1-product-listing-policy-transaction-services.html">Product Listing Policy for Transaction Services</a></li>
-                    <li><a target="_blank" href="http://escrow.aliexpress.com/buyerprotection/index.html">Click here</a> to learn more about online transactions with Escrow</li>
+                    <li>
+                     	<a target="_blank" href=""> <g:message code="default.website.domain"/> Transaction Services Agreement</a>
+                     </li>
                 </ul
                 >
                  -->

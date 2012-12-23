@@ -15,6 +15,10 @@ class ProductExtend {
 	// Remain product in shop
 	int inventory
 	
+	// Price of product based on Color and Size
+	// default price will be productInstance.price
+	float price
+	
 	//TODO: need to check again
     static constraints = {
 		productColor nullable: true

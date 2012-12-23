@@ -16,10 +16,10 @@
 	            <tr>
 	                <td>${shoppingCart.orderNumber }</td>
 	                <td>${shoppingCart.dateAdded }</td>
-	                <td>${CommonUtils.subTotalPerOrder(shoppingCart.product) }</td>
-	                <td>${shoppingCart.shippingMethodPrice }&nbsp;&nbsp;</td>
+	                <td>${CommonUtils.subTotalPerOrder(shoppingCart) } ${CommonUtils.showCurrency()}</td>
+	                <td>${CommonUtils.shippingMethodPrice(shoppingCart.shippingMethodPrice) }&nbsp;&nbsp;</td>
 	                <td>${CommonUtils.discountOrCoupon(shoppingCart) }</td>
-	                <td>${CommonUtils.totalPerOrder(orderItem) }</td>
+	                <td>${CommonUtils.totalPerOrder(shoppingCart) } ${CommonUtils.showCurrency()}</td>
 	            </tr>
 		  </g:each>
 		</tbody>
@@ -28,7 +28,7 @@
 		<p id="special-coupon-amount" style="display: none;"
 			_originaldisplay="block">Save: US $5.00</p>
 		<p>
-			Sum: <span id="sum-payable-amount">${CommonUtils.totalPriceOfShopCart(orderStatusTracking.shoppingCart) }</span> 
+			Sum: <span id="sum-payable-amount">${CommonUtils.totalPriceOfShopCart(orderStatusTracking.shoppingCart) } </span> ${CommonUtils.showCurrency()} 
 		</p>
 	</div>
 </div>

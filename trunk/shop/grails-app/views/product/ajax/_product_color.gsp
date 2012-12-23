@@ -39,6 +39,7 @@
 			  		<i>selected</i>
 			  		<g:hiddenField name="productColor" value="${productExtend.productColor.encodeAsHTML() }"/>
 			  		<%
+					  productExtend.isColorSelected = true
 					  hiddenColorGenerated = true
 					  %>
 				</li>

@@ -26,13 +26,13 @@ def tokenKey = SynchronizerTokensHolder.store(session).generateToken(request.for
  
 <div id="header">
     <div class="clearfix" id="header-inner">
-        <div class="ali-logo">
-            <a href="http://www.aliexpress.com/">
+        <div class="logo" style="float:left">
+            <a href="${createLink(url:'/')}">
                 <img border="0" src="${resource(dir: 'images/shoppingcart', file: 'logo_stable_buyer.gif')}" alt="${message(code: 'default.shop.name')}">
             </a>
         </div>
         <ul class="help-secure">
-            <li class="order-help">Need help? <a target="_blank" href="http://help.aliexpress.com/categories_Placing_orders.html">Click here</a></li>
+            <li class="order-help">Need help? <a target="_blank" >Click here</a></li>
             <li class="secure-logo">
                 <a target="_blank" href="https://seal.verisign.com/splash?form_file=fdf/splash.fdf&dn=ESCROW.ALIBABA.COM&lang=en">
                     <img src="${resource(dir: 'images/shoppingcart', file: 'icon-other.jpg')}">
@@ -57,7 +57,7 @@ def tokenKey = SynchronizerTokensHolder.store(session).generateToken(request.for
      <!--  order info [start]  -->
             
     <div id="order-false-warn">
-        <div id="wishington-error-box" class="message-box error-box-b hide">We are sorry, but due to legal restrictions, AliExpress is unable to provide escrow services to residents located in Washington State.</div>
+        <div id="wishington-error-box" class="message-box error-box-b hide">We are sorry, but due to legal restrictions, we are unable to provide services to residents located in Washington State.</div>
             
             
     </div>
@@ -95,8 +95,7 @@ def tokenKey = SynchronizerTokensHolder.store(session).generateToken(request.for
 		    <div class="board errorA hide">
 		         <ul class="error-list">
 		             <li>
-		                 <strong>This supplier does not currently ship items to your country/region. Please select another address or contact the supplier for more details.</strong>
-		                 <p>Wholesale- Hot best Christmas Gift!! 5pcs/lot New Shuffle 3rd Generation 4GB MP3 MP4 Player (N/A)</p>
+		                 <strong>We do not currently ship items to your country/region. Please select another address or contact us for more details.</strong>
 		             </li>
 		         </ul>
 		    </div>
@@ -130,13 +129,13 @@ def tokenKey = SynchronizerTokensHolder.store(session).generateToken(request.for
 
     <script type="text/javascript">
     window.PLACEORDER = {
-        addressManagerAction:'/mailing_address_action',
-        orderAction:'/order_action',
-        addressManagerMethod:'event_submit_do_save_or_update_mailing_address',
-        orderMethod:'event_submit_do_create_order',
+        addressManagerAction:'',
+        orderAction:'',
+        addressManagerMethod:'',
+        orderMethod:'',
         defaultCountryCode: '',
-        selectedAddressCountryCode:'VN',
-        couponServer: 'http://escrow.alibaba.com',
+        selectedAddressCountryCode:'',
+        couponServer: '',
         isFirst:false
     }
     </script>
@@ -145,19 +144,12 @@ def tokenKey = SynchronizerTokensHolder.store(session).generateToken(request.for
     <!-- edit quantity dialog START -->
     <g:form action="updateQuantity" method="POST" name="dlg-edit-quantity" style="display: none; z-index: 99; left: 508px; top: 328px;">
         <div class="inner clearfix">
-		    <script type="text/javascript">
-		    $(function() {
-			    alert('here')
-			    document.write('<a>cecececec</a>')
-		        alert($('#org.codehaus.groovy.grails.SYNCHRONIZER_TOKEN').val())
-		    });
-		    </script>
-            <input type="hidden" name="productId" id="hid-product-id-quantity" value="608514088">
+            <input type="hidden" name="productId" id="hid-product-id-quantity" value="">
             <a id="quantity-minus" class="quantity-minus" href="javascript:void(0);">minus</a>
             <input name="update_quantity" id="txt-editable-quantity" class="layout-input" autocomplete="off">
             <a id="quantity-add" class="quantity-add" href="javascript:void(0);">plus</a>
             <span id="dlg-unit-quantity">piece</span>
-            <input type="hidden" name="shopcartId" id="hid-shopcart-id-quantity" value="950551662">
+            <input type="hidden" name="shopcartId" id="hid-shopcart-id-quantity" value="">
             
            
             <input type="hidden" name="org.codehaus.groovy.grails.SYNCHRONIZER_TOKEN" id="org.codehaus.groovy.grails.SYNCHRONIZER_TOKEN" value="${tokenKey}">

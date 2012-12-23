@@ -50,6 +50,23 @@ class CommonUtils {
 		return "{US productPrice}"
 	}
 	
+	def static productPriceAfterDiscount(Product productInstance,ProductExtend productExtendInstance) {
+		def price = 0
+		if (productExtendInstance?.price > 0) {
+			price = productExtendInstance.price
+		}
+		else {
+			price = productInstance?.purchargePrice
+		}
+		
+		if (productInstance?.discount > 0) {
+			price = price - (price * productInstance.discount / 100)
+		}
+		
+		price
+	}
+	
+	
 	// return price of product WITHOUT currency
 	// ex: 32
 	def static priceOfProduct(Object productInstance) {
@@ -57,12 +74,24 @@ class CommonUtils {
 		return "{priceOfProduct}"
 	}
 	
-	def static subTotalPerOrder(product) {
-		return "{subtotal }"
+	def static subTotalPerOrder(ShoppingCart shoppingCartItem) {
+		def price = productPriceAfterDiscount(shoppingCartItem?.product, shoppingCartItem?.productExtend)
+		def quantity = shoppingCartItem?.quantity
+		
+		price = price * quantity
+		
+		return price
 	}
 	
 	def static totalPerOrder(ShoppingCart orderItem) {
-		return "{totalPerOrder}"
+		def price = subTotalPerOrder(orderItem)
+		def shippingPrice = orderItem?.shippingMethodPrice
+		
+		if (shippingPrice < 99999) { // free shipping
+			price = price + shippingPrice
+		}
+		
+		return price
 	}
 	
 	/**
@@ -74,7 +103,7 @@ class CommonUtils {
 	def static totalPriceOfShopCart(cartList) {
 		def price = sumPriceOfShopCart(cartList)
 		
-		return "{totalPriceOfShopCart}"
+		return price
 	}
 	
 	/**
@@ -86,12 +115,12 @@ class CommonUtils {
 		def price = 0.00
 		for (ShoppingCart shopItem : cartList) {
 			if (shopItem.product) {
-				price += shopItem.product?.purchargePrice
+				price += totalPerOrder(shopItem)
 			}
 		}
 		
 		
-		// TODO: add coupon + shippingCost
+		// TODO: add coupon
 		return price
 	}
 	
@@ -347,9 +376,21 @@ class CommonUtils {
 		 Product.list()
 	 }
 	 
+	 /**
+	  * Show shipping method price (LABEL only)
+	  * 
+	  * @param price
+	  * @return
+	  */
 	 static shippingMethodPrice(price) {
 		 //TODO: need to verify
-		 price
+		 if (price > 99998) {
+			 "Free shipping"
+		 }
+		 else {
+			 price
+		 }
+		 
 	 }
 	 
 	 static shippingMethodTimeOfDeliver(timeOfDeliver) {
