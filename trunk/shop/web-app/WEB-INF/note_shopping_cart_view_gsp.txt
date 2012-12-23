@@ -75,3 +75,6 @@ PAGE_TIMING.startRenderImage.src = '${resource(dir: 'images/shoppingcart', file:
 
 15. Chinh sua lai file "js/common.js" 
   vd: WEB_ROOT 
+
+  
+16. Hien tai chua xu ly truong hop product het hang -> co the phai sua: category/show, product/show
