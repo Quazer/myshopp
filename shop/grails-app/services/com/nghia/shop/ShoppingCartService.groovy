@@ -33,6 +33,7 @@ class ShoppingCartService {
 			}
 		}
 		
+		
 		if (!error && shoppingCartList.size > 0) {
 			def orderStatusTracking = new OrderStatusTracking()
 			orderStatusTracking.status = 3
@@ -94,17 +95,17 @@ class ShoppingCartService {
 		def productSizeParam = params.productSize
 		
 		// Get productExtend to get product color/size
-		def productExtendList = ProductExtend.executeQuery(
-			"from ProductExtend where product = :productInstance and productColor = :productColor and productSize = :productSize",
-			[productInstance: product, productColor: productColorParam , productSize : productSizeParam])
-		def productExtend
-		if (productExtendList?.size > 0) {
-			productExtend = productExtend.get(0)
-		}
+//		def productExtendList = ProductExtend.executeQuery(
+//			"from ProductExtend where product = :productInstance and productColor = :productColor and productSize = :productSize",
+//			[productInstance: product, productColor: productColorParam , productSize : productSizeParam])
+//		def productExtend
+//		if (productExtendList?.size > 0) {
+//			productExtend = productExtend.get(0)
+//		}
 		
 		def shoppingCart = new ShoppingCart()
 		shoppingCart.product = product
-		shoppingCart.productExtend = productExtend
+		//shoppingCart.productExtend = productExtend
 		shoppingCart.member = currentuserLogin
 		shoppingCart.quantity = params?.long("quantity")
 		shoppingCart.shippingMethodPrice = shippingMethodPrice

@@ -45,6 +45,8 @@ class Product {
 	String packageSize
 	// Package info --------------------
 	
+	boolean isSoldOut = false
+	
 	// main product image
 	ImageStore productImage // prop of this object "isSelected" will be set as TRUE when CREATE Product
 	

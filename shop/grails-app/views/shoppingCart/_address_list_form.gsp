@@ -12,6 +12,10 @@
 			  %>
               <li class="single-address order-address-selected">
                   <div class="order-address-name">
+                  		<%--
+                  		<input type="radio" checked name="addressId" class="rdo-address address-item-id" value="${mainShippingAddress.id }">
+                  		<label class="the-reciver contact-name-text" for="">${mainShippingAddress.name }</label>
+                  		 --%>
                        <input type="radio" checked name="addressId" class="rdo-address address-item-id" value="${mainShippingAddress.id }">
                        <label class="the-reciver contact-name-text" for="">${mainShippingAddress.name }</label>
                   </div>
@@ -51,6 +55,10 @@
               <g:each in="${currentuserLogin.shippingAddress }" var="shippingAddress">
 	              <li class="single-address order-address">
                   <div class="order-address-name">
+                  	<%--
+					   <input type="radio" name="addressId" class="rdo-address address-item-id" value="${shippingAddress.id }">
+                       <label class="the-reciver contact-name-text" for="">${shippingAddress.name }</label>
+                  	 --%>
                        <input type="radio" name="addressId" class="rdo-address address-item-id" value="${shippingAddress.id }">
                        <label class="the-reciver contact-name-text" for="">${shippingAddress.name }</label>
                   </div>

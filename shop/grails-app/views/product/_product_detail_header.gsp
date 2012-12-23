@@ -14,10 +14,10 @@
 											
 											<%-- 
 											<input type="hidden" value="wholesaleProduct"> 
-											<input type="hidden" name="from" value="aliexpress">
+											<input type="hidden" name="from" value="">
 											<input type="hidden" name="" id="objectStockpile" value=""> 
 											<input type="hidden" name="wsOrderFrom" value="product_detail">
-											<input type="hidden" id="hid-product-id" value="688800292">
+											<input type="hidden" id="hid-product-id" value="">
 											<input type="hidden" name="ws_score_session_id" value="">
 											<input type="hidden" id="inf-sel-standard" name="standard">
 											--%>
@@ -31,7 +31,7 @@
 											
 											<div class="inf-pnl-price-detail">
 												<dl>
-													<input type="hidden" id="sku-price-store" value="105.00">
+													<input type="hidden" id="sku-price-store" value="">
 													<input type="hidden" id="bulk-order-store" value="4">
 													<input type="hidden" id="act-sku-bulk-price-store" value="100.80">
 
@@ -41,12 +41,19 @@
 														    <%-- 
 															<span class="currency notranslate" itemprop="priceCurrency" content="AUD">US $</span>
 															--%>
+															
+															     
 															<span class="value" id="sku-price" itemprop="price">
-															     ${CommonUtils.showPriceWithCurrency(productInstance.purchargePrice) }</span>
+															     ${CommonUtils.productPriceAfterDiscount(productInstance, null) } ${CommonUtils.showCurrency()}
+															</span>
 															<span class="separator">/</span> 
 														    <span class="unit">
 															     <g:message code="${productInstance.unit }"/> 
 															</span>
+															
+															<del class="original-price">
+																${CommonUtils.showPriceWithCurrency(productInstance.purchargePrice)} ${CommonUtils.showCurrency()} / <g:message code="${productInstance.unit }"/>
+															</del>
 														</div>
 
 														<span class="unit-disc">${productInstance.note }
@@ -54,13 +61,13 @@
 													</dd>
 
 												</dl>
-												<dl>
+												<dl style="display: none">
 													<dt>
 														<span>
 														  <g:message code="product.bulkprice.label"/>:
 														 </span>
 													</dt>
-													<dd>
+													<dd >
 														<div style="display: none">
 															<strong class="cost cost-m">US $ 103.00</strong> <span
 																class="separator">/</span> <span class="unit">piece
@@ -128,7 +135,16 @@
 														id="hid-freight" value="0.00">
 													<div id="inf-pnl-total-price" class="clearfix"
 														style="visibility: visible;">
-														<strong style="display:none;">$105.00 x 1 + $0.00 = </strong><span class="price price-highlight"><span class="currency notranslate">US $</span><span class="value">105.00</span></span></div>
+														<strong style="display:none;">$105.00 x 2 + $0.00 = </strong>
+														<span class="price price-highlight">
+															<g:each in="${productColors}" var="productColor">
+																<g:if test="${productColor.isColorSelected }">
+																	<span class="currency notranslate">US $</span><span class="value">${productColor.price }</span>
+																</g:if>
+															</g:each>
+															
+														</span>
+													</div>
 
 												</dd>
 											</dl>

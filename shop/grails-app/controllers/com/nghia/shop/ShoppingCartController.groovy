@@ -4,7 +4,7 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class ShoppingCartController {
 
-    static allowedMethods = [save: "POST", update: "POST", delete: "POST", add:"POST", checkout: "POST", placeOrder:"POST"]
+    static allowedMethods = [save: "POST", update: "POST", delete: "POST", add:"POST", placeOrder:"POST"]
 	def springSecurityService
 	def memberService
 	def shoppingCartService 
@@ -37,58 +37,21 @@ class ShoppingCartController {
 				// Kiem tra kho hang
 				def productColorParam = params.productColor
 				def productSizeParam = params.productSize
-				def inventory = 10
-				//= productService.productInventory(productColorParam, productSizeParam, product)
+				ProductExtend productExtend = productService.productInventory(productColorParam, productSizeParam, product) 
+				def inventory = productExtend == null ? 0 : productExtend.inventory
 				
 				// Truong hop con hang
-				if (inventory > 0 && inventory > params?.int("quantity")) {
-					def shoppingCart = shoppingCartService.addShoppingCart(product, currentuserLogin, params)
+				if (inventory > 0 && inventory >= params?.int("quantity")) {
+					ShoppingCart shoppingCart = shoppingCartService.addShoppingCart(product, currentuserLogin, params)
 					if (shoppingCart.hasErrors()) {
 						print "error"
 					}
 					else {
+						shoppingCart.productExtend = productExtend
+						shoppingCart.save(flush:true)
 						print "shoppingCart: " + shoppingCart.id
 					}
-//					def shippingMethod = ShippingMethod.get(params?.shipMethod)
-//					def shippingMethodPrice = 0
-//					def tmp
-//					def methodName
-//					def price
-//					for (int i = 1; i <= 8; i++) {
-//						methodName = "shippingMethod" + i
-//						tmp = product."${methodName}"
-//						if (shippingMethod == tmp) {
-//							price = "shippingMethodPrice" + i
-//							shippingMethodPrice = product."${price}"
-//							break
-//						}
-//					}
-//					
-//					
-//					//TODO: very important !!!! -------------
-//					//need to check shoppingCart is existing in DB?
-//					//if existing, will increase quantity
-//					
-//					def productOrdered = new ProductOrdered()
-//					productOrdered.properties = product.properties
-//					def shoppingCart = new ShoppingCart()
-//					shoppingCart.product = product
-//					shoppingCart.member = currentuserLogin
-//					shoppingCart.quantity = params?.long("quantity")
-//					shoppingCart.shippingMethodPrice = shippingMethodPrice
-//					
-//					//TODO: modify again
-//					// If "shippingMethodPrice = 0" , it should set as "Free shipping"
-//					shoppingCart.shippingMethod = shippingMethod
-//					shoppingCart.save(flush:true)
-//					
-//					if (shoppingCart.hasErrors()) {
-//						//TODO: return back to Product detail
-//					}
 				}
-				
-
-				
 				
 			}
 			else {
@@ -123,9 +86,34 @@ class ShoppingCartController {
 			def isUpdated
 			def currentuserLogin = springSecurityService.currentUser as Member
 			
-			if (params.addressOperateFlag == placeOrderAction) {
-				// TODO: place an order -> move to "check out" page
-				// This process has been moved to "placeOrder" action
+			// Thay doi main address
+			if (params.addressOperateFlag == placeOrderAction && params.addressId?.matches("\\d{1,12}")) {
+				def addressId = Long.parseLong(params.addressId)
+				def tmpAddress
+				boolean isChanged
+				if (addressId != currentuserLogin.shippingDetail.id) {
+					def shippingAddressList = currentuserLogin.shippingAddress
+					for (ShippingDetail shippingAddress : shippingAddressList) {
+						if (shippingAddress.id == addressId) {
+							tmpAddress = currentuserLogin.shippingDetail
+							
+							currentuserLogin.shippingDetail = shippingAddress
+							
+							currentuserLogin.shippingAddress.remove(shippingAddress)
+							
+							isChanged = true
+							break
+						}
+					}
+					
+					if (isChanged) {
+						currentuserLogin.shippingAddress.add(tmpAddress)
+					}
+					
+					
+				}
+				
+				
 			}
 			else if ((params.addressOperateFlag == updateAddressAction || params.addressOperateFlag == createAddressAction)) {
 					
@@ -194,36 +182,23 @@ class ShoppingCartController {
 	
 	def placeOrder() {
 		withForm {
-			print params
-			def agreeDiscloseEmail = request.getParameter("agree-disclose-email")
-			//withForm {
-			if (agreeDiscloseEmail?.trim()) {
-				
-				def productIds = params.purchaseId
-				def idOrderTracking
-				if (productIds) {
-					def currentuserLogin = springSecurityService.currentUser as Member
-					idOrderTracking = shoppingCartService.checkout(productIds, currentuserLogin, params)
-				}
-		
-				if (idOrderTracking) {
-					// show the end day of Order
-					//def endDateOfOrder = orderStatusTracking.date + 7
-					//session.orderTrackingNumberFromCheckout = idOrderTracking 
-					//redirect(action: "checkout")
-					//return
-					//[orderStatusTracking : orderStatusTracking, endDateOfOrder: endDateOfOrder.time]
-					[orderStatusTracking: idOrderTracking]
-				}
-				else {
-					// TODO: need to set error to flash.message ????
-					redirect(action: "myCart")
-					return
-				}
+			def productIds = params.purchaseId
+			def idOrderTracking
+			if (productIds) {
+				def currentuserLogin = springSecurityService.currentUser as Member
+				idOrderTracking = shoppingCartService.checkout(productIds, currentuserLogin, params)
+			}
+	
+			if (idOrderTracking) {
+				// show the end day of Order
+				//def endDateOfOrder = orderStatusTracking.date + 7
+				//session.orderTrackingNumberFromCheckout = idOrderTracking 
+				//redirect(action: "checkout")
+				//return
+				//[orderStatusTracking : orderStatusTracking, endDateOfOrder: endDateOfOrder.time]
+				[orderStatusTracking: idOrderTracking]
 			}
 			else {
-				flash.message = "You should agree our policy."
-				
 				// TODO: need to set error to flash.message ????
 				redirect(action: "myCart")
 				return

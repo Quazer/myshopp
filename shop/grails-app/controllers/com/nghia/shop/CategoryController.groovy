@@ -127,7 +127,7 @@ class CategoryController {
 				//between('inventory', minQuantity, maxQuantity)
 			}
 			
-			params.properties = CommonUtils.validateParamsForPaging(params, params.gotoPage, totalRecCount, 10, 100, listSortBy)
+			params.properties = CommonUtils.validateParamsForPaging(params, params.gotoPage, totalRecCount, 20, 100, listSortBy)
 
 			productList = Product.createCriteria().list(params) {
 				ilike("name", pattern)
@@ -143,7 +143,7 @@ class CategoryController {
 				//between('inventory', minQuantity, maxQuantity)
 			} 
 
-			params.properties = CommonUtils.validateParamsForPaging(params, params.gotoPage, totalRecCount, 10, 100, listSortBy)
+			params.properties = CommonUtils.validateParamsForPaging(params, params.gotoPage, totalRecCount, 20, 100, listSortBy)
 			
 			productList = Product.createCriteria().list(params) {
 				eq("category.id", categoryInstance.id)
