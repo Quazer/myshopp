@@ -181,36 +181,12 @@ def tokenKey = SynchronizerTokensHolder.store(session).generateToken(request.for
 <div id="order-full-mask" style="display: none;"><iframe class="hack-iframe" src="about:blank" frameborder="no"></iframe></div>
 
 
-
-<div class="footer" id="footer">
-    <a rel="nofollow" href="http://www.alibaba.com/aboutalibaba/index.html"><strong>Company Info</strong></a> - <a rel="nofollow" href="http://www.alibaba.com/aboutalibaba/partnership_with_alibaba.html"><strong>Partnerships</strong></a><br>
-    <a href="http://www.aliexpress.com/">Wholesale</a> - <a rel="nofollow" href="http://www.aliexpress.com/all-wholesale-products.html">Buy</a> - <a rel="nofollow" href="http://seller.aliexpress.com/">Sell</a> - <a href="http://www.aliexpress.com/activities/prmotions/index.html">All Promotions</a> - <a rel="nofollow" href="http://escrow.alibaba.com/?tracelog=ws_topbar">My Orders</a> - <a rel="nofollow" href="http://help.aliexpress.com/?tracelog=ws_topbar">Help</a> - <a href="http://www.aliexpress.com/sitemap.html">Site Map</a> - <a rel="nofollow" href="http://www.aliexpress.com/help/contactus.htm">Customer Service</a>
-    <p>
-    Browse Alphabetically:
-    <a href="http://www.aliexpress.com/product.html">All Products</a>,
-    <a href="http://www.aliexpress.com/free-shipping.html">Free Shipping</a>,
-    <a href="http://www.aliexpress.com/wholesale.html">Wholesale Product</a>,
-    <a href="http://www.aliexpress.com/promotion.html">Promotion</a>
-    <br><br>
-    <a rel="nofollow" href="http://www.alibaba.com/aboutalibaba/aligroup/index.html">Alibaba Group</a>:
-    Alibaba.com: <a rel="nofollow" href="http://china.alibaba.com/" target="_blank">Alibaba China</a>
-    - <a href="http://www.alibaba.com/" target="_blank">Alibaba International</a>
-    - <a href="http://www.aliexpress.com/" target="_blank">AliExpress</a>
-    - <a rel="nofollow" href="http://www.alibaba.co.jp/" target="_blank">Alibaba Japan</a>
-    | <a rel="nofollow" href="http://www.taobao.com/" target="_blank">Taobao</a>
-    | <a rel="nofollow" href="http://www.alipay.com/" target="_blank">Alipay</a>
-    | <a rel="nofollow" href="http://www.yahoo.com.cn/" target="_blank">Yahoo! China</a>
-    | <a rel="nofollow" href="http://www.koubei.com/" target="_blank">Koubei.com</a>
-    | <a rel="nofollow" href="http://www.alisoft.com/" target="_blank">Alisoft</a>
-    </p>
-    <a rel="nofollow" href="http://news.alibaba.com/article/detail/help/100105711-1-product-listing-policy.html">Product Listing Policy</a> - <a rel="nofollow" href="http://news.alibaba.com/article/detail/help/100104162-1-intellectual-property-protection-policy-infringement.html">Intellectual Property Policy and Infringement Claims</a> - <a rel="nofollow" href="http://news.alibaba.com/article/detail/help/100103729-1-privacy-policy.html">Privacy Policy</a> - <a rel="nofollow" href="http://news.alibaba.com/article/detail/help/100103727-1-terms-use.html">Terms of Use</a> - <a rel="nofollow" href="http://escrow.aliexpress.com/buyerprotection/index.html?tracelog=ws_topbar">Safe Trading Tips</a> - <a rel="nofollow" href="http://legal.alibaba.com/legal/site/login/login.htm?site_type=international&language_id=english">Report Intellectual Property Right Infringement</a>
-    <br><a rel="nofollow" href="http://www.alibaba.com/trade/servlet/page/static/copyright_policy">Copyright Notice</a> © 1999-2011 Alibaba.com Hong Kong Limited and licensors. All rights reserved.
-</div>
-
+<g:render template="/category/footer"></g:render>
 
                                         
 <script type="text/javascript" src="${resource(dir: 'js/shoppingcart', file: 'page-timing-MODERN_BROWSER-v_42e38a62962e5_0.js')}"></script>
 
 
 
-</body><span id="skype_highlighting_settings" display="none" autoextractnumbers="1"></span><object id="skype_plugin_object" location.href="http://shoppingcart.aliexpress.com/order/confirm_order.htm?affiliate=BBACDEA6E67C159F45EEB9F9022F00A2E7DB350F4C5BBA5AE5049C04F3B14F33D0FAA2B456E90C395DC02F7BC37A3BB74A7FDADFB18DB3E5AF5541DAD9F9214A7D08C4F6894B06ACA2D36965736A28F1C2336C9D1A64BAC95F1DB6F9CC3F5751&amp;wsOrderFrom=shopcart&amp;availableProductShopcartIds=950551662,950551478,&amp;ws_score_session_id=a9d145fa5244422f82425f942645daaf#anchor-950551662" location.hostname="shoppingcart.aliexpress.com" style="position: absolute; visibility: hidden; left: -100px; top: -100px;" width="0" height="0" type="application/x-vnd.skype.click2call.chrome.5.7.0"></object></html>
+</body>
+</html>

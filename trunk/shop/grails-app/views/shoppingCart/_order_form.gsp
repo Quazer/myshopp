@@ -14,7 +14,7 @@
 	                <table class="order-table">
 	                     <thead>
 	                        <tr>
-	                            <th width="740">SKU: ${orderItem.product.sku }</th>
+	                            <th width="740">Order number: ${orderItem.orderNumber }</th>
 	                            <th></th>
 	                        </tr>
 	                     </thead>
@@ -201,14 +201,9 @@
                     <li>
                      	<a target="_blank" href=""> <g:message code="default.website.domain"/> Transaction Services Agreement</a>
                      </li>
-                </ul
-                >
-                 -->
+                </ul>
+                 
             </div>
-            <div class="payment-method">
-                <div id="inf-bp"><div class="bp-banner"><a href="http://www.aliexpress.com/buyerprotection/index.html" rel="nofollow"><img class="banner-img" src="${resource(dir: 'images/shoppingcart', file: 'bp_banner_975x75.png')}"></a></div></div>
-                <span class="payment-method-title">Payment Methods:</span>
-                <ul><li class="pm-type-visa-s"></li><li class="pm-type-mastercard-s"></li><li class="pm-type-westernUnion-s"></li><li class="pm-type-moneybookers-s"></li><li class="pm-type-maestro-s"></li><li class="pm-type-solo-s"></li><li class="pm-type-cartebleue-s"></li><li class="pm-type-4b-s"></li><li class="pm-type-euro6000-s"></li><li class="pm-type-cartasi-s"></li><li class="pm-type-postepay-s"></li><li class="pm-type-banktransfer-s"><strong>Bank Transfer</strong></li></ul>
-            </div>
+
         </div>
      </div>

@@ -14,20 +14,20 @@ class BootStrap {
 	def initData() {
 		def shippingDetail = new ShippingDetail()
 		shippingDetail.name = "Nghia Nguyen"
-		shippingDetail.street1 = "street 1"
-		shippingDetail.street2 = "street 2"
-		shippingDetail.city = "city"
-		shippingDetail.state = "state"
-		shippingDetail.country = "country"
-		shippingDetail.zip = "zip"
-		shippingDetail.mobilePhone = "mobiphone"
-		shippingDetail.homePhone = "home[hon"
+//		shippingDetail.street1 = "street 1"
+//		shippingDetail.street2 = "street 2"
+//		shippingDetail.city = "city"
+//		shippingDetail.state = "state"
+//		shippingDetail.country = "country"
+//		shippingDetail.zip = "zip"
+//		shippingDetail.mobilePhone = "mobiphone"
+//		shippingDetail.homePhone = "home[hon"
 		
 		shippingDetail.save(flush:true)
 		
-		def admin = new Member(username: "nghia", password: "1", shippingDetail: shippingDetail).save(flush:true)
-		def supplier1 = new Member(username: "supplier1", password: "2").save(flush:true)
-		def supplier2 = new Member(username: "supplier2", password: "3").save(flush:true)
+		def admin = new Member(username: "nghia", password: "1", firstName:"", lastName:"", shippingDetail: shippingDetail).save(flush:true)
+		def supplier1 = new Member(username: "supplier1", password: "2",firstName:"", lastName:"" ).save(flush:true)
+		def supplier2 = new Member(username: "supplier2", password: "3",firstName:"", lastName:"" ).save(flush:true)
 		
 		
 		def cat1 = new Category(name : "May vi tinh").save(flush:true)

@@ -96,11 +96,11 @@
 				<input type="hidden" id="_fmh.c._0.c" name="_fmh.c._0.c"
 					value="2012111746552553"> <input type="hidden"
 					id="_fmh.c._0.p" name="_fmh.c._0.p" value="680.00"> <input
-					type="hidden" id="_fmh.c._0.pa" name="_fmh.c._0.pa" value="USD">
+					type="hidden" id="_fmh.c._0.pa" name="_fmh.c._0.pa" value="VND">
 				<input type="hidden" id="_fmh.c._0.is" name="_fmh.c._0.is"
 					value="true"> <input type="hidden"
 					name="deviceFingerprintID"
-					value="4c6b644f6544394951437454557a394b5056527653565244545777775a7a30391353207729402">
+					value="">
 				<dl>
 					<dt>
 						<label id="cardholder-name-label" class="required"

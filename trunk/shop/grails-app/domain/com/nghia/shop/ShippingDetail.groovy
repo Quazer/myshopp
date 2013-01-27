@@ -12,5 +12,13 @@ class ShippingDetail {
 	String homePhone
 	
     static constraints = {
+		street1 nullable:true
+		street2 nullable:true
+		city nullable:true
+		state nullable:true
+		country nullable:true
+		zip nullable:true
+		mobilePhone nullable:true
+		homePhone nullable:true
     }
 }

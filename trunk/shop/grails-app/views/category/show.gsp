@@ -225,8 +225,10 @@ banner advertiment
 
 		<div class="col-sub">
 		    <!-- left menu -->
+		    <%--
 		    <g:render template="left_menu"/>
-
+ 			--%>
+ 			
             <style type="text/css">
             .layout{ margin-bottom:10px;}
             </style>
@@ -278,6 +280,8 @@ banner advertiment
 </script>
  --%>
  
+
+
 <script type="text/javascript" src="${resource(dir: 'js/category', file: 'search-list-aw-MODERN_BROWSER-v_7c262e7ebd78a_158d3040a0bea0.js')}"></script>
 
 </body>

@@ -18,7 +18,7 @@ class ShoppingCartService {
 							if (shoppingCart && !error &&shoppingCart.isCheckout == false) {
 								shoppingCart.messageToShop = params."${tmp}".trim()
 								shoppingCart.isConfirmed = true
-								shoppingCart.orderNumber = CommonUtils.generateOrderNumber(shoppingCart)
+								//shoppingCart.orderNumber = CommonUtils.generateOrderNumber(shoppingCart)
 								if (shoppingCart.hasErrors()) {
 									error = true
 									break
@@ -104,6 +104,7 @@ class ShoppingCartService {
 //		}
 		
 		def shoppingCart = new ShoppingCart()
+		shoppingCart.orderNumber = Calendar.getInstance().getTime().time
 		shoppingCart.product = product
 		//shoppingCart.productExtend = productExtend
 		shoppingCart.member = currentuserLogin

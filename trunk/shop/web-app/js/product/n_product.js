@@ -61,18 +61,7 @@ $(function() {
 });
 
 function refreshProductDetailHeader(action, colorVal, sizeVal) {
-	/**
-	jQuery.ajax({
-		type:'post',
-		data:{exserver: exserver, emailacc:
-		emailacc, emailpw: emailpw},
-		url:'/faql_dev/project/connect2ExServer',
-		success:function(data,textStatus){
-			completeConnect2Ex(data,
-				exserver, emailacc,
-				emailpw);},
-		error:function(XMLHttpRequest,textStatus,errorThrown){}});
-	**/
+
 	var objectId = $("#objectId").val()
 	var selectedQuantity = $('#inf-txt-quantity').val()
 	var selectedCountry

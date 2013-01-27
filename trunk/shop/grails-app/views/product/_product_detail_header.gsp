@@ -44,7 +44,7 @@
 															
 															     
 															<span class="value" id="sku-price" itemprop="price">
-															     ${CommonUtils.productPriceAfterDiscount(productInstance, null) } ${CommonUtils.showCurrency()}
+															    ${CommonUtils.productPriceAfterDiscount(productInstance, null) } ${CommonUtils.showCurrency()}
 															</span>
 															<span class="separator">/</span> 
 														    <span class="unit">
@@ -69,7 +69,7 @@
 													</dt>
 													<dd >
 														<div style="display: none">
-															<strong class="cost cost-m">US $ 103.00</strong> <span
+															<strong class="cost cost-m">10$</strong> <span
 																class="separator">/</span> <span class="unit">piece
 															</span>
 														</div>
@@ -103,28 +103,40 @@
 															<span class="free">Free Shipping</span>
 														</span> 
 														
-														<%--
+														
 														<span class="shipping-to">to</span> 
-														<a id="inf-lnk-shipping"
-															class="shipping-link" rel="nofollow"
-															href="javascript:void(0);">
-														<span id="shipping-country-name">Vietnam</span> 
-														<span class="shipping-via">Via</span> EMS</a>
-														 --%>
+														<select name="countrySelect" id="countrySelect">
+															<option>Viet Nam</option>
+															<option>China</option>
+															<option>Hong Kong</option>
+															<option>Taiwan</option>
+															<option>Germany</option>
+															<option>Japan</option>
+															<option>Australia</option>
+															<option>United States</option>
+															<option>United Kingdom</option>
+															<option>France</option>
+															<option>Canada</option>
+															<option>Singapore</option>
+															<option>Thailand</option>
+															
+														</select>
+														
+														
 													</div>
 												</dd>
 											</dl>
 											<dl>
 												<dt>Delivery Time:</dt>
 												<dd>
-													<span id="inf-pnl-delivery-time" class="delivery-time">4-10 days</span>
+													<span id="inf-pnl-delivery-time" class="delivery-time">20 - 45 days</span>
 												</dd>
 											</dl>
 
 
 											<dl>
 												<dt>Processing Time:</dt>
-												<dd class="proce-time">Ships out within 7 days</dd>
+												<dd class="proce-time">Ships out within 5 days</dd>
 											</dl>
 
 											<dl>

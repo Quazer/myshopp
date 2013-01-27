@@ -1,34 +1,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	
-    <title>Create your Alibaba.com account</title>
-    <meta name="keywords" content="Alibaba Manufacturer Directory - Suppliers, Manufacturers, Exporters &amp; Importers">
-    <meta name="description" content="Alibaba Manufacturer Directory - Suppliers, Manufacturers, Exporters &amp; Importers">
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
 		
     <link rel="stylesheet" type="text/css" href="${resource(dir: 'css/register', file: 'join.css')}">
 	
-    <script type="text/javascript" async="" src="${resource(dir: 'js/index', file: 'dc.js')}"></script>
-    <script type="text/javascript" async="" src="${resource(dir: 'js/index', file: 'base-mod.js')}">
+    <script type="text/javascript" async="" src="${resource(dir: 'js/register', file: 'dc.js')}"></script>
+    <script type="text/javascript" async="" src="${resource(dir: 'js/register', file: 'base-mod.js')}"></script>
+    
     <script type="text/javascript" src="${resource(dir: 'js/register', file: 'ae.js')}"></script>
     
 	<script type="text/javascript" src="${resource(dir: 'js/register', file: 'form_validator.js')}"></script>
     <script type="text/javascript" src="${resource(dir: 'js/register', file: 'message.js')}"></script>
-    <script type="text/javascript" src="${resource(dir: 'js/register', file: 'area_focus.js')}" charset="iso-8859-1"></script>
+    <script type="text/javascript" src="${resource(dir: 'js/register', file: 'area_focus.js')} charset="iso-8859-1"></script>
     <script type="text/javascript" src="${resource(dir: 'js/register', file: 'connection.js')}"></script>
     
-<script id="yui__dyn_0" type="text/javascript" charset="utf-8" >
-wsScoreSessionId = "024fabd88e3d49cb8bd582184989b9c2";
-</script>
 </head>
 
 <body><script type="text/javascript" src="${resource(dir: 'js/register', file: 'beacon_ws.js')}"></script>             
 <script type="text/javascript">
-var dmtrack_c='{ali_resin_trace=JoinInStepLog=joinstep0%26%26%26main}'; 
-var dmtrack_pageid='cbcd34cfcdcc74121356363622'; 
-sk_dmtracking();
-</script>             
- 
+var dmtrack_c='{ali_resin_trace=JoinInStepLog=joinstep0%26%26%26main}';
+var dmtrack_pageid='cbcd34cfcdcc74121356363622'; sk_dmtracking();</script>             
 	<div style="padding-bottom: 0pt;" id="header">
         <div id="header-inner">
             <div id="logo"><a href="http://www.aliexpress.com/" title="http://www.aliexpress.com">http://www.aliexpress.com</a></div>
@@ -38,7 +30,8 @@ sk_dmtracking();
     <!-- header -->
     
     <div id="page">
-	<form name="MemberJoinForm" method="post" onsubmit="return formSubmit();">
+    <g:form name="MemberJoinForm" onsubmit="return formSubmit();" method="post" action="saveUser">
+    
 	<input name="_csrf_token_" type="hidden" value="4zf8tg8q76fo">
     <input type="hidden" name="action" value="buyerJoin/main_buyer_register_action">
     <input type="hidden" name="event_submit_do_buyer_register" value="anything">
@@ -47,29 +40,16 @@ sk_dmtracking();
 	<input type="hidden" name="cc" value="join201109">
     <input type="hidden" name="src" value="">
     <input type="hidden" name="groupName" value="expressJoinGroup">  
-        <input type="hidden" name="ws_score_session_id" id="ws_score_session_id" value="024fabd88e3d49cb8bd582184989b9c2">
+        <input type="hidden" name="ws_score_session_id" id="ws_score_session_id" value="">
     <script type="text/javascript">
         //<![CDATA[
                 if(dmtrack_pageid) {
                         document.write('<input type="hidden" name="pageId" value="' + dmtrack_pageid + '" />');
                 }
         //]]>
-    </script><input type="hidden" name="pageId" value="cbcd34cfcdcc741250d8776613bcdb6cdf87a6ff85"><input type="hidden" name="pageId" value="cbcd34cfcdcc741250d8776613bcd928f091a4fc03">
+    </script><input type="hidden" name="pageId" value="cbcd34cfcdcc741250d8776613bf03bd8201ba7505"><input type="hidden" name="pageId" value="cbcd34cfcdcc741250d8776613bcd928f091a4fc03">
     <script language="JavaScript">
-	//document.domain="alibaba.com";
-    
-    //jintian.zhengjt
-    var scoreSessionEl = get("ws_score_session_id");
-    if(!scoreSessionEl.value){
-        var url = "http://www.aliexpress.com/getSession.htm";
-    	var wsScoreSessionId = "";
-        YAHOO.util.Get.script(url,{
-                        onSuccess : function(o){
-                			scoreSessionEl.value = wsScoreSessionId;
-                        }
-                }
-        );
-    }
+
 
     
     
@@ -682,22 +662,10 @@ sk_dmtracking();
     </table>
 </fieldset></div>
 </div><!-- RegFlowEN -->
-</form>
+</g:form>
 	 <div id="regLeads">
 								
-									<div id="third-party-login-wrapper" class="box">
-						<a target="_blank" id="btn-login-facebook" href="http://thirdparty.aliexpress.com/login.htm?type=fb&amp;tracelog=ws_fb_mainjoin">
-							<img alt="" src="./Create your Alibaba.com account_files/sign-in-facebook.png">
-						</a>
-                    <script type="text/javascript">
-                    YUE.on('btn-login-facebook','click',function(ev){
-                       YUE.stopEvent(ev);
-                       var winProps = "menubar=no,location=yes,resizable=yes,scrollbars=yes,status=no,toolbar=no,width=650,height=500";
-                       var fbSigninLnk = this.href;
-                       window.open(fbSigninLnk,'fb',winProps);
-                    });
-                    </script>
-					</div>	
+
 								
 				<div class="benefits box">
 					<h4>Buy online at wholesale prices</h4>
@@ -718,7 +686,7 @@ sk_dmtracking();
 	</div>
 </div>
 <!--skylight-wholesale/home/ae_bp_detail.html -start --><div id="inf-bp">
-<a href="http://www.aliexpress.com/buyerprotection/index.html" rel="nofollow"><img src="./Create your Alibaba.com account_files/bp_banner_987x75.png"></a>
+<a href="http://www.aliexpress.com/buyerprotection/index.html" rel="nofollow"><img src="${resource(dir: 'images/register', file: 'bp_banner_987x75.png')}"></a>
 </div><!--skylight-wholesale/home/ae_bp_detail.html -end --><script type="text/javascript" language="javascript">
     function clearErrorDisplay(errorClass,rootId){
        var errorEls = YUD.getElementsByClassName(errorClass,"div",rootId);
@@ -806,9 +774,20 @@ var _aecoremetricsServer = "http://us.ae.alibaba.com";
 
     <br><a href="http://www.alibaba.com/trade/servlet/page/static/copyright_policy" rel="nofollow">Copyright Notice</a> © 1999-2012 Alibaba.com Hong Kong Limited and licensors. All rights reserved.
 </div>
+<script>
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-17640202-1']);
+_gaq.push(['_setDomainName', 'aliexpress.com']);
+_gaq.push(['_trackPageview']);
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';    
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+/* ]]> */
+</script><!--skylight-wholesale/common/footer.html -end --><!--us-myaliexpress-web4 -->
 
 
 
-
-</body>
-</html>
+</body></html>

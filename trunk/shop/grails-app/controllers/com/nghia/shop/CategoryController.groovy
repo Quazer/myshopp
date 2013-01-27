@@ -60,7 +60,7 @@ class CategoryController {
 			return
 		}
 		if (params.back) {
-			params.properties = session.searchParams.properties
+			params.properties = session?.searchParams?.properties
 		}
 		
 		// trim strings in params

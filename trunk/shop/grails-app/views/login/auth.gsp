@@ -1,5 +1,6 @@
 <html>
 <head>
+<ckeditor:resources/>
 	<meta name='layout' content='main'/>
 	<title><g:message code="springSecurity.login.title"/></title>
 	<style type='text/css' media='screen'>
@@ -85,6 +86,11 @@
 </head>
 
 <body>
+
+	<ckeditor:editor name="myeditor" height="400px" width="80%">
+cec
+</ckeditor:editor>
+
 <div id='login'>
 	<div class='inner'>
 		<div class='fheader'><g:message code="springSecurity.login.header"/></div>

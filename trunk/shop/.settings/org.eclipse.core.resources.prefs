@@ -1,4 +1,8 @@
 eclipse.preferences.version=1
+encoding//.link_to_grails_plugins/ckeditor-3.6.4.0/grails-app/i18n=UTF-8
+encoding//.link_to_grails_plugins/ckeditor-3.6.4.0/grails-app/i18n/messages.properties=UTF-8
+encoding//.link_to_grails_plugins/ckeditor-3.6.4.0/grails-app/i18n/messages_it.properties=UTF-8
+encoding//.link_to_grails_plugins/ckeditor-3.6.4.0/grails-app/i18n/messages_zh_CN.properties=UTF-8
 encoding//.link_to_grails_plugins/hibernate-2.1.0/grails-app/i18n=UTF-8
 encoding//.link_to_grails_plugins/hibernate-2.1.0/grails-app/i18n/messages.properties=UTF-8
 encoding//.link_to_grails_plugins/jquery-1.7.2/grails-app/i18n=UTF-8
@@ -26,3 +30,4 @@ encoding//grails-app/i18n/messages_ru.properties=UTF-8
 encoding//grails-app/i18n/messages_sv.properties=UTF-8
 encoding//grails-app/i18n/messages_th.properties=UTF-8
 encoding//grails-app/i18n/messages_zh_CN.properties=UTF-8
+encoding//web-app/js/category/search-list-aw-MODERN_BROWSER-v_7c262e7ebd78a_158d3040a0bea0.js=UTF-8

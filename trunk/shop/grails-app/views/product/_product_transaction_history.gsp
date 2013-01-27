@@ -1,4 +1,4 @@
-	<<g:if test="${transactionHistoryList?.size() > 0 }">
+	<g:if test="${transactionHistoryList?.size() > 0 }">
 	
 	<div id="transaction-history">
 		<div id="transaction-top" class="clearfix">
