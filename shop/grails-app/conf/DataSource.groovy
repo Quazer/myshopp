@@ -15,7 +15,7 @@ environments {
     development {
         dataSource {
             def logSql = true 
-            dbCreate = "create-drop" // one of 'create', 'create-drop','update' 
+            dbCreate = "update" // one of 'create', 'create-drop','update' 
             url = "jdbc:postgresql://localhost/shop" 
             username = "postgres" 
             password = "postgres" 

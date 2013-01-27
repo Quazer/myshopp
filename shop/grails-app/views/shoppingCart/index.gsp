@@ -1185,20 +1185,9 @@
                      <label for="cb-buyer-provide-email">I agree to disclose my email address to this member.</label>
                 </div>
                                 
-                <!-- Agreement -->
-                <ul class="agreement">
-                    <li>Upon clicking 'Place Order', I acknowledge I have read and agreed to:</li>
-                    <li>- <a target="_blank" href="http://news.alibaba.com/article/detail/help/100454419-1-alibaba.com-transaction-services-agreement-international.html">Alibaba.com Transaction Services Agreement</a></li>
-                    <li>- <a target="_blank" href="http://news.alibaba.com/article/detail/help/100454412-1-alipay-escrow-services-agreement.html">Escrow Services Agreement</a></li>
-                    <li>- <a target="_blank" href="http://news.alibaba.com/article/detail/product-listing-policy-for-transaction-services/100130971-1-product-listing-policy-transaction-services.html">Product Listing Policy for Transaction Services</a></li>
-                    <li><a target="_blank" href="http://escrow.aliexpress.com/buyerprotection/index.html">Click here</a> to learn more about online transactions with Escrow</li>
-                </ul>
+
             </div>
-            <div class="payment-method">
-                <div id="inf-bp"><div class="bp-banner"><a href="http://www.aliexpress.com/buyerprotection/index.html" rel="nofollow"><img class="banner-img" src="${resource(dir: 'images/shoppingcart', file: 'bp_banner_975x75.png')}"></a></div></div>
-                <span class="payment-method-title">Payment Methods:</span>
-                <ul><li class="pm-type-visa-s"></li><li class="pm-type-mastercard-s"></li><li class="pm-type-westernUnion-s"></li><li class="pm-type-moneybookers-s"></li><li class="pm-type-maestro-s"></li><li class="pm-type-solo-s"></li><li class="pm-type-cartebleue-s"></li><li class="pm-type-4b-s"></li><li class="pm-type-euro6000-s"></li><li class="pm-type-cartasi-s"></li><li class="pm-type-postepay-s"></li><li class="pm-type-banktransfer-s"><strong>Bank Transfer</strong></li></ul>
-            </div>
+
         </div>
      </div>
        <!-- order info  [end]-->

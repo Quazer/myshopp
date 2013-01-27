@@ -22,7 +22,7 @@ class CommonUtils {
 	
 	// arg maybe "int" or "float"
 	def static showPriceWithCurrency(def price) {
-		price + " VND"
+		price + " USD"
 	}
 	
 	def static showSaleOffWithFixedPrice(discountPrice, discountPriceFixed) {
@@ -34,7 +34,8 @@ class CommonUtils {
 	}
 	
 	def static showCurrency() {
-		return "{showCurrency}"
+		//return "{showCurrency}"
+		return "USD"
 	}
 	
 	// return price of Product with currency
@@ -429,7 +430,8 @@ class CommonUtils {
 	 }
 	 
 	 static discountOrCoupon(ShoppingCart shoppingCart) {
-		 return "{discountOrCoupon}"
+		 //return "{discountOrCoupon}"
+		 return "-"
 	 }
 	 
 	 static urlWithProductName(productInstance) {

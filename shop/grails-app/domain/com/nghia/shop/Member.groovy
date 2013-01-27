@@ -13,7 +13,9 @@ class Member {
 	boolean accountExpired = false
 	boolean accountLocked = false
 	boolean passwordExpired = false
-
+	String firstName
+	String lastName
+	
 	/**
 	 * User Profile 
 	 */
@@ -33,7 +35,7 @@ class Member {
 	static constraints = {
 		username blank: false, unique: true
 		password blank: false
-		
+
 		// TODO: need to modify
 		shippingDetail nullable:true
 		

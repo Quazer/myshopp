@@ -17,12 +17,12 @@ class ProductController {
 //        [productInstanceList: Product.list(params), productInstanceTotal: Product.count(), prod : Product.list()]
 //    }
 //
-//    def create() {
-//		productService.autoCreate()
-//		def productList = Product.list()
-//		print "productList.size():" + productList.size()
-//        [productInstance: new Product(params)]
-//    }
+    def create() {
+		//productService.autoCreate()
+		def productList = Product.list()
+		print "productList.size():" + productList.size()
+        [productInstance: new Product(params)]
+    }
 //
 //    def save() {
 //        def productInstance = new Product(params)

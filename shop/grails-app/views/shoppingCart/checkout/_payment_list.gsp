@@ -218,7 +218,7 @@
 
 		<div id="bank-transfer" class="clearfix" style="display: block;"
 			_originaldisplay="block">
-			<h2>Pay With Bank Transfer</h2>
+			<h2>Thanh toán qua Ngân hàng</h2>
 			<h5 class="separator">${message(code: 'payment.banktransfer.title')}</h5>
 			<div class="account-detail">
 				<dl>

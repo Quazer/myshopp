@@ -13,9 +13,9 @@
              
 
         
-<div id="header">
+<div id="header" style="height:100px">
     <div id="logo">
-                <a href="http://www.aliexpress.com/" title="AliExpress">
+                <a href="/" title="${message(code: 'default.shop.name')}">
                 <img border="0" src="${resource(dir: 'images/shoppingcart', file: 'logo_stable_buyer.gif')}" alt="${message(code: 'default.shop.name')}">
         </a>
             </div>
@@ -23,12 +23,7 @@
         <li class="help">
             Need help? <a href="http://help.aliexpress.com/categories_Payment.html" target="new">Click here now</a>
         </li>
-        <li class="secure-logo">
-            <a href="https://seal.verisign.com/splash?form_file=fdf/splash.fdf&dn=ALIPAY.ALIBABA.COM&lang=en" target="new">
-                <img src="./Checkout_files/icon-other.jpg" width="80" height="30" alt="Verisign.com">
-            </a>
-            <span>You are securely signed in</span>
-        </li>
+
     </ul>
 </div>
 
@@ -71,7 +66,7 @@
             </dl>
             <dl>
                 <dt>Date:</dt>
-                <dd>17 Nov 2012 19:02</dd>
+                <dd><g:formatDate date="${orderStatusTracking?.date}" formatName="product.label.date" /></dd>
             </dl>
         </div>
     </div>
@@ -85,15 +80,7 @@
     </div>
     
             
-        <div class="security-identity">
-        <div class="bp-banner">
-            <a rel="nofollow" href="http://www.aliexpress.com/buyerprotection/index.html" target="_blank">
-                <img src="${resource(dir: 'images/shoppingcart', file: 'bp-banner-987x75.png')}">
-            </a>
-        </div>
-        <span class="SSL"></span>
-        <span class="TRW"></span>
-    </div>
+
     </div>
 
 <script type="text/javascript">
@@ -138,7 +125,7 @@
 
                         defaultPaymentMethod: "" || "",
 
-                checkCodeURL:"https://ushermes.alibaba.com/omeo/service/checkcode?sessionID=614da46046bc437783a406b0557fa91e&type=mark",
+                checkCodeURL:"",
 
                 countdown: {
             show: true,
@@ -154,17 +141,17 @@
         },
 
                         coremetricsParams: {
-            tradeID         : '16748157',
-            tradeGMV        : '700.00',
-            sellerID        : '200037156',
-            buyerID         : '131688756',
-            buyerCity       : 'Da nang',
-            buyerState      : 'Da nang',
-            buyerCountry    : 'VN'
+            tradeID         : '',
+            tradeGMV        : '',
+            sellerID        : '',
+            buyerID         : '',
+            buyerCity       : '',
+            buyerState      : '',
+            buyerCountry    : ''
         },
         
                 dmtrackConfig: {
-            url  : "https://stat.alibaba.com/escrow/pay.html",
+            url  : "",
             payOrder :  {orderId:"",tradeId:"",type:"payMyOrder"} , 
             paypal :  {orderId:"",tradeId:"",type:"paypal"} 
         }
@@ -177,32 +164,7 @@
 
 <img src="${resource(dir: 'images/shoppingcart', file: 'clear.png')}" alt="">
 
-        <!--us-pci-ipay-web2 -->
-<div id="footer">
-<a href="http://www.alibaba.com/aboutalibaba/index.html"><strong>Company Info</strong></a> - <a href="http://www.alibaba.com/aboutalibaba/partnership_with_alibaba.html"><strong>Partnerships</strong></a><br>
-    <a href="http://www.alibaba.com/">Manufacturers</a> - <a href="http://chinasuppliers.alibaba.com/">Gold Suppliers</a> - <a href="http://www.alibaba.com/catalogs/0/product.html">Buy</a> - <a href="http://importer.alibaba.com/">Sell</a> - <a href="http://tradeshow.alibaba.com/">Trade Shows</a> - <a href="http://us.my.alibaba.com/">My Alibaba</a> - <a href="http://exporter.alibaba.com/">China Export Services</a> - <a href="http://www.alibaba.com/trade/help/helpcenter">Help</a> - <a href="http://www.alibaba.com/sitemap.html">Site Map</a> - <a href="http://www.alibaba.com/trade/servlet/page/static/help/contact_us_answer">Customer Service</a>
-    <p style="margin:0">
-    Browse Alphabetically: 
-    <a href="http://www.aliexpress.com/product.html">All Products</a>, 
-        <a href="http://www.aliexpress.com/free-shipping.html">Free Shipping</a>, 
-        <a href="http://www.aliexpress.com/wholesale.html">Wholesale Product</a>, 
-        <a href="http://www.alibaba.com/countrysearch/continent.html">Countries</a><!-- - 
-        <a href="http://www.alibaba.com/sitemap/archives.html">Archive</a>-->
-        <br><br>
-<a href="http://www.alibaba.com/aboutalibaba/aligroup/index.html">Alibaba Group</a>: 
-Alibaba.com: <a href="http://china.alibaba.com/" target="_blank">Alibaba China</a>
-- <a href="http://www.alibaba.com/" target="_blank">Alibaba International</a> 
-- <a href="http://www.alibaba.co.jp/" target="_blank">Alibaba Japan</a> 
-| <a href="http://www.taobao.com/" target="_blank">Taobao</a> 
-| <a href="http://www.alipay.com/" target="_blank">Alipay</a>
-| <a href="http://www.yahoo.com.cn/" target="_blank">Yahoo! China</a> 
-| <a href="http://www.koubei.com/" target="_blank">Koubei.com</a> 
-| <a href="http://www.alisoft.com/" target="_blank">Alisoft</a>
-| <a href="http://www.alimama.com/" target="_blank">Alimama</a>
-    </p>
-    <a rel="nofollow" href="http://www.alibaba.com/trade/servlet/page/help/rules_and_policies/products_listing_policy">Product Listing Policy</a> - <a rel="nofollow" href="http://www.alibaba.com/trade/servlet/page/help/rules_and_policies/intellectual_property_policy">Intellectual Property Policy and Infringement Claims</a> - <a rel="nofollow" href="http://www.alibaba.com/trade/servlet/page/help/rules_and_policies/privacy_policy">Privacy Policy</a> - <a rel="nofollow" href="http://www.alibaba.com/trade/servlet/page/help/rules_and_policies/term_of_use">Terms of Use</a> - <a href="http://www.alibaba.com/trade/servlet/page/static/safetrade/index">Safe Trading Tips</a> - <a rel="nofollow" href="http://legal.alibaba.com/legal/site/login/login.htm?site_type=international&language_id=english">Report Intellectual Property Right Infringement</a>
-<br><a href="http://www.alibaba.com/trade/servlet/page/static/copyright_policy">Copyright Notice</a> © 1999-2009  Alibaba.com Limited and/or its subsidiaries and licensors. All rights reserved.
-</div>
+<g:render template="/category/footer"/>
 
 
     
